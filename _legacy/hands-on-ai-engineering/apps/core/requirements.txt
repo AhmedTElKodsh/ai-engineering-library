@@ -1,0 +1,7 @@
+fastapi
+uvicorn
+langgraph
+pydantic
+pytest
+httpx
+datamodel-code-generator

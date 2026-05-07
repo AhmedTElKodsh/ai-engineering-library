@@ -1,0 +1,111 @@
+# Teaching Methodology Evaluator Configuration
+
+# Research Engine Configuration
+research:
+  # API keys (set via environment variables)
+  api_keys:
+    tavily: ${TAVILY_API_KEY}
+    google_scholar: ${GOOGLE_SCHOLAR_API_KEY}
+  
+  # Date range for research (YYYY-MM-DD)
+  date_range:
+    start: "2024-01-01"
+    end: "2026-12-31"
+  
+  # Cache directory for research results
+  cache_dir: "./cache/research"
+  
+  # Rate limit (requests per minute)
+  rate_limit: 10
+  
+  # Prioritize peer-reviewed sources
+  prioritize_peer_reviewed: true
+
+# Analysis Engine Configuration
+analysis:
+  # Path to content modules
+  content_modules_path: "./curriculum/content"
+  
+  # Path to delivery modes
+  delivery_modes_path: "./curriculum/delivery"
+  
+  # Evidence threshold for "evidence-supported" rating (0.0 to 1.0)
+  evidence_threshold: 0.7
+  
+  # Consistency threshold for consistent implementation (0.0 to 1.0)
+  consistency_threshold: 0.8
+
+# Comparison Engine Configuration
+comparison:
+  # Minimum reuse percentage to flag duplication
+  duplication_threshold: 0.8
+
+# Gap Analysis Engine Configuration
+gap_analysis:
+  # Minimum impact score for high-impact gaps (0.0 to 1.0)
+  high_impact_threshold: 0.7
+  
+  # Maximum difficulty score for low-difficulty gaps (0.0 to 1.0)
+  low_difficulty_threshold: 0.3
+
+# Platform Evaluator Configuration
+platform:
+  # Current platform to evaluate
+  current_platform: "jupyter"
+  
+  # Alternative platforms to compare
+  alternatives:
+    - "marimo"
+    - "quarto"
+    - "educative"
+  
+  # Evaluation criteria weights (must sum to 1.0)
+  criteria_weights:
+    reproducibility: 0.25
+    git_integration: 0.20
+    ai_compatibility: 0.20
+    workflow_support: 0.20
+    deployment: 0.15
+
+# Interview Preparation Assessor Configuration
+interview_prep:
+  # Minimum mock interview count (per mode)
+  min_mock_interviews: 3
+  
+  # Minimum explanation exercise coverage (percentage)
+  min_explanation_coverage: 0.8
+
+# Synthesis Engine Configuration
+synthesis:
+  # Quick win thresholds
+  quick_win:
+    min_impact: 0.7
+    max_difficulty: 0.3
+
+# Output Configuration
+output:
+  # Output directory for reports
+  report_dir: "./output/reports"
+  
+  # Output formats (markdown, html, json, pdf)
+  formats:
+    - "markdown"
+    - "html"
+    - "json"
+  
+  # Template directory
+  template_dir: "./templates"
+
+# Logging Configuration
+logging:
+  # Log level (DEBUG, INFO, WARNING, ERROR, CRITICAL)
+  level: "INFO"
+  
+  # Log file path
+  file: "./logs/evaluator.log"
+  
+  # Log format
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  
+  # Console logging
+  console: true

@@ -1,0 +1,39 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ResearchClaim",
+  "type": "object",
+  "required": ["claimId", "subject", "value", "sourceCharacterStart", "sourceCharacterEnd", "confidenceScore"],
+  "properties": {
+    "claimId": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "subject": {
+      "type": "string",
+      "description": "The financial metric or topic (e.g., 'REVENUE')."
+    },
+    "value": {
+      "type": "string",
+      "description": "The extracted or derived value."
+    },
+    "sourceCharacterStart": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Start offset in the source SEC filing."
+    },
+    "sourceCharacterEnd": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "End offset in the source SEC filing."
+    },
+    "confidenceScore": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "evidenceHash": {
+      "type": "string",
+      "description": "SHA-256 hash of the source text snippet."
+    }
+  }
+}

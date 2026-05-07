@@ -1,0 +1,360 @@
+// Prisma schema for AI Engineering Curriculum Platform
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// User model
+model User {
+  id                  String   @id @default(cuid())
+  email               String   @unique
+  name                String?
+  password            String?
+  oauthProvider       String?
+  oauthId             String?
+  entryPoint          Int      @default(0)
+  preferences         String?  // JSON string
+  portfolioSlug       String?
+  bio                 String?
+  avatarUrl            String?
+  createdAt            DateTime @default(now())
+  updatedAt            DateTime @updatedAt
+
+  progress             Progress[]
+  projectSubmissions   ProjectSubmission[]
+  milestoneAchievements MilestoneAchievement[]
+  assessmentAttempts   AssessmentAttempt[]
+  codeExecutions       CodeExecution[]
+  analyticsEvents      AnalyticsEvent[]
+  reviews              Review[]  @relation("Reviewer")
+  codeComments         CodeComment[]
+  reviewResponses      ReviewResponse[]
+  contentReviewsSubmitted ContentReview[] @relation("ContentReviewSubmitter")
+  contentReviewsReviewed ContentReview[] @relation("ContentReviewReviewer")
+  publishRecords       PublishRecord[] @relation("PublishRecordPublisher")
+
+  @@map("users")
+}
+
+// Module model
+model Module {
+  id          String   @id @default(cuid())
+  title       String
+  description String?
+  order       Int
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  chapters    Chapter[]
+  weeks       Week[]
+  milestones  Milestone[]
+
+  @@map("modules")
+}
+
+// Chapter model
+model Chapter {
+  id          String   @id @default(cuid())
+  title       String
+  content     String?  // MDX content
+  order       Int
+  moduleId    String
+  isProject   Boolean  @default(false)
+  projectType String?  // mini-project, flagship-project, capstone, custom
+  version     Int      @default(1)
+  previousVersionId String?
+  contentHash String?  // SHA-256 hash of content for change detection
+
+  module      Module   @relation(fields: [moduleId], references: [id])
+  progress    Progress[]
+  assessments Assessment[]
+  projectSubmissions ProjectSubmission[]
+  dailyContent DailyContent[]
+  previousVersion Chapter? @relation("ChapterVersion", fields: [previousVersionId], references: [id])
+  nextVersions Chapter[] @relation("ChapterVersion")
+  contentReviews ContentReview[]  // Added for content workflow
+  publishRecords PublishRecord[]  // Added for content workflow
+
+  @@map("chapters")
+}
+
+// Week model
+model Week {
+  id         String @id @default(cuid())
+  weekNumber Int
+  title      String?
+  moduleId   String
+
+  module Module         @relation(fields: [moduleId], references: [id])
+  days   DailyContent[]
+
+  @@map("weeks")
+}
+
+// DailyContent model
+model DailyContent {
+  id        String   @id @default(cuid())
+  dayNumber Int
+  topic     String?
+  hours     Float    @default(2.5)
+  type      String   @default("regular") // regular, mini-project, flagship-project, catch-up
+  weekId    String
+  chapterId String?
+
+  week    Week     @relation(fields: [weekId], references: [id])
+  chapter Chapter? @relation(fields: [chapterId], references: [id])
+
+  @@map("daily_content")
+}
+
+// Progress model
+model Progress {
+  id        String   @id @default(cuid())
+  userId    String
+  chapterId String
+  completed Boolean  @default(false)
+  completedAt DateTime?
+
+  user    User    @relation(fields: [userId], references: [id])
+  chapter Chapter  @relation(fields: [chapterId], references: [id])
+
+  @@unique([userId, chapterId])
+  @@map("progress")
+}
+
+// Assessment model
+model Assessment {
+  id           String   @id @default(cuid())
+  type         String   // diagnostic, checkpoint
+  title        String?
+  description  String?
+  chapterId    String?
+  questions    AssessmentQuestion[]
+
+  chapter Chapter? @relation(fields: [chapterId], references: [id])
+  attempts  AssessmentAttempt[]
+
+  @@map("assessments")
+}
+
+// AssessmentQuestion model
+model AssessmentQuestion {
+  id           String   @id @default(cuid())
+  assessmentId String
+  type         String   // multiple-choice, coding, short-answer, design
+  content      String
+  options      String?  // JSON array
+  correctAnswer String?
+  language     String?
+  order        Int
+
+  assessment Assessment           @relation(fields: [assessmentId], references: [id])
+  responses  AssessmentResponse[]
+
+  @@map("assessment_questions")
+}
+
+// AssessmentAttempt model
+model AssessmentAttempt {
+  id           String   @id @default(cuid())
+  userId       String
+  assessmentId String
+  status       String   // in-progress, completed, passed, failed
+  score        Float?
+  completedAt  DateTime?
+  responses    AssessmentResponse[]
+
+  user       User       @relation(fields: [userId], references: [id])
+  assessment Assessment @relation(fields: [assessmentId], references: [id])
+
+  @@map("assessment_attempts")
+}
+
+// AssessmentResponse model
+model AssessmentResponse {
+  id           String   @id @default(cuid())
+  attemptId    String
+  questionId   String
+  answer       String
+  isCorrect    Boolean?
+
+  attempt    AssessmentAttempt  @relation(fields: [attemptId], references: [id])
+  question   AssessmentQuestion @relation(fields: [questionId], references: [id])
+
+  @@map("assessment_responses")
+}
+
+// Milestone model
+model Milestone {
+  id          String   @id @default(cuid())
+  moduleId    String
+  title       String
+  description String?
+  criteria    String?  // JSON: { type: "module-completion" | "checkpoint-pass" | "custom", ... }
+  order       Int
+
+  module             Module              @relation(fields: [moduleId], references: [id])
+  achievements       MilestoneAchievement[]
+
+  @@map("milestones")
+}
+
+// MilestoneAchievement model
+model MilestoneAchievement {
+  id          String   @id @default(cuid())
+  userId      String
+  milestoneId String
+  achievedAt  DateTime @default(now())
+  sharedAt    DateTime?
+  sharePlatform String?
+
+  user      User      @relation(fields: [userId], references: [id])
+  milestone Milestone @relation(fields: [milestoneId], references: [id])
+
+  @@unique([userId, milestoneId])
+  @@map("milestone_achievements")
+}
+
+// ProjectSubmission model
+model ProjectSubmission {
+  id              String   @id @default(cuid())
+  userId          String
+  chapterId       String
+  githubUrl        String?
+  demoUrl          String?
+  screenshots      String?  // JSON array
+  description      String?
+  technologies     String?  // JSON array
+  status           String   @default("not-submitted") // not-submitted, pending-review, approved, revision-requested
+  isPortfolioReady Boolean  @default(false)
+  revisionNumber   Int      @default(0)
+  submittedAt      DateTime?
+
+  user    User    @relation(fields: [userId], references: [id])
+  chapter Chapter @relation(fields: [chapterId], references: [id])
+  reviews  Review[] @relation("SubmissionReviews")
+
+  @@map("project_submissions")
+}
+
+// Review model
+model Review {
+  id              String   @id @default(cuid())
+  submissionId   String
+  reviewerId     String
+  rubricScores   String?  // JSON: { codeQuality, documentation, testing, deployment }
+  overallScore   Float?
+  strengths      String?  // JSON array
+  improvements   String?  // JSON array
+  recommendation String?  // approve, revision-required, needs-work
+  generalFeedback String?
+  createdAt      DateTime @default(now())
+
+  submission   ProjectSubmission @relation("SubmissionReviews", fields: [submissionId], references: [id])
+  reviewer     User             @relation("Reviewer", fields: [reviewerId], references: [id])
+  codeComments CodeComment[]
+  responses    ReviewResponse[]
+
+  @@map("reviews")
+}
+
+// CodeComment model
+model CodeComment {
+  id        String   @id @default(cuid())
+  reviewId  String
+  userId    String
+  file      String?
+  lineNumber Int?
+  content   String
+  severity  String?  // info, suggestion, issue, critical
+  createdAt  DateTime @default(now())
+
+  review Review @relation(fields: [reviewId], references: [id])
+  user   User   @relation(fields: [userId], references: [id])
+
+  @@map("code_comments")
+}
+
+// ReviewResponse model
+model ReviewResponse {
+  id       String   @id @default(cuid())
+  reviewId String
+  userId   String
+  content  String
+  createdAt DateTime @default(now())
+
+  review Review @relation(fields: [reviewId], references: [id])
+  user   User  @relation(fields: [userId], references: [id])
+
+  @@map("review_responses")
+}
+
+// ContentReview model (for content workflow)
+model ContentReview {
+  id          String   @id @default(cuid())
+  chapterId   String
+  submitterId String
+  reviewerId  String?
+  status      String   @default("pending") // pending, approved, rejected
+  comments    String?
+  version     Int
+  reviewedAt  DateTime?
+  createdAt   DateTime @default(now())
+
+  chapter   Chapter @relation(fields: [chapterId], references: [id])
+  submitter User    @relation("ContentReviewSubmitter", fields: [submitterId], references: [id])
+  reviewer  User?   @relation("ContentReviewReviewer", fields: [reviewerId], references: [id])
+
+  @@map("content_reviews")
+}
+
+// PublishRecord model
+model PublishRecord {
+  id            String   @id @default(cuid())
+  chapterId     String
+  version       Int
+  publishedBy   String
+  previousVersion Int?
+  publishedAt   DateTime @default(now())
+
+  chapter     Chapter @relation(fields: [chapterId], references: [id])
+  publisher   User    @relation("PublishRecordPublisher", fields: [publishedBy], references: [id])
+
+  @@map("publish_records")
+}
+
+// CodeExecution model
+model CodeExecution {
+  id         String   @id @default(cuid())
+  userId     String
+  code       String
+  language   String
+  output     String?
+  errors     String?
+  executionTime Int?
+  status     String?  // success, error
+  createdAt  DateTime @default(now())
+
+  user User @relation(fields: [userId], references: [id])
+
+  @@map("code_executions")
+}
+
+// AnalyticsEvent model
+model AnalyticsEvent {
+  id         String   @id @default(cuid())
+  userId     String?
+  eventType  String
+  eventData  String?  // JSON
+  moduleId   String?
+  chapterId  String?
+  createdAt   DateTime @default(now())
+
+  user User? @relation(fields: [userId], references: [id])
+
+  @@map("analytics_events")
+}

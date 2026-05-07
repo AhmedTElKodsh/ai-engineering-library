@@ -1,0 +1,199 @@
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model User {
+  id        String   @id @default(cuid())
+  email     String   @unique
+  name      String?
+  password  String? // hashed password
+  oauthProvider String? // google, github
+  oauthId   String? // provider's user ID
+  preferences Json? // theme, font size, notification prefs
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  progress  Progress[]
+  milestoneAchievements MilestoneAchievement[]
+  projectSubmissions ProjectSubmission[]
+  projectReviews ProjectReview[] // as reviewer
+  codeComments CodeComment[]
+  reviewResponses ReviewResponse[]
+  portfolioConfig PortfolioConfig?
+}
+
+model Module {
+  id          String   @id @default(cuid())
+  title       String
+  description String?
+  order       Int // 0-6 for modules 0-6
+  weeks       Week[]
+  chapters    Chapter[]
+  milestones  Milestone[]
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model Chapter {
+  id          String   @id @default(cuid())
+  moduleId    String
+  title       String
+  content     String // MDX content
+  order       Int
+  isProject   Boolean @default(false)
+  projectType String? // mini-project, flagship-project, capstone, custom
+  module      Module   @relation(fields: [moduleId], references: [id])
+  progress    Progress[]
+  projectSubmissions ProjectSubmission[]
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model Week {
+  id        String   @id @default(cuid())
+  moduleId  String
+  weekNumber Int // 1 to N per module
+  title     String?
+  module    Module   @relation(fields: [moduleId], references: [id])
+  days      DailyContent[]
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model DailyContent {
+  id        String   @id @default(cuid())
+  weekId    String
+  dayNumber Int // 1-7, day 5 = mini-project, 6-7 = optional catch-up
+  topic     String
+  hours     Float // estimated hours
+  type      String // regular, mini-project, flagship-project, catch-up
+  chapters  Chapter[] // chapters covered this day
+  week      Week     @relation(fields: [weekId], references: [id])
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Milestone {
+  id          String   @id @default(cuid())
+  moduleId    String
+  title       String
+  description String?
+  criteria    Json // unlock criteria (module-completion, checkpoint-pass, etc.)
+  icon        String? // emoji or icon URL
+  module      Module   @relation(fields: [moduleId], references: [id])
+  achievements MilestoneAchievement[]
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model MilestoneAchievement {
+  id          String   @id @default(cuid())
+  userId      String
+  milestoneId String
+  achievedAt  DateTime @default(now())
+  shared      Boolean @default(false)
+  sharedAt    DateTime?
+  user        User     @relation(fields: [userId], references: [id])
+  milestone   Milestone @relation(fields: [milestoneId], references: [id])
+  @@unique([userId, milestoneId])
+}
+
+model Progress {
+  id        String   @id @default(cuid())
+  userId    String
+  chapterId String
+  completed Boolean @default(false)
+  completedAt DateTime?
+  user      User     @relation(fields: [userId], references: [id])
+  chapter   Chapter  @relation(fields: [chapterId], references: [id])
+  @@unique([userId, chapterId])
+}
+
+model Assessment {
+  id          String   @id @default(cuid())
+  type        String // diagnostic, checkpoint
+  title       String
+  questions   Json // question bank data
+  moduleId    String? // for checkpoint assessments
+  chapterId   String? // for chapter assessments
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model ProjectSubmission {
+  id          String   @id @default(cuid())
+  userId      String
+  chapterId   String
+  githubUrl   String?
+  demoUrl     String?
+  screenshots String[] // S3 URLs
+  description String?
+  status      String // not-submitted, pending-review, reviewed, revision-requested, approved
+  score       Float?
+  revisionNumber Int @default(1)
+  user        User     @relation(fields: [userId], references: [id])
+  chapter     Chapter  @relation(fields: [chapterId], references: [id])
+  reviews     ProjectReview[]
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model ProjectReview {
+  id          String   @id @default(cuid())
+  submissionId String
+  reviewerId  String
+  rubricScores Json // code quality, documentation, testing, deployment
+  overallScore Float
+  strengths   String[]
+  improvements String[]
+  recommendation String // approve, revision-required, needs-work
+  generalFeedback String?
+  submission  ProjectSubmission @relation(fields: [submissionId], references: [id])
+  reviewer    User     @relation(fields: [reviewerId], references: [id])
+  codeComments CodeComment[]
+  reviewResponses ReviewResponse[]
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model CodeComment {
+  id          String   @id @default(cuid())
+  reviewId    String
+  userId      String
+  file        String
+  lineNumber  Int
+  content     String
+  severity    String // info, suggestion, issue, critical
+  resolved    Boolean @default(false)
+  review      ProjectReview @relation(fields: [reviewId], references: [id])
+  user        User     @relation(fields: [userId], references: [id])
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model ReviewResponse {
+  id          String   @id @default(cuid())
+  reviewId    String
+  userId      String
+  content     String
+  user        User     @relation(fields: [userId], references: [id])
+  review      ProjectReview @relation(fields: [reviewId], references: [id])
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model PortfolioConfig {
+  id        String   @id @default(cuid())
+  userId    String   @unique
+  isPublic  Boolean @default(false)
+  slug      String?  @unique
+  bio       String?
+  user      User     @relation(fields: [userId], references: [id])
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}

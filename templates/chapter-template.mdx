@@ -1,0 +1,102 @@
+---
+title: "Chapter Title"
+module: "module-0"
+order: 1
+type: "lesson" # or "mini-project", "flagship-project"
+duration: 2 # hours
+objectives:
+  - "Objective 1"
+  - "Objective 2"
+  - "Objective 3"
+prerequisites:
+  - "Prerequisite 1"
+  - "Prerequisite 2"
+---
+
+# {frontmatter.title}
+
+## Learning Objectives
+
+By the end of this chapter, you will be able to:
+{frontmatter.objectives.map(obj => `- ${obj}`).join('\n')}
+
+## Introduction
+
+Brief introduction to the topic...
+
+## Main Content Section
+
+### Subtopic 1
+
+Explanation of the concept...
+
+```python
+# Code example
+def example_function():
+    return "Hello, World!"
+```
+
+### Interactive Example
+
+<ExplorableExplanation
+  parameter1={10}
+  parameter2={20}
+  explanation="Adjust the parameters to see how the output changes."
+>
+  <p>Current value: {parameter1}</p>
+  <p>Result: {parameter1 * parameter2}</p>
+</ExplorableExplanation>
+
+### Scrollytelling Section
+
+<ScrollytellingSection>
+  <div data-step="1">
+    <h3>Step 1: Understanding the Basics</h3>
+    <p>Explanation for step 1...</p>
+  </div>
+  <div data-step="2">
+    <h3>Step 2: Diving Deeper</h3>
+    <p>Explanation for step 2...</p>
+  </div>
+  <div data-step="3">
+    <h3>Step 3: Putting it Together</h3>
+    <p>Explanation for step 3...</p>
+  </div>
+</ScrollytellingSection>
+
+## Code Playground
+
+<CodePlayground
+  initialCode={`# Try it yourself!
+def solve():
+    # Your code here
+    pass
+`}
+  language="python"
+  testCases={[
+    { input: "", expectedOutput: "expected" }
+  ]}
+/>
+
+## Summary
+
+Key takeaways from this chapter...
+
+## Checkpoint Quiz
+
+<QuestionSet
+  questions={[
+    {
+      id: "q1",
+      type: "multiple-choice",
+      content: "Sample question?",
+      options: ["Option A", "Option B", "Option C"],
+      correctAnswer: "Option A"
+    }
+  ]}
+/>
+
+## Additional Resources
+
+- [Resource 1](https://example.com)
+- [Resource 2](https://example.com)
