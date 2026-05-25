@@ -1,0 +1,8 @@
+ticker,date,close,source
+AAPL,2026-05-01,190.00,lesson-fixture
+AAPL,2026-05-02,193.80,lesson-fixture
+AAPL,2026-05-03,192.00,lesson-fixture
+MSFT,2026-05-01,420.00,lesson-fixture
+MSFT,2026-05-02,424.20,lesson-fixture
+MSFT,2026-05-03,430.00,lesson-fixture
+

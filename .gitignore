@@ -90,6 +90,33 @@ node_modules/
 **/.git_disabled/
 
 # Project specific
-curriculum/
 templates/*.html
 templates/*.pdf
+
+# Local agent/tool workspaces
+.agent/
+.agents/
+.bob/
+.claude/
+.cline/
+.codebuddy/
+.firebender/
+.kode/
+.qwen/
+.trae/
+.turbo/
+
+# Private source books and generated research artifacts
+books/
+.kiro/specs/curriculum-planning/master_ai_engineering_rag_corpus/
+_bmad-output/
+_bmad/
+_bmad_legacy/
+infrastructure/
+.kiro/skills/
+.kiro/specs/curriculum-planning/source-material/
+.kiro/specs/curriculum-planning/docs/
+.kiro/specs/curriculum-planning/future/
+.kiro/specs/curriculum-planning/guides/
+.kiro/specs/curriculum-planning/AI_Engineering_Books.md
+.kiro/specs/curriculum-planning/books_encyclopedia_outline_source_map.md

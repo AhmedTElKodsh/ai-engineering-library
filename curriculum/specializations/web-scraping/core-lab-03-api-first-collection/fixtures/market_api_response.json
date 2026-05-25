@@ -1,0 +1,30 @@
+{
+  "endpoint": "https://api.example.com/market-notes",
+  "collected_at": "2026-05-25T10:00:00Z",
+  "items": [
+    {
+      "id": "api-001",
+      "symbol": "AAPL",
+      "headline": "Services revenue remains resilient",
+      "summary": "Analysts noted steady services demand while hardware growth stayed mixed.",
+      "source_url": "https://example.com/api/aapl-services",
+      "published_at": "2026-05-24T14:00:00Z"
+    },
+    {
+      "id": "api-002",
+      "symbol": "MSFT",
+      "headline": "Cloud backlog expands",
+      "summary": "The company reported stronger cloud backlog and continued AI infrastructure spending.",
+      "source_url": "https://example.com/api/msft-cloud",
+      "published_at": "2026-05-24T15:30:00Z"
+    },
+    {
+      "id": "api-003",
+      "symbol": "",
+      "headline": "Malformed item",
+      "summary": "This item is missing a symbol and should not enter the clean layer.",
+      "source_url": "https://example.com/api/malformed",
+      "published_at": "2026-05-24T16:00:00Z"
+    }
+  ]
+}
