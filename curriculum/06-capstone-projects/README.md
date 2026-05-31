@@ -98,7 +98,7 @@ This shows APIs, prompting, data pipelines, RAG, tools/workflows, evaluation, de
 | Week | Folder | Learner deliverable | Verification |
 | --- | --- | --- | --- |
 | Week 1 | `week-01-build` | FinAgent capstone scope, deterministic eval cases, and portfolio evidence ledger | `python -m pytest curriculum/06-capstone-projects/week-01-build/tests -v` |
-| Week 2 | `week-02-polish` | Demo, limitation note, release evidence, and interview defense | planned scaffold |
+| Week 2 | `week-02-polish` | Demo, limitation note, release evidence, and interview defense | `python -m pytest curriculum/06-capstone-projects/week-02-polish/tests -v` |
 
 ### Week 2: Harden and Present
 

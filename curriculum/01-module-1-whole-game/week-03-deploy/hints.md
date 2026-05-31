@@ -1,17 +1,43 @@
 # Hints: Local FinAgent Request Boundary
 
-## Hint 1
+Use these only after you have read the failing test and identified the request-boundary behavior it expects.
 
-Keep validation separate from analysis. A function that receives arbitrary request data should not also calculate the stock movement.
+The hints are layered. Start with Layer 1. Move to Layer 2 only when you are stuck. Use Layer 3 when individual helpers pass but the response contract fails.
 
-## Hint 2
+## Layer 1
 
-Normalize the ticker by stripping whitespace and uppercasing it. Use the same simple rule as earlier lessons: 1-5 alphabetic characters.
+Separate boundary work from analysis work. A request handler receives messy outside data; the analyzer should receive clean, trusted values.
 
-## Hint 3
+Before editing, answer:
 
-The response should be a dictionary because dictionaries map naturally to JSON responses later.
+- Is this test about validation, analysis, response shape, or trace metadata?
+- What input is allowed to reach the stock-summary logic?
+- What should happen when request data is missing or malformed?
 
-## Hint 4
+## Layer 2
 
-Trace metadata can be simple. Include enough information to answer: what operation ran, what source was used, and whether the result succeeded.
+### Validation Boundary
+
+Normalize the ticker before checking it. Use the same simple ticker rule from earlier lessons so the deploy boundary agrees with the local FinAgent.
+
+Validation should produce a clear refusal or error shape. Do not let invalid input drift into the calculation layer.
+
+### Response Shape
+
+Return a dictionary because this boundary is preparing learners for JSON responses. Keep keys stable so later tests and clients can rely on them.
+
+Trace metadata can be simple. It should answer what operation ran, what source was used, and whether the result succeeded.
+
+## Layer 3
+
+### Reading The Tests
+
+If a valid request fails, compare the cleaned values sent into the analyzer with the raw request values.
+
+If an invalid request fails, check whether the code refused early enough.
+
+If a trace assertion fails, add only the missing diagnostic fact instead of rewriting the main response.
+
+### Final Check
+
+Run validation tests first, then response-shape tests. The boundary is done when clean requests succeed and malformed requests never reach analysis.

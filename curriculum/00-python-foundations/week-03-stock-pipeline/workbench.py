@@ -97,8 +97,9 @@ def calculate_metrics(grouped: dict[str, list[StockPrice]]) -> dict[str, dict[st
 
 def stream_summary_lines(metrics: dict[str, dict[str, float]]):
     """Yield one human-readable summary line per ticker."""
-    # TODO: yield lines like:
-    # "AAPL: last close 192.00, change 1.05%, 2-day average 192.90"
+    # TODO: yield one line per ticker with:
+    # ticker, last close to 2 decimals, change percent to 2 decimals,
+    # and latest 2-day average to 2 decimals.
     if False:
         yield ""
 
@@ -114,4 +115,3 @@ def render_report(report: PipelineReport) -> str:
     # TODO: include a title, all summary lines, ticker count, and disclaimer.
     # The disclaimer must include the phrase "not financial advice".
     return ""
-

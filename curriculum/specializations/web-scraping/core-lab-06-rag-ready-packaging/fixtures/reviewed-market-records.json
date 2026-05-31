@@ -1,0 +1,44 @@
+{
+  "records": [
+    {
+      "record_id": "listing-001",
+      "title": "Cloud Revenue Watch",
+      "summary": "Cloud vendors report steady enterprise demand while finance teams compare platform commitments.",
+      "source_url": "https://example.com/research/cloud-revenue",
+      "source_heading": "Market Context Directory",
+      "collected_at": "2026-05-25T10:00:00Z",
+      "extraction_assumption": "Fixture card title and summary are treated as reviewable source context.",
+      "quality_status": "passed"
+    },
+    {
+      "record_id": "listing-002",
+      "title": "Semiconductor Supply Notes",
+      "summary": "Analysts track shipment constraints, inventory signals, and lead-time changes across chip suppliers.",
+      "source_url": "https://example.com/research/semiconductor-supply",
+      "source_heading": "Market Context Directory",
+      "collected_at": "2026-05-25T10:00:00Z",
+      "extraction_assumption": "Fixture card title and summary are treated as reviewable source context.",
+      "quality_status": "passed"
+    },
+    {
+      "record_id": "listing-003",
+      "title": "Edge AI Device Roundup",
+      "summary": "Device makers publish local inference benchmarks and explain deployment limits for smaller models.",
+      "source_url": "https://example.com/research/edge-ai-devices",
+      "source_heading": "Market Context Directory",
+      "collected_at": "2026-05-25T10:00:00Z",
+      "extraction_assumption": "Fixture card title and summary are treated as reviewable source context.",
+      "quality_status": "passed"
+    },
+    {
+      "record_id": "listing-004",
+      "title": "Model Risk Controls",
+      "summary": "Governance teams compare review checklists for generated research.",
+      "source_url": "https://example.com/research/model-risk-controls",
+      "source_heading": "",
+      "collected_at": "2026-05-25T10:00:00Z",
+      "extraction_assumption": "",
+      "quality_status": "blocked_missing_provenance"
+    }
+  ]
+}

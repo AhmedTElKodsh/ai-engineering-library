@@ -77,10 +77,22 @@ By the end of this module, you should be able to:
 
 From `curriculum/00-python-foundations`:
 
+Required first:
+
 ```powershell
 python -m pytest week-00-diagnostic -v
 python -m pytest week-01-python-essentials -v
+```
+
+After Module 1:
+
+```powershell
 python -m pytest week-03-stock-pipeline/tests -v
+```
+
+Optional repair and extension:
+
+```powershell
 python -m pytest week-02-production-python -v
 python -m pytest extensions/ai-client-simulator/ai_client -v
 ```

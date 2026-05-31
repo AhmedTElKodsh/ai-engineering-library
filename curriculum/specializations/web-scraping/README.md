@@ -72,6 +72,8 @@ Learner output:
 - apply timeouts, retries, and rate limits
 - deduplicate by normalized URL and content hash
 
+Status: learner scaffold available in `core-lab-04-pagination-retries-deduplication/`.
+
 ### Core Lab 5: Provenance and Data Quality
 
 Make the dataset reviewable.
@@ -82,6 +84,8 @@ Learner output:
 - data-quality report
 - tests for broken selectors, duplicate rows, stale data, and failed requests
 
+Status: learner scaffold available in `core-lab-05-provenance-data-quality/`.
+
 ### Core Lab 6: RAG-Ready Packaging
 
 Convert cleaned pages or records into chunks for downstream retrieval.
@@ -91,6 +95,8 @@ Learner output:
 - chunk text with source metadata
 - preserve citation fields
 - explain what should be refused, flagged, or marked uncertain
+
+Status: learner scaffold available in `core-lab-06-rag-ready-packaging/`.
 
 ## Required Portfolio Mini-Project
 

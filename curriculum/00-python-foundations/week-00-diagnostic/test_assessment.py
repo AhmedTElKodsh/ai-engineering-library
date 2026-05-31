@@ -162,7 +162,7 @@ def test_even_squares():
     assert result == [4, 16], (
         "even_squares([1,2,3,4,5]) should square only even numbers. "
         f"Expected [4, 16], got {result}. "
-        "Hint: [x**2 for x in numbers if x % 2 == 0]"
+        "Hint: filter the even numbers first, then square the values you kept"
     )
 
 

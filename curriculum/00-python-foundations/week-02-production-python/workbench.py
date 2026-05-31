@@ -75,6 +75,8 @@ def validate_llm_config(config: dict) -> dict:
     AI use: Pydantic does this automatically in Week 1, but understanding
             the manual version makes you a better schema designer.
     """
+    if not isinstance(config, dict):
+        raise ValidationError("config", "must be a dictionary")
     pass  # YOUR CODE HERE
 
 

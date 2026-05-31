@@ -1,48 +1,55 @@
 # Hints: Market Text Tokenization Lab
 
-## Hint 1: Bytes First
+Use these only after you have read the failing test and found the tokenizer function it names.
 
-Python strings have an `.encode("utf-8")` method. The result can be converted into a list of integers.
+The hints are layered. Start with Layer 1. Move to Layer 2 only when you are stuck. Use Layer 3 when you understand the concept but the exact behavior still fails.
 
-## Hint 2: Decode Is The Reverse
+## Layer 1
 
-If you have integer byte values, `bytes(byte_values).decode("utf-8")` reconstructs the text when the byte sequence is valid UTF-8.
+Follow the tokenizer in small stages: text to bytes, bytes back to text, pair counting, merging, vocabulary growth, and token-budget estimation.
 
-## Hint 3: Pair Counting
+Before editing, answer:
 
-Use a loop over indexes:
+- Is the test about representing text, counting adjacent pairs, merging pairs, or tracking vocabulary?
+- Does the function need to preserve order?
+- What should happen when two choices have the same score or count?
 
-```python
-for index in range(len(tokens) - 1):
-    pair = (tokens[index], tokens[index + 1])
-```
+## Layer 2
 
-Then increment a dictionary count.
+### Bytes And Text
 
-## Hint 4: Non-Overlapping Merges
+Encoding turns text into byte values. Decoding reverses that process when the byte sequence is valid.
 
-When you merge a pair, move forward by two positions. When you do not merge, copy the current token and move forward by one.
+Keep the output type exactly what the test expects. A list of byte integers, a string, and a vocabulary entry are different contracts.
 
-## Hint 5: Training BPE
+### Pair Counting And Merging
 
-Start the vocabulary with every byte:
+Pair counting looks at adjacent tokens. The last token has no token after it, so it does not start a pair.
 
-```python
-vocabulary = {i: (i,) for i in range(256)}
-```
+Merging should be non-overlapping. After a pair is merged, the next scan position should move past both tokens in that pair.
 
-Each new token ID should start at `256`.
+### Training BPE
 
-## Hint 6: Choosing The Pair
+Start with byte-level vocabulary before adding learned merge tokens. Each new token should receive a stable new ID.
 
-Pick the pair with the highest count. If two pairs tie, choose the lexicographically smaller pair so tests and learners get deterministic behavior.
+When counts tie, choose deterministically so repeated runs produce the same tokenizer.
 
-## Hint 7: Vocabulary Entries
+Vocabulary entries should represent the underlying byte sequence, even when the merge includes a token that was itself created earlier.
 
-When `(65, 65)` becomes token `256`, the new vocabulary entry should be `(65, 65)`.
+### Token Budget
 
-When `(256, 80)` becomes token `257`, expand the existing entry for `256`, then append the bytes for `80`, producing `(65, 65, 80)`.
+Token-budget estimation does not need to summarize the text. It only needs to encode each snippet and count the resulting token IDs.
 
-## Hint 8: Token Budget
+## Layer 3
 
-`estimate_token_budget` does not need to summarize text. It only needs to encode each snippet and count the token IDs.
+### Reading The Tests
+
+If pair counts are off by one, check the scan range and the final token.
+
+If merge output is too short or too long, check whether overlapping pairs were merged by accident.
+
+If a vocabulary entry is wrong, expand any learned token back to its byte sequence before combining it with the new pair.
+
+### Final Check
+
+Run pair-counting and merge tests before training tests. The training path depends on those smaller behaviors being stable.

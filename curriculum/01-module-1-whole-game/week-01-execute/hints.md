@@ -1,35 +1,49 @@
 # Hints: First FinAgent Stock Summary
 
-Use one hint at a time.
+Use these only after you have read the failing test and found the function it names.
 
-## Hint 1: Prices
+The hints are layered. Start with Layer 1. Move to Layer 2 only when you are stuck. Use Layer 3 when the behavior is clear but the final summary still fails.
 
-`parse_price` should clean the string before converting it. Think about whitespace and a leading `$`.
+## Layer 1
 
-## Hint 2: Invalid Prices
+Treat this lab as a tiny FinAgent pipeline: parse prices, calculate movement, validate ticker, then assemble a safe educational summary.
 
-A price of `0` is numeric, but it is not valid for this lesson. Raise `ValueError` when the final number is less than or equal to zero.
+Before editing, answer:
 
-## Hint 3: Percentage Change
+- Is the failure about input cleanup, numeric calculation, label selection, or summary wording?
+- Should bad input raise an exception or become part of a safe response?
+- Which helper should own this behavior so it is not duplicated later?
 
-The formula is:
+## Layer 2
 
-```python
-((current_price - previous_close) / previous_close) * 100
-```
+### Price Parsing
 
-## Hint 4: Movement Labels
+Clean the price text before converting it. Think about whitespace and a leading currency marker.
 
-Use the thresholds from the docstring:
+A numeric value can still be invalid for this lesson. Prices at or below zero should not continue into movement calculations.
 
-- `>= 1.0`: up
-- `<= -1.0`: down
-- otherwise: flat
+### Movement Calculation
 
-## Hint 5: Ticker Validation
+Percentage change compares the difference between current and previous prices against the previous price. The sign matters because it drives the movement label.
 
-Normalize first with `strip().upper()`. Then check length and whether every character is alphabetic.
+Use the threshold rules from the docstring. Values near the boundary are the cases most likely to reveal an off-by-one style mistake.
 
-## Hint 6: Summary
+### Ticker And Summary
 
-The tests look for the ticker, the movement word, a percentage rounded to two decimals, the source, and the phrase `not financial advice`.
+Normalize the ticker before validating it. The lesson uses a small uppercase alphabetic ticker, not arbitrary symbols.
+
+The final summary should include the core facts a reader needs and the educational disclaimer. Keep it factual, not advisory.
+
+## Layer 3
+
+### Reading The Tests
+
+If a test checks rounded text, first confirm the raw number is correct, then inspect formatting.
+
+If a test expects `ValueError`, do not return a fallback price or ticker.
+
+If the summary test fails, list the required words and facts from the assertion before rewriting the whole sentence.
+
+### Final Check
+
+After each helper passes, run the full Week 01 module test so the summary uses the same behavior as the lower-level functions.

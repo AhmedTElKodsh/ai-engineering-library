@@ -47,7 +47,7 @@ They produce a decision note with quality, cost, latency, data, safety, and main
 | Week | Folder | Learner deliverable | Verification |
 | --- | --- | --- | --- |
 | Week 1 | `week-01-golden-datasets` | Golden examples, edge cases, eval objective, and summary report | `python -m pytest curriculum/05-module-5-production/week-01-golden-datasets/tests -v` |
-| Week 2 | `week-02-cicd` | Prompt/model/index version notes plus unit/eval smoke gate and CI-style command checklist | planned scaffold |
+| Week 2 | `week-02-cicd` | Prompt/model/index version notes plus unit/eval smoke gate and CI-style command checklist | `python -m pytest curriculum/05-module-5-production/week-02-cicd/tests -v` |
 | Week 3 | `week-03-fastapi` | Local service boundary with health and error responses | planned scaffold |
 | Week 4 | `week-04-docker` | Reproducible local package or container run path | planned scaffold |
 | Week 5 | `week-05-monitoring` | Structured logs, traces, failure categories, and review loop | planned scaffold |

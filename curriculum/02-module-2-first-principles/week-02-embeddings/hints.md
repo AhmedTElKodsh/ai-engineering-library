@@ -1,62 +1,55 @@
 # Hints: Market Note Similarity Search Lab
 
-## Hint 1: Normalize Terms
+Use these only after you have read the failing test and identified the retrieval stage it exercises.
 
-Use a regular expression to find words:
+The hints are layered. Start with Layer 1. Move to Layer 2 only when you are stuck. Use Layer 3 when the search result looks close but not quite right.
 
-```python
-re.findall(r"[a-z0-9]+", text.lower())
-```
+## Layer 1
 
-This keeps the tokenizer simple and deterministic.
+Build the search system in order: normalize terms, build vocabulary, vectorize notes, score similarity, store the index, then format grounded context.
 
-## Hint 2: Vocabulary
+Before editing, answer:
 
-Collect terms in a set, then sort it:
+- Is this test about text normalization, vector shape, ranking, filtering, or citation context?
+- Does the expected output depend on stable ordering?
+- What metadata must survive from the original note?
 
-```python
-sorted(unique_terms)
-```
+## Layer 2
 
-The sorted order keeps vector positions stable.
+### Normalization And Vocabulary
 
-## Hint 3: Vectorize
+Normalize terms in a simple deterministic way: lowercase text and keep word-like pieces. Avoid smart linguistic behavior that the tests did not ask for.
 
-Count terms first, then build the vector in vocabulary order. If a vocabulary word does not appear, its value should be `0.0`.
+Collect unique terms, then put them in stable order. Vector positions only make sense when every note uses the same vocabulary order.
 
-## Hint 4: Cosine Similarity
+### Vectorization And Similarity
 
-The formula is:
+Vectorization counts terms in vocabulary order. Missing terms should contribute zero instead of changing vector length.
 
-```text
-dot(left, right) / (magnitude(left) * magnitude(right))
-```
+Cosine similarity compares direction, not raw size. If either vector has no magnitude, the safest score is zero.
 
-Return `0.0` if either magnitude is zero.
+### Index And Search
 
-## Hint 5: Build The Index
+The index should keep the vocabulary, original notes, and one vector per note together. All vectors must match the vocabulary length.
 
-The index stores three things together:
+Search should keep enough information to break ties deterministically and map a score back to the original note.
 
-- the vocabulary
-- the original notes
-- one vector per note
+Only positive matches should appear in the tiny search result. A zero score means this toy model found no shared terms.
 
-Every vector must have the same length as the vocabulary.
+### Grounded Context
 
-## Hint 6: Search
+Grounded context should include source identity, ticker, score, and original note text. This prepares the learner for later citation-aware RAG.
 
-Use `enumerate` so you keep the original document order for tie-breaking.
+## Layer 3
 
-Only return results with a positive score. A zero score means the query and document had no shared terms in this tiny model.
+### Reading The Tests
 
-## Hint 7: Grounded Context
+If vector lengths differ, inspect vocabulary construction before search ranking.
 
-A useful context line includes:
+If ranking is unstable, check tie-breaking and original note order.
 
-- source note ID
-- ticker
-- score rounded to two decimals
-- original note text
+If context text fails, list the required fields before changing score logic.
 
-This prepares learners for later RAG and citation work.
+### Final Check
+
+Run normalization and vector tests before search tests. Retrieval bugs are easier to diagnose when the earlier stages are already trustworthy.

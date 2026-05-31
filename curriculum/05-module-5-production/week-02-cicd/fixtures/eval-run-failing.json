@@ -1,0 +1,10 @@
+{
+  "run_id": "eval-2026-05-25-failing",
+  "total": 5,
+  "passed": 3,
+  "failed": 2,
+  "failure_categories": {
+    "missing_citation": 1,
+    "wrong_abstention": 1
+  }
+}

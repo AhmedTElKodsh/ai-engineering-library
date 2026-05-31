@@ -1,64 +1,51 @@
 # Hints: Market Context Attention Lab
 
-## Hint 1: Dot Product
+Use these only after you have read the failing test and found the attention helper it names.
 
-Check vector lengths before calculating. A dot product only makes sense when both vectors use the same dimensions.
+The hints are layered. Start with Layer 1. Move to Layer 2 only when you are stuck. Use Layer 3 when the math is close but the expected values differ.
 
-## Hint 2: Scaling
+## Layer 1
 
-Use:
+Think of attention as four steps: compare the query with each key, scale the scores, convert scores into weights, then mix the value vectors using those weights.
 
-```python
-math.sqrt(dimension)
-```
+Before editing, answer:
 
-Reject `dimension <= 0` so the function fails loudly instead of hiding bad data.
+- Which step is the test isolating?
+- Do the input vectors have compatible shapes?
+- Is the expected output a scalar, a list of weights, a vector, or a short explanation?
 
-## Hint 3: Stable Softmax
+## Layer 2
 
-Subtract the largest score before exponentiating:
+### Dot Product And Scaling
 
-```python
-largest = max(scores)
-exps = [math.exp(score - largest) for score in scores]
-```
+A dot product only makes sense when both vectors use the same number of dimensions. Reject mismatched shapes before calculating.
 
-Then divide each exponent by the total.
+Scaling uses the vector dimension to keep scores from growing too large. Invalid dimensions should fail loudly.
 
-## Hint 4: Weighted Sum
+### Stable Softmax
 
-If values are:
+Softmax should turn any list of scores into weights that add up to one. For numerical stability, reason about scores relative to the largest score rather than their raw size.
 
-```python
-[[4.0, 0.0], [0.0, 8.0]]
-```
+### Weighted Sum
 
-and weights are:
+Weighted sum combines each value vector according to its attention weight. Each output dimension is built from the same dimension across all value vectors.
 
-```python
-[0.25, 0.75]
-```
+### Attention Result
 
-the output is:
+The query must align with every key. Keys, values, and sources should all have the same number of rows so scores, context, and source labels stay connected.
 
-```python
-[1.0, 6.0]
-```
+The most-attended source is the source at the same position as the largest attention weight.
 
-## Hint 5: Attention Input Alignment
+## Layer 3
 
-`keys`, `values`, and `sources` should have the same number of rows. The query length should match every key length.
+### Reading The Tests
 
-## Hint 6: Most Attended Source
+If weights do not add up to one, inspect softmax before weighted sum.
 
-Find the index of the largest weight, then return the source at the same index.
+If the context vector has the wrong length, inspect value-vector shape.
 
-## Hint 7: Explanation
+If the explanation fails, include diagnostic facts only: source ID, ticker, and attention weight. Do not turn it into advice.
 
-The explanation should be short and diagnostic. It is not an investment recommendation.
+### Final Check
 
-Include:
-
-- source ID
-- ticker
-- attention weight rounded to two decimals
+Run shape-validation tests before numeric tests. Then run the full attention lab so the explanation is grounded in the same weights as the calculation.

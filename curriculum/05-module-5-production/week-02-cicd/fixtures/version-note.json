@@ -1,0 +1,6 @@
+{
+  "prompt_version": "finagent-rag-prompt-v3",
+  "model_version": "mock-llm-2026-05",
+  "index_version": "webdata-index-v2",
+  "dataset_version": "golden-eval-v1"
+}

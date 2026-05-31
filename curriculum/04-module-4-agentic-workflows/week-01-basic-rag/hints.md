@@ -1,22 +1,49 @@
 # Hints: AI-Ready Ingestion And Chunking Lab
 
-## Hint 1: Clean Text Before Chunking
+Use these only after you have read the failing test and identified the ingestion stage it targets.
 
-Chunking messy text spreads the mess into every retrieval result. Make `normalize_text` boring and deterministic before touching chunks.
+The hints are layered. Start with Layer 1. Move to Layer 2 only when you are stuck. Use Layer 3 when clean records exist but chunks or reports still fail.
 
-## Hint 2: Preserve Provenance
+## Layer 1
 
-Every clean record and chunk should keep `record_id`, `source_id`, `title`, and `collected_at`. A later citation cannot recover metadata that this pipeline dropped.
+Keep the first path local and evidence-first: fixture record, normalized record, failed record, chunk, and report.
 
-## Hint 3: Report Bad Records
+Before editing, answer:
 
-Do not crash the whole pipeline because one fixture is incomplete. Put the rejected record in `failed_records` with a short reason such as `missing_body`.
+- Is this test about cleaning text, preserving provenance, rejecting bad records, chunking, or reporting?
+- Which metadata must survive every stage?
+- Should this record become a clean record or a failed record?
 
-## Hint 4: Chunk Simply
+## Layer 2
 
-Use word windows first. You are not optimizing retrieval yet; you are proving that source-grounded chunks can be produced and inspected.
+### Cleaning And Provenance
 
-## Hint 5: Keep The First Path Local
+Normalize text before chunking. Chunking messy text spreads the mess into every retrieval result.
 
-No LLM, vector database, web request, or LangGraph node belongs in this phase. Fixture-first evidence is the point.
+Every clean record and chunk should keep source identity fields such as record ID, source ID, title, and collection timestamp. Later citations cannot recover metadata that was dropped.
 
+### Failed Records
+
+Do not crash the whole pipeline because one fixture is incomplete. Put rejected records in the failed-record collection with a short reason.
+
+Failure reasons should be stable enough for tests and reviewers to understand what happened.
+
+### Chunking And Scope
+
+Use simple word windows first. This lab proves source-grounded chunks can be produced and inspected; it is not optimizing retrieval yet.
+
+No live LLM, vector database, web request, or graph runtime belongs in this phase.
+
+## Layer 3
+
+### Reading The Tests
+
+If chunk metadata is missing, inspect the transition from clean record to chunk.
+
+If failed-record counts are wrong, classify each fixture record before changing chunking.
+
+If report text fails, list the required quality facts before rewriting the pipeline.
+
+### Final Check
+
+Run cleaning tests before chunking tests. The chunker should only consume records that already passed validation.

@@ -61,14 +61,14 @@ The folder names stay stable for tests and links. The learner-facing titles belo
 | Required bridge | `../specializations/web-scraping/core-lab-03-api-first-collection` | API-First Collection Lab | Prefer stable JSON payloads, validate records, and preserve raw/clean/failed layers | `python -m pytest curriculum/specializations/web-scraping/core-lab-03-api-first-collection/tests -v` |
 | Phase 1 | `week-01-basic-rag` | AI-Ready Ingestion And Chunking Lab | Build raw, clean, failed, and chunked source layers with provenance metadata | `python -m pytest curriculum/04-module-4-agentic-workflows/week-01-basic-rag/tests -v` |
 | Phase 2 | `week-02-advanced-rag` | Citation And Abstention RAG Lab | Add retrieval, citation checks, and abstention behavior over bridge/Phase 1 chunks | `python -m pytest curriculum/04-module-4-agentic-workflows/week-02-advanced-rag/tests -v` |
-| Phase 3 | `week-03-core-patterns` | Explicit Workflow Pattern Lab | Build prompt chaining, routing, and tool-use workflows with gates | planned scaffold |
+| Phase 3 | `week-03-core-patterns` | Explicit Workflow Pattern Lab | Build prompt chaining, routing, and tool-use workflows with gates | `python -m pytest curriculum/04-module-4-agentic-workflows/week-03-core-patterns/tests -v` |
 | Phase 4 | `week-04-advanced-patterns` | Critique And Review Loop Lab | Add reflection, critique, retry, and human-review checkpoints | planned scaffold |
 | Phase 5 | `week-05-langgraph-state` | Framework State Machine Lab | Rebuild one explicit loop with framework-managed state after the plain-Python version works | planned scaffold |
 | Phase 6 | `week-06-advanced-orchestration` | Resumable Orchestration Lab | Add error recovery, bounded loops, and resumable workflow state | planned scaffold |
 | Phase 7 | `week-07-collaboration` | Multi-Role Review Workflow Lab | Build a multi-role review or collaboration workflow with clear ownership | planned scaffold |
 | Phase 8 | `week-08-production-multi-agent` | Production Multi-Agent Boundaries Lab | Build a small multi-agent system with traceable decisions and stop conditions | planned scaffold |
 
-Phase 1, Phase 2, and the first three required web-data bridge labs now include learner scaffolds. Tests are expected to fail before learners complete the TODOs in `workbench.py`.
+Phase 1, Phase 2, Phase 3, and all six required web-data bridge labs now include learner scaffolds. Tests are expected to fail before learners complete the TODOs in `workbench.py`.
 
 ## Teaching Contract
 

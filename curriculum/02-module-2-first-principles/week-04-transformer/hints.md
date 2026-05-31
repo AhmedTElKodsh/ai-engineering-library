@@ -1,66 +1,53 @@
 # Hints: Tiny Transformer Block Lab
 
-## Hint 1: Vector Addition
+Use these only after you have read the failing test and identified the transformer-block stage it exercises.
 
-Check lengths first. Residual connections only work when both vectors use the same dimensions.
+The hints are layered. Start with Layer 1. Move to Layer 2 only when you are stuck. Use Layer 3 when the shape is right but the trace or values still fail.
 
-## Hint 2: Layer Normalization
+## Layer 1
 
-Compute the mean, then the variance:
+Follow the transformer block as a sequence: embeddings, self-attention, residual addition, normalization, feed-forward projection, and trace reporting.
 
-```python
-mean = sum(vector) / len(vector)
-variance = sum((value - mean) ** 2 for value in vector) / len(vector)
-```
+Before editing, answer:
 
-If the variance is zero, returning zeros is a stable and easy-to-inspect behavior.
+- Is the failure about vector shape, value calculation, ordering, or trace metadata?
+- Which stage receives the output of the previous stage?
+- Should empty input return an empty result or raise?
 
-## Hint 3: Embeddings
+## Layer 2
 
-Preserve token order. If the input IDs are `[30, 10, 20]`, the output vectors should follow that same order.
+### Vectors And Embeddings
 
-Return copies of vectors so later code does not accidentally mutate the embedding table.
+Residual addition requires equal-length vectors. Check shape before combining values.
 
-## Hint 4: Projection
+Layer normalization should center and scale a vector in a stable way. If every value is identical, choose a deterministic safe output rather than dividing by zero.
 
-Treat each matrix row as one output dimension:
+Embedding lookup should preserve token order. Return independent vector values so later stages cannot accidentally mutate the embedding table.
 
-```text
-output[0] = input dot matrix[0]
-output[1] = input dot matrix[1]
-```
+### Projection And Attention
 
-Every row must have the same length as the input vector.
+Projection treats each matrix row as one output dimension. Each row must be compatible with the input vector length.
 
-## Hint 5: Self-Attention
+Self-attention reuses the same pattern from the attention lab: score each key for a query, scale, normalize into weights, then mix values. Run that process once per token position.
 
-Use the same shape from Phase 3:
+Feed-forward work should compose smaller helpers rather than duplicating vector math.
 
-```text
-score = query dot key
-scaled_score = score / sqrt(vector_size)
-weights = softmax(scaled_scores)
-context = weighted_sum(weights, values)
-```
+### Trace And Empty Input
 
-Run that once for each query vector in the sequence.
+The trace should make debugging possible without guessing. Include enough shape and stage information to see where a value changed.
 
-## Hint 6: Feed-Forward
+Empty input should produce empty outputs and trace fields that clearly show zero rows.
 
-Start by projecting the vector. Then add the bias with `add_vectors`.
+## Layer 3
 
-## Hint 7: Transformer Trace
+### Reading The Tests
 
-The trace should help you debug without guessing. Useful fields include:
+If a shape assertion fails, inspect the stage immediately before that shape is recorded.
 
-- `token_ids`
-- `embedding_shape`
-- `attention_weights`
-- `attention_shape`
-- `residual_vectors`
-- `normalized_vectors`
-- `output_shape`
+If attention values fail, run the attention-helper tests first.
 
-## Hint 8: Empty Input
+If trace output fails, add the missing diagnostic field without changing the model calculation.
 
-An empty token sequence should not crash. Return empty outputs and trace shapes that clearly say there were zero rows.
+### Final Check
+
+Verify helper functions first, then the full transformer trace. Most full-block failures come from one earlier vector helper.

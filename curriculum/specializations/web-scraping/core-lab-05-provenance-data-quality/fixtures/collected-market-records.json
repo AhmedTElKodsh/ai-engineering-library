@@ -1,0 +1,58 @@
+{
+  "records": [
+    {
+      "record_id": "listing-001",
+      "title": "Cloud Revenue Watch",
+      "summary": "Cloud vendors report steady enterprise demand.",
+      "source_url": "https://example.com/research/cloud-revenue",
+      "source_heading": "Market Context Directory",
+      "collected_at": "2026-05-25T10:00:00Z",
+      "extraction_assumption": "Fixture card title and summary are treated as reviewable source context."
+    },
+    {
+      "record_id": "listing-002",
+      "title": "Semiconductor Supply Notes",
+      "summary": "Analysts track shipment constraints and inventory signals.",
+      "source_url": "https://example.com/research/semiconductor-supply",
+      "source_heading": "Market Context Directory",
+      "collected_at": "2026-05-25T10:00:00Z",
+      "extraction_assumption": "Fixture card title and summary are treated as reviewable source context."
+    },
+    {
+      "record_id": "listing-002-copy",
+      "title": "Semiconductor Supply Notes",
+      "summary": "Analysts track shipment constraints and inventory signals.",
+      "source_url": "https://example.com/research/semiconductor-supply",
+      "source_heading": "Market Context Directory",
+      "collected_at": "2026-05-25T10:00:00Z",
+      "extraction_assumption": "Fixture card title and summary are treated as reviewable source context."
+    },
+    {
+      "record_id": "listing-003",
+      "title": "Edge AI Device Roundup",
+      "summary": "Device makers publish new local inference benchmarks.",
+      "source_url": "https://example.com/research/edge-ai-devices",
+      "source_heading": "Market Context Directory",
+      "collected_at": "2026-04-01T10:00:00Z",
+      "extraction_assumption": "Fixture card title and summary are treated as reviewable source context."
+    },
+    {
+      "record_id": "listing-004",
+      "title": "Model Risk Controls",
+      "summary": "Governance teams compare review checklists for generated research.",
+      "source_url": "https://example.com/research/model-risk-controls",
+      "source_heading": "",
+      "collected_at": "2026-05-25T10:00:00Z",
+      "extraction_assumption": ""
+    },
+    {
+      "record_id": "listing-005",
+      "title": "Tiny Note",
+      "summary": "Short.",
+      "source_url": "https://example.com/research/tiny-note",
+      "source_heading": "Market Context Directory",
+      "collected_at": "2026-05-25T10:00:00Z",
+      "extraction_assumption": "Fixture card title and summary are treated as reviewable source context."
+    }
+  ]
+}

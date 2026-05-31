@@ -758,3 +758,173 @@ Revised next implementation order:
 2. Add Module 4 Phase 3 explicit workflow pattern lab after citation/abstention behavior is in place.
 3. Add Module 5 Week 2 CI-style regression gate over the golden eval scaffold.
 4. Add Module 6 Week 2 polish scaffold with demo, limitation note, release evidence, and interview defense.
+
+## Implementation Update: Web Data Core Lab 4
+
+Added the next required Web Data Acquisition core lab:
+
+- `curriculum/specializations/web-scraping/core-lab-04-pagination-retries-deduplication/README.md`
+- `curriculum/specializations/web-scraping/core-lab-04-pagination-retries-deduplication/workbench.py`
+- `curriculum/specializations/web-scraping/core-lab-04-pagination-retries-deduplication/tests/test_pagination_retries_deduplication.py`
+- `curriculum/specializations/web-scraping/core-lab-04-pagination-retries-deduplication/fixtures/market-listings-page-1.html`
+- `curriculum/specializations/web-scraping/core-lab-04-pagination-retries-deduplication/fixtures/market-listings-page-2.html`
+- `curriculum/specializations/web-scraping/core-lab-04-pagination-retries-deduplication/hints.md`
+- `curriculum/specializations/web-scraping/core-lab-04-pagination-retries-deduplication/rubric.md`
+- `curriculum/specializations/web-scraping/core-lab-04-pagination-retries-deduplication/AUTHORING_PLAN.md`
+- `implementation-notes/web-data-core-lab-4-reference.md`
+
+The lab keeps pagination fixture-first and bounded: next-page discovery, page-level provenance, normalized source URLs, content hashes, duplicate removal, timeout/retry/delay planning, and collection reporting. It does not add live network requests yet.
+
+Verification:
+
+- `python -m pytest curriculum/specializations/web-scraping/core-lab-04-pagination-retries-deduplication/tests -v`
+- Result: 7 tests collected; 6 expected learner-workbench failures and 1 passing stop-condition test. Collection and imports succeed; failures point to TODO behavior in `workbench.py`.
+
+Revised next implementation order:
+
+1. Add Web Data Core Lab 5 provenance and data-quality reporting.
+2. Add Web Data Core Lab 6 RAG-ready packaging over clean web records.
+3. Add Module 4 Phase 3 explicit workflow pattern lab after citation/abstention behavior is in place.
+4. Add Module 5 Week 2 CI-style regression gate over the golden eval scaffold.
+
+## Implementation Update: Web Data Core Lab 5
+
+Added the next required Web Data Acquisition core lab:
+
+- `curriculum/specializations/web-scraping/core-lab-05-provenance-data-quality/README.md`
+- `curriculum/specializations/web-scraping/core-lab-05-provenance-data-quality/workbench.py`
+- `curriculum/specializations/web-scraping/core-lab-05-provenance-data-quality/tests/test_provenance_data_quality.py`
+- `curriculum/specializations/web-scraping/core-lab-05-provenance-data-quality/fixtures/collected-market-records.json`
+- `curriculum/specializations/web-scraping/core-lab-05-provenance-data-quality/hints.md`
+- `curriculum/specializations/web-scraping/core-lab-05-provenance-data-quality/rubric.md`
+- `curriculum/specializations/web-scraping/core-lab-05-provenance-data-quality/AUTHORING_PLAN.md`
+- `implementation-notes/web-data-core-lab-5-reference.md`
+
+The lab makes web-collected records reviewable before RAG packaging: normalized source records, provenance table, duplicate/stale/missing-provenance/weak-summary issue detection, and a quality report with a `ready_for_rag` gate.
+
+Verification:
+
+- `python -m pytest curriculum/specializations/web-scraping/core-lab-05-provenance-data-quality/tests -v`
+- Result: 5 tests collected; 5 expected learner-workbench failures. Collection and imports succeed; failures point to TODO behavior in `workbench.py`.
+
+Revised next implementation order:
+
+1. Add Web Data Core Lab 6 RAG-ready packaging over clean web records.
+2. Add Module 4 Phase 3 explicit workflow pattern lab after citation/abstention behavior is in place.
+3. Add Module 5 Week 2 CI-style regression gate over the golden eval scaffold.
+4. Add Module 6 Week 2 polish scaffold with demo, limitation note, release evidence, and interview defense.
+
+## Implementation Update: Web Data Core Lab 6
+
+Added the final required Web Data Acquisition core lab:
+
+- `curriculum/specializations/web-scraping/core-lab-06-rag-ready-packaging/README.md`
+- `curriculum/specializations/web-scraping/core-lab-06-rag-ready-packaging/workbench.py`
+- `curriculum/specializations/web-scraping/core-lab-06-rag-ready-packaging/tests/test_rag_ready_packaging.py`
+- `curriculum/specializations/web-scraping/core-lab-06-rag-ready-packaging/fixtures/reviewed-market-records.json`
+- `curriculum/specializations/web-scraping/core-lab-06-rag-ready-packaging/hints.md`
+- `curriculum/specializations/web-scraping/core-lab-06-rag-ready-packaging/rubric.md`
+- `curriculum/specializations/web-scraping/core-lab-06-rag-ready-packaging/AUTHORING_PLAN.md`
+- `implementation-notes/web-data-core-lab-6-reference.md`
+
+The lab completes the web-data-to-RAG bridge: reviewed records become citation-ready chunks, blocked records stay out of retrieval, refusal rules make stale/missing-provenance/financial-advice boundaries explicit, and the package manifest gives Module 4 a reviewable input contract.
+
+Verification:
+
+- `python -m pytest curriculum/specializations/web-scraping/core-lab-06-rag-ready-packaging/tests -v`
+- Result: 5 tests collected; 5 expected learner-workbench failures. Collection and imports succeed; failures point to TODO behavior in `workbench.py`.
+
+Revised next implementation order:
+
+1. Add Module 4 Phase 3 explicit workflow pattern lab after citation/abstention behavior is in place.
+2. Add Module 5 Week 2 CI-style regression gate over the golden eval scaffold.
+3. Add Module 6 Week 2 polish scaffold with demo, limitation note, release evidence, and interview defense.
+4. Add a web-data portfolio mini-project that integrates Core Labs 1-6.
+
+## Implementation Update: Module 4 Phase 3
+
+Added the next learner-facing Module 4 chapter:
+
+- `curriculum/04-module-4-agentic-workflows/week-03-core-patterns/README.md`
+- `curriculum/04-module-4-agentic-workflows/week-03-core-patterns/workbench.py`
+- `curriculum/04-module-4-agentic-workflows/week-03-core-patterns/tests/test_explicit_workflow_patterns.py`
+- `curriculum/04-module-4-agentic-workflows/week-03-core-patterns/fixtures/workflow-cases.json`
+- `curriculum/04-module-4-agentic-workflows/week-03-core-patterns/hints.md`
+- `curriculum/04-module-4-agentic-workflows/week-03-core-patterns/rubric.md`
+- `curriculum/04-module-4-agentic-workflows/week-03-core-patterns/AUTHORING_PLAN.md`
+- `implementation-notes/module-4-week-03-explicit-workflow-reference.md`
+
+The lab keeps Phase 3 as an explicit workflow slice before autonomous agents: request routing, prompt-chain planning, deterministic evidence tool use, gate decisions, trace summaries, abstention when evidence is missing, and refusal for unsafe financial advice.
+
+Updated the Module 4 README so Phase 3 is listed as a scaffolded learner chapter and the status sentence reflects all six web-data bridge labs.
+
+Verification:
+
+- `python -m pytest curriculum/04-module-4-agentic-workflows/week-03-core-patterns/tests -v`
+- Result: 7 tests collected; 7 expected learner-workbench failures. Collection and imports succeed; failures point to TODO behavior in `workbench.py`.
+
+Revised next implementation order:
+
+1. Add Module 5 Week 2 CI-style regression gate over the golden eval scaffold.
+2. Add Module 6 Week 2 polish scaffold with demo, limitation note, release evidence, and interview defense.
+3. Add a web-data portfolio mini-project that integrates Core Labs 1-6.
+4. Add Module 4 Phase 4 critique and review loop after the explicit workflow pattern is in place.
+
+## Implementation Update: Module 5 Week 2
+
+Added the next learner-facing Module 5 chapter:
+
+- `curriculum/05-module-5-production/week-02-cicd/README.md`
+- `curriculum/05-module-5-production/week-02-cicd/workbench.py`
+- `curriculum/05-module-5-production/week-02-cicd/tests/test_ci_regression_gate.py`
+- `curriculum/05-module-5-production/week-02-cicd/fixtures/eval-run-passing.json`
+- `curriculum/05-module-5-production/week-02-cicd/fixtures/eval-run-failing.json`
+- `curriculum/05-module-5-production/week-02-cicd/fixtures/version-note.json`
+- `curriculum/05-module-5-production/week-02-cicd/hints.md`
+- `curriculum/05-module-5-production/week-02-cicd/rubric.md`
+- `curriculum/05-module-5-production/week-02-cicd/AUTHORING_PLAN.md`
+- `implementation-notes/module-5-week-02-ci-gate-reference.md`
+
+The lab turns Week 1 golden eval output into a local CI-style release gate: eval run fixtures, prompt/model/index/dataset version notes, pass-rate thresholding, failure-category visibility, rerunnable command checklist, and a gate report a teammate could inspect.
+
+Updated the Module 5 README so Week 2 is listed as a scaffolded learner chapter.
+
+Verification:
+
+- `python -m pytest curriculum/05-module-5-production/week-02-cicd/tests -v`
+- Result: 7 tests collected; 7 expected learner-workbench failures. Collection and imports succeed; failures point to TODO behavior in `workbench.py`.
+
+Revised next implementation order:
+
+1. Add Module 6 Week 2 polish scaffold with demo, limitation note, release evidence, and interview defense.
+2. Add a web-data portfolio mini-project that integrates Core Labs 1-6.
+3. Add Module 4 Phase 4 critique and review loop after the explicit workflow pattern is in place.
+4. Add Module 5 Week 3 local service boundary with health and error responses.
+
+## Implementation Update: Module 6 Week 2
+
+Added the next learner-facing Module 6 capstone chapter:
+
+- `curriculum/06-capstone-projects/week-02-polish/README.md`
+- `curriculum/06-capstone-projects/week-02-polish/workbench.py`
+- `curriculum/06-capstone-projects/week-02-polish/tests/test_capstone_polish.py`
+- `curriculum/06-capstone-projects/week-02-polish/hints.md`
+- `curriculum/06-capstone-projects/week-02-polish/rubric.md`
+- `curriculum/06-capstone-projects/week-02-polish/AUTHORING_PLAN.md`
+- `implementation-notes/module-6-week-02-polish-reference.md`
+
+The lab turns the capstone from "it works on my machine" into a reviewer-ready portfolio artifact: demo path, release evidence summary, limitation and safety note, and interview defense over architecture, evals, source grounding, safety, and next improvements.
+
+Updated the Module 6 README so Week 2 is listed as a scaffolded learner chapter.
+
+Verification:
+
+- `python -m pytest curriculum/06-capstone-projects/week-02-polish/tests -v`
+- Result: 5 tests collected; 5 expected learner-workbench failures. Collection and imports succeed; failures point to TODO behavior in `workbench.py`.
+
+Revised next implementation order:
+
+1. Add a web-data portfolio mini-project that integrates Core Labs 1-6.
+2. Add Module 4 Phase 4 critique and review loop after the explicit workflow pattern is in place.
+3. Add Module 5 Week 3 local service boundary with health and error responses.
+4. Add Module 6 portfolio README template and final assessment checklist.

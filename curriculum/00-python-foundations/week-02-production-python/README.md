@@ -7,6 +7,32 @@ Week 01 taught you to transform data. Week 02 teaches you to build code that sur
 
 Use this week only when the diagnostic, Module 1, or the stock pipeline shows that these production Python habits need reinforcement. It is a targeted repair lab, not a required detour for every learner.
 
+## Progression From Week 01
+
+Week 02 raises the reliability bar one step at a time:
+
+1. Error handling teaches code to fail clearly instead of hiding bad inputs.
+2. Context managers teach resource lifetime before you touch files, sessions, or tracing spans.
+3. Classes teach stable contracts for clients, tools, documents, and agents.
+4. Magic methods teach small composable objects without framework magic.
+5. Comprehensions and generators teach batch and streaming data flow.
+6. Pythonic state updates teach audit-friendly transformations for workflows.
+
+Do not use this as a syntax checklist. Use it when a real task shows that one of these habits needs practice.
+
+## Choose Your Repair Lane
+
+You do not need to complete every lane before returning to the main curriculum. Pick the lane that matches the friction you saw in the diagnostic, Module 1, or Week 03.
+
+| Lane | Use it when you struggle with... | Sections to focus on |
+| --- | --- | --- |
+| Reliability | bad inputs, unclear failures, partial API results | error handling |
+| Objects | classes, inheritance, reusable agent or document shapes | OOP and magic methods |
+| Streaming | yielding values, chunking batches, memory-friendly loops | generators and comprehensions |
+| State | updating dictionaries without surprise mutation | Pythonic patterns |
+
+Finish one lane, then return to the project that exposed the gap. Week 02 is a repair bench, not a wall around Module 1.
+
 ## What You Will Implement
 
 | Section | Concepts | Real Use |
@@ -30,6 +56,25 @@ python -m pytest week-02-production-python -v
 Open `workbench.py`. Implement one behavior at a time. If a test fails, read the assertion message and fix the concept it names.
 
 If the concept itself is unclear, pause and use `../concept-review-map.md`. Review the relevant Python reference, write a short note, then return to the smallest failing test. Do not use the reference as a source of code to paste.
+
+Recommended working loop:
+
+1. Choose one production habit from the table above.
+2. Run the full week once to see the current failure shape.
+3. Re-run one focused test for that habit.
+4. Before editing, predict which class or function the test exercises and what contract it expects.
+5. Use `hints.md` for the next question to ask, not for a finished implementation.
+6. Make one change and re-run the focused test.
+7. Explain how the habit would protect a later FinAgent feature.
+
+Tiny flow trace:
+
+| Production signal | Contract question | Implementation target |
+| --- | --- | --- |
+| bad input | should this raise, skip, or record a failure? | validation or exception path |
+| resource lifetime | what starts and what must always close? | context manager methods |
+| object behavior | what state does the object own? | constructor, method, or representation |
+| stream behavior | what should arrive one item at a time? | generator or batching function |
 
 ## Key Ideas
 
@@ -66,3 +111,5 @@ You are done when:
 - Python dataclasses: https://docs.python.org/3/library/dataclasses.html
 - Python contextlib: https://docs.python.org/3/library/contextlib.html
 - Python iterators and generators: https://docs.python.org/3/tutorial/classes.html#iterators
+- Visual context-manager guide: https://realpython.com/python-with-statement/
+- Generator walkthrough: https://realpython.com/introduction-to-python-generators/

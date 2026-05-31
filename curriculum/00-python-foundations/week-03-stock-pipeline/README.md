@@ -8,6 +8,8 @@ Complete this project after:
 2. `week-01-python-essentials`, if the diagnostic showed Python gaps
 3. `../01-module-1-whole-game`
 
+Week 02 remains optional reinforcement. Use it before this project only when you are stuck on errors, context managers, classes, generators, or state updates.
+
 ## Mission
 
 Build a local stock research pipeline from messy CSV data. This is the first larger bridge project after the student has seen the whole FinAgent workflow in Module 1.
@@ -21,6 +23,19 @@ The project is not about predicting the market. It is about writing reliable Pyt
 - test normal and failure paths
 
 This is intentionally local and deterministic. No API keys, paid services, or live network calls are required.
+
+## Progression From Module 1
+
+Module 1 showed the whole FinAgent shape. This project rebuilds the data spine underneath it:
+
+1. Read raw rows before trusting them.
+2. Validate rows into typed objects.
+3. Group objects by ticker so later tools can reason over one symbol at a time.
+4. Calculate metrics from validated prices only.
+5. Stream summary lines so report generation resembles later model streaming.
+6. Render a bounded educational report with a clear limitation.
+
+Every step protects the next one. If validation is loose, metrics become misleading. If metrics are unclear, the report becomes overconfident.
 
 ## Teaching Method
 
@@ -68,6 +83,16 @@ When a Python concept blocks you, use `../concept-review-map.md` to review the c
 7. Repeat until green.
 8. Use `hints.md` only after you can name the exact blocker.
 
+Suggested order:
+
+1. `StockPrice.from_row`
+2. `load_price_rows`
+3. `group_by_ticker`
+4. `percentage_change` and `moving_average`
+5. `calculate_metrics`
+6. `stream_summary_lines`
+7. `build_report` and `render_report`
+
 Run from `curriculum/00-python-foundations`:
 
 ```powershell
@@ -91,9 +116,20 @@ After the tests pass, answer:
 3. Which functions would become tools in FinAgent later?
 4. Which tests protect users from misleading summaries?
 
+## FinAgent Handoff Artifact
+
+Before leaving this bridge project, write a short handoff note with:
+
+- two functions that could become FinAgent tools or tool helpers
+- one validation rule that protects users from misleading data
+- one source or disclaimer behavior you should carry into the capstone
+
+This note becomes evidence that the Python work is not isolated practice; it is preparing the safer AI engineering workflow that follows.
+
 ## Optional Review References
 
 - Python CSV module: https://docs.python.org/3/library/csv.html
 - Python dataclasses: https://docs.python.org/3/library/dataclasses.html
 - Python contextlib: https://docs.python.org/3/library/contextlib.html
 - Pytest assertions: https://docs.pytest.org/en/stable/how-to/assert.html
+- Current pytest guide: https://realpython.com/pytest-python-testing/

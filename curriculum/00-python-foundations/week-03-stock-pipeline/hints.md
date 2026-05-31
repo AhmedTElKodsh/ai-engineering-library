@@ -1,48 +1,74 @@
-# Hints
+# Week 03 Hints
 
-Use these one at a time. Try the code before reading the next hint.
+Use these only after you have read the failing test and found the matching stock-pipeline function.
 
-Before each hint, write down:
+The hints are layered. Start with Layer 1. Move to Layer 2 only when you are stuck. Use Layer 3 when the test expectation is clear but the pipeline shape feels blurry.
 
-1. the test that is failing
-2. the function it points to
-3. what you expect the function to return or raise
+## Layer 1
 
-## Hint 1: Validate Rows First
+Follow the data path in order: raw row, validated price object, grouped prices, calculated metrics, rendered report.
 
-`StockPrice.from_row` is the gatekeeper. If bad rows pass through, every later calculation becomes harder to trust.
+Before editing, answer:
 
-## Hint 2: Ticker and Date
+- Which stage is the failing test exercising?
+- Is the function supposed to reject bad data or transform good data?
+- What later stage would become unreliable if this function accepts messy input?
 
-Normalize ticker with `strip().upper()`. For the date, this project only requires a simple `YYYY-MM-DD` shape check: length 10 and dashes at positions 4 and 7.
+Fix one stage at a time and re-run the matching test.
 
-## Hint 3: CSV Loading
+Use this order unless the first failing test points somewhere else:
 
-Use:
+1. Validate a single CSV row.
+2. Load all rows through that same validation path.
+3. Group already-valid rows.
+4. Calculate small metrics.
+5. Stream human-readable lines.
+6. Build and render the final report.
 
-```python
-with open(csv_path, newline="", encoding="utf-8") as file:
-    reader = csv.DictReader(file)
-```
+The pipeline is progressive by design. Do not patch the report to hide problems from earlier stages.
 
-Then convert each row with `StockPrice.from_row`.
+## Layer 2
 
-## Hint 4: Grouping
+### Row Validation
 
-Start with an empty dictionary. For each price:
+`StockPrice.from_row` is the gatekeeper. Normalize fields before validating them, and make bad rows fail loudly instead of leaking into later calculations.
 
-```python
-grouped.setdefault(price.ticker, []).append(price)
-```
+Ticker cleanup should produce a predictable symbol. Date validation only needs the simple shape required by the lesson, not a full calendar parser.
 
-## Hint 5: Moving Average
+Checkpoint before moving on: would a bad row be stopped before it can affect a metric?
 
-For each valid window, slice the values and divide by `window`.
+### Loading And Grouping
 
-## Hint 6: Metrics
+CSV loading should convert each raw row through the same validation path. Avoid creating a second, looser interpretation of a stock row.
 
-For each ticker, collect closes with a list comprehension. Reuse `percentage_change` and `moving_average` instead of duplicating calculations.
+Grouping should preserve each price object while organizing records by ticker. Think "one key per ticker, many prices per key."
 
-## Hint 7: Rendering
+Checkpoint before moving on: can you explain why grouping should not discard date, source, or close price data?
 
-The final report should join text lines with `"\n"`. Include the disclaimer in plain language.
+### Calculations
+
+Moving averages are window-based. A window should only produce an output when it has enough values.
+
+Metrics should reuse the smaller calculation helpers. If you duplicate formulas, it becomes harder to debug which behavior is wrong.
+
+Checkpoint before moving on: can each metric be traced back to validated prices?
+
+### Rendering
+
+The report is the final presentation layer. It should use the calculated metrics, include the educational disclaimer, and avoid changing the underlying data.
+
+Checkpoint before finishing: does the report make the data understandable without pretending to give financial advice?
+
+## Layer 3
+
+### Reading The Tests
+
+If a test expects an exception from a bad row, do not return a partially-filled object.
+
+If a test checks grouped keys, inspect the ticker normalization path first.
+
+If a test checks report text, list the required facts before changing formatting.
+
+### Final Check
+
+Run the focused test after each stage. When the pipeline passes end to end, run the full Week 03 file to catch interactions between validation, metrics, and rendering.
