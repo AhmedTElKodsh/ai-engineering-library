@@ -100,6 +100,15 @@ python -m pytest tests -v
 
 The tests intentionally fail at first. A good learner pass fixes one behavior at a time and reruns the suite after each change.
 
+## Section Checkpoints
+
+| Checkpoint | Focused command | Pause when you can... |
+| --- | --- | --- |
+| Byte round trip | `python -m pytest tests -k "text_to_bytes or bytes_to_text" -v` | explain why UTF-8 byte values are the tokenizer's first representation |
+| Pair mechanics | `python -m pytest tests -k "count_adjacent_pairs or merge_pair" -v` | explain how pair counts become merge decisions |
+| BPE training and use | `python -m pytest tests -k "train_bpe or encode or decode" -v` | explain how learned merges change token IDs while preserving text |
+| Budget estimate | `python -m pytest tests -k estimate_token_budget -v` | explain why FinAgent should inspect token length before model calls |
+
 ## Reflect
 
 - Which test failure gave you the clearest clue?

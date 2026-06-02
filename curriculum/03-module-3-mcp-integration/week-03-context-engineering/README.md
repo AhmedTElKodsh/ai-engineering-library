@@ -35,6 +35,17 @@ Validate context, structured outputs, and trace metadata so tool and model resul
 6. Record what the trace proves.
 7. Reflect on what should be hidden from the model.
 
+## Expected First Run And Checkpoints
+
+Run `python -m pytest tests -v`. The first run should collect cleanly and fail
+on TODO behavior.
+
+| Checkpoint | Focused command | Pause when you can... |
+| --- | --- | --- |
+| Sanitization | `python -m pytest tests -k sanitize_text -v` | explain how unsafe instructions are removed without deleting market content |
+| Context contract | `python -m pytest tests -k "validate_context_items or prepare_model_context" -v` | explain which source fields must exist before model use |
+| Output and trace | `python -m pytest tests -k "validate_structured_answer or build_trace_record" -v` | explain how citations, confidence, and trace metadata protect downstream steps |
+
 ## Evidence Artifact
 
 ```text

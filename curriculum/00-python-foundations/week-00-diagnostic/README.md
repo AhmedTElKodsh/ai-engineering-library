@@ -38,7 +38,11 @@ python -m pytest week-00-diagnostic/test_assessment.py -v
 
 The tests import `diagnostic_workbench.py`, the learner-facing file for this inventory. Your results show strengths and gaps across six areas. Do not worry about failures. The failures are the starting point.
 
-Some early diagnostic functions may already pass or feel familiar. Treat those as calibration examples: they show what a clean assertion looks like before the inventory reaches areas you may need to repair.
+Some early diagnostic functions are intentionally prefilled calibration examples. Treat them as a warm-up: they show what a clean assertion looks like before the inventory reaches TODO areas you may need to repair.
+
+## Expected First Test Run
+
+On the first run, `test_setup.py` should pass. `test_assessment.py` may show a mix of passing calibration tests and failing TODO tests. That is the intended diagnostic state: passing tests show current fluency, and failing tests identify the next concept to review.
 
 ## Step 3: Read The First Failure
 

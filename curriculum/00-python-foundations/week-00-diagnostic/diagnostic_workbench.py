@@ -25,6 +25,11 @@ Prepares For: Week 01 Python Essentials
 # Note: You are NOT expected to pass everything. That's the point.
 
 
+# Calibration examples
+#
+# The first few functions are intentionally implemented. They give learners
+# examples of passing diagnostic tests before the TODO-based inventory begins.
+
 # Fundamentals
 
 def swap_without_temp(a: int, b: int) -> tuple[int, int]:
@@ -134,6 +139,11 @@ def count_words(text: str) -> dict[str, int]:
     return dictw
 
 
+# Diagnostic TODOs
+#
+# From here down, incomplete behavior is intentional. Implementing these gaps
+# is how learners identify which Python concepts need review.
+
 def unique_elements(items: list) -> list:
     """
     Return unique elements preserving original order.
@@ -153,7 +163,7 @@ def unique_elements(items: list) -> list:
         2. Build result list, adding only unseen elements
         3. Return the result
     """
-    pass  # YOUR CODE HERE
+    pass  # YOUR DIAGNOSTIC TODO HERE
 
 # Functions
 
@@ -176,7 +186,7 @@ def make_multiplier(factor: int):
         2. Return the argument multiplied by factor
         3. Return the inner function
     """
-    pass  # YOUR CODE HERE
+    pass  # YOUR DIAGNOSTIC TODO HERE
 
 
 def apply_to_all(func, items: list) -> list:
@@ -198,7 +208,7 @@ def apply_to_all(func, items: list) -> list:
         1. Create a new list by calling func on each item
         2. Return the new list
     """
-    pass  # YOUR CODE HERE
+    pass  # YOUR DIAGNOSTIC TODO HERE
 
 
 # OOP
@@ -224,23 +234,23 @@ class Counter:
 
     def __init__(self, start: int = 0) -> None:
         """Initialize Counter with a starting value."""
-        pass  # YOUR CODE HERE
+        pass  # YOUR DIAGNOSTIC TODO HERE
 
     def increment(self) -> None:
         """Add 1 to the counter."""
-        pass  # YOUR CODE HERE
+        pass  # YOUR DIAGNOSTIC TODO HERE
 
     def decrement(self) -> None:
         """Subtract 1 from the counter (minimum 0)."""
-        pass  # YOUR CODE HERE
+        pass  # YOUR DIAGNOSTIC TODO HERE
 
     def reset(self) -> None:
         """Reset the counter to 0."""
-        pass  # YOUR CODE HERE
+        pass  # YOUR DIAGNOSTIC TODO HERE
 
     def __str__(self) -> str:
         """Return string representation like 'Counter(5)'."""
-        pass  # YOUR CODE HERE
+        pass  # YOUR DIAGNOSTIC TODO HERE
 
 
 # Pythonic Patterns
@@ -265,7 +275,7 @@ def even_squares(numbers: list[int]) -> list[int]:
         3. Square each even number
         4. Return the result
     """
-    pass  # YOUR CODE HERE
+    pass  # YOUR DIAGNOSTIC TODO HERE
 
 
 def first_n_fibonacci(n: int) -> list[int]:
@@ -288,7 +298,7 @@ def first_n_fibonacci(n: int) -> list[int]:
         3. Each new number is sum of previous two
         4. Return the list
     """
-    pass  # YOUR CODE HERE
+    pass  # YOUR DIAGNOSTIC TODO HERE
 
 
 # Error Handling
@@ -313,7 +323,7 @@ def safe_divide(a: float, b: float) -> float | str:
         2. If ZeroDivisionError occurs, return the error message string
         3. Otherwise return the result
     """
-    pass  # YOUR CODE HERE
+    pass  # YOUR DIAGNOSTIC TODO HERE
 
 
 def validate_age(age) -> int:
@@ -340,7 +350,7 @@ def validate_age(age) -> int:
         2. Check if age is positive; raise ValueError if not
         3. Return the validated age
     """
-    pass  # YOUR CODE HERE
+    pass  # YOUR DIAGNOSTIC TODO HERE
 
 
 # Diagnostic Test Runner

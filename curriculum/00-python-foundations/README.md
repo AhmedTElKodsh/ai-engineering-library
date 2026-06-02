@@ -77,6 +77,10 @@ By the end of this module, you should be able to:
 
 From `curriculum/00-python-foundations`:
 
+The first run is expected to show failures because learner files contain TODOs.
+Treat the output as a map of what to implement next, not as a signal that the
+curriculum is broken.
+
 Required first:
 
 ```powershell
@@ -98,6 +102,16 @@ python -m pytest extensions/ai-client-simulator/ai_client -v
 ```
 
 The workbench files are expected to fail at first because they contain TODOs. A clean import with failing behavior tests is the intended learning state.
+
+## Expected First Test Runs
+
+| Unit | First-run signal | What it means |
+| --- | --- | --- |
+| Week 00 | setup tests should pass; several assessment tests may fail | your environment works and the failures show Python practice areas |
+| Week 01 | many behavior tests fail | this is the remediation workbench before implementation |
+| Week 02 | many behavior tests fail if you choose this repair lane | this optional lab starts from TODOs, not finished examples |
+| Week 03 | stock-pipeline behavior tests fail | this is the post-Module-1 project waiting for your implementation |
+| Extension | simulator behavior tests fail | optional extra reps before later real API modules |
 
 ## Required Learning Path
 

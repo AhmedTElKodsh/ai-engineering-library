@@ -72,6 +72,13 @@ The folder names stay stable for tests and links. The learner-facing titles belo
 
 Phases 1-4 are learner-ready now. Phases 5-6 remain planned curriculum slices and should not be assigned as runnable labs until their `workbench.py` files and tests exist. Do not use planned phases as readiness gates for Module 3.
 
+## Learner Readiness Boundary
+
+Assign only Phases 1-4 today. If a learner opens Phase 5 or Phase 6, treat the
+folder as a roadmap placeholder, not missing homework. A phase becomes
+learner-ready only when it has a README, learner-editable `workbench.py`,
+fixtures if needed, tests that collect cleanly, hints, and a rubric.
+
 ## Teaching Contract
 
 Every phase should follow the same learner loop:
@@ -85,6 +92,10 @@ Every phase should follow the same learner loop:
 7. Reflect on what the tests prove and what production would still require.
 
 Workbench tests are expected to fail before learners complete the TODOs.
+
+Expected first run: each learner-ready phase should collect tests cleanly and
+then fail on TODO behavior. Import errors, missing fixtures, or unclear planned
+folders are curriculum issues, not learner performance issues.
 
 ## Style Rubric
 

@@ -35,6 +35,17 @@ Add permission checks, injection resistance, secret-safe configuration, and a sm
 6. Record what the trace proves.
 7. Reflect on what MCP integration should never make easier by accident.
 
+## Expected First Run And Checkpoints
+
+Run `python -m pytest tests -v`. The first run should collect cleanly and fail
+on TODO behavior.
+
+| Checkpoint | Focused command | Pause when you can... |
+| --- | --- | --- |
+| Permissions | `python -m pytest tests -k is_tool_allowed -v` | explain why role policy and explicit tool allowlists both matter |
+| Injection and secrets | `python -m pytest tests -k "detect_prompt_injection or redact_secret_values" -v` | explain how unsafe text and secret values are kept out of prompts/logs |
+| Handoff boundary | `python -m pytest tests -k "build_handoff or authorize_handoff_tool_call" -v` | explain what context crosses roles and what stays blocked |
+
 ## Evidence Artifact
 
 ```text

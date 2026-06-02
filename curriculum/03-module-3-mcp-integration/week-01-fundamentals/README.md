@@ -35,6 +35,17 @@ Build a small provider boundary that treats model calls as testable request/resp
 6. Record what the trace proves.
 7. Reflect on what a real provider adds and what it can break.
 
+## Expected First Run And Checkpoints
+
+Run `python -m pytest tests -v`. The first run should collect cleanly and fail
+on TODO behavior.
+
+| Checkpoint | Focused command | Pause when you can... |
+| --- | --- | --- |
+| Message contract | `python -m pytest tests -k validate_messages -v` | explain which roles and empty messages are refused |
+| Prompt and cost | `python -m pytest tests -k "render_prompt or estimate" -v` | explain how prompt versions, token estimates, and cost estimates are recorded |
+| Provider boundary | `python -m pytest tests -k call_provider -v` | explain why validation happens before a provider is called |
+
 ## Evidence Artifact
 
 ```text

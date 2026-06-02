@@ -3,6 +3,7 @@
 ## Verification, Operations, and Model Decisions
 
 **Duration:** 7 weeks  
+**Expected time to finish:** 8-12 hours learner-ready core, plus planned production extensions  
 **Prerequisites:** Module 4 or equivalent comfort with RAG, tools, workflows, and pytest  
 **Pedagogy:** eval-driven development, operational evidence, and small release gates
 
@@ -53,6 +54,13 @@ They produce a decision note with quality, cost, latency, data, safety, and main
 | Week 5 | `week-05-monitoring` | Structured logs, traces, failure categories, and review loop | planned scaffold |
 | Week 6 | `week-06-optimization` | Cost, latency, caching, batching, and retry tradeoffs | planned scaffold |
 | Week 7 | `week-07-fine-tuning` | Decision framework for prompt/RAG/tooling/fine-tuning, with fine-tuning kept as optional adaptation lab | planned scaffold |
+
+## Learner Readiness Boundary
+
+Assign only Week 1 and Week 2 today. Weeks 3-7 are roadmap placeholders until
+each folder has a README, learner-editable `workbench.py`, fixtures if needed,
+tests that collect cleanly, hints, and a rubric. Do not use planned scaffold
+folders as capstone readiness gates.
 
 ## Teaching Contract
 

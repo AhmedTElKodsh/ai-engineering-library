@@ -134,9 +134,9 @@ def group_by_key(records: list[dict], key: str) -> dict[str, list]:
 
 
 def unique_sources(records: list[dict], key: str = "source") -> list[str]:
-    """Return sorted list of unique values at `key` across all records.
+    """Return unique values at `key` in first-seen order across all records.
 
-    AI use: {doc["source"] for doc in results} - deduplicating RAG sources.
+    AI use: deduplicating RAG sources without scrambling citation order.
     """
     pass  # YOUR CODE HERE
 

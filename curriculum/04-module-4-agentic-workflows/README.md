@@ -70,6 +70,14 @@ The folder names stay stable for tests and links. The learner-facing titles belo
 
 Phase 1, Phase 2, Phase 3, and all six required web-data bridge labs now include learner scaffolds. Tests are expected to fail before learners complete the TODOs in `workbench.py`.
 
+## Learner Readiness Boundary
+
+Assign only the required web-data bridge plus Phases 1-3 today. Phases 4-8 are
+roadmap placeholders until each folder has a README, learner-editable
+`workbench.py`, fixtures if needed, tests that collect cleanly, hints, and a
+rubric. Do not treat planned scaffold folders as learner homework or readiness
+gates for Module 5.
+
 ## Teaching Contract
 
 Every week should ask:

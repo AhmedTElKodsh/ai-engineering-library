@@ -60,6 +60,7 @@ Run:
 python -m pytest tests -v
 ```
 
+Expected first run: tests should collect cleanly and fail on TODO behavior.
 Use the first failure as your next task. Fix one function at a time.
 
 ## Create
@@ -70,6 +71,15 @@ Complete the TODOs in this order:
 2. `analyze_move`
 3. `build_response`
 4. `handle_request`
+
+## Section Checkpoints
+
+| Checkpoint | Focused command | Pause when you can... |
+| --- | --- | --- |
+| Boundary validation | `python -m pytest tests -k validate_request -v` | explain what malformed input is refused before analysis |
+| Pure analysis | `python -m pytest tests -k analyze_move -v` | explain why the calculation step should not depend on interface details |
+| Structured response | `python -m pytest tests -k build_response -v` | explain which fields help users and which help debugging |
+| Full flow | `python -m pytest tests -k handle_request -v` | explain how the local boundary prepares for CLI, FastAPI, MCP, or agent nodes |
 
 ## Verify
 

@@ -110,6 +110,15 @@ python -m pytest tests -v
 
 The tests intentionally fail at first. Use one failure at a time as your guide.
 
+## Section Checkpoints
+
+| Checkpoint | Focused command | Pause when you can... |
+| --- | --- | --- |
+| Scores and scaling | `python -m pytest tests -k "dot_product or scale_scores" -v` | explain how query-key scores are computed and why dimensions matter |
+| Weights | `python -m pytest tests -k softmax -v` | explain why stable softmax returns weights that sum to one |
+| Blended output | `python -m pytest tests -k "weighted_sum or attention" -v` | explain how values are combined from attention weights |
+| Explanation | `python -m pytest tests -k "most_attended_source or explain_attention" -v` | explain why attention can aid debugging without proving correctness |
+
 ## Reflect
 
 - Which context source received the most attention?

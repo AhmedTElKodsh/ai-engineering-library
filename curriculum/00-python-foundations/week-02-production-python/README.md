@@ -53,6 +53,10 @@ Run:
 python -m pytest week-02-production-python -v
 ```
 
+Expected first run: many tests should fail because this optional repair lab is
+mostly TODOs. Use the failure list to choose a repair lane; you do not need to
+finish every lane before returning to the main curriculum.
+
 Open `workbench.py`. Implement one behavior at a time. If a test fails, read the assertion message and fix the concept it names.
 
 If the concept itself is unclear, pause and use `../concept-review-map.md`. Review the relevant Python reference, write a short note, then return to the smallest failing test. Do not use the reference as a source of code to paste.
@@ -75,6 +79,19 @@ Tiny flow trace:
 | resource lifetime | what starts and what must always close? | context manager methods |
 | object behavior | what state does the object own? | constructor, method, or representation |
 | stream behavior | what should arrive one item at a time? | generator or batching function |
+
+## Section Checkpoints
+
+Use one checkpoint at a time. When a checkpoint passes and you can explain the
+habit, return to the project that exposed the gap.
+
+| Checkpoint | Focused command | Pause when you can... |
+| --- | --- | --- |
+| Error handling | `python -m pytest week-02-production-python/test_chapter_02.py -k "ValidationError or APIError or safe_divide or validate_llm_config or process_api_responses" -v` | explain when bad data should raise instead of returning a placeholder |
+| Context managers | `python -m pytest week-02-production-python/test_chapter_02.py -k "timer or suppress or managed_resource" -v` | explain what opens, what closes, and whether exceptions are suppressed |
+| Objects and composition | `python -m pytest week-02-production-python/test_chapter_02.py -k "base_model or document_schema or agent or step or pipeline or embedding_vector" -v` | explain how object contracts support clients, tools, agents, and chains |
+| Batch and streaming | `python -m pytest week-02-production-python/test_chapter_02.py -k "batch_embed or filter_by_score or metadata_index or count_by_category or stream_tokens or batch_generator or document_pipeline or fibonacci" -v` | explain why generators and comprehensions help with large or streaming data |
+| State patterns | `python -m pytest week-02-production-python/test_chapter_02.py -k "update_state or zip_to_records or indexed_chunks or deep_get" -v` | explain how to update workflow state without surprise mutation |
 
 ## Key Ideas
 

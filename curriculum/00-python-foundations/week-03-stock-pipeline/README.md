@@ -99,6 +99,11 @@ Run from `curriculum/00-python-foundations`:
 python -m pytest week-03-stock-pipeline/tests -v
 ```
 
+Expected first run: the tests should fail because the stock pipeline starts as a
+TODO project. Work from the first failing stage forward: validate one row, load
+the CSV, group prices, calculate metrics, stream summaries, then render the
+source-aware educational report.
+
 ## Optional Extension
 
 After this project, the optional AI-client simulator lives at `extensions/ai-client-simulator`. It prepares you for later API and streaming lessons, but the stock pipeline is the required post-Module-1 bridge.

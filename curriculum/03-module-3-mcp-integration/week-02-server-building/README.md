@@ -35,6 +35,17 @@ Wrap a small FinAgent capability behind a local tool contract so a model or MCP 
 6. Record what the trace proves.
 7. Reflect on what the model should never be allowed to decide alone.
 
+## Expected First Run And Checkpoints
+
+Run `python -m pytest tests -v`. The first run should collect cleanly and fail
+on TODO behavior.
+
+| Checkpoint | Focused command | Pause when you can... |
+| --- | --- | --- |
+| Tool list | `python -m pytest tests -k list_tools -v` | explain why only explicit tools are exposed |
+| Tool validation | `python -m pytest tests -k "quote_lookup or moving_average" -v` | explain how malformed arguments are blocked before execution |
+| Dispatcher | `python -m pytest tests -k dispatch_tool -v` | explain how success, refusal, and trace metadata stay structured |
+
 ## Evidence Artifact
 
 ```text

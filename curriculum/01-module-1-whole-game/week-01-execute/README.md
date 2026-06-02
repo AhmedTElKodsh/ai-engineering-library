@@ -47,6 +47,9 @@ python -m pytest tests -v
 
 Your first win is not making everything pass. Your first win is reading one failure and explaining what behavior it is asking for.
 
+Expected first run: tests should collect cleanly and some behavior tests should
+fail because `workbench.py` still contains TODO logic.
+
 ## Trace
 
 Open `workbench.py` and read these items before editing:
@@ -100,6 +103,15 @@ Suggested order:
 3. `classify_movement`
 4. `validate_ticker`
 5. `build_stock_summary`
+
+## Section Checkpoints
+
+| Checkpoint | Focused command | Pause when you can... |
+| --- | --- | --- |
+| Price parsing | `python -m pytest tests -k parse_price -v` | explain how strings become trusted numeric values |
+| Movement math | `python -m pytest tests -k percentage_change -v` | explain why zero previous close must fail |
+| Ticker validation | `python -m pytest tests -k validate_ticker -v` | explain why FinAgent normalizes symbols before reporting |
+| Safe summary | `python -m pytest tests -k build_stock_summary -v` | explain how source and disclaimer text protect users |
 
 ## Verify
 

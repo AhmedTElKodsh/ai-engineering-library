@@ -100,6 +100,10 @@ This shows APIs, prompting, data pipelines, RAG, tools/workflows, evaluation, de
 | Week 1 | `week-01-build` | FinAgent capstone scope, deterministic eval cases, and portfolio evidence ledger | `python -m pytest curriculum/06-capstone-projects/week-01-build/tests -v` |
 | Week 2 | `week-02-polish` | Demo, limitation note, release evidence, and interview defense | `python -m pytest curriculum/06-capstone-projects/week-02-polish/tests -v` |
 
+Expected first run: both capstone weeks should collect tests cleanly and fail on
+TODO behavior. The failures are portfolio prompts: they name scope, evidence,
+release, and explanation work that the learner must make concrete.
+
 ### Week 2: Harden and Present
 
 - Day 1: Add or refine the golden eval set.

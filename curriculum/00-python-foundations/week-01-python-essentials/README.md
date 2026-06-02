@@ -58,6 +58,10 @@ Run:
 python -m pytest week-01-python-essentials -v
 ```
 
+Expected first run: most tests should fail because `workbench.py` is a TODO
+file. That is the starting line. A failure means "this behavior is next," not
+"the project is broken."
+
 Then open `workbench.py` and replace one `pass` at a time. Do not try to solve the whole file in one pass. Let the tests guide your next change.
 
 Recommended working loop:
@@ -84,6 +88,18 @@ Focused test pattern:
 ```powershell
 python -m pytest week-01-python-essentials/test_chapter_01.py -k safe_convert_to_int -v
 ```
+
+## Section Checkpoints
+
+Use these checkpoints to avoid turning the whole file into one large task:
+
+| Checkpoint | Focused command | Pause when you can... |
+| --- | --- | --- |
+| Types and data | `python -m pytest week-01-python-essentials/test_chapter_01.py -k "classify or safe_convert or build_profile or calculate_stats" -v` | explain how messy values become predictable inputs |
+| Strings and prompts | `python -m pytest week-01-python-essentials/test_chapter_01.py -k "greeting or prompt or truncate" -v` | explain how formatted strings become prompt/report text |
+| Collections | `python -m pytest week-01-python-essentials/test_chapter_01.py -k "chunk or merge_configs or group_by_key or unique_sources" -v` | explain how batch, metadata, and source lists keep order and meaning |
+| Control flow | `python -m pytest week-01-python-essentials/test_chapter_01.py -k "fizzbuzz or route_request or temperature" -v` | explain how small conditionals become request routing |
+| Functions and decorators | `python -m pytest week-01-python-essentials/test_chapter_01.py -k "discount or memoize or retry or make_counter" -v` | explain how wrappers and closures support retry, cache, and state |
 
 ## Core Ideas
 

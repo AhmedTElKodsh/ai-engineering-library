@@ -65,6 +65,10 @@ The folder names stay stable for tests and links. The learner-facing titles belo
 
 All four phases now include learner scaffolds. Tests are expected to fail before learners complete the TODOs in each `workbench.py`.
 
+Expected first run: each phase should collect tests cleanly and fail on TODO
+behavior. If a test fails because of a missing package, fixture, or import path,
+fix the scaffold before treating it as learner work.
+
 ## Teaching Contract
 
 Every week should follow the standard loop:

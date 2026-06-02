@@ -45,6 +45,7 @@ Run the tests:
 python -m pytest tests -v
 ```
 
+Expected first run: tests should collect cleanly and fail on TODO behavior.
 Read the first failure. Fix one TODO at a time.
 
 ## Create
@@ -54,6 +55,14 @@ Complete the TODOs in this order:
 1. `risk_label`
 2. `format_percent`
 3. `build_risk_aware_summary`
+
+## Section Checkpoints
+
+| Checkpoint | Focused command | Pause when you can... |
+| --- | --- | --- |
+| Risk thresholds | `python -m pytest tests -k risk_label -v` | explain why absolute movement handles up and down moves together |
+| Percent formatting | `python -m pytest tests -k format_percent -v` | explain why consistent formatting matters in user-facing reports |
+| Safe richer summary | `python -m pytest tests -k build_risk_aware_summary -v` | explain how richer wording still stays educational and source-grounded |
 
 ## Verify
 

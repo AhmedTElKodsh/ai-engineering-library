@@ -142,6 +142,12 @@ def test_unique_sources():
     assert result == ["doc1", "doc2"]
 
 
+def test_unique_sources_preserves_first_seen_order():
+    records = [{"source": "doc2"}, {"source": "doc1"}, {"source": "doc2"}]
+    result = unique_sources(records)
+    assert result == ["doc2", "doc1"], "Preserve first-seen citation order; do not sort"
+
+
 # -- Section 4: Control Flow -------------------------------
 
 def test_fizzbuzz_15():

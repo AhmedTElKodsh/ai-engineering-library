@@ -110,6 +110,15 @@ python -m pytest tests -v
 
 The tests intentionally fail at first. Treat each failure as the next instruction.
 
+## Section Checkpoints
+
+| Checkpoint | Focused command | Pause when you can... |
+| --- | --- | --- |
+| Text normalization | `python -m pytest tests -k "normalize_terms or build_vocabulary" -v` | explain how stable vocabulary order makes vectors comparable |
+| Vector math | `python -m pytest tests -k "vectorize or dot_product or magnitude or cosine_similarity" -v` | explain why zero vectors and mismatched lengths need explicit handling |
+| Retrieval | `python -m pytest tests -k "build_index or search" -v` | explain how scores, source IDs, and tie order affect grounded answers |
+| Context formatting | `python -m pytest tests -k build_grounded_context -v` | explain how retrieved notes become cited prompt context |
+
 ## Reflect
 
 - Which retrieved note was most obvious?

@@ -127,3 +127,40 @@ def test_build_and_render_report():
     assert "MSFT" in rendered
     assert "2 tickers" in rendered
     assert "not financial advice" in rendered.lower()
+
+
+def test_render_report_includes_source_aware_educational_disclaimer():
+    report = PipelineReport(
+        prices=[
+            StockPrice("AAPL", "2026-05-01", 190.0, "fixture"),
+            StockPrice("MSFT", "2026-05-01", 425.0, "analyst-note"),
+        ],
+        metrics={
+            "AAPL": {
+                "first_close": 190.0,
+                "last_close": 190.0,
+                "change_percent": 0.0,
+                "average_close": 190.0,
+                "latest_2_day_average": 190.0,
+            },
+            "MSFT": {
+                "first_close": 425.0,
+                "last_close": 425.0,
+                "change_percent": 0.0,
+                "average_close": 425.0,
+                "latest_2_day_average": 425.0,
+            },
+        },
+        summary_lines=[
+            "AAPL: last close 190.00, change 0.00%, 2-day average 190.00",
+            "MSFT: last close 425.00, change 0.00%, 2-day average 425.00",
+        ],
+    )
+
+    rendered = render_report(report).lower()
+
+    assert "source" in rendered
+    assert "fixture" in rendered
+    assert "analyst-note" in rendered
+    assert "educational" in rendered
+    assert "not financial advice" in rendered
