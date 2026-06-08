@@ -1,4 +1,26 @@
-# Phase 1: LLM Provider Boundary Lab
+﻿# Phase 1: LLM Provider Boundary Lab
+
+## Learning Logic
+
+Use the course map in `curriculum/LEARNER_JOURNEY_MAP.md` and the local module README to keep this lesson bounded.
+
+| Question | Learner-facing answer |
+| --- | --- |
+| What can I do now? | explain tokens, context, and model-boundary limits. |
+| What new capability am I adding? | build a deterministic LLM provider wrapper with prompt and cost traces. |
+| What failure does this help me catch? | invalid chat roles, blank content, bad templates, and missing cost evidence. |
+| How does this improve FinAgent or a practical AI system? | lets FinAgent call model providers through a testable boundary. |
+| What should I be able to explain afterward? | how provider calls are validated, rendered, traced, and costed. |
+
+## Minimum Path, Enrichment, And Doorway
+
+- **Minimum path:** read the scenario, inspect the tests or fixtures, complete the TODOs in `workbench.py`, run the verification command, and write the reflection/evidence note.
+- **Optional enrichment:** add one edge case, comparison, or small test after the required behavior works.
+- **Advanced doorway:** notice the later advanced topic this prepares for, then return to the bounded Course 1 task.
+
+## Evidence Portfolio
+
+Leave this lesson with technical evidence, failure evidence, explanation evidence, and transfer evidence. A passing test alone is not the whole learning outcome.
 
 Folder: `week-01-fundamentals`  
 Expected time to finish: 4-6 hours  
@@ -60,3 +82,4 @@ Remaining provider risk:
 ## Connection To Module 2
 
 Module 2 showed what model-facing mechanisms do. This phase creates the first safe boundary around real or mocked model access.
+

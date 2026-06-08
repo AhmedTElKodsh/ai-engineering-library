@@ -17,7 +17,7 @@ class RagChunk:
 @dataclass(frozen=True)
 class RetrievalResult:
     chunk: RagChunk
-    score: int
+    score: float
     matched_terms: list[str]
 
 
@@ -44,6 +44,40 @@ def normalize_terms(text: str) -> list[str]:
 def retrieve(query: str, chunks: list[RagChunk], *, min_score: int = 1) -> list[RetrievalResult]:
     """Rank chunks by keyword overlap."""
     # TODO: Score chunks by term overlap and return sorted results above min_score.
+    return []
+
+
+def build_tiny_vocabulary(chunks: list[RagChunk], *, max_terms: int = 12) -> list[str]:
+    """Return a small deterministic vocabulary for embedding-style comparison."""
+    # TODO: Count normalized chunk terms and return the most common terms in
+    # stable order. Keep this tiny so learners can inspect every dimension.
+    return []
+
+
+def vectorize_terms(terms: list[str], vocabulary: list[str]) -> list[float]:
+    """Represent normalized terms as a tiny count vector."""
+    # TODO: Return one count per vocabulary term.
+    return []
+
+
+def cosine_similarity(left: list[float], right: list[float]) -> float:
+    """Compare two tiny vectors without a library."""
+    # TODO: Reuse Module 2 vector discipline. Return 0.0 when either vector has
+    # zero magnitude.
+    return 0.0
+
+
+def retrieve_hybrid(
+    query: str,
+    chunks: list[RagChunk],
+    *,
+    keyword_weight: float = 1.0,
+    vector_weight: float = 1.0,
+    min_score: float = 1.0,
+) -> list[RetrievalResult]:
+    """Rank chunks with keyword overlap plus tiny vector similarity."""
+    # TODO: Build a vocabulary, combine keyword and vector scores, and return
+    # RetrievalResult objects sorted by hybrid score.
     return []
 
 

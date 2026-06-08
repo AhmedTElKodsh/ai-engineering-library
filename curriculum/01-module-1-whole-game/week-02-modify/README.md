@@ -1,4 +1,26 @@
-# Phase 2: FinAgent Risk Signal Extension
+﻿# Phase 2: FinAgent Risk Signal Extension
+
+## Learning Logic
+
+Use the course map in `curriculum/LEARNER_JOURNEY_MAP.md` and the local module README to keep this lesson bounded.
+
+| Question | Learner-facing answer |
+| --- | --- |
+| What can I do now? | run and explain the first FinAgent summary. |
+| What new capability am I adding? | add risk labels, percentage formatting, and safer summary behavior. |
+| What failure does this help me catch? | misclassified movement, unclear percentages, and overconfident wording. |
+| How does this improve FinAgent or a practical AI system? | turns FinAgent from a static demo into a modifiable product slice. |
+| What should I be able to explain afterward? | how a small behavior change stays testable and safe. |
+
+## Minimum Path, Enrichment, And Doorway
+
+- **Minimum path:** read the scenario, inspect the tests or fixtures, complete the TODOs in `workbench.py`, run the verification command, and write the reflection/evidence note.
+- **Optional enrichment:** add one edge case, comparison, or small test after the required behavior works.
+- **Advanced doorway:** notice the later advanced topic this prepares for, then return to the bounded Course 1 task.
+
+## Evidence Portfolio
+
+Leave this lesson with technical evidence, failure evidence, explanation evidence, and transfer evidence. A passing test alone is not the whole learning outcome.
 
 Folder: `week-02-modify`  
 Expected time to finish: 2-3 hours  
@@ -97,3 +119,4 @@ Remaining risk:
 ## Extension
 
 Add a test for an exactly `5.0%` move and decide whether it belongs in watchlist or high-volatility risk. Explain your choice in one sentence.
+

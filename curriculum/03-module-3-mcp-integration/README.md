@@ -1,4 +1,4 @@
-# Module 3: Connect AI To Tools With MCP
+# Module 3: LLM APIs, PromptOps, Tools, and MCP Boundaries
 
 ## Reliable Model, Prompt, Tool, And MCP Boundaries
 
@@ -18,12 +18,22 @@ Module 3 turns the earlier FinAgent and first-principles work into explicit syst
 | How does this prepare me for the next module? | It gives FinAgent reliable access to outside capabilities before later modules add richer agent workflows and production gates. |
 
 **Previous:** you learned how text, vectors, attention, and transformer-style flow behave.  
-**Current:** you connect model behavior to prompts, tools, resources, and explicit contracts.  
+**Current:** you connect model behavior to APIs, prompts, tools, resources, and explicit contracts.  
 **Next:** you use those contracts as the safer base for agentic workflows.
 
 The book synthesis makes one thing clear: prompt engineering and LLM API work must be treated as engineering, not one-off experimentation. So this module adds API wrappers, chat roles, token/cost logs, prompt templates, schema validation, prompt regression tests, and injection checks before exposing tools or MCP-style interfaces.
 
 MCP appears here as a practical interface pattern for exposing tools, resources, and prompts to AI applications. The learner does not need to become an enterprise integration architect in Layer 1. They need to understand the shape of the contract, how to test it, and where permissions and secrets can fail.
+
+## Minimum Path And Advanced Doorway
+
+Use `../LEARNER_JOURNEY_MAP.md` as the course-level map. Module 3's minimum
+path is provider boundaries, prompt contracts, structured output validation,
+typed local tools, trace metadata, permissions, and secret-safe configuration.
+
+The advanced doorway is full integration architecture: MCP ecosystems,
+multi-provider routing, enterprise prompt management, and large tool catalogs.
+Layer 1 keeps the work small so learners understand contracts before scale.
 
 ## Layer-Proof Project
 
@@ -50,7 +60,7 @@ Learners build a small assistant that can:
 - handle missing or malformed tool responses
 - record a simple trace of what happened
 
-FinAgent reuses the same pattern for market quote tools, indicator calculators, company context resources, and later MCP-style boundaries.
+FinAgent reuses the same pattern for market quote tools, indicator calculators, company context resources, and later MCP-style boundaries. Keep the finance boundary in `../../FINANCE_SAFETY.md` visible whenever a provider or tool can produce market-facing text.
 
 ## Folder Map
 

@@ -1,4 +1,4 @@
-# Authoring Plan: Phase 4 Tiny Transformer Block
+﻿# Authoring Plan: Phase 4 Tiny Transformer Block
 
 This plan applies `curriculum/templates/lesson-quality-checklist.md` to the next concrete curriculum slice before lesson files are written.
 
@@ -82,7 +82,7 @@ The starting learner state may produce expected TODO assertion failures, but it 
 
 ## Reference Validation
 
-- [x] Reviewer-only intended behavior is documented under `.kiro/specs/curriculum-planning/implementation-notes/module-2-week-4-reference.md`.
+- [x] Reviewer-only intended behavior is documented under `.kiro/specs/curriculum-planning/implementation-notes/02-module-2-first-principles-week-04-transformer-reference.md`.
 - [x] Reference behavior proves the learner-visible tests are solvable.
 - [x] Hidden or reviewer-only notes cover edge cases not fully shown to learners.
 - [x] No API, network, secret, GPU, NumPy, PyTorch, or transformer library dependency is required.
@@ -110,9 +110,30 @@ python -m pytest tests -v
 
 Expected starting result: collection succeeds; learner-visible tests fail only because `workbench.py` TODO behavior is incomplete.
 
-Reference validation path: `.kiro/specs/curriculum-planning/implementation-notes/module-2-week-4-reference.md`
+Reference validation path: `.kiro/specs/curriculum-planning/implementation-notes/02-module-2-first-principles-week-04-transformer-reference.md`
 
 Follow-up files to update:
 
 - `curriculum/02-module-2-first-principles/README.md`
 - `.kiro/specs/curriculum-planning/CURRICULUM_REVIEW.md`
+## Learner Logic Enhancement
+
+- Current capability the learner brings into this lesson:
+- New capability added by this lesson:
+- Failure mode the learner must reproduce, inspect, or prevent:
+- FinAgent or practical AI-system improvement:
+- Explanation artifact the learner should leave with:
+
+## Scope Boundary Enhancement
+
+- Minimum required path:
+- Optional enrichment only after the minimum path works:
+- Advanced doorway, named briefly but not required:
+
+## Evidence Portfolio Enhancement
+
+- Technical evidence:
+- Failure evidence:
+- Explanation evidence:
+- Transfer evidence:
+

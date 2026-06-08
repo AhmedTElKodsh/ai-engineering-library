@@ -3,7 +3,7 @@
 ## Verification, Operations, and Model Decisions
 
 **Duration:** 7 weeks  
-**Expected time to finish:** 8-12 hours learner-ready core, plus planned production extensions  
+**Expected time to finish:** 28-42 hours total, about 4-6 hours per week  
 **Prerequisites:** Module 4 or equivalent comfort with RAG, tools, workflows, and pytest  
 **Pedagogy:** eval-driven development, operational evidence, and small release gates
 
@@ -14,6 +14,17 @@ Module 5 turns working AI features into maintainable AI systems. Learners build 
 The lesson is simple: a demo that works once is not production engineering. A junior AI engineer should learn to ask what can regress, what should be logged, what costs money, what leaks secrets, what fails under malformed input, and how the team will know when the system is wrong.
 
 The all-phases book synthesis adds one more production habit: do not jump to fine-tuning or bigger models because they sound advanced. Learners must compare deterministic code, prompt-only design, RAG, tool use, agents, and fine-tuning before choosing a path.
+
+## Minimum Path And Advanced Doorway
+
+Use `../LEARNER_JOURNEY_MAP.md` as the course-level map. Module 5's minimum
+path is evidence: golden evals, CI-style gates, local service boundaries,
+reproducible packaging, logs, monitoring review, cost/latency tradeoffs, and a
+model-selection decision.
+
+The advanced doorway is full LLMOps, production ML platforms, governance, and
+hands-on fine-tuning. Layer 1 teaches enough production discipline to avoid
+fragile demos and premature complexity.
 
 ## Layer-Proof Project
 
@@ -49,18 +60,17 @@ They produce a decision note with quality, cost, latency, data, safety, and main
 | --- | --- | --- | --- |
 | Week 1 | `week-01-golden-datasets` | Golden examples, edge cases, eval objective, and summary report | `python -m pytest curriculum/05-module-5-production/week-01-golden-datasets/tests -v` |
 | Week 2 | `week-02-cicd` | Prompt/model/index version notes plus unit/eval smoke gate and CI-style command checklist | `python -m pytest curriculum/05-module-5-production/week-02-cicd/tests -v` |
-| Week 3 | `week-03-fastapi` | Local service boundary with health and error responses | planned scaffold |
-| Week 4 | `week-04-docker` | Reproducible local package or container run path | planned scaffold |
-| Week 5 | `week-05-monitoring` | Structured logs, traces, failure categories, and review loop | planned scaffold |
-| Week 6 | `week-06-optimization` | Cost, latency, caching, batching, and retry tradeoffs | planned scaffold |
-| Week 7 | `week-07-fine-tuning` | Decision framework for prompt/RAG/tooling/fine-tuning, with fine-tuning kept as optional adaptation lab | planned scaffold |
+| Week 3 | `week-03-fastapi` | Local service boundary with health and error responses | `python -m pytest curriculum/05-module-5-production/week-03-fastapi/tests -v` |
+| Week 4 | `week-04-docker` | Reproducible local package or container run path | `python -m pytest curriculum/05-module-5-production/week-04-docker/tests -v` |
+| Week 5 | `week-05-monitoring` | Structured logs, traces, failure categories, and review loop | `python -m pytest curriculum/05-module-5-production/week-05-monitoring/tests -v` |
+| Week 6 | `week-06-optimization` | Cost, latency, caching, batching, and retry tradeoffs | `python -m pytest curriculum/05-module-5-production/week-06-optimization/tests -v` |
+| Week 7 | `week-07-fine-tuning` | Decision framework for prompt/RAG/tooling/fine-tuning, with fine-tuning kept as optional adaptation lab | `python -m pytest curriculum/05-module-5-production/week-07-fine-tuning/tests -v` |
 
 ## Learner Readiness Boundary
 
-Assign only Week 1 and Week 2 today. Weeks 3-7 are roadmap placeholders until
-each folder has a README, learner-editable `workbench.py`, fixtures if needed,
-tests that collect cleanly, hints, and a rubric. Do not use planned scaffold
-folders as capstone readiness gates.
+Assign Weeks 1-7 in order. Each week has a README, learner-editable
+`workbench.py`, tests that collect cleanly, hints, and a rubric. Tests are
+expected to fail before learners complete TODO behavior.
 
 ## Teaching Contract
 
@@ -96,6 +106,8 @@ FinAgent's final value depends on reliability, not just features. Module 5 adds 
 - rate limits
 - latency and cost budgets
 - safety language for educational use only
+
+Use `../../FINANCE_SAFETY.md` as the shared refusal and educational-boundary checklist for FinAgent production evals.
 
 ## Checkpoint Gate
 

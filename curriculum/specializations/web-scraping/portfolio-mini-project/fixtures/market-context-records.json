@@ -1,0 +1,40 @@
+{
+  "records": [
+    {
+      "record_id": "ctx-001",
+      "source_id": "market-notes",
+      "title": "Cloud Revenue Watch",
+      "summary": "Cloud vendors report steady enterprise demand while customers continue cost reviews.",
+      "source_url": "https://example.com/research/cloud-revenue",
+      "collected_at": "2026-05-25T10:00:00Z",
+      "tags": ["cloud", "earnings"]
+    },
+    {
+      "record_id": "ctx-002",
+      "source_id": "market-notes",
+      "title": "Edge AI Device Outlook",
+      "summary": "Device makers describe cautious inventory planning for edge AI hardware.",
+      "source_url": "https://example.com/research/edge-ai-devices",
+      "collected_at": "2026-05-25T10:05:00Z",
+      "tags": ["edge-ai", "hardware"]
+    },
+    {
+      "record_id": "ctx-003",
+      "source_id": "market-notes",
+      "title": "Cloud Revenue Watch",
+      "summary": "Cloud vendors report steady enterprise demand while customers continue cost reviews.",
+      "source_url": "https://example.com/research/cloud-revenue",
+      "collected_at": "2026-05-25T10:10:00Z",
+      "tags": ["duplicate"]
+    },
+    {
+      "record_id": "ctx-004",
+      "source_id": "analyst-rumors",
+      "title": "Unverified Price Target",
+      "summary": "A rumor claims a large near-term price jump without cited evidence.",
+      "source_url": "https://example.com/rumors/price-target",
+      "collected_at": "2026-05-25T10:15:00Z",
+      "tags": ["rumor"]
+    }
+  ]
+}

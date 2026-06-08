@@ -22,6 +22,25 @@ By the end of this module, the learner can:
 - build:
 - verify:
 
+## Learner Journey Map
+
+Use this map to make the module logic visible:
+
+| Stage | Capability | Failure Mode Practiced | Evidence |
+| --- | --- | --- | --- |
+| Enter | What the learner can already do | What still breaks | Prior artifact |
+| Build | New module capability | New failure made visible | Workbench/test/eval |
+| Transfer | FinAgent or practical reuse | Production-shaped risk | Explanation or portfolio note |
+
+## Minimum Path And Optional Enrichment
+
+- **Minimum path:** the required weeks, tests, and artifacts needed for the course exit standard.
+- **Optional enrichment:** additional practice or advanced previews that are useful but not required.
+
+## Advanced Doorways
+
+Name later topics this module prepares for without teaching them at full depth.
+
 ## Weekly Plan
 
 | Week | Topic | Learner Output | Verification |
@@ -41,4 +60,3 @@ The learner is ready to continue when they can:
 - build the scaffolded implementation
 - pass the tests
 - describe at least one failure mode
-

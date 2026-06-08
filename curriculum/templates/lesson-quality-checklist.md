@@ -11,10 +11,15 @@ Copy this checklist into a lesson `AUTHORING_PLAN.md` before building a new lear
 - FinAgent or practical AI engineering callback:
 - Primary concept:
 - Secondary operational concern:
+- Minimum required path:
+- Optional enrichment boundary:
+- Advanced doorway:
 
 ## Learner Surface
 
 - [ ] `README.md` includes learning goal, realistic context, story, trace, task, verification, reflection, and extension.
+- [ ] `README.md` includes the five-question learner logic map: current capability, new capability, failure solved, FinAgent/practical improvement, explanation target.
+- [ ] `README.md` names the minimum path, optional enrichment, and advanced doorway without making advanced work required.
 - [ ] `workbench.py` is the primary learner-editable file.
 - [ ] `workbench.py` imports cleanly before TODOs are completed.
 - [ ] `hints.md` uses progressive hints without revealing the full implementation early.
@@ -36,6 +41,7 @@ Copy this checklist into a lesson `AUTHORING_PLAN.md` before building a new lear
 - [ ] Explain Like a Teammate prompt asks for a short written explanation.
 - [ ] One Step Stronger asks for a small edge case, variation, or test.
 - [ ] Reflection asks what the implementation proves and what it does not prove.
+- [ ] Evidence portfolio asks for technical evidence, failure evidence, explanation evidence, and transfer evidence.
 - [ ] The lesson avoids research-report prose and keeps citations or source synthesis out of learner flow.
 - [ ] The rubric checks learning behavior, not only final correctness.
 
@@ -71,6 +77,7 @@ Copy this checklist into a lesson `AUTHORING_PLAN.md` before building a new lear
 - [ ] The lesson adds at most one secondary operational concern.
 - [ ] Extension work is clearly marked as optional.
 - [ ] Advanced or platform scope is parked rather than pulled into the core lesson.
+- [ ] Any advanced doorway is 1-3 sentences and does not expand the required task.
 
 ## Completion Evidence
 

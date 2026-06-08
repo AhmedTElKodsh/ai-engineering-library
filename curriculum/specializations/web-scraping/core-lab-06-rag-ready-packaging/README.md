@@ -1,4 +1,26 @@
-# Core Lab 6: RAG-Ready Packaging
+﻿# Core Lab 6: RAG-Ready Packaging
+
+## Learning Logic
+
+Use the course map in `curriculum/LEARNER_JOURNEY_MAP.md` and the local module README to keep this lesson bounded.
+
+| Question | Learner-facing answer |
+| --- | --- |
+| What can I do now? | review source records for provenance and quality. |
+| What new capability am I adding? | package passed records into citation-preserving RAG chunks and refusal rules. |
+| What failure does this help me catch? | chunks without citations, stale evidence, and unsafe financial claims. |
+| How does this improve FinAgent or a practical AI system? | hands Module 4 retrieval clean evidence for FinAgent answers. |
+| What should I be able to explain afterward? | how source records become retrieval-ready context. |
+
+## Minimum Path, Enrichment, And Doorway
+
+- **Minimum path:** read the scenario, inspect the tests or fixtures, complete the TODOs in `workbench.py`, run the verification command, and write the reflection/evidence note.
+- **Optional enrichment:** add one edge case, comparison, or small test after the required behavior works.
+- **Advanced doorway:** notice the later advanced topic this prepares for, then return to the bounded Course 1 task.
+
+## Evidence Portfolio
+
+Leave this lesson with technical evidence, failure evidence, explanation evidence, and transfer evidence. A passing test alone is not the whole learning outcome.
 
 ## Learning Goal
 
@@ -50,3 +72,4 @@ The chunks from this lab match the citation habits used in Module 4. Learners sh
 
 - Reference: [OpenAI retrieval-augmented generation guide](https://platform.openai.com/docs/guides/retrieval) - use it to connect chunk packaging to later retrieval workflows.
 - Reference: [OpenAI evals guidance](https://platform.openai.com/docs/guides/evals) - use it to think about how refusal rules become test cases later.
+

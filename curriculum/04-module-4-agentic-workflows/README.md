@@ -2,8 +2,8 @@
 
 ## Controlled Workflows Before Autonomous Agents
 
-**Duration:** 8 weeks  
-**Expected time to finish:** 12-18 hours core, plus 3-5 hours optional enrichment  
+**Duration:** required web-data bridge plus 4 core phases; 4 later phases are optional advanced doorway work  
+**Expected time to finish:** 20-30 hours for the required bridge plus Phases 1-4; 16-24 optional hours for Phases 5-8  
 **Prerequisites:** Module 3 or equivalent comfort with tool contracts and testable boundaries  
 **Pedagogy:** simple composable workflows first, agent autonomy only when justified
 
@@ -27,6 +27,17 @@ The book synthesis reinforces that many RAG failures happen before retrieval: ba
 
 The required Web Data Acquisition bridge now feeds this module directly. Learners first inspect allowed sources and extract fixture-backed records with provenance, then Module 4 consumes those records as clean chunks for citation and abstention RAG.
 
+## Minimum Path And Advanced Doorway
+
+Use `../LEARNER_JOURNEY_MAP.md` as the course-level map. Module 4's Course 1
+core path is AI-ready data, cited retrieval, abstention, explicit workflows,
+critique, retry, and human-review gates. The learner should prove that each
+answer or action is supported by evidence.
+
+The advanced doorway is GraphRAG, complex orchestration, autonomous agents, and
+multi-agent systems at scale. This module teaches the safer base first:
+retrieval and workflows that can be inspected, tested, and stopped.
+
 ## Layer-Proof Project
 
 **AI-Ready Data Pipeline**
@@ -44,11 +55,18 @@ Learners build a small raw/clean/curated pipeline that can:
 
 Learners build a source-grounded assistant over a small document set. It must retrieve relevant context, cite sources, abstain when evidence is weak, and expose enough trace data to debug bad answers.
 
+The retrieval progression is explicit:
+
+1. keyword baseline
+2. tiny embedding similarity using Module 2 vector habits
+3. hybrid score that combines lexical and vector evidence
+4. short comparison of failure cases
+
 **Workflow Automation Agent**
 
 Learners then add a bounded multi-step workflow that plans, calls tools, checks intermediate outputs, and stops safely.
 
-FinAgent reuses these skills for cited market context, uncertainty labels, source comparison, and controlled research-note generation.
+FinAgent reuses these skills for cited market context, uncertainty labels, source comparison, and controlled research-note generation. Its finance safety boundary is defined in `../../FINANCE_SAFETY.md`.
 
 ## Folder Map
 
@@ -62,21 +80,23 @@ The folder names stay stable for tests and links. The learner-facing titles belo
 | Phase 1 | `week-01-basic-rag` | AI-Ready Ingestion And Chunking Lab | Build raw, clean, failed, and chunked source layers with provenance metadata | `python -m pytest curriculum/04-module-4-agentic-workflows/week-01-basic-rag/tests -v` |
 | Phase 2 | `week-02-advanced-rag` | Citation And Abstention RAG Lab | Add retrieval, citation checks, and abstention behavior over bridge/Phase 1 chunks | `python -m pytest curriculum/04-module-4-agentic-workflows/week-02-advanced-rag/tests -v` |
 | Phase 3 | `week-03-core-patterns` | Explicit Workflow Pattern Lab | Build prompt chaining, routing, and tool-use workflows with gates | `python -m pytest curriculum/04-module-4-agentic-workflows/week-03-core-patterns/tests -v` |
-| Phase 4 | `week-04-advanced-patterns` | Critique And Review Loop Lab | Add reflection, critique, retry, and human-review checkpoints | planned scaffold |
-| Phase 5 | `week-05-langgraph-state` | Framework State Machine Lab | Rebuild one explicit loop with framework-managed state after the plain-Python version works | planned scaffold |
-| Phase 6 | `week-06-advanced-orchestration` | Resumable Orchestration Lab | Add error recovery, bounded loops, and resumable workflow state | planned scaffold |
-| Phase 7 | `week-07-collaboration` | Multi-Role Review Workflow Lab | Build a multi-role review or collaboration workflow with clear ownership | planned scaffold |
-| Phase 8 | `week-08-production-multi-agent` | Production Multi-Agent Boundaries Lab | Build a small multi-agent system with traceable decisions and stop conditions | planned scaffold |
+| Phase 4 | `week-04-advanced-patterns` | Critique And Review Loop Lab | Add reflection, critique, retry, and human-review checkpoints | `python -m pytest curriculum/04-module-4-agentic-workflows/week-04-advanced-patterns/tests -v` |
+| Optional doorway | `week-05-langgraph-state` | Framework State Machine Lab | Rebuild one explicit loop with framework-style state after the plain-Python version works | `python -m pytest curriculum/04-module-4-agentic-workflows/week-05-langgraph-state/tests -v` |
+| Optional doorway | `week-06-advanced-orchestration` | Resumable Orchestration Lab | Add error recovery, bounded loops, and resumable workflow state | `python -m pytest curriculum/04-module-4-agentic-workflows/week-06-advanced-orchestration/tests -v` |
+| Optional doorway | `week-07-collaboration` | Multi-Role Review Workflow Lab | Build a multi-role review or collaboration workflow with clear ownership | `python -m pytest curriculum/04-module-4-agentic-workflows/week-07-collaboration/tests -v` |
+| Optional doorway | `week-08-production-multi-agent` | Production Multi-Agent Boundaries Lab | Build a small multi-agent system with traceable decisions and stop conditions | `python -m pytest curriculum/04-module-4-agentic-workflows/week-08-production-multi-agent/tests -v` |
 
-Phase 1, Phase 2, Phase 3, and all six required web-data bridge labs now include learner scaffolds. Tests are expected to fail before learners complete the TODOs in `workbench.py`.
+Phases 1-4 and the required web-data bridge labs are the Course 1 core. Phases
+5-8 include learner scaffolds, but they are optional advanced doorway practice,
+not required for the Course 1 exit standard. Tests are expected to fail before
+learners complete the TODOs in `workbench.py`.
 
 ## Learner Readiness Boundary
 
-Assign only the required web-data bridge plus Phases 1-3 today. Phases 4-8 are
-roadmap placeholders until each folder has a README, learner-editable
-`workbench.py`, fixtures if needed, tests that collect cleanly, hints, and a
-rubric. Do not treat planned scaffold folders as learner homework or readiness
-gates for Module 5.
+Assign the required web-data bridge plus Phases 1-4 in order. Offer Phases 5-8
+only after the learner can already explain and test the explicit workflow path.
+Each listed folder has a README, learner-editable `workbench.py`, tests that
+collect cleanly, hints, and a rubric.
 
 ## Teaching Contract
 
@@ -122,6 +142,6 @@ Learners are ready for Module 5 when they can:
 - build a RAG pipeline with citations and abstention
 - compare vector, keyword, or hybrid retrieval on a small benchmark
 - explain why a retrieval result was or was not relevant
-- implement a bounded agentic workflow
+- implement a bounded explicit workflow with critique/review gates
 - inspect trace state after a failed run
 - justify when not to use an agent

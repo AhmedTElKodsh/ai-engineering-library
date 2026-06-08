@@ -1,4 +1,26 @@
-# Core Lab 4: Pagination, Retries, and Deduplication
+﻿# Core Lab 4: Pagination, Retries, and Deduplication
+
+## Learning Logic
+
+Use the course map in `curriculum/LEARNER_JOURNEY_MAP.md` and the local module README to keep this lesson bounded.
+
+| Question | Learner-facing answer |
+| --- | --- |
+| What can I do now? | validate API-collected market records. |
+| What new capability am I adding? | handle pagination, retry policy, and duplicate records. |
+| What failure does this help me catch? | lost pages, repeated records, retrying validation errors, and unstable IDs. |
+| How does this improve FinAgent or a practical AI system? | prepares FinAgent for multi-page source collection without messy duplicates. |
+| What should I be able to explain afterward? | how pagination and retry choices affect data quality. |
+
+## Minimum Path, Enrichment, And Doorway
+
+- **Minimum path:** read the scenario, inspect the tests or fixtures, complete the TODOs in `workbench.py`, run the verification command, and write the reflection/evidence note.
+- **Optional enrichment:** add one edge case, comparison, or small test after the required behavior works.
+- **Advanced doorway:** notice the later advanced topic this prepares for, then return to the bounded Course 1 task.
+
+## Evidence Portfolio
+
+Leave this lesson with technical evidence, failure evidence, explanation evidence, and transfer evidence. A passing test alone is not the whole learning outcome.
 
 ## Learning Goal
 
@@ -51,3 +73,4 @@ Pagination makes RAG inputs broader, but broader is only useful when provenance 
 
 - Reference: [urllib.parse documentation](https://docs.python.org/3/library/urllib.parse.html) - use `urljoin` when turning relative next links into absolute URLs.
 - Reference: [Requests timeouts](https://requests.readthedocs.io/en/master/user/quickstart/#timeouts) - use the timeout idea when this fixture-first lab becomes live collection.
+

@@ -1,4 +1,4 @@
-# Authoring Plan: Module 5 Week 1
+﻿# Authoring Plan: Module 5 Week 1
 
 ## Lesson Identity
 
@@ -72,4 +72,25 @@ python -m pytest curriculum/05-module-5-production/week-01-golden-datasets/tests
 
 Expected starting result: tests collect and then fail on TODO behavior.
 
-Reference validation path: `.kiro/specs/curriculum-planning/implementation-notes/module-5-week-01-golden-eval-reference.md`
+Reference validation path: `.kiro/specs/curriculum-planning/implementation-notes/05-module-5-production-week-01-golden-datasets-reference.md`
+## Learner Logic Enhancement
+
+- Current capability the learner brings into this lesson:
+- New capability added by this lesson:
+- Failure mode the learner must reproduce, inspect, or prevent:
+- FinAgent or practical AI-system improvement:
+- Explanation artifact the learner should leave with:
+
+## Scope Boundary Enhancement
+
+- Minimum required path:
+- Optional enrichment only after the minimum path works:
+- Advanced doorway, named briefly but not required:
+
+## Evidence Portfolio Enhancement
+
+- Technical evidence:
+- Failure evidence:
+- Explanation evidence:
+- Transfer evidence:
+

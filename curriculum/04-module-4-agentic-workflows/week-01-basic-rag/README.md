@@ -1,4 +1,26 @@
-# Phase 1: AI-Ready Ingestion And Chunking Lab
+﻿# Phase 1: AI-Ready Ingestion And Chunking Lab
+
+## Learning Logic
+
+Use the course map in `curriculum/LEARNER_JOURNEY_MAP.md` and the local module README to keep this lesson bounded.
+
+| Question | Learner-facing answer |
+| --- | --- |
+| What can I do now? | build validated tools and structured context. |
+| What new capability am I adding? | create raw, clean, failed, and chunked AI-ready records. |
+| What failure does this help me catch? | missing metadata, silent record drops, and bad chunk provenance. |
+| How does this improve FinAgent or a practical AI system? | gives FinAgent source-grounded material before retrieval answers. |
+| What should I be able to explain afterward? | how ingestion quality controls RAG reliability. |
+
+## Minimum Path, Enrichment, And Doorway
+
+- **Minimum path:** read the scenario, inspect the tests or fixtures, complete the TODOs in `workbench.py`, run the verification command, and write the reflection/evidence note.
+- **Optional enrichment:** add one edge case, comparison, or small test after the required behavior works.
+- **Advanced doorway:** notice the later advanced topic this prepares for, then return to the bounded Course 1 task.
+
+## Evidence Portfolio
+
+Leave this lesson with technical evidence, failure evidence, explanation evidence, and transfer evidence. A passing test alone is not the whole learning outcome.
 
 Folder: `week-01-basic-rag`  
 Expected time to finish: 5-7 hours  
@@ -133,4 +155,5 @@ One thing this pipeline still does not prove:
 ## Connection To Module 3
 
 Module 3 taught provider and tool boundaries. This phase gives those tools trustworthy input: records that can be validated, traced, chunked, and cited before any LLM or agent is allowed to act.
+
 

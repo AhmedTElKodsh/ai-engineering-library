@@ -4,6 +4,10 @@ This folder has one active planning home:
 
 - `curriculum-planning/`
 
+Older sibling folders may still exist in this working tree while cleanup is in
+progress. Treat them as inert legacy source copies unless and until their useful
+content is merged into `curriculum-planning/`.
+
 Use `curriculum-planning/ROADMAP.md` as the source of truth for curriculum sequencing, module scope, FinAgent integration, web-scraping placement, pedagogy, quality gates, and implementation phases. Use `curriculum-planning/SPEC.md` for the authoring contract.
 
 Use `curriculum-planning/docs/pedagogy-methodologies-research.md` when choosing teaching methods for new lessons. It maps software engineering topics to appropriate pedagogy mixes, GitHub teaching infrastructure, and project-spine assessment evidence.
@@ -28,6 +32,11 @@ For implementation work, also use:
 | `curriculum-planning/source-material/AI_Engineering_Curriculum_All_Phases.md` | Preserved broad book-derived concept map used for coverage checks, not as a direct folder plan. |
 | `curriculum-planning/docs/` | Research notes, historical merge summaries, and supporting planning context. Keep for traceability, but do not treat as competing roadmaps. |
 | `curriculum-planning/docs/pedagogy-methodologies-research.md` | Current pedagogy enhancement source for topic-to-method mapping and assessment evidence. |
+| `ai-engineering-curriculum-implementation/` | Legacy sibling copy, not an active roadmap. Consolidate or remove after verifying traceability. |
+| `capstone-pedagogical-enhancement/` | Legacy sibling copy, not an active roadmap. Consolidate or remove after verifying traceability. |
+| `teaching-methodology-evaluation/` | Legacy sibling copy, not an active roadmap. Consolidate or remove after verifying traceability. |
+| `web-scraping-curriculum/` | Legacy sibling copy, not an active roadmap. Consolidate or remove after verifying traceability. |
+| `docs/` | Legacy sibling docs, not the canonical planning docs unless linked from `curriculum-planning/`. |
 
 ## Planning Rule
 

@@ -1,4 +1,26 @@
-# Week 01: FinAgent Intake Mini-Project
+﻿# Week 01: FinAgent Intake Mini-Project
+
+## Learning Logic
+
+Use the course map in `curriculum/LEARNER_JOURNEY_MAP.md` and the local module README to keep this lesson bounded.
+
+| Question | Learner-facing answer |
+| --- | --- |
+| What can I do now? | read diagnostic failures and identify a Python gap. |
+| What new capability am I adding? | repair core functions, collections, strings, and small reusable helpers. |
+| What failure does this help me catch? | off-by-one, type conversion, grouping, and formatting mistakes. |
+| How does this improve FinAgent or a practical AI system? | prepares the intake and data-shaping code FinAgent reuses. |
+| What should I be able to explain afterward? | how each small Python pattern supports later AI-system code. |
+
+## Minimum Path, Enrichment, And Doorway
+
+- **Minimum path:** read the scenario, inspect the tests or fixtures, complete the TODOs in `workbench.py`, run the verification command, and write the reflection/evidence note.
+- **Optional enrichment:** add one edge case, comparison, or small test after the required behavior works.
+- **Advanced doorway:** notice the later advanced topic this prepares for, then return to the bounded Course 1 task.
+
+## Evidence Portfolio
+
+Leave this lesson with technical evidence, failure evidence, explanation evidence, and transfer evidence. A passing test alone is not the whole learning outcome.
 
 **Time estimate:** 2-3 hours  
 **Goal:** repair Python gaps by building the small intake, routing, prompt, and retry habits FinAgent needs.
@@ -138,3 +160,4 @@ You are done when:
 - Python functools: https://docs.python.org/3/library/functools.html
 - Pytest assertions: https://docs.pytest.org/en/stable/how-to/assert.html
 - Visual pytest walkthrough: https://realpython.com/pytest-python-testing/
+

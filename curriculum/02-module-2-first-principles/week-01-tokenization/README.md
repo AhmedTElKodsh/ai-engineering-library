@@ -1,4 +1,26 @@
-# Phase 1: Market Text Tokenization Lab
+﻿# Phase 1: Market Text Tokenization Lab
+
+## Learning Logic
+
+Use the course map in `curriculum/LEARNER_JOURNEY_MAP.md` and the local module README to keep this lesson bounded.
+
+| Question | Learner-facing answer |
+| --- | --- |
+| What can I do now? | trace deterministic FinAgent text output. |
+| What new capability am I adding? | turn market text into byte and merge-based token IDs. |
+| What failure does this help me catch? | spacing, punctuation, and vocabulary assumptions that distort token counts. |
+| How does this improve FinAgent or a practical AI system? | prepares FinAgent prompts for cost, context, and provider-boundary reasoning. |
+| What should I be able to explain afterward? | how text becomes tokens and what the toy tokenizer proves. |
+
+## Minimum Path, Enrichment, And Doorway
+
+- **Minimum path:** read the scenario, inspect the tests or fixtures, complete the TODOs in `workbench.py`, run the verification command, and write the reflection/evidence note.
+- **Optional enrichment:** add one edge case, comparison, or small test after the required behavior works.
+- **Advanced doorway:** notice the later advanced topic this prepares for, then return to the bounded Course 1 task.
+
+## Evidence Portfolio
+
+Leave this lesson with technical evidence, failure evidence, explanation evidence, and transfer evidence. A passing test alone is not the whole learning outcome.
 
 Folder: `week-01-tokenization`  
 Expected time to finish: 4-6 hours  
@@ -137,3 +159,4 @@ What this toy tokenizer does not prove:
 ## Connection To Module 1
 
 Module 1 packaged FinAgent behind a deterministic request/response boundary. Module 2 begins opening the model-facing side of that system. The stock summaries from Module 1 are still plain text, but this chapter shows how that text would enter a model pipeline.
+

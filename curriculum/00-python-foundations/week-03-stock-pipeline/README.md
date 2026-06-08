@@ -1,4 +1,26 @@
-# Week 03: Post-Module-1 Stock Research Pipeline
+﻿# Week 03: Post-Module-1 Stock Research Pipeline
+
+## Learning Logic
+
+Use the course map in `curriculum/LEARNER_JOURNEY_MAP.md` and the local module README to keep this lesson bounded.
+
+| Question | Learner-facing answer |
+| --- | --- |
+| What can I do now? | trace Module 1 FinAgent behavior and Module 0 Python utilities. |
+| What new capability am I adding? | build a CSV-backed stock data pipeline with validation and summaries. |
+| What failure does this help me catch? | bad rows, missing prices, invalid windows, and unsafe summaries. |
+| How does this improve FinAgent or a practical AI system? | gives FinAgent a deterministic data-loading spine before LLMs. |
+| What should I be able to explain afterward? | how clean data flows from file to metrics to educational report. |
+
+## Minimum Path, Enrichment, And Doorway
+
+- **Minimum path:** read the scenario, inspect the tests or fixtures, complete the TODOs in `workbench.py`, run the verification command, and write the reflection/evidence note.
+- **Optional enrichment:** add one edge case, comparison, or small test after the required behavior works.
+- **Advanced doorway:** notice the later advanced topic this prepares for, then return to the bounded Course 1 task.
+
+## Evidence Portfolio
+
+Leave this lesson with technical evidence, failure evidence, explanation evidence, and transfer evidence. A passing test alone is not the whole learning outcome.
 
 **Goal:** apply Python foundations after the student has completed Module 1's whole-game FinAgent workflow.
 
@@ -138,3 +160,4 @@ This note becomes evidence that the Python work is not isolated practice; it is 
 - Python contextlib: https://docs.python.org/3/library/contextlib.html
 - Pytest assertions: https://docs.pytest.org/en/stable/how-to/assert.html
 - Current pytest guide: https://realpython.com/pytest-python-testing/
+

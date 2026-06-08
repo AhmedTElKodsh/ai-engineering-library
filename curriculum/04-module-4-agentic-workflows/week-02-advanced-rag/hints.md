@@ -47,3 +47,15 @@ If abstention fails, confirm low-score cases do not sneak into the answer path.
 ### Final Check
 
 Run retrieval tests before answer tests. The answer layer should only use chunks that passed retrieval and threshold rules.
+## Failure Lab
+
+Before asking for the next hint, identify the first concrete failure signal: the failing test name, assertion message, malformed fixture, missing field, unsafe output, weak citation, or unclear trace. Write one sentence about what the failure is teaching.
+
+## Evidence Check
+
+After the smallest behavior works, leave four notes:
+
+- technical evidence: what code, test, fixture, eval, trace, or log changed
+- failure evidence: what broken case is now handled or intentionally refused
+- explanation evidence: why the fix works in 2-4 sentences
+- transfer evidence: how this pattern strengthens FinAgent or a later AI system

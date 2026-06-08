@@ -1,4 +1,26 @@
-# Week 2: Capstone Polish And Defense
+﻿# Week 2: Capstone Polish And Defense
+
+## Learning Logic
+
+Use the course map in `curriculum/LEARNER_JOURNEY_MAP.md` and the local module README to keep this lesson bounded.
+
+| Question | Learner-facing answer |
+| --- | --- |
+| What can I do now? | build or inspect the runnable FinAgent integration. |
+| What new capability am I adding? | prepare demo flow, release evidence, limitation notes, and interview defense. |
+| What failure does this help me catch? | unclear demos, missing blockers, and overclaimed capabilities. |
+| How does this improve FinAgent or a practical AI system? | makes FinAgent portfolio-ready without hiding limitations. |
+| What should I be able to explain afterward? | how to defend architecture, evals, safety, and next improvements. |
+
+## Minimum Path, Enrichment, And Doorway
+
+- **Minimum path:** read the scenario, inspect the tests or fixtures, complete the TODOs in `workbench.py`, run the verification command, and write the reflection/evidence note.
+- **Optional enrichment:** add one edge case, comparison, or small test after the required behavior works.
+- **Advanced doorway:** notice the later advanced topic this prepares for, then return to the bounded Course 1 task.
+
+## Evidence Portfolio
+
+Leave this lesson with technical evidence, failure evidence, explanation evidence, and transfer evidence. A passing test alone is not the whole learning outcome.
 
 ## Learning Goal
 
@@ -62,3 +84,4 @@ Your capstone is ready to present when a reviewer can:
 ## Cafe Visual Break
 
 - Reference: [OpenAI evaluation best practices](https://platform.openai.com/docs/guides/evaluation-best-practices) - use the continuous-evaluation mindset when deciding which checks belong in your release evidence.
+

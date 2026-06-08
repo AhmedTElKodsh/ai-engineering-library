@@ -89,7 +89,7 @@ FinAgent should be visible as one staged product story, not only a final project
 | Module 3 | LLM API wrapper, prompt contract, structured output, tool boundary, MCP-style interface | prompt regression test, typed tool schema, secret-safe trace |
 | Module 4 | cited market/company context with RAG, web data, and a bounded workflow | source metadata, retrieval log, abstention/citation check |
 | Module 5 | production hardening for evals, logs, cost, latency, safety, and failure analysis | golden eval run, structured logs, release/readiness note |
-| Module 6 | portfolio-ready educational FinAgent capstone | architecture diagram, tests, evals, trace samples, limitation and ethics note |
+| Module 6 | capstone kickoff, deterministic integration build, and polish | scope note, eval cases, runnable local workflow, portfolio ledger, demo evidence, limitation and ethics note |
 
 ## Pacing Guardrails
 
@@ -101,7 +101,7 @@ Use time budgets to prevent the junior course from becoming an encyclopedia.
 | Module 1 | 8-12 hours | 2-3 hours | do not hide the whole-game workflow behind theory |
 | Module 2 | 12-16 hours | 3-4 hours | do not become a full deep-learning course |
 | Module 3 | 10-14 hours | 2-4 hours | do not become all agent frameworks |
-| Module 4 | 12-18 hours | 3-5 hours | do not become all RAG, GraphRAG, and data platforms |
+| Module 4 core | 12-18 hours for Phases 1-4 after the web-data bridge | 16-24 hours for Phases 5-8 advanced workflow doorway | do not make state frameworks, collaboration, or production multi-agent work required for Course 1 |
 | Web Data Acquisition mini-course | 8-12 hours | 10-20 hours in specialization | keep it mandatory but bounded; do not become a production scraping engineer track |
 | Module 5 | 10-14 hours | 2-4 hours | keep production practical, not enterprise platform-heavy |
 | Module 6 | 12-18 hours | 4-6 hours | keep FinAgent educational, not fintech SaaS |
@@ -470,6 +470,20 @@ FinAgent contribution:
 - preserve raw source metadata and cleaning decisions
 - generate a research note with citations and limitations
 
+Course 1 required core:
+
+- Phase 1: AI-ready data pipeline
+- Phase 2: citation and abstention RAG
+- Phase 3: explicit workflow patterns
+- Phase 4: critique, retry, and human-review loop
+
+Advanced doorway, optional unless explicitly assigned:
+
+- framework state-machine practice
+- resumable orchestration
+- multi-role collaboration
+- production multi-agent boundaries
+
 Gate:
 
 - retrieval output includes source metadata
@@ -540,11 +554,12 @@ Pedagogical milestones:
 
 1. Read and explain the target architecture.
 2. Modify a worked FinAgent slice.
-3. Create a new data/tool capability from TODOs.
-4. Add retrieval and citation checks.
-5. Add agent orchestration with bounded failure recovery.
-6. Add production gates and documentation.
-7. Present the final system with a written defense.
+3. Define capstone scope, eval cases, and portfolio evidence.
+4. Compose prior FinAgent slices into a runnable deterministic workflow.
+5. Add retrieval and citation checks.
+6. Add bounded workflow behavior and failure recovery where justified.
+7. Add production gates and documentation.
+8. Present the final system with a written defense.
 
 Final deliverables:
 

@@ -1,4 +1,26 @@
-# Week 02: Python for Production
+﻿# Week 02: Python for Production
+
+## Learning Logic
+
+Use the course map in `curriculum/LEARNER_JOURNEY_MAP.md` and the local module README to keep this lesson bounded.
+
+| Question | Learner-facing answer |
+| --- | --- |
+| What can I do now? | write small tested Python functions from Week 1. |
+| What new capability am I adding? | practice errors, context managers, classes, generators, and state updates. |
+| What failure does this help me catch? | resource leaks, unclear exceptions, mutation bugs, and brittle state handling. |
+| How does this improve FinAgent or a practical AI system? | strengthens the production habits behind clients, tools, and pipelines. |
+| What should I be able to explain afterward? | why the production pattern is safer than the naive version. |
+
+## Minimum Path, Enrichment, And Doorway
+
+- **Minimum path:** read the scenario, inspect the tests or fixtures, complete the TODOs in `workbench.py`, run the verification command, and write the reflection/evidence note.
+- **Optional enrichment:** add one edge case, comparison, or small test after the required behavior works.
+- **Advanced doorway:** notice the later advanced topic this prepares for, then return to the bounded Course 1 task.
+
+## Evidence Portfolio
+
+Leave this lesson with technical evidence, failure evidence, explanation evidence, and transfer evidence. A passing test alone is not the whole learning outcome.
 
 **Time estimate:** 3-4 hours  
 **Goal:** practice the intermediate-to-advanced Python patterns that make real systems reliable.
@@ -130,3 +152,4 @@ You are done when:
 - Python iterators and generators: https://docs.python.org/3/tutorial/classes.html#iterators
 - Visual context-manager guide: https://realpython.com/python-with-statement/
 - Generator walkthrough: https://realpython.com/introduction-to-python-generators/
+

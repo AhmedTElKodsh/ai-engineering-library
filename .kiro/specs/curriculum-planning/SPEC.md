@@ -363,7 +363,11 @@ The core path must include:
 - privacy, PII minimization, copyright, terms-of-service, robots.txt, and attribution review
 - conversion of cleaned pages or records into RAG-ready chunks with citation metadata
 
-The core path should require 5-6 labs and one portfolio mini-project. The remaining labs from `AI_Engineering_Books.md` belong in the optional extension path unless a later module explicitly needs them.
+The core path should require 5-6 labs plus one fixture-first portfolio
+mini-project. The portfolio project is assignable after the learner has
+completed source approval, provenance, quality, and RAG packaging labs. The
+remaining labs from `AI_Engineering_Books.md` belong in the optional extension
+path unless a later module explicitly needs them.
 
 The mini-project deliverables are:
 

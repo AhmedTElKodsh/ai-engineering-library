@@ -7,8 +7,6 @@ Learners should complete the TODOs using plain Python only.
 
 from __future__ import annotations
 
-import math
-import re
 from dataclasses import dataclass
 
 

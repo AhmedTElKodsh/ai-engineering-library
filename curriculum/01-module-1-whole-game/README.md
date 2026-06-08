@@ -11,6 +11,8 @@
 
 Module 1 gives learners a small complete AI engineering product slice before they study every internal mechanism. The current implemented path uses FinAgent, a deterministic stock-market analysis workflow, so learners can see the shape of the final capstone early without relying on full AI-generated code.
 
+Use `../../FINANCE_SAFETY.md` whenever FinAgent output touches market context.
+
 | Question | Answer |
 | --- | --- |
 | What will I build? | A deterministic FinAgent stock-summary workflow with validation, risk wording, and a local request/response boundary. |
@@ -26,6 +28,17 @@ The goal is confidence plus context:
 5. Explain why deterministic code is enough for this first slice and what is still missing before LLMs, RAG, MCP, and agents are added later.
 
 The workbench tests are expected to fail at first. That is the exercise state, not a broken curriculum state.
+
+## Minimum Path And Advanced Doorway
+
+Use `../LEARNER_JOURNEY_MAP.md` as the course-level map. Module 1's minimum
+path is to run, trace, modify, and package one deterministic FinAgent slice.
+The learner should leave with trace evidence, a PR-style change summary, and a
+boundary note.
+
+The advanced doorway is AI product architecture: LLM calls, RAG, tools, agents,
+and production gates will arrive later. Here the learner earns the right to add
+AI by first proving when deterministic software is enough.
 
 ## Evidence-Informed Teaching Mix
 

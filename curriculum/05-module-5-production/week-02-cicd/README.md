@@ -1,4 +1,26 @@
-# Week 2: CI-Style Regression Gate
+﻿# Week 2: CI-Style Regression Gate
+
+## Learning Logic
+
+Use the course map in `curriculum/LEARNER_JOURNEY_MAP.md` and the local module README to keep this lesson bounded.
+
+| Question | Learner-facing answer |
+| --- | --- |
+| What can I do now? | run a small golden eval set. |
+| What new capability am I adding? | add CI-style pass-rate gates, version notes, and review checklists. |
+| What failure does this help me catch? | silent prompt/model/index drift and failing eval runs. |
+| How does this improve FinAgent or a practical AI system? | turns FinAgent quality checks into repeatable release evidence. |
+| What should I be able to explain afterward? | how CI gates connect tests, evals, versions, and review. |
+
+## Minimum Path, Enrichment, And Doorway
+
+- **Minimum path:** read the scenario, inspect the tests or fixtures, complete the TODOs in `workbench.py`, run the verification command, and write the reflection/evidence note.
+- **Optional enrichment:** add one edge case, comparison, or small test after the required behavior works.
+- **Advanced doorway:** notice the later advanced topic this prepares for, then return to the bounded Course 1 task.
+
+## Evidence Portfolio
+
+Leave this lesson with technical evidence, failure evidence, explanation evidence, and transfer evidence. A passing test alone is not the whole learning outcome.
 
 ## Learning Goal
 
@@ -52,3 +74,4 @@ FinAgent cannot rely on "it answered well when I tried it." A release gate catch
 
 - Reference: [OpenAI evals guide](https://platform.openai.com/docs/guides/evals) - use it to connect small golden evals to repeatable quality checks.
 - Reference: [GitHub Actions for Python](https://docs.github.com/en/actions/how-tos/writing-workflows/building-and-testing/building-and-testing-python) - use it later when turning this local checklist into an actual CI workflow.
+

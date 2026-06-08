@@ -1,4 +1,26 @@
-# Week 00: Python Confidence Inventory
+﻿# Week 00: Python Confidence Inventory
+
+## Learning Logic
+
+Use the course map in `curriculum/LEARNER_JOURNEY_MAP.md` and the local module README to keep this lesson bounded.
+
+| Question | Learner-facing answer |
+| --- | --- |
+| What can I do now? | basic Python reading and simple pytest commands. |
+| What new capability am I adding? | inventory your actual Python gaps with diagnostic tasks. |
+| What failure does this help me catch? | environment, syntax, data-shape, and control-flow misunderstandings. |
+| How does this improve FinAgent or a practical AI system? | routes you to only the remediation FinAgent work you need. |
+| What should I be able to explain afterward? | which Python patterns are ready and which need repair. |
+
+## Minimum Path, Enrichment, And Doorway
+
+- **Minimum path:** read the scenario, inspect the tests or fixtures, complete the TODOs in `workbench.py`, run the verification command, and write the reflection/evidence note.
+- **Optional enrichment:** add one edge case, comparison, or small test after the required behavior works.
+- **Advanced doorway:** notice the later advanced topic this prepares for, then return to the bounded Course 1 task.
+
+## Evidence Portfolio
+
+Leave this lesson with technical evidence, failure evidence, explanation evidence, and transfer evidence. A passing test alone is not the whole learning outcome.
 
 Before the journey begins, find your current Python footing.
 
@@ -75,3 +97,4 @@ After the run, write down:
 - which failures looked surprising
 - one Python concept you want tests to help you practice first
 - whether your next step is Week 01 remediation, Module 1, or concept review
+

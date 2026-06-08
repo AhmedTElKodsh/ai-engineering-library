@@ -45,3 +45,15 @@ If text feels too narrative, convert it into structured fields and short reasons
 ### Final Check
 
 Review the inspection as a go/no-go note. A teammate should be able to tell whether collection is allowed and what exactly would be collected.
+## Failure Lab
+
+Before asking for the next hint, identify the first concrete failure signal: the failing test name, assertion message, malformed fixture, missing field, unsafe output, weak citation, or unclear trace. Write one sentence about what the failure is teaching.
+
+## Evidence Check
+
+After the smallest behavior works, leave four notes:
+
+- technical evidence: what code, test, fixture, eval, trace, or log changed
+- failure evidence: what broken case is now handled or intentionally refused
+- explanation evidence: why the fix works in 2-4 sentences
+- transfer evidence: how this pattern strengthens FinAgent or a later AI system

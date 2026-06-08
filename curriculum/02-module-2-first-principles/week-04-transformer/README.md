@@ -1,4 +1,26 @@
-# Phase 4: Tiny Transformer Block Lab
+﻿# Phase 4: Tiny Transformer Block Lab
+
+## Learning Logic
+
+Use the course map in `curriculum/LEARNER_JOURNEY_MAP.md` and the local module README to keep this lesson bounded.
+
+| Question | Learner-facing answer |
+| --- | --- |
+| What can I do now? | trace attention outputs for market context. |
+| What new capability am I adding? | assemble a tiny transformer-style block with residual and feed-forward steps. |
+| What failure does this help me catch? | dimension errors, missing trace fields, and overtrust in toy math. |
+| How does this improve FinAgent or a practical AI system? | prepares FinAgent API work with clearer model-internals intuition. |
+| What should I be able to explain afterward? | how token representations become contextual representations. |
+
+## Minimum Path, Enrichment, And Doorway
+
+- **Minimum path:** read the scenario, inspect the tests or fixtures, complete the TODOs in `workbench.py`, run the verification command, and write the reflection/evidence note.
+- **Optional enrichment:** add one edge case, comparison, or small test after the required behavior works.
+- **Advanced doorway:** notice the later advanced topic this prepares for, then return to the bounded Course 1 task.
+
+## Evidence Portfolio
+
+Leave this lesson with technical evidence, failure evidence, explanation evidence, and transfer evidence. A passing test alone is not the whole learning outcome.
 
 Folder: `week-04-transformer`  
 Expected time to finish: 5-7 hours  
@@ -189,3 +211,4 @@ What this teaches before Module 3:
 ## Connection To Phase 3
 
 Phase 3 taught attention as a single mechanism. Phase 4 places attention inside a tiny block with residual, normalization, and feed-forward steps. Module 3 will use that intuition to make better decisions about real model APIs, prompts, structured outputs, and tool boundaries.
+

@@ -1,4 +1,26 @@
-# Core Lab 5: Provenance and Data Quality
+﻿# Core Lab 5: Provenance and Data Quality
+
+## Learning Logic
+
+Use the course map in `curriculum/LEARNER_JOURNEY_MAP.md` and the local module README to keep this lesson bounded.
+
+| Question | Learner-facing answer |
+| --- | --- |
+| What can I do now? | collect multi-page records with retries and dedupe. |
+| What new capability am I adding? | score provenance, freshness, required fields, and quality decisions. |
+| What failure does this help me catch? | stale sources, missing citations, and unreviewed low-quality records. |
+| How does this improve FinAgent or a practical AI system? | teaches FinAgent to trust evidence by quality, not just availability. |
+| What should I be able to explain afterward? | how provenance and quality gates decide record readiness. |
+
+## Minimum Path, Enrichment, And Doorway
+
+- **Minimum path:** read the scenario, inspect the tests or fixtures, complete the TODOs in `workbench.py`, run the verification command, and write the reflection/evidence note.
+- **Optional enrichment:** add one edge case, comparison, or small test after the required behavior works.
+- **Advanced doorway:** notice the later advanced topic this prepares for, then return to the bounded Course 1 task.
+
+## Evidence Portfolio
+
+Leave this lesson with technical evidence, failure evidence, explanation evidence, and transfer evidence. A passing test alone is not the whole learning outcome.
 
 ## Learning Goal
 
@@ -50,3 +72,4 @@ Only records that pass this gate should become chunk candidates. Module 4 can re
 
 - Reference: [ISO 8601 date/time examples](https://www.w3.org/TR/NOTE-datetime) - use consistent timestamps when comparing freshness.
 - Reference: [Python hashlib documentation](https://docs.python.org/3/library/hashlib.html) - use stable hashes to detect duplicate content.
+

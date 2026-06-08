@@ -7,7 +7,6 @@ Concepts: comprehensions, generators, context managers, dict operations
 AI use: document chunking, response parsing, and batch operations in later modules.
 """
 
-import time
 from contextlib import contextmanager
 
 

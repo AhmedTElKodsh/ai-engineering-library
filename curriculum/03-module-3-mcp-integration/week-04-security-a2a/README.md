@@ -1,4 +1,26 @@
-# Phase 4: Secure MCP And Agent Handoff Lab
+﻿# Phase 4: Secure MCP And Agent Handoff Lab
+
+## Learning Logic
+
+Use the course map in `curriculum/LEARNER_JOURNEY_MAP.md` and the local module README to keep this lesson bounded.
+
+| Question | Learner-facing answer |
+| --- | --- |
+| What can I do now? | validate tool and context boundaries. |
+| What new capability am I adding? | add role policy, injection checks, secret redaction, and handoff gates. |
+| What failure does this help me catch? | unauthorized tools, leaked secrets, unsafe handoffs, and injection text. |
+| How does this improve FinAgent or a practical AI system? | keeps FinAgent collaborations bounded and auditable. |
+| What should I be able to explain afterward? | how security policy travels with tool and agent handoffs. |
+
+## Minimum Path, Enrichment, And Doorway
+
+- **Minimum path:** read the scenario, inspect the tests or fixtures, complete the TODOs in `workbench.py`, run the verification command, and write the reflection/evidence note.
+- **Optional enrichment:** add one edge case, comparison, or small test after the required behavior works.
+- **Advanced doorway:** notice the later advanced topic this prepares for, then return to the bounded Course 1 task.
+
+## Evidence Portfolio
+
+Leave this lesson with technical evidence, failure evidence, explanation evidence, and transfer evidence. A passing test alone is not the whole learning outcome.
 
 Folder: `week-04-security-a2a`  
 Expected time to finish: 4-6 hours  
@@ -60,3 +82,4 @@ Remaining security risk:
 ## Connection To Module 4
 
 This phase closes Module 3 by making integration safer. Module 4 can then build richer agent workflows on top of explicit permissions, traces, and refusal behavior.
+

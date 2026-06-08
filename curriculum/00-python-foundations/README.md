@@ -9,6 +9,17 @@ This module is not a beginner syntax tour and it is not abstract interview pract
 
 The refresher path is shaped like a small engineering project, not a list of right answers. When a learner hits a concept gap, they should use `concept-review-map.md` to review the relevant Python idea, return to the failing test, and implement the behavior personally with best practices.
 
+## Minimum Path And Advanced Doorway
+
+Use `../LEARNER_JOURNEY_MAP.md` as the course-level map. Module 0's minimum
+path is diagnostic first, targeted remediation only when needed, and a
+post-Module-1 stock pipeline bridge. Optional reinforcement is for repair, not
+for slowing every learner before Module 1.
+
+The advanced doorway is production Python for AI systems: configuration,
+testing, retries, resource cleanup, and data pipelines. This module does not
+teach every Python feature. It teaches the habits later modules depend on.
+
 ## How To Use This Module
 
 Start with the diagnostic. If you pass it cleanly, move into Module 1. If the diagnostic exposes gaps, complete only the matching remediation work before Module 1. Optional reinforcement is for confidence and repair, not a hidden gate.

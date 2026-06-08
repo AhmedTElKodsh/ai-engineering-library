@@ -11,7 +11,24 @@ Build ethical, testable web-data pipelines that can support AI engineering workf
 - Module 0: Python Foundations
 - Basic comfort with functions, dictionaries, files, and pytest
 
-The core mini-course is required before learners use web-collected data for RAG, tools, agents, or FinAgent capstone evidence. The deeper projects remain optional extension work because Course 1 should teach responsible acquisition without turning into a full production scraping engineer track.
+The six core labs and portfolio mini-project are required before learners use
+web-collected data for RAG, tools, agents, or FinAgent capstone evidence. Deeper
+projects remain optional extension work because Course 1 should teach
+responsible acquisition without turning into a full production scraping engineer
+track.
+
+## Minimum Path And Advanced Doorway
+
+Use `../../LEARNER_JOURNEY_MAP.md` as the course-level map. The minimum path is
+six bounded labs plus the portfolio mini-project: inspect, extract from
+fixtures, prefer APIs, handle pagination/retries/deduplication, report
+provenance/data quality, package RAG-ready chunks, and compose one reviewable
+data package.
+
+The advanced doorway is production web data engineering: browser automation,
+large crawling, scheduled refresh, monitoring, and legal review workflows. The
+required bridge stays small so learners can responsibly feed AI systems without
+turning Course 1 into a scraping specialization.
 
 ## Teaching Contract
 
@@ -98,13 +115,16 @@ Learner output:
 
 Status: learner scaffold available in `core-lab-06-rag-ready-packaging/`.
 
-## Required Portfolio Mini-Project
+## Portfolio Mini-Project
 
-Build a small documentation or market-context collector from approved public sources.
+Status: learner scaffold available in `portfolio-mini-project/`.
+
+Build a small documentation or market-context collector from local fixtures that
+represent approved public sources.
 
 Deliver:
 
-- crawler or collector code
+- collector code
 - fixtures and tests
 - approved-source checklist
 - raw dataset sample

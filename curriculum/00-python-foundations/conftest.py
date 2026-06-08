@@ -1,5 +1,4 @@
 """Root pytest configuration for Module 0 Python Foundations."""
-import pytest
 
 
 def pytest_configure(config):

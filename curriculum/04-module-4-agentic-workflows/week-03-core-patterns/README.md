@@ -1,4 +1,26 @@
-# Phase 3: Explicit Workflow Pattern Lab
+﻿# Phase 3: Explicit Workflow Pattern Lab
+
+## Learning Logic
+
+Use the course map in `curriculum/LEARNER_JOURNEY_MAP.md` and the local module README to keep this lesson bounded.
+
+| Question | Learner-facing answer |
+| --- | --- |
+| What can I do now? | answer with cited retrieval and abstention. |
+| What new capability am I adding? | build explicit prompt-chain, route, and tool-use workflow gates. |
+| What failure does this help me catch? | wrong route selection, missing evidence, and tool calls without stopping rules. |
+| How does this improve FinAgent or a practical AI system? | lets FinAgent use workflows before autonomous agents. |
+| What should I be able to explain afterward? | how explicit state and gates make workflow failures debuggable. |
+
+## Minimum Path, Enrichment, And Doorway
+
+- **Minimum path:** read the scenario, inspect the tests or fixtures, complete the TODOs in `workbench.py`, run the verification command, and write the reflection/evidence note.
+- **Optional enrichment:** add one edge case, comparison, or small test after the required behavior works.
+- **Advanced doorway:** notice the later advanced topic this prepares for, then return to the bounded Course 1 task.
+
+## Evidence Portfolio
+
+Leave this lesson with technical evidence, failure evidence, explanation evidence, and transfer evidence. A passing test alone is not the whole learning outcome.
 
 ## Learning Goal
 
@@ -53,3 +75,4 @@ FinAgent should not jump from RAG to a free-running market agent. It first needs
 
 - Reference: [Anthropic Building Effective Agents](https://www.anthropic.com/engineering/building-effective-agents) - use the workflow patterns as a mental model for prompt chaining, routing, and tool use before autonomous agents.
 - Reference: [OpenAI Agents guide](https://platform.openai.com/docs/guides/agents) - use it later to compare explicit workflows with agent-managed tool calls.
+

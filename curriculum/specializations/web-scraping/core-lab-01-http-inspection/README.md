@@ -1,4 +1,26 @@
-# Core Lab 1: HTTP And Page Inspection
+﻿# Core Lab 1: HTTP And Page Inspection
+
+## Learning Logic
+
+Use the course map in `curriculum/LEARNER_JOURNEY_MAP.md` and the local module README to keep this lesson bounded.
+
+| Question | Learner-facing answer |
+| --- | --- |
+| What can I do now? | validate local AI-system data needs. |
+| What new capability am I adding? | inspect HTTP targets, allowed-source rules, and extraction candidates. |
+| What failure does this help me catch? | terms/robots blind spots, unstable targets, and vague data requirements. |
+| How does this improve FinAgent or a practical AI system? | prepares FinAgent to collect only responsible source material. |
+| What should I be able to explain afterward? | how source inspection changes the collection plan. |
+
+## Minimum Path, Enrichment, And Doorway
+
+- **Minimum path:** read the scenario, inspect the tests or fixtures, complete the TODOs in `workbench.py`, run the verification command, and write the reflection/evidence note.
+- **Optional enrichment:** add one edge case, comparison, or small test after the required behavior works.
+- **Advanced doorway:** notice the later advanced topic this prepares for, then return to the bounded Course 1 task.
+
+## Evidence Portfolio
+
+Leave this lesson with technical evidence, failure evidence, explanation evidence, and transfer evidence. A passing test alone is not the whole learning outcome.
 
 ## Learning Goal
 
@@ -52,3 +74,4 @@ FinAgent should not collect market context from unknown or disallowed sources. T
 ## Cafe Visual Break
 
 - Reference: [Google Search Central robots.txt introduction](https://developers.google.com/search/docs/crawling-indexing/robots/intro) - use it to understand what robots.txt can and cannot control before deciding collection boundaries.
+

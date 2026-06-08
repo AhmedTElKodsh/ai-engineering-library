@@ -1,4 +1,26 @@
-# Phase 3: Local FinAgent Request Boundary
+﻿# Phase 3: Local FinAgent Request Boundary
+
+## Learning Logic
+
+Use the course map in `curriculum/LEARNER_JOURNEY_MAP.md` and the local module README to keep this lesson bounded.
+
+| Question | Learner-facing answer |
+| --- | --- |
+| What can I do now? | modify FinAgent logic behind tests. |
+| What new capability am I adding? | package the local workflow behind a request/response boundary. |
+| What failure does this help me catch? | malformed requests, missing fields, and unclear local run evidence. |
+| How does this improve FinAgent or a practical AI system? | prepares FinAgent for service-style integration without hosted infrastructure. |
+| What should I be able to explain afterward? | how a local deployment boundary differs from business logic. |
+
+## Minimum Path, Enrichment, And Doorway
+
+- **Minimum path:** read the scenario, inspect the tests or fixtures, complete the TODOs in `workbench.py`, run the verification command, and write the reflection/evidence note.
+- **Optional enrichment:** add one edge case, comparison, or small test after the required behavior works.
+- **Advanced doorway:** notice the later advanced topic this prepares for, then return to the bounded Course 1 task.
+
+## Evidence Portfolio
+
+Leave this lesson with technical evidence, failure evidence, explanation evidence, and transfer evidence. A passing test alone is not the whole learning outcome.
 
 Folder: `week-03-deploy`  
 Expected time to finish: 3-5 hours  
@@ -115,3 +137,4 @@ Remaining risk:
 ## FinAgent Callback
 
 The final capstone needs every capability to be callable from a clean interface. This lesson creates the first version of that boundary without hiding the logic behind a framework.
+

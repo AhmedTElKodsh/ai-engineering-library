@@ -2,28 +2,37 @@
 
 This folder holds the canonical planning contract for the AI Engineering Library curriculum.
 
-## Source Of Truth
+## Committed Source Of Truth
 
 - `ROADMAP.md`: learner journey, critical titles, module sequence, layer-proof projects, and capstone plan
 - `SPEC.md`: authoring rules, pedagogy, file layout, testing expectations, and capstone quality criteria
 - `CURRICULUM_REVIEW.md`: implementation ledger and review findings
 - `implementation-notes/spec-consolidation-2026-05-20.md`: current source-disposition and cleanup map
-- `future/platform-notes.md`: hosted platform ideas that are out of the Layer 1 curriculum MVP
 - `docs/pedagogy-methodologies-research.md`: current evidence-informed teaching method map for software engineering lessons
-- `docs/pedagogy-research-research-report.md`: broader comparative pedagogy report retained as supporting research
-- `docs/source-extraction-2026-05-18.md`: extraction ledger for the old top-level spec folders
-- `source-material/legacy-specs/`: preserved old root spec inputs; useful ideas are merged into the active roadmap/spec, not treated as competing plans
 - `../../../curriculum/AI_AUTHORING_GUIDE.md`: global AI authoring workflow for curriculum changes
 - `../../../curriculum/templates/lesson-quality-checklist.md`: checklist used to create lesson `AUTHORING_PLAN.md` files before implementation
 - `../../../curriculum/resources/curated-learning-resources.md`: seed map for optional video, visual, book, course, and documentation references; lesson authors still refresh topic-specific videos with a fresh web search
 
+## Local Archive Inputs
+
+These folders may exist in a maintainer workspace, but they are not committed
+source-of-truth unless a future PR deliberately promotes a specific file:
+
+- `future/`: hosted platform and later-layer ideas that are out of the Layer 1 MVP
+- `guides/`: older diagnostic/support guides retained for historical reference
+- `source-material/legacy-specs/`: preserved old root spec inputs
+- `docs/` except `docs/pedagogy-methodologies-research.md`: broader reports, merge notes, and extraction ledgers
+- `master_ai_engineering_rag_corpus/`, `AI_Engineering_Books.md`, and `books_encyclopedia_outline_source_map.md`: private or generated research inputs
+
+If an archived idea becomes required for authors, summarize it into `ROADMAP.md`,
+`SPEC.md`, or the committed pedagogy methodology map rather than linking to a
+local-only folder.
+
 ## Folder Layout
 
-- `docs/`: research notes, merge summaries, source-extraction ledgers, and historical planning context
-- `future/`: parked platform and later-layer ideas
-- `guides/`: older diagnostic/support guides retained for reference while learner-facing versions live under `curriculum/`
+- `docs/pedagogy-methodologies-research.md`: committed evidence map for teaching method selection
 - `implementation-notes/`: reviewer-only intended behavior and reference notes
-- `source-material/legacy-specs/`: archived inputs moved from old root-level `.kiro/specs` folders
+- local archive folders listed above: historical inputs, not active contract
 
 ## Layer 1 Direction
 
@@ -70,7 +79,7 @@ The stable module folders remain:
 - Enforce cafe-style storytelling, useful visuals or mind maps, optional fresh video/resource search, and optional high-trust book/course references in every module.
 - Keep time budgets visible: each module or local authoring guide needs estimated core hours, optional enrichment cap, new concepts, deferred concepts, maximum new tools/APIs, required visuals, and checkpoint evidence.
 - Keep FinAgent as a staged product arc across Modules 0-6 rather than an extra final project.
-- Keep web data acquisition mandatory but bounded: 5-6 core labs and one portfolio mini-project, with browser automation and larger crawling parked in the extension path unless explicitly promoted later.
+- Keep web data acquisition mandatory but bounded: 5-6 core labs plus a fixture-first portfolio mini-project. Browser automation and larger crawling stay parked in the extension path unless explicitly promoted later.
 
 ## Capstone Decision
 

@@ -12,9 +12,6 @@ Sections:
     7. Pythonic Patterns  - **, zip, enumerate, EAFP
 """
 
-import time
-import math
-from functools import total_ordering
 
 
 # ===========================================================
@@ -110,6 +107,20 @@ class Timer:
         print(t.elapsed)
 
     AI use: timing LLM calls and measuring retrieval latency in production work.
+    
+    CONCEPT CLARIFICATION:
+    Context managers use __enter__ and __exit__ to wrap a code block.
+    
+    Pattern: with Something() as x: ... triggers:
+    1. __enter__ runs BEFORE the block
+    2. Your code runs
+    3. __exit__ runs AFTER the block (even if there's an error!)
+    
+    For timing:
+    - __enter__: record start time, return self
+    - __exit__: record end time, calculate elapsed = end - start
+    
+    Tip: Use time.time() to get current timestamp in seconds
     """
     def __enter__(self):
         pass  # YOUR CODE HERE
@@ -130,6 +141,22 @@ class Suppress:
         print(s.exception)  # the ValueError
 
     AI use: suppressing transient network errors in non-critical paths.
+    
+    CONCEPT CLARIFICATION:
+    Like try/except, but as a reusable context manager.
+    
+    How __exit__ works:
+    - exc_type: type of exception (e.g., ValueError) or None
+    - exc_val: the actual exception object
+    - exc_tb: traceback (you won't need this)
+    - Return True to suppress (swallow) the exception
+    - Return False/None to let it propagate
+    
+    Your job:
+    - Store the exception types you want to catch
+    - In __exit__, check if exc_type matches your types
+    - If match: save exc_val and return True (suppress)
+    - If no match: return False (let it raise)
     """
     def __init__(self, *exception_types):
         pass  # YOUR CODE HERE
@@ -180,6 +207,24 @@ class BaseModel:
         __repr__() -> str: "ClassName(field=value, ...)"
 
     AI use: understanding Pydantic's BaseModel pattern (Week 1).
+    
+    CONCEPT CLARIFICATION:
+    The **fields pattern lets you pass any keyword arguments and store them.
+    
+    Example:
+    BaseModel(name="Alice", age=30) → fields = {"name": "Alice", "age": 30}
+    
+    What **kwargs does:
+    - Captures all keyword arguments as a dictionary
+    - You can then set them as instance attributes
+    
+    Pattern for __init__:
+    - Loop through fields.items()
+    - Use setattr(self, key, value) to set each attribute
+    
+    For __repr__:
+    - Get all attributes with self.__dict__
+    - Format as "ClassName(key=value, key=value)"
     """
     def __init__(self, **fields):
         pass  # YOUR CODE HERE
@@ -268,6 +313,22 @@ class Step:
         __repr__: "Step('{name}')"
 
     AI use: LangChain builds chains exactly this way using __or__ (Week 8).
+    
+    CONCEPT CLARIFICATION:
+    The | operator lets you chain operations: step1 | step2 | step3
+    
+    How Python handles operators:
+    - a | b calls a.__or__(b)
+    - __call__ makes an object callable like a function
+    
+    Example flow:
+    double = Step("double", lambda x: x * 2)
+    add_one = Step("add1", lambda x: x + 1)
+    chain = double | add_one  # Creates Pipeline([double, add_one])
+    result = chain(5)  # 5 → double → 10 → add_one → 11
+    
+    Your __or__ should: return Pipeline([self, other])
+    Your __call__ should: return self.transform(data)
     """
     def __init__(self, name: str, transform):
         self.name = name
@@ -404,6 +465,44 @@ def batch_generator(items: list, batch_size: int):
 
     Example:
         list(batch_generator([1,2,3,4,5], 2)) == [[1,2],[3,4],[5]]
+    
+    CONCEPT CLARIFICATION:
+    A generator function uses `yield` instead of `return` to produce values one at a time.
+    
+    Example walk-through: batch_generator([1, 2, 3, 4, 5], 2)
+    
+    First call to next():
+    - i = 0
+    - Slice items[0:2] = [1, 2]
+    - yield [1, 2] (pause here, give [1, 2] to caller)
+    
+    Second call to next():
+    - Resume from where we paused
+    - i = 2
+    - Slice items[2:4] = [3, 4]
+    - yield [3, 4] (pause here, give [3, 4] to caller)
+    
+    Third call to next():
+    - Resume again
+    - i = 4
+    - Slice items[4:6] = [5]
+    - yield [5] (pause here, give [5] to caller)
+    
+    Fourth call to next():
+    - Resume, but loop ends
+    - Generator is exhausted, raises StopIteration
+    
+    Why generators?
+    - Memory efficient: don't create all batches at once
+    - Lazy: only compute next batch when needed
+    - Perfect for large datasets or streaming
+    
+    Pattern:
+    - Loop through items in steps of batch_size: range(0, len(items), batch_size)
+    - For each i, slice items[i:i+batch_size]
+    - yield (not return!) each batch
+    
+    Usage: for batch in batch_generator([1,2,3,4,5], 2): print(batch)
     """
     pass  # YOUR CODE HERE
 
@@ -469,5 +568,55 @@ def deep_get(data: dict, path: str, default=None):
     Example:
         deep_get({"user": {"name": "Alice"}}, "user.name") -> "Alice"
         deep_get({"user": {}}, "user.email", "N/A") -> "N/A"
+    
+    CONCEPT CLARIFICATION:
+    Navigate nested dicts like navigating folders: "user.profile.email"
+    
+    Example walk-through: deep_get({"user": {"profile": {"email": "alice@example.com"}}}, "user.profile.email")
+    
+    Step 1: Split path by "." → ["user", "profile", "email"]
+    Step 2: Start with current = entire dict
+    Step 3: Loop through keys:
+    
+      Iteration 1: key = "user"
+      - current = current["user"]
+      - current is now {"profile": {"email": "alice@example.com"}}
+      
+      Iteration 2: key = "profile"
+      - current = current["profile"]
+      - current is now {"email": "alice@example.com"}
+      
+      Iteration 3: key = "email"
+      - current = current["email"]
+      - current is now "alice@example.com"
+    
+    Step 4: Return current → "alice@example.com" ✓
+    
+    Example with missing key: deep_get({"user": {}}, "user.email", "N/A")
+    
+    Step 1: Split path → ["user", "email"]
+    Step 2: current = entire dict
+    Step 3: Loop:
+      
+      Iteration 1: key = "user"
+      - current = current["user"]
+      - current is now {}
+      
+      Iteration 2: key = "email"
+      - Try: current["email"]
+      - KeyError! The key doesn't exist
+      - Caught by try/except
+    
+    Step 4: Return default → "N/A"
+    
+    EAFP = "Easier to Ask Forgiveness than Permission"
+    - Don't check if key exists first
+    - Just try to access it!
+    - Catch KeyError if it fails → return default
+    
+    Pattern:
+    - Split path by "."
+    - Try: loop through keys, go deeper each time
+    - Except KeyError: return default
     """
     pass  # YOUR CODE HERE

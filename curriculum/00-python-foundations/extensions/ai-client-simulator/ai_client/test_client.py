@@ -22,9 +22,9 @@ except ImportError:
     from ai_client.prompts import PromptBuilder
 
 try:
-    from client import LLMClient, LLMError, RateLimitError
+    from client import LLMClient
 except ImportError:
-    from ai_client.client import LLMClient, LLMError, RateLimitError
+    from ai_client.client import LLMClient
 
 try:
     from processing import (

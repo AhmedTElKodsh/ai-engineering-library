@@ -1,4 +1,26 @@
-# Core Lab 2: Fixture-First Static Extraction
+﻿# Core Lab 2: Fixture-First Static Extraction
+
+## Learning Logic
+
+Use the course map in `curriculum/LEARNER_JOURNEY_MAP.md` and the local module README to keep this lesson bounded.
+
+| Question | Learner-facing answer |
+| --- | --- |
+| What can I do now? | choose responsible static extraction targets. |
+| What new capability am I adding? | parse local HTML fixtures into citation-ready records. |
+| What failure does this help me catch? | broken selectors, missing fields, and lost source IDs. |
+| How does this improve FinAgent or a practical AI system? | gives FinAgent deterministic web-data records before live collection. |
+| What should I be able to explain afterward? | how fixture-first extraction protects parser reliability. |
+
+## Minimum Path, Enrichment, And Doorway
+
+- **Minimum path:** read the scenario, inspect the tests or fixtures, complete the TODOs in `workbench.py`, run the verification command, and write the reflection/evidence note.
+- **Optional enrichment:** add one edge case, comparison, or small test after the required behavior works.
+- **Advanced doorway:** notice the later advanced topic this prepares for, then return to the bounded Course 1 task.
+
+## Evidence Portfolio
+
+Leave this lesson with technical evidence, failure evidence, explanation evidence, and transfer evidence. A passing test alone is not the whole learning outcome.
 
 ## Learning Goal
 
@@ -47,3 +69,4 @@ The clean records from this lab become the input shape for Module 4 Phase 2 cita
 ## Cafe Visual Break
 
 - Reference: [Beautiful Soup documentation](https://www.crummy.com/software/BeautifulSoup/bs4/doc/) - use the searching and CSS selector sections to compare fixture selectors before writing parser code.
+

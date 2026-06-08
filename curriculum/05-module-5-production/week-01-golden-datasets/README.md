@@ -1,4 +1,26 @@
-# Week 1: Golden Eval Scaffold
+﻿# Week 1: Golden Eval Scaffold
+
+## Learning Logic
+
+Use the course map in `curriculum/LEARNER_JOURNEY_MAP.md` and the local module README to keep this lesson bounded.
+
+| Question | Learner-facing answer |
+| --- | --- |
+| What can I do now? | build RAG and workflow behavior with explicit evidence. |
+| What new capability am I adding? | create golden examples, edge cases, eval objectives, and score summaries. |
+| What failure does this help me catch? | unsupported answers, ambiguous failures, and missing refusal cases. |
+| How does this improve FinAgent or a practical AI system? | gives FinAgent a repeatable quality gate before release work. |
+| What should I be able to explain afterward? | how eval cases define what good behavior means. |
+
+## Minimum Path, Enrichment, And Doorway
+
+- **Minimum path:** read the scenario, inspect the tests or fixtures, complete the TODOs in `workbench.py`, run the verification command, and write the reflection/evidence note.
+- **Optional enrichment:** add one edge case, comparison, or small test after the required behavior works.
+- **Advanced doorway:** notice the later advanced topic this prepares for, then return to the bounded Course 1 task.
+
+## Evidence Portfolio
+
+Leave this lesson with technical evidence, failure evidence, explanation evidence, and transfer evidence. A passing test alone is not the whole learning outcome.
 
 ## Learning Goal
 
@@ -46,3 +68,4 @@ FinAgent needs regression evidence for citation failures, unsupported investment
 ## Cafe Visual Break
 
 - Reference: [OpenAI evaluation best practices](https://platform.openai.com/docs/guides/evaluation-best-practices) - use it to compare deterministic checks, human review, and task-specific eval cases.
+

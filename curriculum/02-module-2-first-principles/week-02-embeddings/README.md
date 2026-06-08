@@ -1,4 +1,26 @@
-# Phase 2: Market Note Similarity Search Lab
+﻿# Phase 2: Market Note Similarity Search Lab
+
+## Learning Logic
+
+Use the course map in `curriculum/LEARNER_JOURNEY_MAP.md` and the local module README to keep this lesson bounded.
+
+| Question | Learner-facing answer |
+| --- | --- |
+| What can I do now? | explain token IDs and simple text normalization. |
+| What new capability am I adding? | build tiny vectors, similarity scores, and note retrieval. |
+| What failure does this help me catch? | irrelevant matches, zero vectors, and bad vocabulary assumptions. |
+| How does this improve FinAgent or a practical AI system? | prepares FinAgent to retrieve market notes before full RAG. |
+| What should I be able to explain afterward? | how vector similarity helps and where it can mislead. |
+
+## Minimum Path, Enrichment, And Doorway
+
+- **Minimum path:** read the scenario, inspect the tests or fixtures, complete the TODOs in `workbench.py`, run the verification command, and write the reflection/evidence note.
+- **Optional enrichment:** add one edge case, comparison, or small test after the required behavior works.
+- **Advanced doorway:** notice the later advanced topic this prepares for, then return to the bounded Course 1 task.
+
+## Evidence Portfolio
+
+Leave this lesson with technical evidence, failure evidence, explanation evidence, and transfer evidence. A passing test alone is not the whole learning outcome.
 
 Folder: `week-02-embeddings`  
 Expected time to finish: 4-6 hours  
@@ -147,3 +169,4 @@ What this toy embedding misses:
 ## Connection To Phase 1
 
 Phase 1 showed how text becomes tokens. Phase 2 shows how text becomes vectors for retrieval. Later, FinAgent will combine both ideas: token budgeting controls what can fit in context, and retrieval decides what deserves to be included.
+

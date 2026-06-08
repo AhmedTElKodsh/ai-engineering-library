@@ -9,13 +9,16 @@ sys.modules.pop("workbench", None)
 from workbench import (  # noqa: E402
     TransformerResult,
     add_vectors,
+    dot_product,
     feed_forward,
     layer_norm,
     lookup_embeddings,
     project_sequence,
     project_vector,
     self_attention,
+    softmax,
     transformer_block,
+    weighted_sum,
 )
 
 
@@ -105,6 +108,48 @@ def test_project_sequence_preserves_sequence_order():
         [1.0, 0.0],
         [0.0, 1.0],
     ]
+
+
+def test_dot_product_multiplies_matching_positions():
+    assert dot_product([1.0, 2.0, 3.0], [4.0, 0.5, -1.0]) == 2.0
+
+
+def test_dot_product_rejects_mismatched_dimensions():
+    try:
+        dot_product([1.0, 2.0], [1.0])
+    except ValueError as error:
+        assert "same length" in str(error)
+    else:
+        raise AssertionError("dot_product should reject vectors with different lengths")
+
+
+def test_softmax_returns_positive_weights_that_sum_to_one():
+    weights = softmax([1.0, 2.0, 3.0])
+
+    assert len(weights) == 3
+    assert all(weight > 0 for weight in weights)
+    assert math.isclose(sum(weights), 1.0, rel_tol=1e-9)
+    assert weights[2] > weights[1] > weights[0]
+
+
+def test_softmax_handles_large_logits_stably():
+    weights = softmax([1000.0, 1001.0, 1002.0])
+
+    assert math.isclose(sum(weights), 1.0, rel_tol=1e-9)
+    assert weights[2] > weights[0]
+
+
+def test_weighted_sum_blends_value_vectors():
+    assert weighted_sum([0.25, 0.75], [[2.0, 0.0], [0.0, 4.0]]) == [0.5, 3.0]
+
+
+def test_weighted_sum_rejects_mismatched_weight_count():
+    try:
+        weighted_sum([1.0], [[1.0, 0.0], [0.0, 1.0]])
+    except ValueError as error:
+        assert "weights" in str(error)
+    else:
+        raise AssertionError("weighted_sum should reject weights that do not align to values")
 
 
 def test_self_attention_returns_contextual_vector_per_token():

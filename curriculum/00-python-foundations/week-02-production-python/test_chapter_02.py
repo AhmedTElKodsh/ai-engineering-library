@@ -180,7 +180,9 @@ def test_base_agent_stats():
 
 
 def test_rag_agent_run():
-    retriever = lambda q: f"context for: {q}"
+    def retriever(q):
+        return f"context for: {q}"
+
     template = "Context:\n{context}\n\nQuestion: {question}"
     agent = RAGAgent("rag", "gpt-4", retriever, template)
     result = agent.run("What is RAG?")

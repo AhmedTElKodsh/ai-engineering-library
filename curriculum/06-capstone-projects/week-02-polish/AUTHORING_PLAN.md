@@ -1,4 +1,4 @@
-# Authoring Plan: Module 6 Week 2
+﻿# Authoring Plan: Module 6 Week 2
 
 ## Lesson Identity
 
@@ -72,4 +72,25 @@ python -m pytest curriculum/06-capstone-projects/week-02-polish/tests -v
 
 Expected starting result: tests collect and then fail on TODO behavior.
 
-Reference validation path: `.kiro/specs/curriculum-planning/implementation-notes/module-6-week-02-polish-reference.md`
+Reference validation path: `.kiro/specs/curriculum-planning/implementation-notes/06-capstone-projects-week-02-polish-reference.md`
+## Learner Logic Enhancement
+
+- Current capability the learner brings into this lesson:
+- New capability added by this lesson:
+- Failure mode the learner must reproduce, inspect, or prevent:
+- FinAgent or practical AI-system improvement:
+- Explanation artifact the learner should leave with:
+
+## Scope Boundary Enhancement
+
+- Minimum required path:
+- Optional enrichment only after the minimum path works:
+- Advanced doorway, named briefly but not required:
+
+## Evidence Portfolio Enhancement
+
+- Technical evidence:
+- Failure evidence:
+- Explanation evidence:
+- Transfer evidence:
+

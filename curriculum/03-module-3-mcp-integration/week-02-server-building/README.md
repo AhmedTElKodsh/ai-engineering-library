@@ -1,4 +1,26 @@
-# Phase 2: Local Tool Server Contract Lab
+﻿# Phase 2: Local Tool Server Contract Lab
+
+## Learning Logic
+
+Use the course map in `curriculum/LEARNER_JOURNEY_MAP.md` and the local module README to keep this lesson bounded.
+
+| Question | Learner-facing answer |
+| --- | --- |
+| What can I do now? | wrap provider behavior behind a validated boundary. |
+| What new capability am I adding? | expose quote lookup and moving average as local tool calls. |
+| What failure does this help me catch? | unknown tools, malformed arguments, and bypassed validation. |
+| How does this improve FinAgent or a practical AI system? | gives FinAgent safe tool contracts before MCP-style integration. |
+| What should I be able to explain afterward? | how tool schemas protect business logic from caller mistakes. |
+
+## Minimum Path, Enrichment, And Doorway
+
+- **Minimum path:** read the scenario, inspect the tests or fixtures, complete the TODOs in `workbench.py`, run the verification command, and write the reflection/evidence note.
+- **Optional enrichment:** add one edge case, comparison, or small test after the required behavior works.
+- **Advanced doorway:** notice the later advanced topic this prepares for, then return to the bounded Course 1 task.
+
+## Evidence Portfolio
+
+Leave this lesson with technical evidence, failure evidence, explanation evidence, and transfer evidence. A passing test alone is not the whole learning outcome.
 
 Folder: `week-02-server-building`  
 Expected time to finish: 4-6 hours  
@@ -60,3 +82,4 @@ Permission or safety boundary:
 ## Connection To Phase 1
 
 Phase 1 wrapped model access. Phase 2 wraps deterministic capabilities so later MCP integration has a clear, testable tool boundary.
+

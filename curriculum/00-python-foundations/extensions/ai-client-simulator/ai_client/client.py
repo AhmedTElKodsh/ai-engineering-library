@@ -7,9 +7,8 @@ Concepts: OOP, generators, error handling, retry pattern, context managers
 AI use: this is the structure learners reuse for real provider boundaries.
 """
 
-import time
 from functools import wraps
-from .config import LLMConfig, ConfigError
+from .config import LLMConfig
 
 
 class RateLimitError(Exception):

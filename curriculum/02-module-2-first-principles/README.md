@@ -2,7 +2,7 @@
 
 ## Understand, Test, And Improve Model Behavior
 
-**Duration:** 4 learner-ready phases  
+**Duration:** 6 learner-ready phases  
 **Expected time to finish:** 24-36 hours total, about 4-6 hours per phase  
 **Prerequisites:** Module 1 or equivalent Python and AI engineering fluency  
 **Pedagogy:** first-principles implementation, worked traces, tests-first practice, tiny visual mechanisms, and model-decision reflection
@@ -15,7 +15,7 @@ Module 1 let learners run and modify a complete FinAgent product slice. Module 2
 | --- | --- |
 | What will I build? | Tiny, inspectable versions of tokenization, embeddings, attention, and transformer-style flow for market text. |
 | What skill will I practice? | Observe, reason, modify, verify: predict intermediate values, implement one primitive, inspect traces, and prove the behavior with tests. |
-| How does this prepare me for the next module? | It teaches what model-facing mechanisms do before Module 3 connects real APIs, prompts, tools, and MCP boundaries. |
+| How does this prepare me for the next module? | It teaches what model-facing mechanisms do before Module 3 connects real APIs, PromptOps, tools, and MCP boundaries. |
 
 **Previous:** you built the whole FinAgent workflow.  
 **Current:** you learn how model-facing mechanisms transform text, vectors, and context.  
@@ -27,10 +27,23 @@ Learners build small versions of the mechanisms that make modern AI systems work
 2. embeddings and similarity search
 3. attention
 4. transformer forward passes
+5. context-window and decoding decisions
+6. training-versus-inference adaptation decisions
 
 The goal is not to recreate a production framework. The goal is mechanical understanding. Learners should finish this module able to explain what happens between a stock-market sentence and a model output.
 
 The book synthesis includes deeper from-scratch LLM training. Layer 1 only takes the parts that are runnable now and help a junior AI engineer make better system decisions: tokens, vectors, attention, transformer shapes, and why a bigger model is not automatically the right fix.
+
+## Minimum Path And Advanced Doorway
+
+Use `../LEARNER_JOURNEY_MAP.md` as the course-level map. Module 2's minimum
+path is mechanical intuition: tokenization, embeddings, attention, transformer
+flow, context/decoding, and train-vs-inference decisions at toy scale.
+
+The advanced doorway is Course 2 depth: tensors, losses, optimization,
+backpropagation, and neural-network training. Module 2 introduces the shape of
+those ideas only far enough to make later API, retrieval, and model-choice work
+less mysterious.
 
 ## Story
 
@@ -67,17 +80,15 @@ The folder names stay stable for tests and links. The learner-facing titles belo
 | Phase 2 | `week-02-embeddings` | Market Note Similarity Search Lab | Build vector similarity and a tiny retrieval index | `python -m pytest curriculum/02-module-2-first-principles/week-02-embeddings/tests -v` |
 | Phase 3 | `week-03-attention` | Market Context Attention Lab | Implement scaled dot-product attention | `python -m pytest curriculum/02-module-2-first-principles/week-03-attention/tests -v` |
 | Phase 4 | `week-04-transformer` | Tiny Transformer Block Lab | Assemble a miniature transformer forward pass | `python -m pytest curriculum/02-module-2-first-principles/week-04-transformer/tests -v` |
-| Phase 5 | `week-05-forward-pass` | Context Window And Decoding Lab | Explore context windows, decoding, and model selection through inspectable functions | planned |
-| Phase 6 | `week-06-backpropagation` | Training Versus Inference Lab | Understand loss and adaptation without requiring full GPT training | planned |
+| Phase 5 | `week-05-forward-pass` | Context Window And Decoding Lab | Explore context windows, decoding, and model selection through inspectable functions | `python -m pytest curriculum/02-module-2-first-principles/week-05-forward-pass/tests -v` |
+| Phase 6 | `week-06-backpropagation` | Training Versus Inference Lab | Understand loss and adaptation without requiring full GPT training | `python -m pytest curriculum/02-module-2-first-principles/week-06-backpropagation/tests -v` |
 
-Phases 1-4 are learner-ready now. Phases 5-6 remain planned curriculum slices and should not be assigned as runnable labs until their `workbench.py` files and tests exist. Do not use planned phases as readiness gates for Module 3.
+All six phases are learner-ready now. Tests are expected to fail before learners complete the TODOs in each `workbench.py`.
 
 ## Learner Readiness Boundary
 
-Assign only Phases 1-4 today. If a learner opens Phase 5 or Phase 6, treat the
-folder as a roadmap placeholder, not missing homework. A phase becomes
-learner-ready only when it has a README, learner-editable `workbench.py`,
-fixtures if needed, tests that collect cleanly, hints, and a rubric.
+Assign phases in order. Each phase has a README, learner-editable
+`workbench.py`, tests that collect cleanly, hints, and a rubric.
 
 ## Teaching Contract
 
@@ -153,4 +164,4 @@ Learners are ready for Module 3 when they can:
 
 ## Connection To Module 3
 
-Module 3 turns understanding into integration. After learners know what model-facing mechanisms do, they will connect tools, data, and external capabilities through MCP-style contracts and safer system boundaries.
+Module 3 turns understanding into integration. After learners know what model-facing mechanisms do, they will connect model APIs, prompts, tools, data, and external capabilities through tested contracts and safer MCP-style boundaries.

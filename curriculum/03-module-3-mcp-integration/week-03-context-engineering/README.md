@@ -1,4 +1,26 @@
-# Phase 3: Structured Context And Trace Lab
+﻿# Phase 3: Structured Context And Trace Lab
+
+## Learning Logic
+
+Use the course map in `curriculum/LEARNER_JOURNEY_MAP.md` and the local module README to keep this lesson bounded.
+
+| Question | Learner-facing answer |
+| --- | --- |
+| What can I do now? | call local tools through explicit contracts. |
+| What new capability am I adding? | sanitize context, validate structured answers, and build traces. |
+| What failure does this help me catch? | prompt injection, missing metadata, malformed outputs, and weak citations. |
+| How does this improve FinAgent or a practical AI system? | helps FinAgent preserve source-grounded context across model calls. |
+| What should I be able to explain afterward? | how structured context and trace metadata support debugging. |
+
+## Minimum Path, Enrichment, And Doorway
+
+- **Minimum path:** read the scenario, inspect the tests or fixtures, complete the TODOs in `workbench.py`, run the verification command, and write the reflection/evidence note.
+- **Optional enrichment:** add one edge case, comparison, or small test after the required behavior works.
+- **Advanced doorway:** notice the later advanced topic this prepares for, then return to the bounded Course 1 task.
+
+## Evidence Portfolio
+
+Leave this lesson with technical evidence, failure evidence, explanation evidence, and transfer evidence. A passing test alone is not the whole learning outcome.
 
 Folder: `week-03-context-engineering`  
 Expected time to finish: 4-6 hours  
@@ -60,3 +82,4 @@ What downstream step is now safer:
 ## Connection To Phase 2
 
 Phase 2 created a tool boundary. Phase 3 makes the context and outputs around that boundary inspectable before an assistant relies on them.
+

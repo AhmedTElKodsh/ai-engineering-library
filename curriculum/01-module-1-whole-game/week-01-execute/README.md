@@ -1,4 +1,26 @@
-# Phase 1: First FinAgent Stock Summary
+﻿# Phase 1: First FinAgent Stock Summary
+
+## Learning Logic
+
+Use the course map in `curriculum/LEARNER_JOURNEY_MAP.md` and the local module README to keep this lesson bounded.
+
+| Question | Learner-facing answer |
+| --- | --- |
+| What can I do now? | run pytest and read a scaffolded Python workbench. |
+| What new capability am I adding? | execute the first deterministic FinAgent stock-summary slice. |
+| What failure does this help me catch? | missing validation, incorrect movement math, and unsafe advice language. |
+| How does this improve FinAgent or a practical AI system? | creates the first whole-game product loop learners can inspect. |
+| What should I be able to explain afterward? | how input data becomes a safe educational market summary. |
+
+## Minimum Path, Enrichment, And Doorway
+
+- **Minimum path:** read the scenario, inspect the tests or fixtures, complete the TODOs in `workbench.py`, run the verification command, and write the reflection/evidence note.
+- **Optional enrichment:** add one edge case, comparison, or small test after the required behavior works.
+- **Advanced doorway:** notice the later advanced topic this prepares for, then return to the bounded Course 1 task.
+
+## Evidence Portfolio
+
+Leave this lesson with technical evidence, failure evidence, explanation evidence, and transfer evidence. A passing test alone is not the whole learning outcome.
 
 Folder: `week-01-execute`  
 Expected time to finish: 3-4 hours  
@@ -36,6 +58,10 @@ FinAgent will eventually analyze market data, retrieve cited context, call tools
 5. Return a concise summary with an educational disclaimer.
 
 The important lesson is the system shape. Even advanced AI products are built from testable pieces like this.
+
+Safety boundary: use `../../../FINANCE_SAFETY.md` as the shared rulebook. This
+slice may summarize market movement for education, but it must not recommend
+trades.
 
 ## Quick Win
 
@@ -149,3 +175,4 @@ Remaining risk:
 ## Extension
 
 Add a new test for a ticker with lowercase letters, then update the implementation so the final summary uses the uppercase ticker.
+

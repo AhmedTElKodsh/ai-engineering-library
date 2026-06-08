@@ -1,0 +1,22 @@
+{
+  "sources": [
+    {
+      "source_id": "market-notes",
+      "name": "Market Context Notes",
+      "base_url": "https://example.com/research",
+      "approved": true,
+      "collection_method": "fixture",
+      "attribution": "Cite title and source URL",
+      "freshness_days": 30
+    },
+    {
+      "source_id": "analyst-rumors",
+      "name": "Unverified Analyst Rumors",
+      "base_url": "https://example.com/rumors",
+      "approved": false,
+      "collection_method": "do-not-collect",
+      "attribution": "Do not use",
+      "freshness_days": 0
+    }
+  ]
+}

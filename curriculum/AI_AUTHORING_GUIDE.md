@@ -7,13 +7,14 @@ The source of truth is still `.kiro/specs/curriculum-planning/ROADMAP.md` for se
 ## Default Workflow
 
 1. Read the module `README.md` and `AI_AUTHORING_GUIDE.md`.
-2. Check `.kiro/specs/curriculum-planning/CURRICULUM_REVIEW.md` for the current next implementation order.
-3. Keep stable folder names unless a migration is explicitly requested.
-4. Use `workbench.py` for learner-editable code.
-5. Keep reviewer-only intended behavior under `.kiro/specs/curriculum-planning/implementation-notes/`.
-6. Build one vertical slice at a time: `README.md`, `workbench.py`, `tests/`, `hints.md`, and `rubric.md`.
-7. Run `python -m pytest` commands from the lesson folder or with explicit paths.
-8. Treat expected TODO failures as lesson state only after imports and collection are clean.
+2. Check `curriculum/LEARNER_JOURNEY_MAP.md` so the lesson's place in the minimum path, optional enrichment, and advanced doorway is explicit.
+3. Check `.kiro/specs/curriculum-planning/CURRICULUM_REVIEW.md` for the current next implementation order.
+4. Keep stable folder names unless a migration is explicitly requested.
+5. Use `workbench.py` for learner-editable code.
+6. Keep reviewer-only intended behavior under `.kiro/specs/curriculum-planning/implementation-notes/`.
+7. Build one vertical slice at a time: `README.md`, `workbench.py`, `tests/`, `hints.md`, and `rubric.md`.
+8. Run `python -m pytest` commands from the lesson folder or with explicit paths.
+9. Treat expected TODO failures as lesson state only after imports and collection are clean.
 
 ## Non-Negotiables
 
@@ -51,6 +52,9 @@ Before writing or editing lesson files, make the teaching method explicit in the
 
 Every learner-facing lesson must include:
 
+- a visible five-question learner logic map: current capability, new capability, failure caught, FinAgent/practical improvement, explanation target
+- a clearly labeled minimum path and optional enrichment boundary
+- a short advanced doorway that orients the learner without expanding the required task
 - an engaging problem frame, mission, or realistic failure
 - cafe-style storytelling: explain the concept like a knowledgeable friend with a notebook, small examples, and no condescension
 - action before lecture: run, trace, predict, inspect, or compare before long explanation
@@ -64,12 +68,13 @@ Every learner-facing lesson must include:
 - progressive hints that preserve learner agency
 - verification copy that explains expected starting failures
 - reflection that names transfer to FinAgent, production AI engineering, or the next module
+- portfolio evidence: technical artifact, failure artifact, explanation artifact, and transfer artifact
 
 If these elements are missing, stop and revise the lesson surface before adding more code.
 
 ## Quality Gate
 
-Before calling a lesson complete, fill out `curriculum/templates/lesson-quality-checklist.md` or an equivalent authoring plan in the lesson folder.
+Before calling a lesson complete, fill out `curriculum/templates/lesson-quality-checklist.md` or an equivalent authoring plan in the lesson folder. For checkpoints, larger projects, and capstone work, use `curriculum/templates/evidence-portfolio-template.md` to capture technical, failure, explanation, and transfer evidence.
 
 The minimum evidence is:
 

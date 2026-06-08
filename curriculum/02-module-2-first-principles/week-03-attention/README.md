@@ -1,4 +1,26 @@
-# Phase 3: Market Context Attention Lab
+﻿# Phase 3: Market Context Attention Lab
+
+## Learning Logic
+
+Use the course map in `curriculum/LEARNER_JOURNEY_MAP.md` and the local module README to keep this lesson bounded.
+
+| Question | Learner-facing answer |
+| --- | --- |
+| What can I do now? | compare market notes with simple vectors. |
+| What new capability am I adding? | implement scaled dot-product attention over tiny values. |
+| What failure does this help me catch? | shape mismatches, unstable weights, and unsupported context emphasis. |
+| How does this improve FinAgent or a practical AI system? | prepares FinAgent to reason about which context a model may emphasize. |
+| What should I be able to explain afterward? | how queries, keys, values, and weights move information. |
+
+## Minimum Path, Enrichment, And Doorway
+
+- **Minimum path:** read the scenario, inspect the tests or fixtures, complete the TODOs in `workbench.py`, run the verification command, and write the reflection/evidence note.
+- **Optional enrichment:** add one edge case, comparison, or small test after the required behavior works.
+- **Advanced doorway:** notice the later advanced topic this prepares for, then return to the bounded Course 1 task.
+
+## Evidence Portfolio
+
+Leave this lesson with technical evidence, failure evidence, explanation evidence, and transfer evidence. A passing test alone is not the whole learning outcome.
 
 Folder: `week-03-attention`  
 Expected time to finish: 4-6 hours  
@@ -146,3 +168,4 @@ Why this is not a final explanation:
 ## Connection To Phase 2
 
 Phase 2 retrieved candidate notes. Phase 3 shows how a model-like mechanism can distribute focus across candidate context. Later modules will connect retrieval, attention, and generation into agent workflows.
+

@@ -50,7 +50,6 @@ def swap_without_temp(a: int, b: int) -> tuple[int, int]:
     Pseudocode:
         1. Return both values in swapped order using tuple packing
     """
-    (d,c) = (a,b)
     return (b, a)
 
 
@@ -162,8 +161,26 @@ def unique_elements(items: list) -> list:
         1. Track seen elements with a set
         2. Build result list, adding only unseen elements
         3. Return the result
+    
+    CONCEPT CLARIFICATION:
+    Why not just return list(set(items))?
+    - Sets are UNORDERED! Converting to set scrambles the original sequence.
+    - Example: [3, 1, 2, 1] → set → might give [1, 2, 3] (wrong order!)
+    
+    The solution pattern:
+    - Use a set for TRACKING what you've seen (fast O(1) lookup)
+    - Use a list for BUILDING the result (preserves insertion order)
+    - Walk through original list once, checking: "Have I seen this before?"
     """
-    pass  # YOUR DIAGNOSTIC TODO HERE
+    # TODO: preserve first-seen order while removing duplicates.
+    # Keep this placeholder import-safe so the diagnostic can report a normal
+    # behavior failure instead of a syntax error.
+    result = []
+    for item in items:
+        if item not in result:
+            result.append(item)
+    return result
+
 
 # Functions
 
@@ -185,8 +202,32 @@ def make_multiplier(factor: int):
         1. Define an inner function that takes one argument
         2. Return the argument multiplied by factor
         3. Return the inner function
+    
+    CONCEPT CLARIFICATION:
+    This is a CLOSURE - a function that "remembers" variables from where it was created.
+    
+    Example walk-through:
+    >>> double = make_multiplier(2)
+    Step 1: make_multiplier(2) is called, factor=2 is stored
+    Step 2: An inner function is created that remembers factor=2
+    Step 3: That inner function is returned and stored as 'double'
+    
+    >>> double(5)
+    Step 1: double is called with argument 5
+    Step 2: The inner function uses the remembered factor=2
+    Step 3: Returns 5 * 2 = 10
+    
+    >>> triple = make_multiplier(3)  # Creates a DIFFERENT function with factor=3
+    >>> triple(4)  # Returns 4 * 3 = 12
+    
+    The pattern: outer function → defines inner function → returns inner function
+    The inner function has access to outer function's variables (that's the closure part!)
     """
-    pass  # YOUR DIAGNOSTIC TODO HERE
+    def multiplier(value):
+        # TODO: Return value multiplied by factor.
+        return 0
+
+    return multiplier
 
 
 def apply_to_all(func, items: list) -> list:
@@ -297,6 +338,29 @@ def first_n_fibonacci(n: int) -> list[int]:
         2. Loop until you have n numbers
         3. Each new number is sum of previous two
         4. Return the list
+    
+    CONCEPT CLARIFICATION:
+    Fibonacci sequence: each number is the sum of the two before it.
+    Pattern: 0, 1, 1, 2, 3, 5, 8, 13...
+    
+    Example walk-through: first_n_fibonacci(6)
+    Step 1: Start with [0, 1] (the seed values)
+    Step 2: Add 0+1=1 → [0, 1, 1]
+    Step 3: Add 1+1=2 → [0, 1, 1, 2]
+    Step 4: Add 1+2=3 → [0, 1, 1, 2, 3]
+    Step 5: Add 2+3=5 → [0, 1, 1, 2, 3, 5]
+    Result: [0, 1, 1, 2, 3, 5] ✓ (6 numbers)
+    
+    Edge case: first_n_fibonacci(1)
+    Just return [0] (only the first number)
+    
+    Pattern for building:
+    - If n==1: return [0]
+    - Otherwise: start with [0, 1]
+    - Loop while len(list) < n
+    - Each iteration: next = list[-2] + list[-1], then append next
+    
+    Tip: list[-1] gets last element, list[-2] gets second-to-last!
     """
     pass  # YOUR DIAGNOSTIC TODO HERE
 
@@ -356,7 +420,6 @@ def validate_age(age) -> int:
 # Diagnostic Test Runner
 
 if __name__ == "__main__":
-    import sys
 
     def run_test(name, func, args, expected):
         try:

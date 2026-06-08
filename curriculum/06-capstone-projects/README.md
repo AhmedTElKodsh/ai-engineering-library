@@ -2,7 +2,7 @@
 
 ## Portfolio-Ready AI Engineering Synthesis
 
-**Duration:** 2 weeks minimum, longer if used as a formal portfolio sprint  
+**Duration:** 3 learner-ready scaffold weeks  
 **Prerequisites:** Module 5 or equivalent ability to build, test, evaluate, and explain an AI workflow  
 **Pedagogy:** build, evaluate, harden, explain
 
@@ -11,6 +11,8 @@
 **FinAgent: Educational Stock-Market Analysis Assistant**
 
 FinAgent helps users understand public market information, compare evidence, summarize market context, and explain uncertainty. It does not recommend trades, predict prices as advice, or present itself as a financial advisor.
+
+The shared safety checklist is `../../FINANCE_SAFETY.md`.
 
 This capstone is a strong Layer 1 portfolio project because it naturally integrates:
 
@@ -24,6 +26,20 @@ This capstone is a strong Layer 1 portfolio project because it naturally integra
 - safety language and refusal behavior
 - cost, latency, logging, and release notes
 - model-selection reasoning
+
+## Minimum Path And Advanced Doorway
+
+Use `../LEARNER_JOURNEY_MAP.md` as the course-level map. Module 6's current
+learner-ready path is capstone kickoff, deterministic local integration, and
+polish evidence: scoped behavior, eval cases, fixture data, source-grounded
+brief generation, refusal/limitation language, release evidence, and interview
+defense. Live providers, hosted services, and richer finance integrations remain
+advanced extensions.
+
+The advanced doorway is specialization. A learner may later deepen the same
+system with richer finance data, GraphRAG, fine-tuning, multimodal inputs, or
+advanced agent workflows, but none of those are required to prove Course 1
+mastery.
 
 ## Recommended Project Architecture
 
@@ -85,32 +101,44 @@ This shows APIs, prompting, data pipelines, RAG, tools/workflows, evaluation, de
 
 ## Timeline
 
-### Week 1: Build and Integrate
+Folder names preserve earlier scaffold history. The recommended learner order is
+kickoff, deterministic integration, then polish.
+
+### Week 1: Scope, Evaluate, And Plan The Build
 
 - Day 1: Choose scope, write the architecture note, create kickoff eval cases, and start the portfolio evidence ledger.
-- Day 2: Connect data/tool contracts and fixtures.
-- Day 3: Add retrieval, citations, or source comparison.
-- Day 4: Add workflow orchestration and failure handling.
-- Day 5: Run tests, collect eval results, and cut scope if needed.
+- Day 2: Identify which prior data/tool contracts and fixtures the capstone will reuse.
+- Day 3: Define retrieval, citation, or source-comparison behavior to integrate.
+- Day 4: Define workflow and failure-handling behavior to integrate.
+- Day 5: Run the kickoff tests, collect eval-plan evidence, and cut scope if needed.
 
-## Learner-Ready Kickoff
+### Week 2: Integrate The Runnable Local Workflow
 
-| Week | Folder | Learner deliverable | Verification |
-| --- | --- | --- | --- |
-| Week 1 | `week-01-build` | FinAgent capstone scope, deterministic eval cases, and portfolio evidence ledger | `python -m pytest curriculum/06-capstone-projects/week-01-build/tests -v` |
-| Week 2 | `week-02-polish` | Demo, limitation note, release evidence, and interview defense | `python -m pytest curriculum/06-capstone-projects/week-02-polish/tests -v` |
+- Day 1: Load fixture market data and evidence chunks.
+- Day 2: Add request validation and advice refusal.
+- Day 3: Add deterministic evidence retrieval and cited brief composition.
+- Day 4: Add workflow trace evidence for success and refusal paths.
+- Day 5: Run integration tests and write the integration tradeoff note.
 
-Expected first run: both capstone weeks should collect tests cleanly and fail on
-TODO behavior. The failures are portfolio prompts: they name scope, evidence,
-release, and explanation work that the learner must make concrete.
-
-### Week 2: Harden and Present
+### Week 3: Harden And Present
 
 - Day 1: Add or refine the golden eval set.
 - Day 2: Add structured logs and release checks.
 - Day 3: Document cost, latency, safety, and limitations.
 - Day 4: Prepare demo and portfolio README.
 - Day 5: Present the system and defend tradeoffs.
+
+## Learner-Ready Scaffolds
+
+| Order | Folder | Learner deliverable | Verification |
+| --- | --- | --- | --- |
+| 1 | `week-01-build` | FinAgent capstone scope, deterministic eval cases, and portfolio evidence ledger | `python -m pytest curriculum/06-capstone-projects/week-01-build/tests -v` |
+| 2 | `week-03-integration-build` | Runnable FinAgent workflow composed from prior slices, with fixture data, citation boundary, eval command, and safety tests | `python -m pytest curriculum/06-capstone-projects/week-03-integration-build/tests -v` |
+| 3 | `week-02-polish` | Demo, limitation note, release evidence, and interview defense | `python -m pytest curriculum/06-capstone-projects/week-02-polish/tests -v` |
+
+Expected first run: all capstone weeks should collect tests cleanly and fail on
+TODO behavior. The failures are portfolio prompts: they name scope, integration,
+evidence, release, and explanation work that the learner must make concrete.
 
 ## Assessment Split
 
