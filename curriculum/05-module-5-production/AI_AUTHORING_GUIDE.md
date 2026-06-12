@@ -2,6 +2,10 @@
 
 Use this guide when creating or modifying production AI engineering lessons.
 
+Use `EVAL_OBSERVABILITY_EVIDENCE_CHECKLIST.md` before changing golden
+datasets, eval summaries, release gates, logs, traces, monitoring plans,
+cost/latency notes, or production review loops.
+
 ## Module Role
 
 Module 5 turns working AI features into evaluated, observable, reproducible systems. It teaches evals, logs, release gates, cost, latency, configuration, and model-selection decisions.
@@ -13,6 +17,7 @@ Module 5 turns working AI features into evaluated, observable, reproducible syst
 3. Keep secrets out of tests, logs, prompts, docs, and summaries.
 4. Teach cost and latency with small concrete numbers.
 5. Make fine-tuning a decision path or optional lab, not the default fix.
+6. Convert production claims into repeatable eval, log, trace, or release-gate evidence.
 
 ## Lesson Requirements
 
@@ -24,6 +29,8 @@ Each week needs:
 - `workbench.py` where learners implement the core behavior
 - tests or evals for normal, edge, and failure paths
 - a rubric with operational evidence
+- eval and observability checklist coverage when the lesson changes release,
+  monitoring, logging, tracing, or evaluation behavior
 
 ## Guardrails
 

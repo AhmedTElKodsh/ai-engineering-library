@@ -15,6 +15,12 @@ The lesson is simple: a demo that works once is not production engineering. A ju
 
 The all-phases book synthesis adds one more production habit: do not jump to fine-tuning or bigger models because they sound advanced. Learners must compare deterministic code, prompt-only design, RAG, tool use, agents, and fine-tuning before choosing a path.
 
+For authors extending production lessons, use
+`EVAL_OBSERVABILITY_EVIDENCE_CHECKLIST.md` to connect source evidence to golden
+examples, release gates, structured logs, traces, failure categories,
+cost/latency notes, version notes, and rubric hooks before editing learner
+files.
+
 ## Minimum Path And Advanced Doorway
 
 Use `../LEARNER_JOURNEY_MAP.md` as the course-level map. Module 5's minimum

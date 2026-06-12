@@ -23,6 +23,14 @@ Module 3 turns the earlier FinAgent and first-principles work into explicit syst
 
 The book synthesis makes one thing clear: prompt engineering and LLM API work must be treated as engineering, not one-off experimentation. So this module adds API wrappers, chat roles, token/cost logs, prompt templates, schema validation, prompt regression tests, and injection checks before exposing tools or MCP-style interfaces.
 
+For authors extending prompt-related lessons, use `PROMPTOPS_EVIDENCE_CHECKLIST.md`
+to connect source evidence to prompt regression tests, structured-output checks,
+injection cases, trace metadata, and rubric hooks before editing learner files.
+For authors extending tool-related lessons, use
+`TOOL_CONTRACT_EVIDENCE_CHECKLIST.md` to connect source evidence to input/output
+schemas, malformed-input tests, permission refusals, missing-output behavior,
+trace metadata, and rubric hooks.
+
 MCP appears here as a practical interface pattern for exposing tools, resources, and prompts to AI applications. The learner does not need to become an enterprise integration architect in Layer 1. They need to understand the shape of the contract, how to test it, and where permissions and secrets can fail.
 
 ## Minimum Path And Advanced Doorway

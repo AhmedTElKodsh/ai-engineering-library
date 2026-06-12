@@ -8,6 +8,8 @@ The active course is **Course 1: Junior AI Engineering With Python**. It teaches
 
 - `START_HERE.md` is the learner front door.
 - `START_HERE_2_HOURS_PER_DAY.md` is the busy-learner route.
+- `START_HERE_30_DAY_PROJECT_LAUNCH.md` is the full-time accelerated project
+  launch overlay. It is not the canonical complete curriculum.
 - `LEARNER_READY_MATRIX.md` is the source of truth for assignable lessons.
 - `TROUBLESHOOTING.md` covers common local setup and pytest issues.
 - `HOW_TO_USE_AI_ASSISTANTS.md` explains acceptable AI help.
@@ -29,6 +31,7 @@ The active course is **Course 1: Junior AI Engineering With Python**. It teaches
 |   |-- 04-module-4-agentic-workflows/
 |   |-- 05-module-5-production/
 |   |-- 06-capstone-projects/
+|   |-- 30-day-project-launch/
 |   |-- specializations/web-scraping/
 |   |-- resources/
 |   |-- templates/
@@ -44,6 +47,7 @@ The active course is **Course 1: Junior AI Engineering With Python**. It teaches
 |-- LICENSE
 |-- requirements.txt
 |-- START_HERE.md
+|-- START_HERE_30_DAY_PROJECT_LAUNCH.md
 |-- START_HERE_2_HOURS_PER_DAY.md
 |-- TROUBLESHOOTING.md
 `-- README.md
@@ -70,6 +74,10 @@ The learner-facing course is:
 - test-guided, with expected TODO failures in learner workbenches
 - built around stable module folder paths
 - centered on FinAgent as the recurring product spine and final capstone
+
+The 30-day project launch route is an accelerated overlay for full-time
+learners who need to start project work quickly. It points into the existing
+modules and produces portfolio evidence, but Course 1 remains the complete path.
 
 Every module and week should make the learner logic visible:
 

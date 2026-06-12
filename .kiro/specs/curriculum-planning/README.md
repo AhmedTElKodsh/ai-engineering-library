@@ -7,6 +7,7 @@ This folder holds the canonical planning contract for the AI Engineering Library
 - `ROADMAP.md`: learner journey, critical titles, module sequence, layer-proof projects, and capstone plan
 - `SPEC.md`: authoring rules, pedagogy, file layout, testing expectations, and capstone quality criteria
 - `CURRICULUM_REVIEW.md`: implementation ledger and review findings
+- `AI_AGENTS_SOURCE_TRACEABILITY_LEDGER.md`: agent-curriculum source inventory, indexed/unindexed reconciliation, concept routing, and evidence gate for book-derived AI agents changes
 - `implementation-notes/spec-consolidation-2026-05-20.md`: current source-disposition and cleanup map
 - `docs/pedagogy-methodologies-research.md`: current evidence-informed teaching method map for software engineering lessons
 - `../../../curriculum/AI_AUTHORING_GUIDE.md`: global AI authoring workflow for curriculum changes

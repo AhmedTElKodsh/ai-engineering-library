@@ -11,6 +11,10 @@
 
 Module 1 let learners run and modify a complete FinAgent product slice. Module 2 slows down and opens the pieces that were previously treated as future model internals.
 
+Use `MODEL_MECHANISM_EVIDENCE_CHECKLIST.md` before revising Module 2 lessons
+that touch tokenization, embeddings, attention, transformer flow, decoding, or
+training-versus-inference decisions.
+
 | Question | Answer |
 | --- | --- |
 | What will I build? | Tiny, inspectable versions of tokenization, embeddings, attention, and transformer-style flow for market text. |

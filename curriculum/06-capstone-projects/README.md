@@ -14,6 +14,14 @@ FinAgent helps users understand public market information, compare evidence, sum
 
 The shared safety checklist is `../../FINANCE_SAFETY.md`.
 
+Use `CAPSTONE_PORTFOLIO_EVIDENCE_CHECKLIST.md` before revising capstone
+lessons that touch portfolio evidence, demo scripts, release readiness,
+limitation notes, or interview defense.
+
+Use `PORTFOLIO_README_TEMPLATE.md` when packaging the final learner-facing
+capstone README. Use `FINAL_ASSESSMENT_CHECKLIST.md` for the reviewer or
+self-assessment gate before presenting the capstone.
+
 This capstone is a strong Layer 1 portfolio project because it naturally integrates:
 
 - structured data loading and validation

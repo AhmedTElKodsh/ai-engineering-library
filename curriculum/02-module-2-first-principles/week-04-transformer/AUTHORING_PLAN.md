@@ -118,22 +118,32 @@ Follow-up files to update:
 - `.kiro/specs/curriculum-planning/CURRICULUM_REVIEW.md`
 ## Learner Logic Enhancement
 
-- Current capability the learner brings into this lesson:
-- New capability added by this lesson:
-- Failure mode the learner must reproduce, inspect, or prevent:
-- FinAgent or practical AI-system improvement:
-- Explanation artifact the learner should leave with:
+- Current capability the learner brings into this lesson: token IDs, embeddings, vector similarity, and scaled attention from the earlier Module 2 phases.
+- New capability added by this lesson: assemble embeddings, projections, self-attention, residual addition, normalization, and feed-forward output into one traceable transformer-style block.
+- Failure mode the learner must reproduce, inspect, or prevent: shape mismatches, missing trace fields, and treating a toy block as if it proved production LLM behavior.
+- FinAgent or practical AI-system improvement: FinAgent model/API work can later be debugged with clearer intuition about token representations, context, and model-task boundaries.
+- Explanation artifact the learner should leave with: a transformer trace naming input token IDs, embedding shape, attention weights, residual/normalized shapes, final output shape, and what the toy does not prove.
 
 ## Scope Boundary Enhancement
 
-- Minimum required path:
-- Optional enrichment only after the minimum path works:
-- Advanced doorway, named briefly but not required:
+- Minimum required path: implement plain-Python vector addition, normalization, embedding lookup, projection, self-attention, residual output, feed-forward output, and trace metadata.
+- Optional enrichment only after the minimum path works: add one focused edge case for empty input, unknown token IDs, or mismatched projection dimensions.
+- Advanced doorway, named briefly but not required: Hugging Face/PyTorch implementation, encoder-decoder depth, decoder masking, fine-tuning, distillation, quantization, pruning, and ONNX optimization belong to Course 2/3.
 
 ## Evidence Portfolio Enhancement
 
-- Technical evidence:
-- Failure evidence:
-- Explanation evidence:
-- Transfer evidence:
+- Technical evidence: passing tests for vector math, layer normalization, embedding lookup, projection, attention, residuals, feed-forward output, and trace keys.
+- Failure evidence: at least one mismatched-dimension or empty-sequence case produces a useful error or trace.
+- Explanation evidence: learner note explains how raw token embeddings become contextual representations.
+- Transfer evidence: FinAgent callback explaining how this mechanism informs later provider, prompt, context-window, retrieval, or model-selection decisions.
+
+## Source Evidence Enhancement
+
+Use `../MODEL_MECHANISM_EVIDENCE_CHECKLIST.md` before changing this lesson.
+
+- Local PDF `Natural Language Processing with Transformers`, p.81 and p.84-86 for transformer encoders updating token embeddings with self-attention, feed-forward layers, skip connections, and normalization.
+- Local PDF `Natural Language Processing with Transformers`, p.99-100 and p.122 for the body/head split, task-specific heads, and decoder masking as model-task distinctions.
+- Local PDF `Natural Language Processing with Transformers`, p.233-234 and p.254-255 for production efficiency tradeoffs that should remain an advanced doorway.
+- B09 `Hands-On Large Language Models` and B13 `Build a Large Language Model (From Scratch)` for indexed support of visual intuition and Course 2 from-scratch depth.
+- Assessment conversion rule: each source insight must become a trace field, shape check, edge-case test, toy limitation note, model-task distinction, or advanced-doorway boundary.
 

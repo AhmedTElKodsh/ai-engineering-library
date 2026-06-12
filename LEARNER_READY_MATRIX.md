@@ -29,6 +29,7 @@ Reference validation meanings:
 | Module 4 | Phases 5-8 advanced workflow and multi-agent doorway | scaffolded | yes | yes | yes | yes | yes | done | optional |
 | Module 5 | Weeks 1-7 production AI engineering | assignable | yes | yes | yes | yes | yes | done | yes |
 | Module 6 | Capstone order: Week 1 kickoff, Week 3 integration build, then Week 2 polish evidence | assignable | yes | yes | yes | yes | yes | done | yes |
+| Route | 30-day project launch overlay | assignable | yes | no route guide only | no dedicated tests | no dedicated hints | milestone rubric | protocol | yes |
 | Planning | `.kiro/specs/curriculum-planning/` | instructor-only | yes | no | no | no | no | protocol | no |
 
 ## Validation Commands

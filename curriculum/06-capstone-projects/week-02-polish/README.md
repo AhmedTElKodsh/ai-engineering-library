@@ -63,6 +63,22 @@ The starting failures are expected TODO failures in `workbench.py`.
 | Release evidence | Records test, eval, trace, data, and safety checks before sharing the capstone. |
 | Limitation note | Names stale data, missing sources, non-advice boundaries, and remaining risks. |
 | Interview defense | Explains architecture, evals, safety, tradeoffs, and what you would improve next. |
+| Portfolio README | Packages the project claim, run commands, evidence table, limitations, tradeoffs, and STAR defense. |
+| Final assessment checklist | Confirms the capstone is ready before you present it as Course 1 portfolio evidence. |
+
+## Portfolio Packaging Gate
+
+After the workbench tests pass, package the capstone evidence with the module
+templates:
+
+1. Use `../PORTFOLIO_README_TEMPLATE.md` to draft the final project README.
+2. Fill the evidence table with real artifacts: test commands, eval summaries,
+   citation or trace records, release blockers, and limitation notes.
+3. Run `../FINAL_ASSESSMENT_CHECKLIST.md` as a self-review before presenting.
+
+The README should not make claims that the checklist cannot verify. If the
+checklist exposes a blocker, keep the blocker visible in release evidence
+instead of polishing around it.
 
 ## Minimum Polish Gate
 
@@ -73,6 +89,9 @@ Your capstone is ready to present when a reviewer can:
 - inspect at least one trace or sample output
 - understand source freshness and citation limits
 - see the non-advice boundary clearly
+- match every portfolio README claim to a code, test, eval, trace, fixture,
+  demo, or limitation artifact
+- pass the final assessment checklist without hidden blockers
 - ask tradeoff questions and get precise answers
 
 ## Reflect

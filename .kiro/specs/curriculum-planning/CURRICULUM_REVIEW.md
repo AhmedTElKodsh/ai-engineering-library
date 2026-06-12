@@ -4,6 +4,64 @@
 
 Reviewed the current curriculum tree and planning archive after moving planning documents into `.kiro/specs/curriculum-planning/`.
 
+## Agent Source Traceability Gate
+
+Added `AI_AGENTS_SOURCE_TRACEABILITY_LEDGER.md` as the planning gate for AI agents curriculum changes derived from the local book library and private RAG corpus.
+
+The ledger reconciles the current `books/` folder with `master_ai_engineering_rag_corpus/sources.json`, records the duplicate `Generative AI in Action` PDF/EPUB handling, marks newly present but unindexed sources as `Needs Human Review`, and routes agent concepts into the stable Course 1 folders before any learner-facing lesson edits.
+
+Next book-derived agent lesson work should update the relevant lesson `AUTHORING_PLAN.md` with exact chapter, page, section, location, or chunk evidence from the ledger's source baseline before changing learner files.
+
+## Module 3 PromptOps Evidence Checklist
+
+Added `curriculum/03-module-3-mcp-integration/PROMPTOPS_EVIDENCE_CHECKLIST.md` as the first curriculum-facing follow-up from the agent source traceability ledger. The checklist maps indexed B01/B14 evidence to authoring gates, minimum tests, rubric hooks, and scope boundaries for prompt templates, structured outputs, prompt regression, injection cases, and trace metadata.
+
+Updated the Module 3 README and local `AI_AUTHORING_GUIDE.md` so future prompt-related lesson edits use the checklist before changing learner files.
+
+## Module 3 Tool Contract Evidence Checklist
+
+Added `curriculum/03-module-3-mcp-integration/TOOL_CONTRACT_EVIDENCE_CHECKLIST.md` as the next curriculum-facing follow-up from the agent source traceability ledger. The checklist maps indexed B14/B15 evidence, with supporting B04/B16 tool-failure evidence, to authoring gates, minimum tests, rubric hooks, and scope boundaries for local tools, MCP-style tools, resource adapters, permissions, missing outputs, malformed inputs, and trace metadata.
+
+Updated the Module 3 README and local `AI_AUTHORING_GUIDE.md` so future tool-related lesson edits use the checklist before changing learner files.
+
+## Module 4 Memory Safety Evidence Checklist
+
+Added `curriculum/04-module-4-agentic-workflows/MEMORY_SAFETY_EVIDENCE_CHECKLIST.md` as the next curriculum-facing follow-up from the agent source traceability ledger. The checklist maps indexed B14/B16/B05 evidence, with supporting B09/B03 evidence for conversation summaries and privacy/governance, to authoring gates, minimum tests, rubric hooks, and scope boundaries for workflow state, retained evidence, summarization, privacy, retention, refusal, and memory traces.
+
+Updated the Module 4 README and local `AI_AUTHORING_GUIDE.md` so future memory or state-related lesson edits use the checklist before changing learner files.
+
+## Module 4 Workflow vs Agent Decision Tree
+
+Added `curriculum/04-module-4-agentic-workflows/WORKFLOW_VS_AGENT_DECISION_TREE.md` as the next curriculum-facing follow-up from the agent source traceability ledger. The decision tree maps indexed B14 workflow/agent evidence and B05 planner/executor/evaluator evidence to authoring gates, minimum learner evidence, rubric hooks, and scope boundaries for deterministic code, prompt calls, RAG, explicit workflows, critique loops, bounded agents, and multi-role workflows.
+
+Updated the Module 4 README and local `AI_AUTHORING_GUIDE.md` so future workflow or agent-related lesson edits justify autonomy before adding it.
+
+## Module 4 RAG Citation and Abstention Checklist
+
+Added `curriculum/04-module-4-agentic-workflows/RAG_CITATION_ABSTENTION_CHECKLIST.md` as the next curriculum-facing follow-up from the agent source traceability ledger. The checklist maps indexed B09/B05/B10/B19/B01 evidence to authoring gates, minimum tests, rubric hooks, and scope boundaries for provenance, retrieval ranking, citation support, citation precision, unsupported-claim abstention, invented citations, weak-evidence thresholds, and retrieval traces.
+
+Updated the Module 4 README and local `AI_AUTHORING_GUIDE.md` so future RAG lesson edits use the checklist before changing learner files. Tightened `week-02-advanced-rag/AUTHORING_PLAN.md` so its learner logic, scope boundary, evidence portfolio, and source evidence sections are concrete rather than placeholder blanks.
+
+## Module 5 Eval and Observability Evidence Checklist
+
+Added `curriculum/05-module-5-production/EVAL_OBSERVABILITY_EVIDENCE_CHECKLIST.md` as the next curriculum-facing follow-up from the agent source traceability ledger. The checklist maps indexed B01/B10/B12/B03 evidence to authoring gates, minimum eval/log/trace checks, rubric hooks, and scope boundaries for golden datasets, release gates, failure categories, structured logs, traces, cost/latency notes, version notes, human review, and production readiness claims.
+
+Updated the Module 5 README and local `AI_AUTHORING_GUIDE.md` so future production lesson edits use the checklist before changing learner files. Tightened `week-01-golden-datasets/AUTHORING_PLAN.md` so its learner logic, scope boundary, evidence portfolio, and source evidence sections are concrete rather than placeholder blanks.
+
+## Principles of Building AI Agents Targeted Extraction
+
+Target-inspected and indexed local PDF B21 `Principles of Building AI Agents` with `pypdf`. The file is extractable, has 149 PDF pages, and now has page-level evidence recorded in `AI_AGENTS_SOURCE_TRACEABILITY_LEDGER.md` for provider/model choice, structured output, tool design, memory, guardrails/authorization, MCP boundaries, workflows, RAG pipeline setup, observability/tracing, and evals.
+
+Updated Module 3, Module 4, and Module 5 evidence checklists so future curriculum edits can use those page references and private corpus retrieval.
+
+## Hands-On RAG for Production Targeted Extraction
+
+Target-inspected and indexed local PDF B22 `Hands-On RAG for Production` with `pypdf`. The file is extractable, has 71 PDF pages, and is an early-release partial: Chapter 1 and Chapter 4 are available while the brief table of contents marks several later chapters as unavailable.
+
+Recorded page-level evidence in `AI_AGENTS_SOURCE_TRACEABILITY_LEDGER.md` for RAG grounding, ingest/query flow separation, post-generation guardrails, missing-data and weak-retrieval failures, access-control metadata, privacy/PII/security controls, latency and KPI requirements, monitoring, post-deployment review, and upgrade evaluation.
+
+Updated Module 4 and Module 5 RAG/eval evidence checklists plus the Phase 2 RAG and Week 1 golden-dataset authoring plans so future learner edits can use these page references and private corpus retrieval while keeping unavailable early-release chapters out of scope.
+
 ## Planning Documents Moved
 
 Moved these planning groups into `.kiro/specs/curriculum-planning/`:
@@ -928,3 +986,317 @@ Revised next implementation order:
 2. Add Module 4 Phase 4 critique and review loop after the explicit workflow pattern is in place.
 3. Add Module 5 Week 3 local service boundary with health and error responses.
 4. Add Module 6 portfolio README template and final assessment checklist.
+
+## Implementation Update: Module 4 Phase 1 Authoring Plan
+
+Closed a book-derived planning gap in the Module 4 RAG foundation by adding:
+
+- `curriculum/04-module-4-agentic-workflows/week-01-basic-rag/AUTHORING_PLAN.md`
+
+The plan ties Phase 1 ingestion and chunking to the source traceability ledger and `RAG_CITATION_ABSTENTION_CHECKLIST.md`. It records learner logic, scope boundaries, evidence portfolio requirements, and source-evidence conversion rules for raw records, clean records, failed-record reporting, chunk provenance, and run reports.
+
+This keeps the first RAG phase bounded to fixture-first, plain-Python ingestion work while routing embeddings, vector stores, hybrid retrieval, reranking, GraphRAG, permission filtering, and production monitoring to later phases or Course 3.
+
+Verification:
+
+- `python -m pytest curriculum/04-module-4-agentic-workflows/week-01-basic-rag/tests -v`
+- Result: 6 tests collected; 6 expected learner-workbench failures. Collection and imports succeed; failures point to TODO behavior in `workbench.py`.
+- `python scripts/validate_curriculum_references.py`
+- Result: 42 scaffolds found; 42 reference-complete; 0 reference-pending.
+
+Revised next implementation order:
+
+1. Add Module 4 Phase 4 critique and review loop after the explicit workflow pattern is in place.
+2. Add Module 5 Week 3 local service boundary with health and error responses.
+3. Add Module 6 portfolio README template and final assessment checklist.
+4. Continue retrofitting source-aware `AUTHORING_PLAN.md` files only where a book-derived checklist changes learner-facing behavior.
+
+## Implementation Update: Module 4 Phase 4 Authoring Plan
+
+Closed the next Module 4 book-derived planning gap by adding:
+
+- `curriculum/04-module-4-agentic-workflows/week-04-advanced-patterns/AUTHORING_PLAN.md`
+
+The plan ties the critique and review loop lab to `WORKFLOW_VS_AGENT_DECISION_TREE.md`, `RAG_CITATION_ABSTENTION_CHECKLIST.md`, and `MEMORY_SAFETY_EVIDENCE_CHECKLIST.md`. It records learner logic, scope boundaries, evidence portfolio requirements, and source-evidence conversion rules for critique issue categories, retry limits, deterministic revision, citation preservation, human-review escalation, and trace fields.
+
+This keeps Phase 4 bounded to a controlled review workflow instead of expanding into planner/evaluator agents, dynamic critique prompts, model-judge evaluation, long-running queues, or multi-agent review systems.
+
+Verification:
+
+- `python -m pytest curriculum/04-module-4-agentic-workflows/week-04-advanced-patterns/tests -v`
+- Result: 5 tests collected; 5 expected learner-workbench failures. Collection and imports succeed; failures point to TODO behavior in `workbench.py`.
+- `python scripts/validate_curriculum_references.py`
+- Result: 42 scaffolds found; 42 reference-complete; 0 reference-pending.
+- `python scripts/validate_curriculum_quality.py`
+- Result: 42 scaffolds imported; 0 quality issues.
+
+Revised next implementation order:
+
+1. Add Module 5 Week 3 local service boundary with health and error responses.
+2. Add Module 6 portfolio README template and final assessment checklist.
+3. Continue source-aware `AUTHORING_PLAN.md` retrofits where a book-derived checklist changes learner-facing behavior.
+4. Keep business-sensitive source material out of public curriculum examples unless explicitly approved.
+
+## Implementation Update: Module 5 Week 3 Authoring Plan
+
+Closed the next production-module planning gap by adding:
+
+- `curriculum/05-module-5-production/week-03-fastapi/AUTHORING_PLAN.md`
+
+The plan ties the local service-boundary lab to `EVAL_OBSERVABILITY_EVIDENCE_CHECKLIST.md` and the shared finance safety boundary. It records learner logic, scope boundaries, evidence portfolio requirements, and source-evidence conversion rules for health metadata, request validation, ticker normalization, advice refusal, structured errors, and traceable success responses.
+
+This keeps Week 3 focused on FastAPI-style contracts in plain Python before introducing live servers, auth, rate limiting, streaming, hosted deployment, OpenAPI schemas, or distributed tracing.
+
+Verification:
+
+- `python -m pytest curriculum/05-module-5-production/week-03-fastapi/tests -v`
+- Result: 5 tests collected; 5 expected learner-workbench failures. Collection and imports succeed; failures point to TODO behavior in `workbench.py`.
+- `python scripts/validate_curriculum_references.py`
+- Result: 42 scaffolds found; 42 reference-complete; 0 reference-pending.
+- `python scripts/validate_curriculum_quality.py`
+- Result: 42 scaffolds imported; 0 quality issues.
+
+Revised next implementation order:
+
+1. Add Module 6 portfolio README template and final assessment checklist.
+2. Continue source-aware `AUTHORING_PLAN.md` retrofits where a book-derived checklist changes learner-facing behavior.
+3. Keep business-sensitive source material out of public curriculum examples unless explicitly approved.
+4. Use indexed B21-B25 corpus retrieval when adding exact follow-up evidence to learner-facing edits.
+
+## Implementation Update: Module 6 Portfolio Template And Final Assessment
+
+Closed the next capstone packaging gap by adding:
+
+- `curriculum/06-capstone-projects/PORTFOLIO_README_TEMPLATE.md`
+- `curriculum/06-capstone-projects/FINAL_ASSESSMENT_CHECKLIST.md`
+
+Updated `curriculum/06-capstone-projects/README.md` so capstone authors and learners can find both artifacts alongside `CAPSTONE_PORTFOLIO_EVIDENCE_CHECKLIST.md`.
+
+The portfolio README template gives learners a bounded final project structure: project purpose, behavior, non-goals, architecture, run commands, demo script, evidence table, limitations, tradeoffs, and STAR-style defense. The final assessment checklist gives reviewers a compact gate for scope, run commands, input safety, source grounding, abstention/refusal, eval evidence, traceability, release evidence, limitations, and interview defense.
+
+This keeps Module 6 polish focused on inspectable Course 1 evidence rather than public website work, social posting, hosted production claims, or advanced finance/product expansion.
+
+Verification:
+
+- `python scripts/validate_curriculum_references.py`
+- Result: 42 scaffolds found; 42 reference-complete; 0 reference-pending.
+- `python scripts/validate_curriculum_quality.py`
+- Result: 42 scaffolds imported; 0 quality issues.
+
+Revised next implementation order:
+
+1. Continue source-aware `AUTHORING_PLAN.md` retrofits where a book-derived checklist changes learner-facing behavior.
+2. Keep `Business_Aql_Marketing_Strategy_Plan.pdf` out of public curriculum examples unless explicitly approved.
+3. Use indexed B21-B25 corpus retrieval when adding exact follow-up evidence to learner-facing edits.
+
+## Implementation Update: Module 5 Remaining Production Authoring Plans
+
+Closed the remaining Module 5 source-aware planning gaps by adding:
+
+- `curriculum/05-module-5-production/week-04-docker/AUTHORING_PLAN.md`
+- `curriculum/05-module-5-production/week-06-optimization/AUTHORING_PLAN.md`
+- `curriculum/05-module-5-production/week-07-fine-tuning/AUTHORING_PLAN.md`
+
+Week 4 now ties reproducible package/runbook work to the production evidence checklist, lightweight governance notes, and restore/runbook boundaries. Week 6 ties cost, latency, caching, batching, and retry decisions to measured production constraints. Week 7 ties model selection and adaptation to the ledger decision that Course 1 needs a decision framework, not required hands-on fine-tuning.
+
+These plans keep Module 5 local and reviewable: no required Docker deployment, live pricing APIs, distributed queues, hosted caches, full LLMOps platform, LoRA, GPU workflow, or model-serving implementation in the Course 1 path.
+
+Verification:
+
+- `python -m pytest curriculum/05-module-5-production/week-04-docker/tests curriculum/05-module-5-production/week-06-optimization/tests curriculum/05-module-5-production/week-07-fine-tuning/tests -v`
+- Result: 14 tests collected; 14 expected learner-workbench failures. Collection and imports succeed; failures point to TODO behavior in `workbench.py`.
+- `python scripts/validate_curriculum_references.py`
+- Result: 42 scaffolds found; 42 reference-complete; 0 reference-pending.
+- `python scripts/validate_curriculum_quality.py`
+- Result: 42 scaffolds imported; 0 quality issues.
+
+Revised next implementation order:
+
+1. Audit remaining Course 1 core folders for learner-facing modules changed by book-derived checklists but missing source-aware authoring plans.
+2. Keep `Business_Aql_Marketing_Strategy_Plan.pdf` out of public curriculum examples unless explicitly approved.
+3. Use indexed B21-B25 corpus retrieval when adding exact follow-up evidence to learner-facing edits.
+
+## Implementation Update: Module 2 Context/Training Authoring Plans
+
+Closed the next Module 2 mechanism-planning gaps by adding:
+
+- `curriculum/02-module-2-first-principles/week-05-forward-pass/AUTHORING_PLAN.md`
+- `curriculum/02-module-2-first-principles/week-06-backpropagation/AUTHORING_PLAN.md`
+
+Week 5 now ties context windows, logits, decoding, and model-strategy decisions to `MODEL_MECHANISM_EVIDENCE_CHECKLIST.md` and the targeted `Natural Language Processing with Transformers` extraction. Week 6 now ties loss, gradients, inference immutability, and adaptation recommendations to the same mechanism checklist and the Course 1 decision to keep real fine-tuning deferred.
+
+These plans keep Module 2 toy-scale and inspectable: no live model dependency, Hugging Face download, GPU workflow, full transformer training, LoRA, distillation, quantization, pruning, or ONNX implementation in Course 1.
+
+Verification:
+
+- `python -m pytest curriculum/02-module-2-first-principles/week-05-forward-pass/tests curriculum/02-module-2-first-principles/week-06-backpropagation/tests -v`
+- Result: 11 tests collected; 11 expected learner-workbench failures. Collection and imports succeed; failures point to TODO behavior in `workbench.py`.
+- `python scripts/validate_curriculum_references.py`
+- Result: 42 scaffolds found; 42 reference-complete; 0 reference-pending.
+- `python scripts/validate_curriculum_quality.py`
+- Result: 42 scaffolds imported; 0 quality issues.
+
+Revised next implementation order:
+
+1. Audit remaining source-checklist targets for missing source-aware authoring plans.
+2. Keep `Business_Aql_Marketing_Strategy_Plan.pdf` out of public curriculum examples unless explicitly approved.
+3. Use indexed B21-B25 corpus retrieval when adding exact follow-up evidence to learner-facing edits.
+
+## Implementation Update: Module 3 Source-Aware Authoring Plans
+
+Closed the Module 3 PromptOps, tool-contract, context, and secure-handoff planning gaps by adding:
+
+- `curriculum/03-module-3-mcp-integration/week-01-fundamentals/AUTHORING_PLAN.md`
+- `curriculum/03-module-3-mcp-integration/week-02-server-building/AUTHORING_PLAN.md`
+- `curriculum/03-module-3-mcp-integration/week-03-context-engineering/AUTHORING_PLAN.md`
+- `curriculum/03-module-3-mcp-integration/week-04-security-a2a/AUTHORING_PLAN.md`
+
+The plans route Module 3 learner behavior through `PROMPTOPS_EVIDENCE_CHECKLIST.md` and `TOOL_CONTRACT_EVIDENCE_CHECKLIST.md`: provider message validation, prompt version traces, fake-provider cost evidence, explicit tool schemas, structured outputs, prompt-injection sanitization, secret redaction, MCP-style capability boundaries, and role-scoped handoffs.
+
+These plans keep Module 3 focused on small inspectable contracts: no paid provider required for the first green path, no remote MCP server requirement, no large tool catalog, no autonomous tool choice, no enterprise prompt platform, and no distributed authorization system.
+
+Verification:
+
+- `python -m pytest curriculum/03-module-3-mcp-integration/week-01-fundamentals/tests curriculum/03-module-3-mcp-integration/week-02-server-building/tests curriculum/03-module-3-mcp-integration/week-03-context-engineering/tests curriculum/03-module-3-mcp-integration/week-04-security-a2a/tests -v`
+- Result: 21 tests collected; 21 expected learner-workbench failures. Collection and imports succeed; failures point to TODO behavior in `workbench.py`.
+- `python scripts/validate_curriculum_references.py`
+- Result: 42 scaffolds found; 42 reference-complete; 0 reference-pending.
+- `python scripts/validate_curriculum_quality.py`
+- Result: 42 scaffolds imported; 0 quality issues.
+
+Revised next implementation order:
+
+1. Audit Module 4 optional doorway folders for missing source-aware plans where workflow, memory, or tool-contract checklists already apply.
+2. Keep `Business_Aql_Marketing_Strategy_Plan.pdf` out of public curriculum examples unless explicitly approved.
+3. Use indexed B21-B25 corpus retrieval when adding exact follow-up evidence to learner-facing edits.
+
+## Implementation Update: Module 4 Optional Doorway Authoring Plans
+
+Closed the remaining Module 4 optional-doorway planning gaps by adding:
+
+- `curriculum/04-module-4-agentic-workflows/week-05-langgraph-state/AUTHORING_PLAN.md`
+- `curriculum/04-module-4-agentic-workflows/week-06-advanced-orchestration/AUTHORING_PLAN.md`
+- `curriculum/04-module-4-agentic-workflows/week-07-collaboration/AUTHORING_PLAN.md`
+- `curriculum/04-module-4-agentic-workflows/week-08-production-multi-agent/AUTHORING_PLAN.md`
+
+The plans route framework-style state, resumable orchestration, multi-role review, and production multi-agent boundaries through `WORKFLOW_VS_AGENT_DECISION_TREE.md`, `MEMORY_SAFETY_EVIDENCE_CHECKLIST.md`, `RAG_CITATION_ABSTENTION_CHECKLIST.md`, and Module 3 tool/security boundaries where relevant.
+
+These plans explicitly keep Phases 5-8 as optional doorway work: no required LangGraph dependency, persisted state store, durable queue, autonomous multi-agent debate, real agent execution, distributed tools, enterprise authorization, hosted monitoring, or governance platform in Course 1.
+
+Verification:
+
+- `python -m pytest curriculum/04-module-4-agentic-workflows/week-05-langgraph-state/tests curriculum/04-module-4-agentic-workflows/week-06-advanced-orchestration/tests curriculum/04-module-4-agentic-workflows/week-07-collaboration/tests curriculum/04-module-4-agentic-workflows/week-08-production-multi-agent/tests -v`
+- Result: 20 tests collected; 20 expected learner-workbench failures. Collection and imports succeed; failures point to TODO behavior in `workbench.py`.
+- `python scripts/validate_curriculum_references.py`
+- Result: 42 scaffolds found; 42 reference-complete; 0 reference-pending.
+- `python scripts/validate_curriculum_quality.py`
+- Result: 42 scaffolds imported; 0 quality issues.
+
+Revised next implementation order:
+
+1. Audit remaining missing `AUTHORING_PLAN.md` files and distinguish legacy/non-book-derived scaffolds from current source-checklist targets.
+2. Keep `Business_Aql_Marketing_Strategy_Plan.pdf` out of public curriculum examples unless explicitly approved.
+3. Use indexed B21-B25 corpus retrieval when adding exact follow-up evidence to learner-facing edits.
+
+## Implementation Update: Module 2 Core Mechanism Authoring Plans
+
+Closed the remaining Module 2 source-aware mechanism-planning gaps by adding:
+
+- `curriculum/02-module-2-first-principles/week-01-tokenization/AUTHORING_PLAN.md`
+- `curriculum/02-module-2-first-principles/week-02-embeddings/AUTHORING_PLAN.md`
+- `curriculum/02-module-2-first-principles/week-03-attention/AUTHORING_PLAN.md`
+
+Together with the existing Week 4 plan and the new Week 5-6 plans, every Module 2 first-principles lesson now has a local authoring plan connected to `MODEL_MECHANISM_EVIDENCE_CHECKLIST.md`.
+
+The plans route tokenization, tiny vector retrieval, and scaled dot-product attention through the targeted `Natural Language Processing with Transformers` extraction and indexed B09/B13 baselines while keeping Course 1 plain-Python and toy-scale: no production tokenizer dependency, embeddings API, vector database, NumPy requirement, live model call, transformer library, GPU workflow, or full model training.
+
+Verification:
+
+- `python -m pytest curriculum/02-module-2-first-principles/week-01-tokenization/tests curriculum/02-module-2-first-principles/week-02-embeddings/tests curriculum/02-module-2-first-principles/week-03-attention/tests -v`
+- Result: 31 tests collected; 28 expected learner-workbench failures and 3 passing edge-case tests. Collection and imports succeed; failures point to TODO behavior in `workbench.py`.
+- `python scripts/validate_curriculum_references.py`
+- Result: 42 scaffolds found; 42 reference-complete; 0 reference-pending.
+- `python scripts/validate_curriculum_quality.py`
+- Result: 42 scaffolds imported; 0 quality issues.
+
+Revised next implementation order:
+
+1. Document that remaining missing `AUTHORING_PLAN.md` files are legacy/general Module 0 and Module 1 scaffolds, not current source-checklist targets.
+2. Keep `Business_Aql_Marketing_Strategy_Plan.pdf` out of public curriculum examples unless explicitly approved.
+3. Use indexed B21-B25 corpus retrieval when adding exact follow-up evidence to learner-facing edits.
+
+## Remaining Authoring Plan Audit
+
+Current missing `AUTHORING_PLAN.md` files after the source-aware retrofit:
+
+- `curriculum/00-python-foundations/week-01-python-essentials`
+- `curriculum/00-python-foundations/week-02-production-python`
+- `curriculum/00-python-foundations/week-03-stock-pipeline`
+- `curriculum/01-module-1-whole-game/week-01-execute`
+- `curriculum/01-module-1-whole-game/week-02-modify`
+- `curriculum/01-module-1-whole-game/week-03-deploy`
+
+These are legacy/general scaffold folders rather than current book-derived checklist targets. They can still be retrofitted later for consistency with `curriculum/templates/lesson-quality-checklist.md`, but they are not blockers for the agent-book extraction pass because the active source checklists now cover their intended learner-facing targets:
+
+- Module 2: model mechanisms
+- Module 3: PromptOps, structured outputs, tool contracts, MCP/security boundaries
+- Module 4: RAG, memory/state, workflow-vs-agent, optional doorway boundaries
+- Module 5: eval, observability, service, packaging, optimization, adaptation decisions
+- Module 6: capstone portfolio evidence and final assessment
+
+Revised next implementation order:
+
+1. Keep `Business_Aql_Marketing_Strategy_Plan.pdf` out of public curriculum examples unless explicitly approved.
+2. Use indexed B21-B25 corpus retrieval when adding exact follow-up evidence to learner-facing edits.
+3. Optionally retrofit Module 0 and Module 1 `AUTHORING_PLAN.md` files for consistency, separate from the book-derived agent curriculum pass.
+
+## Implementation Update: Module 0 and Module 1 Authoring Plans
+
+Closed the final workbench-based scaffold consistency gap by adding:
+
+- `curriculum/00-python-foundations/week-01-python-essentials/AUTHORING_PLAN.md`
+- `curriculum/00-python-foundations/week-02-production-python/AUTHORING_PLAN.md`
+- `curriculum/00-python-foundations/week-03-stock-pipeline/AUTHORING_PLAN.md`
+- `curriculum/01-module-1-whole-game/week-01-execute/AUTHORING_PLAN.md`
+- `curriculum/01-module-1-whole-game/week-02-modify/AUTHORING_PLAN.md`
+- `curriculum/01-module-1-whole-game/week-03-deploy/AUTHORING_PLAN.md`
+
+These plans are general scaffold-quality plans rather than book-extraction artifacts. They document the learner surface, expected TODO-start behavior, verification command, learner logic, FinAgent transfer, and scope boundaries for the readiness and whole-game modules.
+
+After this update, every folder with a learner-editable `workbench.py` has a local `AUTHORING_PLAN.md`.
+
+Verification:
+
+- `python scripts/validate_curriculum_references.py`
+- Result: 42 scaffolds found; 42 reference-complete; 0 reference-pending.
+- `python scripts/validate_curriculum_quality.py`
+- Result: 42 scaffolds imported; 0 quality issues.
+- Missing-plan audit:
+  - Result: no `workbench.py` lesson folders missing `AUTHORING_PLAN.md`.
+
+Revised next implementation order:
+
+1. Keep `Business_Aql_Marketing_Strategy_Plan.pdf` out of public curriculum examples unless explicitly approved.
+2. Use indexed B21-B25 corpus retrieval when adding exact follow-up evidence to learner-facing edits.
+3. If continuing implementation beyond planning artifacts, choose a specific learner-facing module behavior to enhance and add/reference tests before editing learner code.
+
+## Implementation Update: Local Book Corpus Append
+
+Closed the private corpus indexing gap for the five local PDFs that were previously target-inspected but not retrievable through the corpus:
+
+- B21 `Principles of Building AI Agents`
+- B22 `Hands-On RAG for Production`
+- B23 `LLMOps: Managing Large Language Models in Production`
+- B24 `Natural Language Processing with Transformers`
+- B25 `Your AI Roadmap`
+
+Added and ran `.kiro/specs/curriculum-planning/master_ai_engineering_rag_corpus/pipeline/append_local_pdf_sources.py`. The helper extracts page units with `pypdf`, sanitizes malformed PDF text, appends chunk metadata, updates `sources.json`, `chunks.jsonl`, `chunks_preview.csv`, `raw_extracted/B21_units.json` through `raw_extracted/B25_units.json`, refreshes `rag_corpus.sqlite` and FTS rows, and rebuilds the offline TF-IDF artifacts.
+
+Corpus update result:
+
+- Sources: 20 -> 25
+- Chunks: 5502 -> 7146
+- TF-IDF shape: `(7146, 60000)`
+- Extraction errors: 0
+
+This keeps `Business_Aql_Marketing_Strategy_Plan.pdf` restricted and does not add it as generic public curriculum evidence.

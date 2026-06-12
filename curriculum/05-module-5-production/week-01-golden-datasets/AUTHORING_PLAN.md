@@ -75,22 +75,33 @@ Expected starting result: tests collect and then fail on TODO behavior.
 Reference validation path: `.kiro/specs/curriculum-planning/implementation-notes/05-module-5-production-week-01-golden-datasets-reference.md`
 ## Learner Logic Enhancement
 
-- Current capability the learner brings into this lesson:
-- New capability added by this lesson:
-- Failure mode the learner must reproduce, inspect, or prevent:
-- FinAgent or practical AI-system improvement:
-- Explanation artifact the learner should leave with:
+- Current capability the learner brings into this lesson: Module 4 RAG, citation, abstention, workflow, and safety behavior.
+- New capability added by this lesson: convert expected AI behavior into golden examples, failure categories, and a repeatable eval summary.
+- Failure mode the learner must reproduce, inspect, or prevent: a regression that looks fluent but loses citations, misses abstention, or violates the finance-safety boundary.
+- FinAgent or practical AI-system improvement: FinAgent gains a small release gate before capstone integration.
+- Explanation artifact the learner should leave with: a short eval summary explaining pass/fail counts, failure categories, and release recommendation.
 
 ## Scope Boundary Enhancement
 
-- Minimum required path:
-- Optional enrichment only after the minimum path works:
-- Advanced doorway, named briefly but not required:
+- Minimum required path: deterministic golden examples, category-based evaluator behavior, summary report, and release recommendation.
+- Optional enrichment only after the minimum path works: add one extra ambiguous or high-risk case and explain whether it should fail, pass, or need review.
+- Advanced doorway, named briefly but not required: model-judge evals, production monitoring dashboards, drift/retraining systems, and enterprise LLMOps belong to Course 3.
 
 ## Evidence Portfolio Enhancement
 
-- Technical evidence:
-- Failure evidence:
-- Explanation evidence:
-- Transfer evidence:
+- Technical evidence: implemented golden example loading, evaluator behavior, category counts, and summary report in `workbench.py`.
+- Failure evidence: first failing golden case or category mismatch showing the release gate catching a regression.
+- Explanation evidence: learner note explaining the release recommendation and which failure category matters most.
+- Transfer evidence: FinAgent callback showing how the eval gate protects cited market summaries before capstone release.
+
+## Source Evidence Enhancement
+
+- Use `../EVAL_OBSERVABILITY_EVIDENCE_CHECKLIST.md` before revising this lesson.
+- Indexed source baseline:
+  - B01 `Generative AI in Action`, p.403, `B01_B01_P0403_C001` for LLM output behavior as testable eval evidence.
+  - B10 `LLM Engineer's Handbook`, p.291 and p.300-303, `B10_B10_P0291_C001`, `B10_B10_P0300_C001`, `B10_B10_P0302_C001`, `B10_B10_P0303_C001` for fit-for-task evaluation and caution around judge-based signals.
+  - B12 `Designing Machine Learning Systems`, p.229, `B12_B12_P0229_C001` for measurable offline evaluation before production claims.
+  - B01 `Generative AI in Action`, p.363 and p.381-382, `B01_B01_P0363_C001`, `B01_B01_P0381_C001`, `B01_B01_P0382_C001` for logs, traces, cost, human review, and production observability.
+  - Local PDF `Hands-On RAG for Production`, p.61, p.63, and p.68-70 for POC-to-production requirements, latency/response-quality KPIs, monitoring, post-deployment issue response, and upgrade evaluation.
+- Assessment conversion rule: each source insight must become a golden case, failure category, eval-summary field, release-gate rule, log/trace check, or learner decision note.
 

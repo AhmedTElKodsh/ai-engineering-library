@@ -27,6 +27,19 @@ The book synthesis reinforces that many RAG failures happen before retrieval: ba
 
 The required Web Data Acquisition bridge now feeds this module directly. Learners first inspect allowed sources and extract fixture-backed records with provenance, then Module 4 consumes those records as clean chunks for citation and abstention RAG.
 
+For authors extending memory or state-related lessons, use
+`MEMORY_SAFETY_EVIDENCE_CHECKLIST.md` to connect source evidence to retention
+rules, privacy boundaries, summarization tests, state traces, and rubric hooks
+before editing learner files.
+For authors extending RAG lessons, use `RAG_CITATION_ABSTENTION_CHECKLIST.md`
+to connect source evidence to citation metadata, unsupported-claim tests,
+abstention rules, retrieval traces, and rubric hooks before editing learner
+files.
+For authors extending workflow or agent-related lessons, use
+`WORKFLOW_VS_AGENT_DECISION_TREE.md` to justify deterministic code, prompt calls,
+RAG, explicit workflows, critique loops, bounded agents, or multi-role patterns
+before adding autonomy.
+
 ## Minimum Path And Advanced Doorway
 
 Use `../LEARNER_JOURNEY_MAP.md` as the course-level map. Module 4's Course 1

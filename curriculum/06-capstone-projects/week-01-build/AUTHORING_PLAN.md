@@ -75,22 +75,32 @@ Expected starting result: tests collect and then fail on TODO behavior.
 Reference validation path: `.kiro/specs/curriculum-planning/implementation-notes/06-capstone-projects-week-01-build-reference.md`
 ## Learner Logic Enhancement
 
-- Current capability the learner brings into this lesson:
-- New capability added by this lesson:
-- Failure mode the learner must reproduce, inspect, or prevent:
-- FinAgent or practical AI-system improvement:
-- Explanation artifact the learner should leave with:
+- Current capability the learner brings into this lesson: tested slices from data, provider/tool contracts, RAG, workflows, evals, and production gates.
+- New capability added by this lesson: scope a smallest credible capstone and map each portfolio claim to a concrete artifact.
+- Failure mode the learner must reproduce, inspect, or prevent: an oversized capstone claims broad AI ability without evals, evidence, limitations, or refusal behavior.
+- FinAgent or practical AI-system improvement: FinAgent becomes an educational, cited, safety-bounded project a reviewer can understand and question.
+- Explanation artifact the learner should leave with: a portfolio evidence ledger plus a short scope note naming included behavior, non-goals, eval cases, and reviewer checks.
 
 ## Scope Boundary Enhancement
 
-- Minimum required path:
-- Optional enrichment only after the minimum path works:
-- Advanced doorway, named briefly but not required:
+- Minimum required path: define capstone scope, kickoff eval cases, refusal/non-advice behavior, and portfolio evidence ledger entries.
+- Optional enrichment only after the minimum path works: add one extra artifact row for an architecture diagram, trace sample, or release note.
+- Advanced doorway, named briefly but not required: public website, hosted deployment, richer finance integrations, GraphRAG, fine-tuning, and autonomous trading agents are outside Course 1.
 
 ## Evidence Portfolio Enhancement
 
-- Technical evidence:
-- Failure evidence:
-- Explanation evidence:
-- Transfer evidence:
+- Technical evidence: scope object, kickoff eval cases, deterministic scoring behavior, and portfolio evidence ledger.
+- Failure evidence: an unsafe, unsupported, stale, or advice-seeking case is refused or marked not ready.
+- Explanation evidence: learner note explains why the capstone is smaller than a product but stronger as a proof artifact.
+- Transfer evidence: FinAgent callback showing how prior module artifacts become a reviewer-ready portfolio story.
+
+## Source Evidence Enhancement
+
+Use `../CAPSTONE_PORTFOLIO_EVIDENCE_CHECKLIST.md` before changing this lesson.
+
+- B01 `Generative AI in Action`, p.403, `B01_B01_P0403_C001` for behavior-specific evals before release claims.
+- Local PDF `Principles of Building AI Agents`, p.80-83 and p.118-124 for traceable agent runs and eval summaries as project evidence.
+- Local PDF `Your AI Roadmap`, p.123-130 for translating projects into tangible proof, STAR-style project stories, measurable results, and portfolio evidence.
+- Local PDF `Your AI Roadmap`, p.131-135 for keeping career prototyping small, feedback-oriented, and connected to a professional story.
+- Assessment conversion rule: each source insight must become a scope boundary, evidence-led artifact row, eval/refusal case, measurable result, or explanation prompt.
 

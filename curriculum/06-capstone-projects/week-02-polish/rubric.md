@@ -6,6 +6,8 @@
 | Release evidence | Tests, evals, traces, data checks, and safety checks are named with blockers | Some checks are present but readiness is unclear | No reliable release gate |
 | Limitation note | Clearly names freshness, missing evidence, non-advice boundary, and follow-up work | Mentions limits but not enough operational detail | Hides or minimizes risks |
 | Interview defense | Explains architecture, evals, source grounding, safety, and tradeoffs crisply | Answers are plausible but generic | Cannot defend key choices |
+| Portfolio packaging | README claims map to concrete artifacts and the final assessment checklist has no hidden blockers | README exists but some evidence or checklist rows are weak | README is vague, unchecked, or disconnected from artifacts |
+
 ## Learning Evidence Add-On
 
 | Evidence | Excellent | Passing | Needs Work |

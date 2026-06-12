@@ -47,6 +47,13 @@ If interview answers feel generic, add one concrete artifact or design decision 
 ### Final Check
 
 Read the polish package as if you were the interviewer. It should make the project easy to understand, verify, and question.
+
+### Portfolio README And Assessment
+
+Use the module-level portfolio README template as a checklist, not as decorative formatting. Every claim in the README should point to one artifact: a command, test result, eval summary, citation, trace, fixture, release note, or limitation.
+
+Before you call the capstone done, run through the final assessment checklist. If a row is still "Not checked" or blocked, put that blocker in the release evidence instead of hiding it.
+
 ## Failure Lab
 
 Before asking for the next hint, identify the first concrete failure signal: the failing test name, assertion message, malformed fixture, missing field, unsafe output, weak citation, or unclear trace. Write one sentence about what the failure is teaching.

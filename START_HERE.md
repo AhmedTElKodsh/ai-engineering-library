@@ -31,6 +31,10 @@ curriculum/00-python-foundations/week-00-diagnostic/
 Then move through the Course 1 core path below. Use `LEARNER_READY_MATRIX.md`
 when you need the detailed readiness status.
 
+If you can work full time for 30 days and need to launch a project quickly,
+open `START_HERE_30_DAY_PROJECT_LAUNCH.md`. That route is an accelerated
+project overlay; it does not replace the canonical Course 1 path below.
+
 ## Canonical Learner Route
 
 | Step | Open | Go next when... | Remediate or skip |

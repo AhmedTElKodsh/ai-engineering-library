@@ -2,6 +2,18 @@
 
 Use this guide when creating or modifying RAG, web data, and workflow lessons.
 
+Use `MEMORY_SAFETY_EVIDENCE_CHECKLIST.md` before changing conversation
+history, workflow state, summaries, retained evidence, memory privacy behavior,
+or memory-related trace expectations.
+
+Use `RAG_CITATION_ABSTENTION_CHECKLIST.md` before changing retrieval,
+citations, abstention thresholds, unsupported-claim behavior, retrieval traces,
+or RAG evaluation notes.
+
+Use `WORKFLOW_VS_AGENT_DECISION_TREE.md` before changing routing, critique
+loops, bounded agent loops, framework state, orchestration, collaboration, or
+multi-agent behavior.
+
 ## Module Role
 
 Module 4 combines AI-ready data, retrieval, source grounding, and controlled workflows before adding agent autonomy.
@@ -13,6 +25,9 @@ Module 4 combines AI-ready data, retrieval, source grounding, and controlled wor
 3. Teach explicit workflows before framework-managed state.
 4. Add bounded loops and stop conditions before multi-agent behavior.
 5. Make debugging traces visible.
+6. Define memory retention and privacy boundaries before adding agent memory.
+7. Require a workflow-vs-agent justification before adding autonomy.
+8. Separate retrieval-quality failures from answer-generation failures.
 
 ## Lesson Requirements
 
@@ -25,6 +40,12 @@ Each week needs:
 - progressive hints
 - a rubric covering source grounding and traceability
 - reviewer-only reference notes
+- memory safety checklist coverage when the lesson carries, summarizes, stores,
+  or recalls state
+- RAG citation and abstention checklist coverage when the lesson retrieves
+  evidence, cites chunks, or refuses unsupported answers
+- workflow-vs-agent decision tree coverage when the lesson adds autonomy,
+  routing, critique loops, orchestration, or multi-role behavior
 
 ## Guardrails
 

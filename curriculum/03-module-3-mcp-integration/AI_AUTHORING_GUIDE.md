@@ -2,6 +2,14 @@
 
 Use this guide when creating or modifying LLM API, PromptOps, tool, and MCP lessons.
 
+Use `PROMPTOPS_EVIDENCE_CHECKLIST.md` before changing prompt templates, prompt
+regression tests, structured output prompts, prompt-injection behavior, or
+prompt trace expectations.
+
+Use `TOOL_CONTRACT_EVIDENCE_CHECKLIST.md` before changing local tools,
+MCP-style tools, resource adapters, tool permissions, tool traces, or
+tool-related failure behavior.
+
 ## Module Role
 
 Module 3 teaches model and tool boundaries as explicit contracts. Learners build provider wrappers, prompt templates, structured outputs, local tools, and MCP-style interfaces only after they can test the boundary.
@@ -13,6 +21,8 @@ Module 3 teaches model and tool boundaries as explicit contracts. Learners build
 3. Use mocks and local fixtures before real providers.
 4. Keep secrets out of code, prompts, logs, tests, and summaries.
 5. Treat MCP as a connection standard, not an invitation to overbuild.
+6. Convert prompt source evidence into testable learner behavior before adding
+   prompt prose.
 
 ## Lesson Requirements
 
@@ -25,6 +35,8 @@ Each week needs:
 - progressive hints
 - a rubric with safety and contract criteria
 - reference validation outside the learner folder
+- PromptOps evidence checklist coverage when the lesson edits prompt behavior
+- Tool contract evidence checklist coverage when the lesson edits tool behavior
 
 ## Guardrails
 
