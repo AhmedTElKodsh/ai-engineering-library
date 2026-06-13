@@ -50,15 +50,16 @@ The broader book and RAG corpus supports three levels:
 
 When reviewing book-derived topics, classify them as Layer 1 core, Layer 1 preview, Course 2 bridge, Course 3 advanced, specialization, or parked before adding them to a lesson.
 
-The stable module folders remain:
+The stable module folders are:
 
-- `curriculum/00-python-foundations`
-- `curriculum/01-module-1-whole-game`
-- `curriculum/02-module-2-first-principles`
-- `curriculum/03-module-3-mcp-integration`
-- `curriculum/04-module-4-agentic-workflows`
-- `curriculum/05-module-5-production`
-- `curriculum/06-capstone-projects`
+- `curriculum/main-track/00-python-foundations`
+- `curriculum/main-track/01-module-1-whole-game`
+- `curriculum/main-track/02-module-2-first-principles`
+- `curriculum/main-track/03-module-3-mcp-integration`
+- `curriculum/main-track/04-module-4-agentic-workflows`
+- `curriculum/main-track/05-module-5-production`
+- `curriculum/main-track/06-capstone-projects`
+- `curriculum/main-track/extended-concepts`
 - `curriculum/specializations/web-scraping`
 
 `curriculum/specializations/web-scraping` is the stable folder for the mandatory web data acquisition mini-course plus optional extension work. The required slice is bounded to fixture-first extraction, API-first collection, ethical review, provenance, validation, and RAG-ready packaging.

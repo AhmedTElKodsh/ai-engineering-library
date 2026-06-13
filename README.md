@@ -24,13 +24,18 @@ The active course is **Course 1: Junior AI Engineering With Python**. It teaches
 |   |-- README.md
 |   `-- curriculum-planning/
 |-- curriculum/
-|   |-- 00-python-foundations/
-|   |-- 01-module-1-whole-game/
-|   |-- 02-module-2-first-principles/
-|   |-- 03-module-3-mcp-integration/
-|   |-- 04-module-4-agentic-workflows/
-|   |-- 05-module-5-production/
-|   |-- 06-capstone-projects/
+|   |-- main-track/
+|   |   |-- 00-python-foundations/
+|   |   |-- 01-module-1-whole-game/
+|   |   |-- 02-module-2-first-principles/
+|   |   |-- 03-module-3-mcp-integration/
+|   |   |-- 04-module-4-agentic-workflows/
+|   |   |-- 05-module-5-production/
+|   |   `-- 06-capstone-projects/
+|   |-- extended-concepts/
+|   |   |-- 01-model-internals/
+|   |   |-- 02-agentic-systems/
+|   |   `-- 03-production-depth/
 |   |-- 30-day-project-launch/
 |   |   |-- README.md
 |   |   |-- daily-plan.md
@@ -130,8 +135,8 @@ For learner curriculum files, clean collection/import health is the first regres
 Useful commands:
 
 ```powershell
-python -m pytest --collect-only curriculum/00-python-foundations curriculum/01-module-1-whole-game curriculum/02-module-2-first-principles -q
-python -m pytest --collect-only curriculum/02-module-2-first-principles -q
+python -m pytest --collect-only curriculum/main-track/00-python-foundations curriculum/main-track/01-module-1-whole-game curriculum/main-track/02-module-2-first-principles -q
+python -m pytest --collect-only curriculum/main-track/02-module-2-first-principles -q
 python scripts/validate_curriculum_quality.py --strict
 ```
 

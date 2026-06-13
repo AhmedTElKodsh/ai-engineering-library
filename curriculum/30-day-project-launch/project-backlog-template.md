@@ -3,6 +3,10 @@
 Timing: fill the first version in 45-60 minutes before Day 2. Update it in
 5-10 minutes at the start or end of each day.
 
+Backlog sizing rule: keep each card small enough to produce evidence in
+20-45 minutes. A larger item must be split into a test, function, prompt,
+schema, workflow step, or documentation section before it moves to `Today`.
+
 Copy this into your project repository and fill it in before Day 2.
 
 ## Project Goal
@@ -36,6 +40,8 @@ input -> validate -> collect/load data -> clean/process -> retrieve or tool-call
 
 ## Week 1 Backlog
 
+Default size: 20-45 minutes per checkbox after the project is set up.
+
 - [ ] Define project scope and non-goals.
 - [ ] Add pytest and one small tested utility.
 - [ ] Add config and data models.
@@ -45,6 +51,9 @@ input -> validate -> collect/load data -> clean/process -> retrieve or tool-call
 - [ ] Write Day 7 milestone note.
 
 ## Week 2 Backlog
+
+Default size: 30-60 minutes per checkbox because provider and retrieval work
+often needs one test slice plus one integration slice.
 
 - [ ] Add mockable LLM API wrapper.
 - [ ] Add prompt templates and structured output schema.
@@ -56,6 +65,9 @@ input -> validate -> collect/load data -> clean/process -> retrieve or tool-call
 
 ## Week 3 Backlog
 
+Default size: 30-60 minutes per checkbox. Keep tool/workflow authority narrow
+enough to test locally.
+
 - [ ] Add one or two typed deterministic tools.
 - [ ] Add tool router with validation.
 - [ ] Add explicit workflow state.
@@ -65,6 +77,9 @@ input -> validate -> collect/load data -> clean/process -> retrieve or tool-call
 - [ ] Write Day 21 milestone note.
 
 ## Week 4 Backlog
+
+Default size: 30-60 minutes per checkbox. Documentation tasks should still
+include concrete command output, trace evidence, or a limitation.
 
 - [ ] Add CLI, local script, FastAPI endpoint, Streamlit demo, or Gradio demo.
 - [ ] Add versioning notes for prompts, data, index, and model.

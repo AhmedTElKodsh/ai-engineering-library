@@ -11,7 +11,7 @@ curriculum for junior AI engineers with intermediate Python experience.
 4. Run the Module 0 diagnostic:
 
 ```powershell
-python -m pytest curriculum/00-python-foundations/week-00-diagnostic -q
+python -m pytest curriculum/main-track/00-python-foundations/week-00-diagnostic -q
 ```
 
 If pytest plugin noise gets in the way, run:
@@ -25,7 +25,7 @@ $env:PYTEST_DISABLE_PLUGIN_AUTOLOAD='1'
 Start here:
 
 ```text
-curriculum/00-python-foundations/week-00-diagnostic/
+curriculum/main-track/00-python-foundations/week-00-diagnostic/
 ```
 
 Then move through the Course 1 core path below. Use `LEARNER_READY_MATRIX.md`

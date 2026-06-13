@@ -3,6 +3,10 @@
 Timing: read this overview in 15-20 minutes before Day 1. Revisit the file at
 the start of each week in 5 minutes to keep scope honest.
 
+Calendar: Day 1 is Sunday, 2026-06-14. Day 30 is Monday, 2026-07-13. The route
+uses 5-7 focused hours per day, including weekends, with milestone checks on
+Days 7, 14, 21, 28, and 30.
+
 This folder contains a compressed, hands-on route for building a
 production-shaped AI engineering project in 30 full-time days. It is an overlay
 on Course 1. It does not replace the complete Course 1 path.
@@ -17,6 +21,26 @@ portfolio-ready documentation.
 The route favors visible engineering evidence over broad coverage. Every day
 should leave behind code, tests, validation output, notes, or documentation that
 another engineer can inspect.
+
+## Teaching Method
+
+This route follows the same pedagogy as the main curriculum: action before
+lecture, evidence before claims, minimum path before enrichment, and reflection
+before moving on. Read `teaching-method.md` before Day 1 and use it as the
+authoring contract for any route changes.
+
+Every day should make the learner logic visible:
+
+| Question | Daily answer should name |
+| --- | --- |
+| What can I do now? | the previous project capability |
+| What new capability am I adding? | the day's narrow project increment |
+| What failure does this help me catch? | the bad input, weak output, unsafe behavior, or unobservable failure |
+| How does this improve FinAgent or a practical AI system? | the practical assistant behavior being strengthened |
+| What should I be able to explain afterward? | the boundary, evidence, limitation, and transfer |
+
+The daily ritual is: **Before You Run -> Evidence First -> Smallest Change ->
+Explain Like a Teammate -> One Step Stronger -> Reference After Effort**.
 
 ## Relationship To Course 1
 
@@ -41,19 +65,29 @@ already aligns with the curriculum spine, the safety boundary in
 
 ## Weekly Milestones
 
-| Week | Milestone | Evidence |
-| --- | --- | --- |
-| Week 1 | Deterministic assistant | validated input, processed records, tests, logs, documented limits |
-| Week 2 | Cited Q&A system | prompt contracts, structured output, retrieval, citations, abstention, evals |
-| Week 3 | Bounded AI workflow | typed tools, workflow state, retry/review rules, safety tests |
-| Week 4 | Production-shaped local app | service boundary, local quality gate, observability, failure analysis, demo evidence |
+| Calendar | Days | Milestone | Evidence |
+| --- | --- | --- | --- |
+| Jun 14-20 | Days 1-7 | Deterministic assistant | validated input, processed records, tests, logs, documented limits |
+| Jun 21-27 | Days 8-14 | Cited Q&A system | prompt contracts, structured output, retrieval, citations, abstention, evals |
+| Jun 28-Jul 4 | Days 15-21 | Bounded AI workflow | typed tools, workflow state, retry/review rules, safety tests |
+| Jul 5-11 | Days 22-28 | Production-shaped local app | service boundary, local quality gate, observability, failure analysis, demo evidence |
+| Jul 12-13 | Days 29-30 | Portfolio defense and next backlog | portfolio package, final demo, limitations, next 30 days |
 
 ## Daily Rhythm
 
-1. Read or trace: 45-60 min
-2. Implement by hand: 3-4 hrs
-3. Test and debug: 1-2 hrs
-4. Write explanation and commit: 30-45 min
+| Task | Target time | Practical rule |
+| --- | ---: | --- |
+| Plan the day | 15 min | choose one minimum artifact and one cuttable stretch item |
+| Read or trace | 45-60 min | stop when you can name the first expected failure |
+| Implement by hand | 2.5-3.5 hrs | split into 20-45 minute function/task slices |
+| Test and debug | 1-2 hrs | work from the first failure, not broad guesses |
+| Write explanation and commit | 30-45 min | include command, result, limitation, and next action |
+| Buffer | 30-45 min | use for blockers or recovery, not new scope |
+
+Function/task estimate rule: if a single function, prompt contract, test case,
+or documentation task exceeds 45 minutes without evidence, stop and write the
+blocker in the log. Then reduce the slice until it can produce a test, trace,
+or concrete note.
 
 ## Required Daily Deliverables
 
@@ -66,8 +100,14 @@ already aligns with the curriculum spine, the safety boundary in
 ## Files In This Route
 
 - `daily-plan.md`: the 30-day sequence
-- `week-01.md`: detailed guide for the deterministic Week 1 project spine
-- `week-02.md`: detailed guide for LLM boundaries, prompt contracts, and cited RAG
+- `teaching-method.md`: route-level teaching contract aligned with the main
+  curriculum pedagogy
+- `week-01.md`: Week 1 overview and links to the daily Week 1 guides
+- `week-01/`: Day 1-7 guides for the deterministic Week 1 project spine
+- `week-02.md`: Week 2 overview and links to the daily Week 2 guides
+- `week-02/`: Day 8-14 guides for LLM boundaries, prompt contracts, and cited RAG
+- `week-03.md`: Week 3 guide for tools, workflow state, verifier, and safety
+- `week-04.md`: Week 4 guide for local production evidence and portfolio defense
 - `timetable.md`: daily and weekly time blocks
 - `productivity-tools.md`: lightweight planning, focus, and tracking tools
 - `project-backlog-template.md`: backlog template for your project

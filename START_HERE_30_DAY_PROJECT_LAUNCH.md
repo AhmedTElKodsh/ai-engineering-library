@@ -1,7 +1,12 @@
 # Start Here: 30-Day Project Launch
 
-Timing: read this front door in 15-20 minutes before Day 1. The route itself
-expects 5-7 focused hours per day for 30 full-time days.
+Timing: read this front door in 15-20 minutes before Day 1. The route starts
+Sunday, 2026-06-14, and ends Monday, 2026-07-13. It expects 5-7 focused hours
+per day for 30 full-time days.
+
+Calendar commitment: reserve the 30 daily work blocks before starting. If one
+day slips, keep the milestone date fixed and cut stretch work before adding
+scope.
 
 This route is for learners who can work full time for 30 days and need to
 become productive on a real AI engineering project quickly. It is an
@@ -23,7 +28,7 @@ that you can explain in a portfolio conversation.
 ## Who Should Not Use This Yet
 
 - You need broad Python fundamentals first. Start with
-  `curriculum/00-python-foundations/week-00-diagnostic/`.
+  `curriculum/main-track/00-python-foundations/week-00-diagnostic/`.
 - You have only 1-2 hours per day. Use `START_HERE_2_HOURS_PER_DAY.md`.
 - You want the complete Course 1 sequence with every scaffolded lesson.
 - You want from-scratch GPT training, GraphRAG, multimodal RAG, Kubernetes, or
@@ -58,10 +63,13 @@ into the full curriculum for depth.
 
 ## Prepare Before Day 1
 
+Target setup window: 60-90 minutes on Saturday, 2026-06-13, or early Sunday,
+2026-06-14, before the Day 1 build block.
+
 1. Run the Module 0 diagnostic:
 
 ```powershell
-python -m pytest curriculum/00-python-foundations/week-00-diagnostic -q
+python -m pytest curriculum/main-track/00-python-foundations/week-00-diagnostic -q
 ```
 
 2. Create or choose a project folder outside the curriculum source tree.
@@ -106,6 +114,19 @@ curriculum/30-day-project-launch/productivity-tools.md
 curriculum/30-day-project-launch/daily-plan.md
 curriculum/30-day-project-launch/templates/PROJECT_SCOPE.md
 ```
+
+## Daily Time Box
+
+Use the same time budget unless a day file says otherwise:
+
+| Task | Target time | Stop rule |
+| --- | ---: | --- |
+| Plan the day | 15 min | name one minimum artifact |
+| Read or trace | 45-60 min | stop when you can state the first test or failure |
+| Build minimum path | 2.5-3.5 hrs | one function or task at a time, usually 20-45 min each |
+| Test and debug | 1-2 hrs | fix the first failure before broad refactors |
+| Evidence log and commit | 30-45 min | record command, failure, result, limitation |
+| Buffer or recovery | 30-45 min | use only for blockers, not stretch work |
 
 ## After Day 30
 

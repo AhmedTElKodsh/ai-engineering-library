@@ -30,6 +30,7 @@ points back to Course 1.
 | Course 1 remains canonical | The route is described as an overlay and sends learners back to Course 1 after Day 30. |
 | Stable module folders remain | The route points into existing modules and does not move or rename them. |
 | Learners write meaningful code | The no-vibe-coding protocol and daily plan require learner-written artifacts, tests, and explanations. |
+| Lessons use the shared teaching method | `teaching-method.md`, weekly guides, daily logs, and milestone rubrics reuse the learner logic map, evidence-first loop, minimum/enrichment boundary, reference-after-effort rule, and evidence portfolio. |
 | Time budgets stay visible | Every route file starts with a timing note; `timetable.md` defines daily and weekly blocks. |
 | FinAgent remains the spine | FinAgent is the recommended default project, with alternatives allowed only as project spines. |
 | Web data is mandatory but bounded | The plan uses API-first, fixture-first, provenance-preserving data work and defers production scraping at scale. |
@@ -43,6 +44,9 @@ points back to Course 1.
 Before changing this route:
 
 - Keep the first successful path mockable and free of paid API requirements.
+- Preserve the teaching method in `teaching-method.md`: learner logic map,
+  evidence first, smallest change, explanation, one step stronger, reference
+  after effort, and evidence portfolio.
 - Do not add solution code, answer keys, or hidden implementation shortcuts.
 - Do not turn the route into a video course or a platform build.
 - Add new work only if it produces visible learner evidence.

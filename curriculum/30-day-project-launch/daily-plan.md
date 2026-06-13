@@ -3,14 +3,65 @@
 Timing: skim the full plan once in 30-45 minutes before Day 1. During the
 route, read only the current day in 5 minutes before starting work.
 
+Calendar: this plan starts Sunday, 2026-06-14, and finishes Monday,
+2026-07-13. Keep the dates fixed. If a day slips, cut stretch scope and protect
+the next milestone rather than expanding the whole route.
+
 Expected pace: 5-7 focused hours per day. Each day ends with a short engineering
 log and a commit.
+
+Teaching method: use `teaching-method.md` as the route-level version of the
+main curriculum's lesson contract. Each day should preserve action before
+lecture, evidence before claims, minimum path before enrichment, and reflection
+before moving on.
+
+## Daily Learner Logic
+
+Before starting the day's build, answer the same five questions used by the
+main curriculum:
+
+| Question | Answer for today's project slice |
+| --- | --- |
+| What can I do now? |  |
+| What new capability am I adding? |  |
+| What failure does this help me catch? |  |
+| How does this improve FinAgent or a practical AI system? |  |
+| What should I be able to explain afterward? |  |
+
+## Default Task Time Boxes
+
+Use this for every day unless the day guide gives a narrower estimate:
+
+| Task type | Target time | Typical output |
+| --- | ---: | --- |
+| Daily setup and board update | 15 min | one minimum artifact selected |
+| Read/trace source material | 45-60 min | first expected failure or trace note |
+| Small design note | 10-20 min | inputs, outputs, boundary, stop rule |
+| One function or task slice | 20-45 min | one behavior, test, prompt, schema, or doc section |
+| Build block | 90-120 min | 2-4 completed slices |
+| Test/debug block | 60-120 min | failing command understood or fixed |
+| Evidence/log/commit | 30-45 min | command, result, limitation, next step |
+
+Productivity rule: keep one implementation slice in progress. When a slice
+exceeds 45 minutes, reduce it to the next observable behavior and log the rest
+as backlog.
+
+## Evidence Portfolio Rhythm
+
+Each day should leave four evidence types:
+
+- technical evidence: code, tests, fixtures, evals, traces, commands, or docs
+- failure evidence: first failure, rejected input, refusal, abstention, or known
+  limitation
+- explanation evidence: 2-4 teammate-facing sentences about the tradeoff
+- transfer evidence: how the pattern strengthens FinAgent or another practical
+  AI system
 
 ## Week 1 - Engineering Loop, Python, Data, And Deterministic Project Spine
 
 Goal: Build without LLM magic first.
 
-Detailed guide: `week-01.md`
+Detailed guide: `week-01.md`, with daily guides in `week-01/`
 
 ### Day 1 - Setup, Diagnostic, And Project Scope
 
@@ -19,7 +70,7 @@ Deliverable: `PROJECT_SCOPE.md`
 - Objective: choose one project spine and define the smallest useful Day 30 outcome.
 - Read or trace: `START_HERE.md`, `LEARNER_READY_MATRIX.md`, Module 0 diagnostic, and this route's `templates/PROJECT_SCOPE.md`.
 - Build: project folder, virtual environment, initial README, and filled project scope.
-- Test or verify: run `python -m pytest curriculum/00-python-foundations/week-00-diagnostic -q`.
+- Test or verify: run `python -m pytest curriculum/main-track/00-python-foundations/week-00-diagnostic -q`.
 - Engineering log: diagnostic result, project choice, non-goals, and first risk.
 - Done criteria: scope names input, output, deterministic v0, safety boundary, and Day 7/14/21/28/30 evidence.
 - Do not do today: add an LLM call, vector database, UI, or live scraping.
@@ -100,7 +151,7 @@ Deliverable: deterministic project slice with tests, logs, validated input, and 
 
 Goal: Add LLM behavior behind testable boundaries.
 
-Detailed guide: `week-02.md`
+Detailed guide: `week-02.md`, with daily guides in `week-02/`
 
 ### Day 8 - LLM API Wrapper
 
@@ -190,6 +241,8 @@ Deliverable: RAG assistant with citations, abstention, evals, and failure notes
 
 Goal: Build controlled agentic behavior without over-autonomy.
 
+Detailed guide: `week-03.md`
+
 ### Day 15 - Typed Tools
 
 Deliverable: one or two deterministic tools with input/output schemas
@@ -277,6 +330,8 @@ Deliverable: tool-using workflow with state, trace logs, stop conditions, source
 ## Week 4 - Production Hardening And Project Readiness
 
 Goal: Make the project maintainable, observable, and presentable.
+
+Detailed guide: `week-04.md`
 
 ### Day 22 - Service Boundary
 

@@ -3,6 +3,10 @@
 Timing: set up tools in 45-60 minutes before Day 1. Spend no more than 10
 minutes per day maintaining them.
 
+Calendar setup: block Sunday, 2026-06-14 through Monday, 2026-07-13 before
+starting. Each day needs one 5-7 hour learning block or two protected blocks
+that total the same focused time.
+
 Tools should reduce friction, not become a second project. Use the smallest set
 that helps you plan, focus, test, write, and commit.
 
@@ -66,6 +70,27 @@ Use timed blocks:
 Pomodoro-style timers can help when focus is weak, but do not force 25-minute
 chunks if a deeper build block is working. The route cares about evidence, not
 timer purity.
+
+## Timeline Discipline
+
+Use these rules to stay on schedule:
+
+- **One-card WIP:** only one implementation slice can sit in `In Progress`.
+- **45-minute slice limit:** if one function, test, prompt, or doc section
+  takes longer than 45 minutes without evidence, split it smaller.
+- **First-failure debugging:** read the first failing test or trace before
+  changing multiple files.
+- **Two-minute recall:** before reading notes, write what you remember from
+  yesterday and the one thing today's work must prove.
+- **Shutdown note:** end each day by writing the next command to run tomorrow.
+- **Stretch quarantine:** stretch ideas go to backlog until the milestone
+  artifact, test/eval command, and evidence note exist.
+- **Recovery ladder:** first cut stretch work, then reduce the artifact, then
+  use mock/fixture mode, and only then move unfinished scope to the next day.
+
+Learning booster: each evening, write one plain-English explanation without
+looking at the docs. This creates retrieval practice and exposes concepts that
+still need review.
 
 ## Weekly Review Checklist
 

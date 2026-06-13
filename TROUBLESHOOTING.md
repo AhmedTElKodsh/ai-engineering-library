@@ -19,7 +19,7 @@ collect tests cleanly, import the lesson files, and then fail on TODO behavior.
 Run pytest from the repo root:
 
 ```powershell
-python -m pytest curriculum/00-python-foundations/week-00-diagnostic -q
+python -m pytest curriculum/main-track/00-python-foundations/week-00-diagnostic -q
 ```
 
 If imports still fail, check that the lesson test inserts the local lesson path

@@ -3,6 +3,11 @@
 Timing: read this in 10-15 minutes before Day 1. Use the daily self-check in
 3-5 minutes before every commit.
 
+Schedule rule: AI help should shorten diagnosis, not hide learning. Spend at
+least 10 minutes inspecting the test, trace, or docs yourself before asking for
+help. If AI assistance lasts more than 20 minutes, write the exact blocker and
+the next learner-written action in the daily log.
+
 This route allows AI assistants, but the learner remains the engineer. Every
 important design, line of code, test, and claim must be understandable and
 defensible by the learner.
@@ -34,6 +39,23 @@ Answer these before you commit:
 3. Which test failed first?
 4. Which test passed after my change?
 5. Can I explain the tradeoff?
+6. What evidence did I inspect before changing code?
+7. What optional help did I use only after naming the failure?
+
+## Reference After Effort
+
+Use AI help, hints, examples, documentation, or videos after you have made a
+real attempt and can name the concrete blocker:
+
+- failing test name
+- assertion message
+- malformed fixture
+- missing trace field
+- unclear schema rule
+- unsafe output or refusal gap
+
+Do not ask for a finished implementation when the next useful step is to inspect
+the failure, narrow the input, or write the smallest test.
 
 ## Commit Note Rule
 
@@ -48,3 +70,7 @@ test, then wrote and tested the fix myself.
 
 Before a milestone, pick one file or workflow and explain it without opening an
 AI chat. If you cannot explain it, revise the code or docs until you can.
+
+Use the evidence portfolio habit from `teaching-method.md`: technical evidence,
+failure evidence, explanation evidence, and transfer evidence. A clean demo does
+not replace those four evidence types.

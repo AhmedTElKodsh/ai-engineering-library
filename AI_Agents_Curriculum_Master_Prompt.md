@@ -126,14 +126,14 @@ Canonical files to inspect first:
 
 Current repo-aware Course 1 surface:
 
-- `curriculum/00-python-foundations`
-- `curriculum/01-module-1-whole-game`
-- `curriculum/02-module-2-first-principles`
-- `curriculum/03-module-3-mcp-integration`
+- `curriculum/main-track/00-python-foundations`
+- `curriculum/main-track/01-module-1-whole-game`
+- `curriculum/main-track/02-module-2-first-principles`
+- `curriculum/main-track/03-module-3-mcp-integration`
 - `curriculum/specializations/web-scraping`
-- `curriculum/04-module-4-agentic-workflows`
-- `curriculum/05-module-5-production`
-- `curriculum/06-capstone-projects`
+- `curriculum/main-track/04-module-4-agentic-workflows`
+- `curriculum/main-track/05-module-5-production`
+- `curriculum/main-track/06-capstone-projects`
 
 Use `LEARNER_READY_MATRIX.md` as the assignability source of truth. Use `curriculum/LEARNER_JOURNEY_MAP.md` to understand the active Course 1 path. Use `.kiro/specs/curriculum-planning/ROADMAP.md` and `.kiro/specs/curriculum-planning/SPEC.md` as the planning contract.
 
@@ -689,14 +689,14 @@ The structure below is a conceptual coverage map. In the current repository, map
 
 | Conceptual Coverage Area | Current Repo Target |
 |---|---|
-| Engineering workflow, Python, Git, pytest, config, debugging | `curriculum/00-python-foundations` |
-| Whole-game AI engineering and agent/non-agent judgment | `curriculum/01-module-1-whole-game` |
-| Model intuition, tokenization, embeddings, attention, transformer basics | `curriculum/02-module-2-first-principles` |
-| LLM APIs, PromptOps, structured outputs, tool contracts, MCP-style boundaries | `curriculum/03-module-3-mcp-integration` |
+| Engineering workflow, Python, Git, pytest, config, debugging | `curriculum/main-track/00-python-foundations` |
+| Whole-game AI engineering and agent/non-agent judgment | `curriculum/main-track/01-module-1-whole-game` |
+| Model intuition, tokenization, embeddings, attention, transformer basics | `curriculum/main-track/02-module-2-first-principles` |
+| LLM APIs, PromptOps, structured outputs, tool contracts, MCP-style boundaries | `curriculum/main-track/03-module-3-mcp-integration` |
 | Web/API data acquisition and provenance for AI systems | `curriculum/specializations/web-scraping` |
-| AI-ready data, RAG, explicit workflows, critique/review loops, bounded agents | `curriculum/04-module-4-agentic-workflows` |
-| Evaluation, observability, production reliability, model/adaptation decisions | `curriculum/05-module-5-production` |
-| Production-shaped FinAgent capstone and portfolio defense | `curriculum/06-capstone-projects` |
+| AI-ready data, RAG, explicit workflows, critique/review loops, bounded agents | `curriculum/main-track/04-module-4-agentic-workflows` |
+| Evaluation, observability, production reliability, model/adaptation decisions | `curriculum/main-track/05-module-5-production` |
+| Production-shaped FinAgent capstone and portfolio defense | `curriculum/main-track/06-capstone-projects` |
 
 ## Module 0: Engineering Workflow for Agent Builders
 

@@ -3,6 +3,19 @@
 Timing: reserve 30-60 minutes on Days 7, 14, 21, 28, and 30 to score the
 milestone before moving on.
 
+Calendar checkpoints:
+
+| Milestone | Date | Review window |
+| --- | --- | ---: |
+| Day 7 - Deterministic Assistant | Saturday 2026-06-20 | 30-60 min |
+| Day 14 - Cited RAG System | Saturday 2026-06-27 | 30-60 min |
+| Day 21 - Bounded Workflow/Agent | Saturday 2026-07-04 | 30-60 min |
+| Day 28 - Production-Shaped Local App | Saturday 2026-07-11 | 45-60 min |
+| Day 30 - Portfolio Defense | Monday 2026-07-13 | 60 min |
+
+If the milestone does not pass inside the review window, cut stretch work from
+the next block and repair the missing evidence first.
+
 Use this rubric on Days 7, 14, 21, 28, and 30. A milestone passes when the
 project has inspectable evidence, not when it merely feels complete.
 
@@ -13,6 +26,18 @@ project has inspectable evidence, not when it merely feels complete.
 | Pass | Evidence is present, runnable or inspectable, and explained honestly. |
 | Revise | Core evidence is missing, unclear, untested, or overclaimed. |
 | Stretch | The pass standard is met and the learner adds a useful, bounded improvement. |
+
+## Learning Evidence Add-On
+
+Score every milestone against the same learning evidence used by the main
+curriculum.
+
+| Evidence | Pass standard |
+| --- | --- |
+| Learner logic | The milestone note answers what the learner could do before, what changed, what failure is now caught, how it improves FinAgent or a practical AI system, and what can be explained afterward. |
+| Failure literacy | The learner can point to a first failure, rejected case, abstention, refusal, malformed fixture, trace gap, or known limitation. |
+| Scope discipline | Minimum path is complete, optional enrichment is labeled, and advanced work is deferred instead of smuggled into the required route. |
+| Evidence portfolio | Technical, failure, explanation, and transfer evidence are all present. |
 
 ## Day 7 - Deterministic Assistant
 

@@ -21,14 +21,14 @@ Reference validation meanings:
 | Module 0 | Week 0 diagnostic | assignable | yes | diagnostic workbench | yes | yes | yes | done | yes |
 | Module 0 | Weeks 1-3 Python foundations | assignable | yes | yes | yes | yes | yes | done | yes |
 | Module 1 | Weeks 1-3 whole-game FinAgent | assignable | yes | yes | yes | yes | yes | done | yes |
-| Module 2 | Phases 1-6 first principles | assignable | yes | yes | yes | yes | yes | done | yes |
+| Module 2 | Required phases: tokenization, embeddings, attention, context/decoding | assignable | yes | yes | yes | yes | yes | done | yes |
 | Module 3 | Phases 1-4 LLM APIs, PromptOps, tools, and MCP boundaries | assignable | yes | yes | yes | yes | yes | done | yes |
 | Web data bridge | Core Labs 1-6 | assignable | yes | yes | yes | yes | yes | done | yes |
 | Web data bridge | Portfolio mini-project | assignable | yes | yes | yes | yes | yes | done | yes |
-| Module 4 | Phases 1-4 AI-ready data, RAG, and explicit workflows | assignable | yes | yes | yes | yes | yes | done | yes |
-| Module 4 | Phases 5-8 advanced workflow and multi-agent doorway | scaffolded | yes | yes | yes | yes | yes | done | optional |
-| Module 5 | Weeks 1-7 production AI engineering | assignable | yes | yes | yes | yes | yes | done | yes |
-| Module 6 | Capstone order: Week 1 kickoff, Week 3 integration build, then Week 2 polish evidence | assignable | yes | yes | yes | yes | yes | done | yes |
+| Module 4 | Required bridge plus Phases 1-4 AI-ready data, RAG, and explicit workflows | assignable | yes | yes | yes | yes | yes | done | yes |
+| Module 5 | Required weeks: evals, CI gate, service boundary, monitoring, optimization | assignable | yes | yes | yes | yes | yes | done | yes |
+| Module 6 | Capstone order: kickoff, integration build, then polish evidence; folder names are legacy labels | assignable | yes | yes | yes | yes | yes | done | yes |
+| Extended concepts | Model internals, advanced agentic systems, reproducible packaging, model adaptation | scaffolded | yes | yes | yes | yes | yes | done | optional |
 | Route | 30-day project launch overlay, timetable, and productivity guide | assignable | yes | no route guide only | no dedicated tests | no dedicated hints | milestone rubric | protocol | yes |
 | Planning | `.kiro/specs/curriculum-planning/` | instructor-only | yes | no | no | no | no | protocol | no |
 
