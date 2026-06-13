@@ -1,5 +1,8 @@
 # Next 30 Days
 
+Timing: fill this in on Day 30 in 45-60 minutes after scoring the final
+portfolio defense.
+
 ## Top 5 Improvements
 
 1. 

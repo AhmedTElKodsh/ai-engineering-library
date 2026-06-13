@@ -1,5 +1,8 @@
 # Failure Analysis
 
+Timing: start this on Day 26. Budget 60-90 minutes for the first pass, then add
+new failure cases as they appear.
+
 Use one section per failure case.
 
 ## Failure Case
@@ -32,4 +35,3 @@ What change reduces the risk?
 ## Remaining Risk
 
 What can still go wrong after the mitigation?
-

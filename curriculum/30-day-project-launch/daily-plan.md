@@ -1,11 +1,16 @@
 # 30-Day Project Launch Daily Plan
 
-Expected pace: 5-7 focused hours per day. Each day ends with a short
-engineering log and a commit.
+Timing: skim the full plan once in 30-45 minutes before Day 1. During the
+route, read only the current day in 5 minutes before starting work.
+
+Expected pace: 5-7 focused hours per day. Each day ends with a short engineering
+log and a commit.
 
 ## Week 1 - Engineering Loop, Python, Data, And Deterministic Project Spine
 
 Goal: Build without LLM magic first.
+
+Detailed guide: `week-01.md`
 
 ### Day 1 - Setup, Diagnostic, And Project Scope
 
@@ -94,6 +99,8 @@ Deliverable: deterministic project slice with tests, logs, validated input, and 
 ## Week 2 - LLM APIs, Prompts, Embeddings, And RAG
 
 Goal: Add LLM behavior behind testable boundaries.
+
+Detailed guide: `week-02.md`
 
 ### Day 8 - LLM API Wrapper
 

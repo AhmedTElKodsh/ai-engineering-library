@@ -1,5 +1,8 @@
 # Continuation Roadmap
 
+Timing: read this in 20-30 minutes on Day 30 after the final defense. Revisit it
+weekly during the next 30-60 days.
+
 Day 30 is a project launch, not the end of Course 1. Use this roadmap to choose
 the next stretch of work while returning to the full curriculum for depth.
 

@@ -1,5 +1,8 @@
 # Portfolio Note
 
+Timing: draft this on Day 29 in 60-90 minutes. Tighten it after the final Day
+30 validation run.
+
 ## Project Summary
 
 What problem does the project solve, and who is it for?
@@ -46,4 +49,3 @@ input -> validation -> data pipeline -> retrieval/tools -> workflow -> verified 
 - The hardest failure:
 - Why this design is bounded:
 - What I would not build yet:
-

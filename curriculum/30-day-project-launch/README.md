@@ -1,5 +1,8 @@
 # 30-Day Project Launch Route
 
+Timing: read this overview in 15-20 minutes before Day 1. Revisit the file at
+the start of each week in 5 minutes to keep scope honest.
+
 This folder contains a compressed, hands-on route for building a
 production-shaped AI engineering project in 30 full-time days. It is an overlay
 on Course 1. It does not replace the complete Course 1 path.
@@ -63,10 +66,15 @@ already aligns with the curriculum spine, the safety boundary in
 ## Files In This Route
 
 - `daily-plan.md`: the 30-day sequence
+- `week-01.md`: detailed guide for the deterministic Week 1 project spine
+- `week-02.md`: detailed guide for LLM boundaries, prompt contracts, and cited RAG
+- `timetable.md`: daily and weekly time blocks
+- `productivity-tools.md`: lightweight planning, focus, and tracking tools
 - `project-backlog-template.md`: backlog template for your project
 - `no-vibe-coding-protocol.md`: strict AI-assistant use rules
 - `milestone-rubric.md`: Day 7, 14, 21, 28, and 30 quality gates
 - `continuation-roadmap.md`: what to do after the launch
+- `planning-review.md`: maintainer check against the curriculum planning contract
 - `templates/`: project scope, daily log, failure analysis, demo, portfolio,
   and next-30-days templates
 

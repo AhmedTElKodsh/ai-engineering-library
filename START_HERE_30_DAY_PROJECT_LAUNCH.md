@@ -1,5 +1,8 @@
 # Start Here: 30-Day Project Launch
 
+Timing: read this front door in 15-20 minutes before Day 1. The route itself
+expects 5-7 focused hours per day for 30 full-time days.
+
 This route is for learners who can work full time for 30 days and need to
 become productive on a real AI engineering project quickly. It is an
 accelerated overlay on Course 1, not a replacement for the complete curriculum.
@@ -98,6 +101,8 @@ Start here:
 
 ```text
 curriculum/30-day-project-launch/README.md
+curriculum/30-day-project-launch/timetable.md
+curriculum/30-day-project-launch/productivity-tools.md
 curriculum/30-day-project-launch/daily-plan.md
 curriculum/30-day-project-launch/templates/PROJECT_SCOPE.md
 ```

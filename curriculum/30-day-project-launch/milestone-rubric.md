@@ -1,5 +1,8 @@
 # 30-Day Project Launch Milestone Rubric
 
+Timing: reserve 30-60 minutes on Days 7, 14, 21, 28, and 30 to score the
+milestone before moving on.
+
 Use this rubric on Days 7, 14, 21, 28, and 30. A milestone passes when the
 project has inspectable evidence, not when it merely feels complete.
 

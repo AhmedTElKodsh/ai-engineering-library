@@ -1,5 +1,8 @@
 # Project Scope
 
+Timing: fill this in during Day 1 in 45-60 minutes. Revise it only when scope
+changes are deliberate and written in the backlog.
+
 ## Project Name
 
 

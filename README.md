@@ -32,6 +32,16 @@ The active course is **Course 1: Junior AI Engineering With Python**. It teaches
 |   |-- 05-module-5-production/
 |   |-- 06-capstone-projects/
 |   |-- 30-day-project-launch/
+|   |   |-- README.md
+|   |   |-- daily-plan.md
+|   |   |-- project-backlog-template.md
+|   |   |-- no-vibe-coding-protocol.md
+|   |   |-- milestone-rubric.md
+|   |   |-- continuation-roadmap.md
+|   |   |-- timetable.md
+|   |   |-- productivity-tools.md
+|   |   |-- planning-review.md
+|   |   `-- templates/
 |   |-- specializations/web-scraping/
 |   |-- resources/
 |   |-- templates/

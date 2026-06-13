@@ -1,5 +1,8 @@
 # 30-Day Project Backlog Template
 
+Timing: fill the first version in 45-60 minutes before Day 2. Update it in
+5-10 minutes at the start or end of each day.
+
 Copy this into your project repository and fill it in before Day 2.
 
 ## Project Goal

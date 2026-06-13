@@ -1,5 +1,8 @@
 # Daily Engineering Log
 
+Timing: fill this in during the final 10-15 minutes of each day. Do not skip the
+first failure or limitation sections.
+
 ## Date/Day
 
 
@@ -36,5 +39,4 @@ Explain the most important code or design choice in 2-4 sentences.
 
 
 ## Next Step
-
 

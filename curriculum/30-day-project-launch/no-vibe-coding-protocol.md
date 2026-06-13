@@ -1,5 +1,8 @@
 # No-Vibe-Coding Protocol
 
+Timing: read this in 10-15 minutes before Day 1. Use the daily self-check in
+3-5 minutes before every commit.
+
 This route allows AI assistants, but the learner remains the engineer. Every
 important design, line of code, test, and claim must be understandable and
 defensible by the learner.
