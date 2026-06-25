@@ -13,6 +13,7 @@ Before editing, answer:
 - Is the failure about input cleanup, numeric calculation, label selection, or summary wording?
 - Should bad input raise an exception or become part of a safe response?
 - Which helper should own this behavior so it is not duplicated later?
+- Is the failure about missing data, wrong formatting, unsafe wording, the wrong source field, or a missing edge case?
 
 ## Layer 2
 
@@ -34,6 +35,10 @@ Normalize the ticker before validating it. The lesson uses a small uppercase alp
 
 The final summary should include the core facts a reader needs and the educational disclaimer. Keep it factual, not advisory.
 
+The source is part of the safety boundary, not decoration. A missing or blank
+source should fail before the summary is returned because the answer would no
+longer be grounded.
+
 ## Layer 3
 
 ### Reading The Tests
@@ -47,6 +52,11 @@ If the summary test fails, list the required words and facts from the assertion 
 ### Final Check
 
 After each helper passes, run the full Week 01 module test so the summary uses the same behavior as the lower-level functions.
+
+Expected first-run shape: collection should succeed, then assertions should fail
+because TODO logic is still missing. Import errors or missing files are setup
+problems; assertion failures from TODO behavior are part of the exercise.
+
 ## Failure Lab
 
 Before asking for the next hint, identify the first concrete failure signal: the failing test name, assertion message, malformed fixture, missing field, unsafe output, weak citation, or unclear trace. Write one sentence about what the failure is teaching.

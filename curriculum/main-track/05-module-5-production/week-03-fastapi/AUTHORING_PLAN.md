@@ -73,7 +73,7 @@ Expected initial state: collection succeeds and assertions fail because
 ## Source Evidence Enhancement
 
 Use `../EVAL_OBSERVABILITY_EVIDENCE_CHECKLIST.md` before changing this lesson.
-Use `../../../FINANCE_SAFETY.md` for finance-domain refusal boundaries.
+Use `../../../../FINANCE_SAFETY.md` for finance-domain refusal boundaries.
 
 - B10 `LLM Engineer's Handbook`, Chapter 7, p.300-303,
   `B10_B10_P0300_C001`, `B10_B10_P0302_C001`, `B10_B10_P0303_C001` for small,

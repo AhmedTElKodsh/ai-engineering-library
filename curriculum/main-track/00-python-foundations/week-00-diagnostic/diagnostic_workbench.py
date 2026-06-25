@@ -99,11 +99,11 @@ def flatten_list(nested: list[list]) -> list:
         4. Return the result
     """
     # flattened = []
-    # for list in nested:
-    #     for el in list:
+    # for sublist in nested:
+    #     for el in sublist:
     #         flattened.append(el)
     # return flattened
-    return [el for list in nested for el in list]
+    return [el for sublist in nested for el in sublist]
 
 
 def count_words(text: str) -> dict[str, int]:
@@ -138,10 +138,12 @@ def count_words(text: str) -> dict[str, int]:
     return dictw
 
 
-# Diagnostic TODOs
+# Learner diagnostic tasks
 #
-# From here down, incomplete behavior is intentional. Implementing these gaps
-# is how learners identify which Python concepts need review.
+# From here down, incomplete behavior is intentional in starter copies.
+# Implementing these gaps is how learners identify which Python concepts need
+# review. If you already solved some of them, keep your solutions and use the
+# tests as calibration evidence.
 
 def unique_elements(items: list) -> list:
     """
@@ -161,25 +163,18 @@ def unique_elements(items: list) -> list:
         1. Track seen elements with a set
         2. Build result list, adding only unseen elements
         3. Return the result
-    
+
     CONCEPT CLARIFICATION:
     Why not just return list(set(items))?
     - Sets are UNORDERED! Converting to set scrambles the original sequence.
-    - Example: [3, 1, 2, 1] → set → might give [1, 2, 3] (wrong order!)
-    
+    - Example: [3, 1, 2, 1] -> set -> might give [1, 2, 3] (wrong order!)
+
     The solution pattern:
     - Use a set for TRACKING what you've seen (fast O(1) lookup)
     - Use a list for BUILDING the result (preserves insertion order)
     - Walk through original list once, checking: "Have I seen this before?"
     """
-    # TODO: preserve first-seen order while removing duplicates.
-    # Keep this placeholder import-safe so the diagnostic can report a normal
-    # behavior failure instead of a syntax error.
-    result = []
-    for item in items:
-        if item not in result:
-            result.append(item)
-    return result
+    raise NotImplementedError("TODO: remove duplicates while preserving order")
 
 
 # Functions
@@ -202,30 +197,28 @@ def make_multiplier(factor: int):
         1. Define an inner function that takes one argument
         2. Return the argument multiplied by factor
         3. Return the inner function
-    
+
     CONCEPT CLARIFICATION:
     This is a CLOSURE - a function that "remembers" variables from where it was created.
-    
+
     Example walk-through:
     >>> double = make_multiplier(2)
     Step 1: make_multiplier(2) is called, factor=2 is stored
     Step 2: An inner function is created that remembers factor=2
     Step 3: That inner function is returned and stored as 'double'
-    
+
     >>> double(5)
     Step 1: double is called with argument 5
     Step 2: The inner function uses the remembered factor=2
     Step 3: Returns 5 * 2 = 10
-    
+
     >>> triple = make_multiplier(3)  # Creates a DIFFERENT function with factor=3
     >>> triple(4)  # Returns 4 * 3 = 12
-    
-    The pattern: outer function → defines inner function → returns inner function
+
+    The pattern: outer function -> defines inner function -> returns inner function
     The inner function has access to outer function's variables (that's the closure part!)
     """
-    def multiplier(value):
-        return factor * value
-    return multiplier
+    raise NotImplementedError("TODO: return a closure that multiplies by factor")
 
 
 def apply_to_all(func, items: list) -> list:
@@ -247,7 +240,7 @@ def apply_to_all(func, items: list) -> list:
         1. Create a new list by calling func on each item
         2. Return the new list
     """
-    pass  # YOUR DIAGNOSTIC TODO HERE
+    raise NotImplementedError("TODO: apply func to each item")
 
 
 # OOP
@@ -273,23 +266,23 @@ class Counter:
 
     def __init__(self, start: int = 0) -> None:
         """Initialize Counter with a starting value."""
-        pass  # YOUR DIAGNOSTIC TODO HERE
+        raise NotImplementedError("TODO: store the starting count")
 
     def increment(self) -> None:
         """Add 1 to the counter."""
-        pass  # YOUR DIAGNOSTIC TODO HERE
+        raise NotImplementedError("TODO: add one to count")
 
     def decrement(self) -> None:
         """Subtract 1 from the counter (minimum 0)."""
-        pass  # YOUR DIAGNOSTIC TODO HERE
+        raise NotImplementedError("TODO: subtract one without going below zero")
 
     def reset(self) -> None:
         """Reset the counter to 0."""
-        pass  # YOUR DIAGNOSTIC TODO HERE
+        raise NotImplementedError("TODO: reset count to zero")
 
     def __str__(self) -> str:
         """Return string representation like 'Counter(5)'."""
-        pass  # YOUR DIAGNOSTIC TODO HERE
+        raise NotImplementedError("TODO: return Counter(N)")
 
 
 # Pythonic Patterns
@@ -314,7 +307,7 @@ def even_squares(numbers: list[int]) -> list[int]:
         3. Square each even number
         4. Return the result
     """
-    pass  # YOUR DIAGNOSTIC TODO HERE
+    raise NotImplementedError("TODO: square only the even numbers")
 
 
 def first_n_fibonacci(n: int) -> list[int]:
@@ -336,31 +329,13 @@ def first_n_fibonacci(n: int) -> list[int]:
         2. Loop until you have n numbers
         3. Each new number is sum of previous two
         4. Return the list
-    
-    CONCEPT CLARIFICATION:
-    Fibonacci sequence: each number is the sum of the two before it.
-    Pattern: 0, 1, 1, 2, 3, 5, 8, 13...
-    
-    Example walk-through: first_n_fibonacci(6)
-    Step 1: Start with [0, 1] (the seed values)
-    Step 2: Add 0+1=1 → [0, 1, 1]
-    Step 3: Add 1+1=2 → [0, 1, 1, 2]
-    Step 4: Add 1+2=3 → [0, 1, 1, 2, 3]
-    Step 5: Add 2+3=5 → [0, 1, 1, 2, 3, 5]
-    Result: [0, 1, 1, 2, 3, 5] ✓ (6 numbers)
-    
-    Edge case: first_n_fibonacci(1)
-    Just return [0] (only the first number)
-    
-    Pattern for building:
-    - If n==1: return [0]
-    - Otherwise: start with [0, 1]
-    - Loop while len(list) < n
-    - Each iteration: next = list[-2] + list[-1], then append next
-    
-    Tip: list[-1] gets last element, list[-2] gets second-to-last!
+
+    Explanation:
+        Fibonacci numbers start with 0 and 1. Every next value is the sum of
+        the previous two values. This implementation builds the sequence in a
+        list and keeps appending the next value until the list reaches length n.
     """
-    pass  # YOUR DIAGNOSTIC TODO HERE
+    raise NotImplementedError("TODO: generate the first n Fibonacci numbers")
 
 
 # Error Handling
@@ -385,7 +360,7 @@ def safe_divide(a: float, b: float) -> float | str:
         2. If ZeroDivisionError occurs, return the error message string
         3. Otherwise return the result
     """
-    pass  # YOUR DIAGNOSTIC TODO HERE
+    raise NotImplementedError("TODO: divide safely and handle zero division")
 
 
 def validate_age(age) -> int:
@@ -412,7 +387,7 @@ def validate_age(age) -> int:
         2. Check if age is positive; raise ValueError if not
         3. Return the validated age
     """
-    pass  # YOUR DIAGNOSTIC TODO HERE
+    raise NotImplementedError("TODO: validate positive integer age")
 
 
 # Diagnostic Test Runner
@@ -435,7 +410,7 @@ if __name__ == "__main__":
                 print(f"ERROR {name} ({type(e).__name__}: {e})")
 
     print("\n--- Running Python Confidence Inventory ---")
-    
+
     # We use a wrapper to handle functions that are just 'pass'
     def wrap(f):
         def inner(*args, **kwargs):
@@ -458,24 +433,29 @@ if __name__ == "__main__":
         ("ApplyToAll (str, [1])", wrap(apply_to_all), (str, [1]), ["1"]),
         ("Even Squares [1, 2, 4]", wrap(even_squares), [1, 2, 4], [4, 16]),
         ("Fibonacci (5)", wrap(first_n_fibonacci), 5, [0, 1, 1, 2, 3]),
+        ("Fibonacci (1)", wrap(first_n_fibonacci), 1, [0]),
         ("Safe Divide (10/2)", wrap(safe_divide), (10, 2), 5.0),
         ("Safe Divide (10/0)", wrap(safe_divide), (10, 0), "Error: division by zero"),
         ("Validate Age (25)", wrap(validate_age), 25, 25),
         ("Validate Age (-1)", wrap(validate_age), -1, "ValueError"),
+        ("Validate Age (0)", wrap(validate_age), 0, "ValueError"),
         ("Validate Age ('25')", wrap(validate_age), "25", "TypeError"),
+        ("Validate Age (True)", wrap(validate_age), True, "TypeError"),
     ]
 
     for name, func, args, expected in tests:
         run_test(name, func, args, expected)
-    
+
     # Special test for Counter
     try:
         c = Counter(5)
         c.increment()
-        if str(c) == "Counter(6)":
+        c.reset()
+        count = getattr(c, "count", "MISSING")
+        if count == 0:
              print("PASS Counter")
         else:
-             raise Exception(f"Expected Counter(6), got {str(c)}")
+             raise Exception(f"Expected count 0 after reset, got {count}")
     except NotImplementedError:
         print("TODO Counter")
     except Exception as e:

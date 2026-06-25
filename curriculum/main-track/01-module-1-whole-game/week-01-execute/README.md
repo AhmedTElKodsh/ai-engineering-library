@@ -27,6 +27,9 @@ Expected time to finish: 3-4 hours
 File to edit: `workbench.py`  
 Test folder: `tests/`
 
+Learning path: read the behavior, run the test, trace the failure, make one
+small change, verify, then write evidence.
+
 ## Learning Goal
 
 Run the smallest useful slice of FinAgent: take a stock snapshot, compute basic movement, and produce a grounded research-style summary.
@@ -59,9 +62,26 @@ FinAgent will eventually analyze market data, retrieve cited context, call tools
 
 The important lesson is the system shape. Even advanced AI products are built from testable pieces like this.
 
-Safety boundary: use `../../../FINANCE_SAFETY.md` as the shared rulebook. This
-slice may summarize market movement for education, but it must not recommend
-trades.
+Safety boundary: use `../../../../FINANCE_SAFETY.md` as the shared rulebook.
+This project summarizes financial data for education; it must not provide
+personalized investment advice or recommend trades.
+
+## Function Contracts
+
+Use the tests as the contract for this first slice. Keep the scope intentionally
+small so the lesson stays focused on validation, calculation, and safety.
+
+| Function | Accepts | Rejects or protects against | Required result |
+| --- | --- | --- | --- |
+| `parse_price` | plain numeric strings and strings with surrounding whitespace or one leading `$` | empty, non-numeric, zero, negative, or non-string values | positive `float` |
+| `percentage_change` | positive previous close and current price numbers | zero or negative `previous_close`; negative `current_price` | percentage move from previous close |
+| `classify_movement` | a percentage movement | boundary mistakes around `1.0` and `-1.0` | `up`, `down`, or `flat` |
+| `validate_ticker` | 1-5 alphabetic characters, with optional surrounding whitespace or lowercase input | empty values, numbers, dotted symbols, and longer symbols | uppercase ticker |
+| `build_stock_summary` | a `StockSnapshot` with valid ticker, prices, and source | unsafe advice wording, missing source, missing disclaimer, invalid prices | factual educational summary |
+
+Ticker scope note: this lesson uses a simplified ticker rule, letters only and
+1-5 characters. Real market symbols can be more complex; support for those is
+outside Phase 1.
 
 ## Quick Win
 
@@ -74,7 +94,9 @@ python -m pytest tests -v
 Your first win is not making everything pass. Your first win is reading one failure and explaining what behavior it is asking for.
 
 Expected first run: tests should collect cleanly and some behavior tests should
-fail because `workbench.py` still contains TODO logic.
+fail because `workbench.py` still contains TODO logic. Collection errors,
+import errors, or missing dependency errors are setup problems. Assertion
+failures from TODO behavior are the expected learner starting state.
 
 ## Trace
 
@@ -92,8 +114,10 @@ Do not write code yet. First, answer:
 2. Which function should reject a starting price of zero?
 3. Which function creates the final user-facing text?
 4. Where should the educational disclaimer appear?
+5. What should happen if `snapshot.source` is empty?
 
-Now inspect `tests/test_finagent_stock_summary.py` and answer:
+Now inspect `tests/test_finagent_stock_summary.py`. This file defines the
+behavior your implementation must satisfy. Answer:
 
 1. Which test checks normal happy-path behavior?
 2. Which test checks invalid input?
@@ -102,21 +126,16 @@ Now inspect `tests/test_finagent_stock_summary.py` and answer:
 
 ## Modify
 
-Run the tests once before editing:
+Use the baseline ritual for each behavior:
 
-```powershell
-python -m pytest tests -v
-```
-
-Some tests should fail because the TODO behavior is missing. Read the first failing assertion and fix only that behavior.
-
-Use this debugging loop:
-
-1. Name the failing test.
-2. Restate the expected behavior in your own words.
-3. Edit the smallest function involved.
-4. Run that test again.
-5. Move to the next failure.
+1. Run the focused test.
+2. Read the failure.
+3. Predict the cause before editing.
+4. Name the failing test.
+5. Restate the expected behavior in your own words.
+6. Edit the smallest function involved.
+7. Run that test again.
+8. Move to the next failure.
 
 ## Create
 
@@ -151,6 +170,9 @@ All tests should pass when your implementation is complete.
 
 When the suite passes, intentionally break one validation rule, run the tests, and observe which test catches it. Then restore the correct behavior. This builds trust in the tests instead of treating them as a mystery grader.
 
+Safe break example: temporarily allow an invalid ticker such as `123`, confirm
+the ticker validation test catches it, then restore the correct rule.
+
 ## Reflect
 
 - Why is this lesson deterministic before adding an LLM?
@@ -172,7 +194,21 @@ Tests run:
 Remaining risk:
 ```
 
+Your trace note is the raw material for the weekly PR-style summary. Good
+evidence includes:
+
+- Test run before change:
+- Failing test and what it taught:
+- File/function inspected:
+- Change made:
+- Test run after change:
+- Safety boundary cited:
+- Remaining risk:
+
 ## Extension
 
 Add a new test for a ticker with lowercase letters, then update the implementation so the final summary uses the uppercase ticker.
+
+Next week, you will reuse this calculation and summary spine to add a risk
+signal. Keep this week small and reliable so later changes have a clear base.
 

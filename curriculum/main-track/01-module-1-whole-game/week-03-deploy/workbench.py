@@ -28,6 +28,7 @@ def validate_request(payload: dict) -> DeploymentRequest:
     # TODO: normalize ticker to uppercase and require 1-5 alphabetic characters.
     # TODO: convert prices to float and require positive values.
     # TODO: require source to be a non-empty string.
+    
     return DeploymentRequest("", 0.0, 0.0, "")
 
 
@@ -40,8 +41,13 @@ def analyze_move(request: DeploymentRequest) -> dict:
 
 
 def build_response(request: DeploymentRequest, analysis: dict) -> dict:
-    """Build a structured response suitable for a future CLI/API/MCP wrapper."""
+    """Build a structured response suitable for a future CLI/API/MCP wrapper.
+
+    Required fields: ticker, analysis, summary, trace, disclaimer.
+    Trace should include operation, source, and status.
+    """
     # TODO: include ticker, analysis, summary, trace, and disclaimer fields.
+    # TODO: include "not financial advice" in the disclaimer.
     return {}
 
 

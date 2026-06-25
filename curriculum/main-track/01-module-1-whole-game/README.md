@@ -11,7 +11,7 @@
 
 Module 1 gives learners a small complete AI engineering product slice before they study every internal mechanism. The current implemented path uses FinAgent, a deterministic stock-market analysis workflow, so learners can see the shape of the final capstone early without relying on full AI-generated code.
 
-Use `../../FINANCE_SAFETY.md` whenever FinAgent output touches market context.
+Use `../../../FINANCE_SAFETY.md` whenever FinAgent output touches market context.
 
 | Question | Answer |
 | --- | --- |

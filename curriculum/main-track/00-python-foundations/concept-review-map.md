@@ -1,6 +1,6 @@
 # Python Concept Review Map
 
-Use this file when a test failure shows a concept gap. The goal is not to find the right answer to paste into `workbench.py`. The goal is to review the smallest concept you are missing, return to the failing test, and implement the behavior yourself.
+Use this file when a test failure shows a concept gap. The goal is not to find the right answer to paste into a workbench file. The goal is to review the smallest concept you are missing, return to the failing test, and implement the behavior yourself.
 
 ## How To Use This Map
 
@@ -8,7 +8,7 @@ Use this file when a test failure shows a concept gap. The goal is not to find t
 2. Match the failure to one concept below.
 3. Review the short official reference or tutorial.
 4. Write a two-sentence note: what the concept does, and how the test is asking you to use it.
-5. Return to `workbench.py` and make the smallest useful change.
+5. Return to the learner workbench named by the unit, such as `diagnostic_workbench.py`, and make the smallest useful change.
 
 ## Concept References
 

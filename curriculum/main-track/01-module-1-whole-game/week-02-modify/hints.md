@@ -28,6 +28,9 @@ The summary should combine ticker, movement, risk label, source, and educational
 
 Percentage formatting should be consistent with the earlier week. Confirm whether the test is checking the number or the displayed text.
 
+For the summary test, list each required fragment before editing: ticker,
+movement, formatted percent, risk label, source, and not-financial-advice text.
+
 ## Layer 3
 
 ### Reading The Tests

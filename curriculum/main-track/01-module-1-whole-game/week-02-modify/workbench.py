@@ -28,13 +28,19 @@ def risk_label(change_percent: float) -> str:
     """
     # TODO: use absolute movement so up and down moves share thresholds.
     # TODO: return the correct label for each threshold.
-    return "low"
+    if abs(change_percent) <= 1.0:
+        return "low"
+    elif abs(1.0 < change_percent < 5.0):
+        return "watchlist"
+    else:
+        return "high volatility"
 
 
 def format_percent(value: float) -> str:
-    """Format a percentage with two decimal places."""
+    """Format a percentage with two decimal places and a trailing percent sign."""
     # TODO: return a string like "2.50%".
-    return ""
+    # return f"{value: 0.2f}%"
+    return "{:.2f}".format(value)
 
 
 def movement_label(change_percent: float) -> str:
@@ -47,7 +53,16 @@ def movement_label(change_percent: float) -> str:
 
 
 def build_risk_aware_summary(move: StockMove) -> str:
-    """Build a concise educational summary with movement and risk."""
+    """Build a concise educational summary with movement, risk, source, and safety text."""
     # TODO: use movement_label, risk_label, and format_percent.
-    # TODO: include ticker, source, and a not-financial-advice disclaimer.
-    return ""
+    # TODO: include ticker, formatted percent, movement, risk label, source,
+    # and a not-financial-advice disclaimer.
+    movement = movement_label(move.change_percent)
+    risk = risk_label(move.change_percent)
+    percent = format_percent(move.change_percent)
+
+    return (
+        f"{move.ticker} is {movement} {percent}, "
+        f"labeled {risk} based on {move.source}. "
+        "This is not financial advice."
+    )

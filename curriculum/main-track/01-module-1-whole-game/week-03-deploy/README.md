@@ -57,6 +57,17 @@ This lesson turns the Phase 1 and Phase 2 ideas into a small service boundary:
 
 The goal is not to build a full web API yet. The goal is to make FinAgent shippable as a local, inspectable unit.
 
+## Function Contracts
+
+Use the tests as the contract for the local boundary.
+
+| Function | Required behavior |
+| --- | --- |
+| `validate_request` | require ticker, previous close, current price, and source; normalize ticker; convert prices to floats; reject missing fields, invalid tickers, non-positive prices, and empty source |
+| `analyze_move` | return `change_percent`, `movement`, and `risk` from a validated request |
+| `build_response` | return ticker, analysis, summary, trace, and disclaimer; trace includes operation, source, and status; disclaimer includes `not financial advice` |
+| `handle_request` | compose validation, analysis, and response formatting without skipping any step |
+
 ## Trace
 
 Open `workbench.py` and inspect:

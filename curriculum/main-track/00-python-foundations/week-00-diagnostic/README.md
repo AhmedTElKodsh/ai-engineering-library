@@ -14,13 +14,18 @@ Use the course map in `curriculum/LEARNER_JOURNEY_MAP.md` and the local module R
 
 ## Minimum Path, Enrichment, And Doorway
 
-- **Minimum path:** read the scenario, inspect the tests or fixtures, complete the TODOs in `workbench.py`, run the verification command, and write the reflection/evidence note.
-- **Optional enrichment:** add one edge case, comparison, or small test after the required behavior works.
+- **Minimum path:** read the scenario, run the setup and diagnostic tests, inspect the first 1-3 failures, map them to `../concept-review-map.md`, and write the reflection/evidence note.
+- **Optional calibration:** complete TODOs in `diagnostic_workbench.py` only when fixing them helps you confirm a readiness pattern.
+- **Optional enrichment:** add one edge case, comparison, or small test after the required diagnostic behavior is clear.
 - **Advanced doorway:** notice the later advanced topic this prepares for, then return to the bounded Course 1 task.
+
+**Stop rule:** stop after you can name your weak areas and choose a path. You do not need a perfect score in Week 00.
 
 ## Evidence Portfolio
 
 Leave this lesson with technical evidence, failure evidence, explanation evidence, and transfer evidence. A passing test alone is not the whole learning outcome.
+
+Record the evidence in `diagnostic_notes.md`, or in the Week 00 section of your learning journal.
 
 Before the journey begins, find your current Python footing.
 
@@ -62,9 +67,13 @@ The tests import `diagnostic_workbench.py`, the learner-facing file for this inv
 
 Some early diagnostic functions are intentionally prefilled calibration examples. Treat them as a warm-up: they show what a clean assertion looks like before the inventory reaches TODO areas you may need to repair.
 
+Your job is not to prove you already know every item. Your job is to notice what the assessment reveals.
+
 ## Expected First Test Run
 
 On the first run, `test_setup.py` should pass. `test_assessment.py` may show a mix of passing calibration tests and failing TODO tests. That is the intended diagnostic state: passing tests show current fluency, and failing tests identify the next concept to review.
+
+A result like `6 passed / 20 failed` is useful signal, not a bad outcome. The exact count may differ after you implement some diagnostic tasks, but the expected shape is still setup green and assessment mixed.
 
 ## Step 3: Read The First Failure
 
@@ -74,9 +83,28 @@ Before editing anything, inspect one failing test and write down:
 - whether the failure is about setup, import, assertion, or missing behavior
 - the Python concept it points to in `../concept-review-map.md`
 
+For object errors such as `AttributeError`, read the object type and missing attribute or method first. For example, a missing `count` attribute on `Counter` points to object initialization before it points to arithmetic.
+
 Use `hints.md` only after you can name the failure category. The goal is to learn how to read feedback from tests, not to finish every diagnostic TODO immediately.
 
+To focus on one failure at a time, use a targeted pytest command:
+
+```powershell
+python -m pytest week-00-diagnostic/test_assessment.py::test_safe_divide_zero_division -v
+```
+
 ## After Your Results
+
+Use this map to connect failing tests to the review material:
+
+| Failing area | Typical concept row in `../concept-review-map.md` |
+| --- | --- |
+| fundamentals | Types and conversions |
+| data structures | Lists and dictionaries |
+| functions | Functions or decorators and closures |
+| OOP | Classes and dataclasses |
+| Pythonic patterns | Lists and dictionaries or generators |
+| error handling | Exceptions |
 
 | Result pattern | What it means | Best next step |
 | --- | --- | --- |
@@ -84,10 +112,11 @@ Use `hints.md` only after you can name the failure category. The goal is to lear
 | mostly strings, lists, dictionaries, functions | everyday Python needs practice | complete Week 01 before Module 1 |
 | mostly classes, exceptions, context managers, generators | production Python needs reinforcement | keep Week 02 nearby as an optional repair lane |
 | only a few familiar assertion failures | you can read the tests and know the gap | start Module 1 and return as needed |
+| unsure whether the gaps are serious | the signal is not clear yet | do Week 01 quickly, then reassess |
 
 ## Optional Visual Reference
 
-If pytest output feels noisy, skim the assertion and failure-reporting sections in the current pytest docs: https://docs.pytest.org/en/stable/how-to/assert.html
+You only need the commands shown here. If pytest output feels noisy and you want background, skim the assertion and failure-reporting sections in the current pytest docs: https://docs.pytest.org/en/stable/how-to/assert.html
 
 ## Reflection
 

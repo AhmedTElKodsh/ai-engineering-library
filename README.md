@@ -8,8 +8,6 @@ The active course is **Course 1: Junior AI Engineering With Python**. It teaches
 
 - `START_HERE.md` is the learner front door.
 - `START_HERE_2_HOURS_PER_DAY.md` is the busy-learner route.
-- `START_HERE_30_DAY_PROJECT_LAUNCH.md` is the full-time accelerated project
-  launch overlay. It is not the canonical complete curriculum.
 - `LEARNER_READY_MATRIX.md` is the source of truth for assignable lessons.
 - `TROUBLESHOOTING.md` covers common local setup and pytest issues.
 - `HOW_TO_USE_AI_ASSISTANTS.md` explains acceptable AI help.
@@ -36,17 +34,6 @@ The active course is **Course 1: Junior AI Engineering With Python**. It teaches
 |   |   |-- 01-model-internals/
 |   |   |-- 02-agentic-systems/
 |   |   `-- 03-production-depth/
-|   |-- 30-day-project-launch/
-|   |   |-- README.md
-|   |   |-- daily-plan.md
-|   |   |-- project-backlog-template.md
-|   |   |-- no-vibe-coding-protocol.md
-|   |   |-- milestone-rubric.md
-|   |   |-- continuation-roadmap.md
-|   |   |-- timetable.md
-|   |   |-- productivity-tools.md
-|   |   |-- planning-review.md
-|   |   `-- templates/
 |   |-- specializations/web-scraping/
 |   |-- resources/
 |   |-- templates/
@@ -62,7 +49,6 @@ The active course is **Course 1: Junior AI Engineering With Python**. It teaches
 |-- LICENSE
 |-- requirements.txt
 |-- START_HERE.md
-|-- START_HERE_30_DAY_PROJECT_LAUNCH.md
 |-- START_HERE_2_HOURS_PER_DAY.md
 |-- TROUBLESHOOTING.md
 `-- README.md
@@ -90,9 +76,11 @@ The learner-facing course is:
 - built around stable module folder paths
 - centered on FinAgent as the recurring product spine and final capstone
 
-The 30-day project launch route is an accelerated overlay for full-time
-learners who need to start project work quickly. It points into the existing
-modules and produces portfolio evidence, but Course 1 remains the complete path.
+The main track is the enhanced 30-day core curriculum surface. It keeps the
+archived 30-day route's useful pacing discipline while making
+`curriculum/main-track/` the only active learner route. Extended concepts are
+advanced deepening labs used after the related main-track capability already
+works; they do not replace or precede the main-track order.
 
 Every module and week should make the learner logic visible:
 
@@ -135,8 +123,8 @@ For learner curriculum files, clean collection/import health is the first regres
 Useful commands:
 
 ```powershell
-python -m pytest --collect-only curriculum/main-track/00-python-foundations curriculum/main-track/01-module-1-whole-game curriculum/main-track/02-module-2-first-principles -q
-python -m pytest --collect-only curriculum/main-track/02-module-2-first-principles -q
+python -m pytest --collect-only curriculum/main-track curriculum/extended-concepts curriculum/specializations -q
+python scripts/validate_curriculum_references.py --strict
 python scripts/validate_curriculum_quality.py --strict
 ```
 

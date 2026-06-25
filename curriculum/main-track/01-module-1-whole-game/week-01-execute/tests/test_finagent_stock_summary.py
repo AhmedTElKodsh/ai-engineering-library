@@ -21,7 +21,7 @@ def test_parse_price_accepts_plain_and_dollar_values():
 
 
 def test_parse_price_rejects_invalid_values():
-    for raw_value in ["", "abc", "0", "-4.5"]:
+    for raw_value in ["", "abc", "0", "-4.5", 101.25]:
         try:
             parse_price(raw_value)
         except ValueError:
@@ -34,17 +34,34 @@ def test_percentage_change_calculates_market_move():
     assert percentage_change(100.0, 97.5) == -2.5
 
 
-def test_percentage_change_rejects_zero_previous_close():
+def test_percentage_change_rejects_invalid_prices():
     try:
         percentage_change(0.0, 105.0)
     except ValueError:
-        return
-    raise AssertionError("previous_close of zero should raise ValueError")
+        pass
+    else:
+        raise AssertionError("previous_close of zero should raise ValueError")
+
+    try:
+        percentage_change(-100.0, 105.0)
+    except ValueError:
+        pass
+    else:
+        raise AssertionError("negative previous_close should raise ValueError")
+
+    try:
+        percentage_change(100.0, -105.0)
+    except ValueError:
+        pass
+    else:
+        raise AssertionError("negative current_price should raise ValueError")
 
 
 def test_classify_movement_uses_simple_thresholds():
     assert classify_movement(1.0) == "up"
+    assert classify_movement(0.99) == "flat"
     assert classify_movement(0.25) == "flat"
+    assert classify_movement(-0.99) == "flat"
     assert classify_movement(-1.0) == "down"
 
 
@@ -74,3 +91,33 @@ def test_build_stock_summary_is_grounded_and_safe():
     assert "2.50%" in summary
     assert "sample lesson data" in summary
     assert "not financial advice" in summary.lower()
+
+
+def test_build_stock_summary_rejects_invalid_snapshot_data():
+    invalid_snapshots = [
+        StockSnapshot(
+            ticker="MSFT",
+            previous_close=0.0,
+            current_price=102.5,
+            source="sample lesson data",
+        ),
+        StockSnapshot(
+            ticker="MSFT",
+            previous_close=100.0,
+            current_price=-102.5,
+            source="sample lesson data",
+        ),
+        StockSnapshot(
+            ticker="MSFT",
+            previous_close=100.0,
+            current_price=102.5,
+            source="",
+        ),
+    ]
+
+    for snapshot in invalid_snapshots:
+        try:
+            build_stock_summary(snapshot)
+        except ValueError:
+            continue
+        raise AssertionError(f"build_stock_summary should reject {snapshot!r}")

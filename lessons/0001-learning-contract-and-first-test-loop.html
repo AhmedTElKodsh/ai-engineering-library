@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lesson 0001: Learning Contract And First Test Loop</title>
+  <link rel="stylesheet" href="../assets/lesson.css">
+</head>
+<body>
+  <main>
+    <header>
+      <h1>Lesson 0001: Learning Contract And First Test Loop</h1>
+      <p>Your first job is not to build an agent. It is to prove that you can use the curriculum like an engineer: inspect the contract, run the feedback loop, and explain the next smallest move.</p>
+    </header>
+
+    <section>
+      <h2>Mission Tie</h2>
+      <p>You are learning AI Engineering for job readiness, Business AQL and FinAgent-style product building, and stronger agentic systems judgment. That means every lesson needs evidence: code, tests, traces, notes, or a defensible explanation.</p>
+      <p>Today you will anchor yourself in the main track and verify that the test loop works before touching implementation.</p>
+    </section>
+
+    <section>
+      <h2>Read First</h2>
+      <p>Open these local resources:</p>
+      <ul>
+        <li><a href="../curriculum/main-track/README.md">Main Track 30-Day Core</a></li>
+        <li><a href="../curriculum/main-track/30-day-map.md">30-Day Core Map</a></li>
+        <li><a href="../curriculum/main-track/scope-guards.md">Scope Guards</a></li>
+        <li><a href="../reference/ai-engineering-core-glossary.html">AI Engineering Core Glossary</a></li>
+      </ul>
+      <p>Primary external source for the agentic systems vocabulary: <a href="https://developers.openai.com/api/docs/guides/agents">OpenAI Agents SDK guide</a>. Use it as a reference, not as today's implementation target.</p>
+    </section>
+
+    <section>
+      <h2>Core Idea</h2>
+      <p>Job-ready AI Engineering is not "make the model do something impressive." The core loop is:</p>
+      <table>
+        <thead>
+          <tr>
+            <th>Step</th>
+            <th>Question</th>
+            <th>Evidence</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Inspect</td>
+            <td>What is the smallest contract?</td>
+            <td>README, tests, rubric, scope guard</td>
+          </tr>
+          <tr>
+            <td>Predict</td>
+            <td>What should fail first?</td>
+            <td>A written guess before running tests</td>
+          </tr>
+          <tr>
+            <td>Run</td>
+            <td>What does the feedback loop say?</td>
+            <td>Focused pytest output</td>
+          </tr>
+          <tr>
+            <td>Change</td>
+            <td>What is the smallest useful edit?</td>
+            <td>One function, one test, one trace, or one note</td>
+          </tr>
+          <tr>
+            <td>Explain</td>
+            <td>What did this prove and not prove?</td>
+            <td>Short reflection or PR-style summary</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="practice">
+      <h2>Practice</h2>
+      <p>From the repository root, run:</p>
+      <pre><code>python -m pytest --collect-only curriculum/main-track/00-python-foundations -q</code></pre>
+      <p>Then open:</p>
+      <pre><code>curriculum/main-track/00-python-foundations/week-00-diagnostic/README.md</code></pre>
+      <p>Before running any diagnostic tests, write three lines in your own notes:</p>
+      <ol>
+        <li>What capability is this diagnostic checking?</li>
+        <li>What kind of failure would mean "I need Python repair" rather than "the curriculum is broken"?</li>
+        <li>How does this connect to FinAgent or Business AQL product work?</li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>Retrieval Check</h2>
+      <p>Without looking back, answer these:</p>
+      <ol>
+        <li>What is the difference between the main track and extended concepts?</li>
+        <li>Why does the course start with deterministic behavior before model calls?</li>
+        <li>What evidence would convince a reviewer that you learned something today?</li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>Stop Rule</h2>
+      <p class="note">Do not ask AI to complete the diagnostic for you. Ask AI to explain a failing test, define a term, or help you choose the next smallest change. You are training engineering judgment, not outsourcing it.</p>
+    </section>
+
+    <section>
+      <h2>Ask Me Next</h2>
+      <p>After you run the collect-only command and inspect the diagnostic README, ask: "Tutor me through the first failing diagnostic test." I will help you read the test contract before suggesting any code.</p>
+    </section>
+  </main>
+</body>
+</html>

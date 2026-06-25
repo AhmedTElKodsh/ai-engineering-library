@@ -4,7 +4,9 @@ from pathlib import Path
 
 _dir = str(Path(__file__).parent)
 
-# Evict locally-named modules cached from a previous day directory
+# Evict locally-named modules cached from another curriculum folder. Many days
+# reuse names like workbench.py, so stale imports can make the wrong file pass
+# or fail.
 for _mod in ("diagnostic_workbench", "workbench", "core", "utils", "main"):
     sys.modules.pop(_mod, None)
 

@@ -34,26 +34,27 @@ class StockPrice:
         - require date in YYYY-MM-DD shape
         - convert close to float
         - reject close <= 0
-        
+
         CONCEPT CLARIFICATION:
         A factory method that validates and transforms raw CSV data.
-        
+
         Input: {"ticker": "aapl", "date": "2024-01-15", "close": "150.25", "source": "yahoo"}
         Output: StockPrice(ticker="AAPL", date="2024-01-15", close=150.25, source="yahoo")
-        
+
         Validation checklist:
         1. All required keys exist? Raise StockDataError if missing
         2. Ticker is 1-5 letters? Use .isalpha() and len() checks
         3. Date format? Check it has 2 dashes and matches YYYY-MM-DD pattern
         4. Close is positive number? Convert to float, check > 0
-        
+
         Pattern:
         - Check each requirement
         - Raise StockDataError with descriptive message on failure
         - Return cls(ticker=..., date=..., close=..., source=...)
-        
+
         Tip: Use try/except for float conversion to catch ValueError
         """
+
         return cls(ticker="", date="", close=0.0, source="")
 
 
@@ -99,7 +100,7 @@ def moving_average(values: list[float], window: int) -> list[float]:
     # TODO: reject window <= 0.
     # TODO: return [] when there are not enough values.
     # TODO: calculate each rolling average.
-    
+
     # CONCEPT CLARIFICATION:
     # Moving average = average of the last N values, sliding along.
     #
@@ -144,7 +145,7 @@ def calculate_metrics(grouped: dict[str, list[StockPrice]]) -> dict[str, dict[st
     # - change_percent
     # - average_close
     # - latest_2_day_average
-    
+
     # CONCEPT CLARIFICATION:
     # Aggregate statistics from a list of StockPrice objects per ticker.
     #
@@ -176,7 +177,7 @@ def stream_summary_lines(metrics: dict[str, dict[str, float]]):
     # TODO: yield one line per ticker with:
     # ticker, last close to 2 decimals, change percent to 2 decimals,
     # and latest 2-day average to 2 decimals.
-    
+
     # CONCEPT CLARIFICATION:
     # A generator function that produces formatted strings one at a time.
     #

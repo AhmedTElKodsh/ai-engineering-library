@@ -80,7 +80,7 @@ The retrieval progression is explicit:
 
 Learners then add a bounded multi-step workflow that plans, calls tools, checks intermediate outputs, and stops safely.
 
-FinAgent reuses these skills for cited market context, uncertainty labels, source comparison, and controlled research-note generation. Its finance safety boundary is defined in `../../FINANCE_SAFETY.md`.
+FinAgent reuses these skills for cited market context, uncertainty labels, source comparison, and controlled research-note generation. Its finance safety boundary is defined in `../../../FINANCE_SAFETY.md`.
 
 ## Folder Map
 

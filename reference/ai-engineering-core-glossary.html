@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI Engineering Core Glossary</title>
+  <link rel="stylesheet" href="../assets/lesson.css">
+</head>
+<body>
+  <main>
+    <header>
+      <h1>AI Engineering Core Glossary</h1>
+      <p>A compact reference for the main-track language we will use while learning.</p>
+    </header>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Term</th>
+          <th>Working meaning</th>
+          <th>Why it matters</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Deterministic baseline</td>
+          <td>A version of the workflow that works without model behavior.</td>
+          <td>It gives you something testable before adding probabilistic output.</td>
+        </tr>
+        <tr>
+          <td>Provider boundary</td>
+          <td>A wrapper around model calls that controls inputs, outputs, errors, timeouts, and cost traces.</td>
+          <td>It keeps model behavior from leaking everywhere in the codebase.</td>
+        </tr>
+        <tr>
+          <td>Tool contract</td>
+          <td>An explicit schema and permission boundary for work an AI system may request.</td>
+          <td>It prevents unvalidated model text from becoming authority.</td>
+        </tr>
+        <tr>
+          <td>RAG</td>
+          <td>Retrieval-augmented generation: retrieve evidence first, then answer from that evidence.</td>
+          <td>It makes answers inspectable and gives the system a reason to abstain.</td>
+        </tr>
+        <tr>
+          <td>Trace</td>
+          <td>A structured record of what the workflow did at each step.</td>
+          <td>It lets another engineer debug success, refusal, retries, and failure.</td>
+        </tr>
+        <tr>
+          <td>Evaluation</td>
+          <td>A repeatable check of behavior against examples, expected failures, or quality rules.</td>
+          <td>It turns "seems good" into evidence.</td>
+        </tr>
+        <tr>
+          <td>Agentic workflow</td>
+          <td>A workflow that can plan, call tools, review results, or hand off tasks within explicit limits.</td>
+          <td>It is powerful only when state, tools, permissions, and stop conditions are visible.</td>
+        </tr>
+      </tbody>
+    </table>
+  </main>
+</body>
+</html>

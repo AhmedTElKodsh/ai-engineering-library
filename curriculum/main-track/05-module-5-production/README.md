@@ -120,7 +120,7 @@ FinAgent's final value depends on reliability, not just features. Module 5 adds 
 - latency and cost budgets
 - safety language for educational use only
 
-Use `../../FINANCE_SAFETY.md` as the shared refusal and educational-boundary checklist for FinAgent production evals.
+Use `../../../FINANCE_SAFETY.md` as the shared refusal and educational-boundary checklist for FinAgent production evals.
 
 ## Checkpoint Gate
 

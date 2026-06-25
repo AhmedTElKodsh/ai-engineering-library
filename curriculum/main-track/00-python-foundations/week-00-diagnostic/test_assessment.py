@@ -2,7 +2,8 @@
 Python Confidence Inventory - Week 00 Assessment
 
 This diagnostic covers six skill areas. Do not worry about failing tests;
-that is expected. Your results show where to focus during the refresher path.
+that is expected until learner TODOs are complete. Your results show where to
+focus during the refresher path.
 
 Run this now, then again after the refresher path to measure your growth.
 """
@@ -114,16 +115,43 @@ def test_apply_to_all():
 
 
 # ------------------------------------------------------------
-# OOP (3 tests)
+# OOP
 # ------------------------------------------------------------
 
-def test_counter_basic():
+def test_counter_initial_count():
+    c = Counter()
+    count = getattr(c, "count", "MISSING")
+    assert count == 0, (
+        "Counter() should start at 0. "
+        f"Expected 0, got {count}. "
+        "Hint: Set self.count in __init__"
+    )
+
+
+def test_counter_custom_start():
+    c = Counter(5)
+    count = getattr(c, "count", "MISSING")
+    assert count == 5, (
+        "Counter(5) should store the starting value. "
+        f"Expected 5, got {count}. "
+        "Hint: Use the start argument in __init__"
+    )
+
+
+def test_counter_increment_adds_one_each_time():
     c = Counter()
     c.increment()
+    count = getattr(c, "count", "MISSING")
+    assert count == 1, (
+        "increment() should add exactly 1. "
+        f"Expected 1, got {count}. "
+        "Hint: Update the instance attribute"
+    )
     c.increment()
-    assert c.count == 2, (
+    count = getattr(c, "count", "MISSING")
+    assert count == 2, (
         "Counter should be 2 after two increments. "
-        f"Expected 2, got {getattr(c, 'count', 'MISSING')}. "
+        f"Expected 2, got {count}. "
         "Hint: Store count as an instance attribute"
     )
 
@@ -131,18 +159,42 @@ def test_counter_basic():
 def test_counter_decrement_floor():
     c = Counter()
     c.decrement()
-    assert c.count == 0, (
+    count = getattr(c, "count", "MISSING")
+    assert count == 0, (
         "Counter should not go below 0. "
-        f"Expected 0, got {getattr(c, 'count', 'MISSING')}. "
+        f"Expected 0, got {count}. "
         "Hint: Use max(0, count - 1) or an if check"
+    )
+
+
+def test_counter_decrement_subtracts_one():
+    c = Counter(2)
+    c.decrement()
+    count = getattr(c, "count", "MISSING")
+    assert count == 1, (
+        "decrement() should subtract exactly 1 when count is above 0. "
+        f"Expected 1, got {count}. "
+        "Hint: Decrease count without going below 0"
+    )
+
+
+def test_counter_reset():
+    c = Counter(5)
+    c.reset()
+    count = getattr(c, "count", "MISSING")
+    assert count == 0, (
+        "reset() should set count back to 0. "
+        f"Expected 0, got {count}. "
+        "Hint: Assign 0 to the instance attribute"
     )
 
 
 def test_counter_str():
     c = Counter(5)
-    assert str(c) == "Counter(5)", (
-        "str(Counter(5)) should return 'Counter(5)'. "
-        f"Expected 'Counter(5)', got '{str(c)}'. "
+    result = c.__str__()
+    assert result == "Counter(5)", (
+        "Counter.__str__() should return 'Counter(5)'. "
+        f"Expected 'Counter(5)', got '{result}'. "
         "Hint: Implement __str__ to return a formatted string"
     )
 
@@ -169,16 +221,28 @@ def test_first_n_fibonacci():
     )
 
 
+def test_first_n_fibonacci_single_value():
+    result = first_n_fibonacci(1)
+    assert result == [0], (
+        "first_n_fibonacci(1) should return only the first Fibonacci number. "
+        f"Expected [0], got {result}. "
+        "Hint: Handle the smallest valid n before looping"
+    )
+
+
 # ------------------------------------------------------------
-# ERROR HANDLING (2 tests)
+# ERROR HANDLING
 # ------------------------------------------------------------
 
-def test_safe_divide():
+def test_safe_divide_normal_division():
     assert safe_divide(10, 3) == pytest.approx(3.333, rel=1e-2), (
         "safe_divide(10, 3) should return ~3.333. "
         f"Expected ~3.333, got {safe_divide(10, 3)}. "
         "Hint: Use regular division (/)"
     )
+
+
+def test_safe_divide_zero_division():
     assert safe_divide(10, 0) == "Error: division by zero", (
         "safe_divide(10, 0) should return an error message string. "
         f"Expected 'Error: division by zero', got {safe_divide(10, 0)}. "
@@ -186,13 +250,29 @@ def test_safe_divide():
     )
 
 
-def test_validate_age():
+def test_validate_age_valid_integer():
     assert validate_age(25) == 25, (
         "validate_age(25) should return 25. "
         f"Expected 25, got {validate_age(25)}. "
         "Hint: Return the age after validation passes"
     )
+
+
+def test_validate_age_rejects_non_integer():
     with pytest.raises(TypeError):
         validate_age("twenty")
+
+
+def test_validate_age_rejects_bool():
+    with pytest.raises(TypeError):
+        validate_age(True)
+
+
+def test_validate_age_rejects_negative():
     with pytest.raises(ValueError):
         validate_age(-5)
+
+
+def test_validate_age_rejects_zero():
+    with pytest.raises(ValueError):
+        validate_age(0)

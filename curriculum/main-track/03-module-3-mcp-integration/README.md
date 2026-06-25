@@ -68,7 +68,7 @@ Learners build a small assistant that can:
 - handle missing or malformed tool responses
 - record a simple trace of what happened
 
-FinAgent reuses the same pattern for market quote tools, indicator calculators, company context resources, and later MCP-style boundaries. Keep the finance boundary in `../../FINANCE_SAFETY.md` visible whenever a provider or tool can produce market-facing text.
+FinAgent reuses the same pattern for market quote tools, indicator calculators, company context resources, and later MCP-style boundaries. Keep the finance boundary in `../../../FINANCE_SAFETY.md` visible whenever a provider or tool can produce market-facing text.
 
 ## Folder Map
 

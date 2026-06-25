@@ -45,6 +45,16 @@ You will add one new idea to the Phase 1 stock summary:
 
 The goal is not to build a trading model. The goal is to practice a constrained product extension while tests protect behavior.
 
+## Function Contracts
+
+Use the tests as the contract for this extension.
+
+| Function | Required behavior |
+| --- | --- |
+| `risk_label` | classify absolute movement below `1.0` as `low`, from `1.0` up to but not including `5.0` as `watchlist`, and `5.0` or above as `high volatility` |
+| `format_percent` | return text with exactly two decimal places and `%` |
+| `build_risk_aware_summary` | include ticker, movement, formatted percent, risk label, source, and the phrase `not financial advice` |
+
 ## Trace
 
 Before editing, inspect:

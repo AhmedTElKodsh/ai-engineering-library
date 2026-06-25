@@ -29,7 +29,6 @@ Reference validation meanings:
 | Module 5 | Required weeks: evals, CI gate, service boundary, monitoring, optimization | assignable | yes | yes | yes | yes | yes | done | yes |
 | Module 6 | Capstone order: kickoff, integration build, then polish evidence; folder names are legacy labels | assignable | yes | yes | yes | yes | yes | done | yes |
 | Extended concepts | Model internals, advanced agentic systems, reproducible packaging, model adaptation | scaffolded | yes | yes | yes | yes | yes | done | optional |
-| Route | 30-day project launch overlay, timetable, and productivity guide | assignable | yes | no route guide only | no dedicated tests | no dedicated hints | milestone rubric | protocol | yes |
 | Planning | `.kiro/specs/curriculum-planning/` | instructor-only | yes | no | no | no | no | protocol | no |
 
 ## Validation Commands
@@ -44,6 +43,7 @@ Strict reference gate:
 
 ```powershell
 python scripts/validate_curriculum_references.py --strict
+python scripts/validate_curriculum_quality.py --strict
 ```
 
 Current validation state:

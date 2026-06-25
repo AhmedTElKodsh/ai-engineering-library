@@ -65,7 +65,7 @@ The starting failures are expected TODO failures in `workbench.py`.
 
 FinAgent should answer educational market-context questions from approved, cited sources. It should not recommend trades, guarantee returns, or pretend that stale or missing evidence is enough.
 
-Use `../../../FINANCE_SAFETY.md` as the capstone safety checklist.
+Use `../../../../FINANCE_SAFETY.md` as the capstone safety checklist.
 
 ## Reflect
 

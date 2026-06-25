@@ -8,6 +8,10 @@ You are ready to move on when you can:
 - decide whether to take Week 01 slowly or move through it quickly
 
 This unit is a placement gate, not a pass/fail grade.
+
+Passing tests alone is not enough. Leave one short note that explains a
+failure, one fix or attempted fix, and one edge case you now understand.
+
 ## Learning Evidence Add-On
 
 | Evidence | Excellent | Passing | Needs Work |

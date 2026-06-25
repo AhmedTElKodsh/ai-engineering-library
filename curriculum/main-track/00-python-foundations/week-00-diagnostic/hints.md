@@ -4,7 +4,7 @@ Use these only after you have run the setup check and the diagnostic at least on
 
 The diagnostic is a placement tool. Do not try to force every test green before you understand what the failures are telling you.
 
-## Layer 1
+## Layer 1: Where To Look
 
 Start with the first failure, not the longest failure.
 
@@ -17,7 +17,7 @@ Before editing, answer:
 
 If the failure is a setup or import problem, fix that before changing behavior. If it is an assertion failure, move to the matching function in `diagnostic_workbench.py`.
 
-## Layer 2
+## Layer 2: What Concept Is Involved
 
 ### Reading The Signal
 
@@ -37,7 +37,7 @@ If failures cluster around classes, exceptions, context managers, or generators,
 
 If the diagnostic mostly makes sense, move into Module 1 and return here only when a real blocker appears.
 
-## Layer 3
+## Layer 3: Minimal Code Direction
 
 ### Working One Diagnostic Function
 
@@ -49,9 +49,24 @@ For one failing function, read the test example as a tiny user story:
 
 Then make the smallest change you can explain. Re-run only the diagnostic test you touched before moving on.
 
+If you are working on `first_n_fibonacci`, remember that the sequence starts
+with `0, 1`, and each later value is the sum of the two previous values. Handle
+`n == 1` before the loop, then keep appending values until the result has `n`
+items.
+
 ### Final Check
 
 When you have enough signal, stop. The point of Week 00 is to choose the right path, not to complete a hidden assignment.
+
+## Layer 4: Explanation After Attempt
+
+After one attempt, explain the result before making another change:
+
+- What behavior changed?
+- Which test did you rerun?
+- Did the failure move from import/setup to assertion behavior?
+- What concept would help if you tried again?
+
 ## Failure Lab
 
 Before asking for the next hint, identify the first concrete failure signal: the failing test name, assertion message, malformed fixture, missing field, unsafe output, weak citation, or unclear trace. Write one sentence about what the failure is teaching.

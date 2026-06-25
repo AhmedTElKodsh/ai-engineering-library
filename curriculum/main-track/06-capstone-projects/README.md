@@ -16,7 +16,7 @@ verification command, and limitation note before adding polish.
 
 FinAgent helps users understand public market information, compare evidence, summarize market context, and explain uncertainty. It does not recommend trades, predict prices as advice, or present itself as a financial advisor.
 
-The shared safety checklist is `../../FINANCE_SAFETY.md`.
+The shared safety checklist is `../../../FINANCE_SAFETY.md`.
 
 Use `CAPSTONE_PORTFOLIO_EVIDENCE_CHECKLIST.md` before revising capstone
 lessons that touch portfolio evidence, demo scripts, release readiness,

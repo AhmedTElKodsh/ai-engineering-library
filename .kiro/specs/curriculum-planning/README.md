@@ -59,7 +59,7 @@ The stable module folders are:
 - `curriculum/main-track/04-module-4-agentic-workflows`
 - `curriculum/main-track/05-module-5-production`
 - `curriculum/main-track/06-capstone-projects`
-- `curriculum/main-track/extended-concepts`
+- `curriculum/extended-concepts`
 - `curriculum/specializations/web-scraping`
 
 `curriculum/specializations/web-scraping` is the stable folder for the mandatory web data acquisition mini-course plus optional extension work. The required slice is bounded to fixture-first extraction, API-first collection, ethical review, provenance, validation, and RAG-ready packaging.
