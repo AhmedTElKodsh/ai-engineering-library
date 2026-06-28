@@ -1,5 +1,9 @@
 # Rubric: LLM Provider Boundary Lab
 
+## How To Use This File
+
+Use this before starting to understand what good work looks like, then use it after verification to check whether you have evidence, not just passing tests. The rubric is a review checklist, not extra scope.
+
 ## Runs Correctly
 
 - Valid chat-style requests return structured responses.

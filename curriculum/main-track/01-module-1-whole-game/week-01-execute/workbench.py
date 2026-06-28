@@ -29,6 +29,8 @@ def parse_price(raw_value: str) -> float:
     Think first:
     - What string cleanup must happen before float conversion?
     - Which invalid cases should raise instead of returning 0.0?
+    - Which input examples in the tests are valid prices, and which are traps?
+    - Should cleanup change the number itself, or only remove display characters?
     """
     # TODO: strip whitespace and a leading dollar sign.
     if isinstance(raw_value, float):
@@ -54,6 +56,8 @@ def percentage_change(previous_close: float, current_price: float) -> float:
     Think first:
     - Why is previous_close the denominator?
     - What would happen if previous_close were zero?
+    - Which value is the baseline and which value is the new observation?
+    - Does the sign of the result need to survive for later movement labeling?
     """
     # TODO: reject previous_close <= 0 because division would be invalid.
     if previous_close <= 0:
@@ -70,6 +74,8 @@ def classify_movement(change_percent: float) -> str:
     Think first:
     - Which boundary values belong to "up" and "down"?
     - Why might tiny changes be called "flat"?
+    - Are 1.0 and -1.0 inside the movement buckets or still flat?
+    - Does this function care about dollars, or only an already-computed percent?
     """
     # TODO: return "up" for >= 1.0, "down" for <= -1.0, otherwise "flat".
     if change_percent >= 1.0:
@@ -85,6 +91,8 @@ def validate_ticker(ticker: str) -> str:
     Think first:
     - What should happen to lowercase or padded input?
     - Why reject symbols that do not match this lesson's simple ticker rule?
+    - Which operation normalizes learner-friendly input before the shape check?
+    - Which characters would make downstream summaries look less trustworthy?
     """
     # TODO: strip whitespace and uppercase the ticker.
     # TODO: require 1-5 alphabetic characters.
@@ -103,6 +111,8 @@ def build_stock_summary(snapshot: StockSnapshot) -> str:
     - Which helper functions should this call instead of duplicating logic?
     - What information makes the answer grounded and safe?
     - Why should an empty source be rejected instead of printed?
+    - Which fields come from the snapshot, and which values are derived?
+    - Which phrase protects the summary from sounding like trading advice?
     """
     # TODO: validate the ticker.
     # TODO: compute percentage change and movement label.

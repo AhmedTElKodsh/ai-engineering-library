@@ -1,5 +1,9 @@
 # Module 4: AI-Ready Data, RAG, and Agentic Workflows
 
+## How To Use This File
+
+Read this file first. It defines the lesson objective, the minimum path, the expected evidence, and the verification command. Treat the local tests as the exact contract when implementation details feel unclear.
+
 ## Controlled Workflows Before Autonomous Agents
 
 **Duration:** required web-data bridge plus 4 core phases  

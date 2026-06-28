@@ -57,24 +57,29 @@ def validate_messages(messages: list[Message]) -> list[Message]:
     """Validate chat messages before any provider call."""
     # TODO: Require at least one message with role in system/user/assistant
     # and non-empty string content.
+    # Hint: this is the trust boundary; reject bad shape before the provider sees it.
+    # Return the original valid messages so later code can keep ordering intact.
     return []
 
 
 def estimate_tokens(text: str) -> int:
     """Return a simple deterministic token estimate."""
     # TODO: Count whitespace-separated terms, returning 0 for blank text.
+    # Hint: this estimate is intentionally boring; no tokenizer dependency needed.
     return 0
 
 
 def estimate_cost(tokens: int, price_per_1k_tokens: float) -> float:
     """Estimate cost for a token count."""
     # TODO: Use tokens / 1000 * price and round to six decimal places.
+    # Hint: keep this numeric; formatting as currency belongs in presentation code.
     return 0.0
 
 
 def render_prompt(template: PromptTemplate, variables: dict[str, str]) -> Message:
     """Render a versioned prompt template as a user message."""
     # TODO: Replace {variable} placeholders and include template metadata.
+    # Hint: the body is the prompt content; name/version make the prompt traceable.
     return Message(role="user", content="")
 
 
@@ -88,4 +93,6 @@ def call_provider(
     """Validate messages, call a provider, and return trace metadata."""
     # TODO: Validate first, call the provider second, then include model,
     # input token estimate, output token estimate, and cost estimate.
+    # Hint: trace should describe the call without hiding whether validation happened.
+    # Count input from the validated messages and output from the provider text.
     return ProviderResponse(content="", trace={})

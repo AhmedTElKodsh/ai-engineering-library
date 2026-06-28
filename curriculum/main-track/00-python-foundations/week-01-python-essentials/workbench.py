@@ -8,6 +8,11 @@ Sections:
     3. Collections        - embedding batches, document metadata
     4. Control Flow       - route guards, agent decision loops
     5. Functions          - retry decorators, LangGraph nodes
+
+How to read each function:
+    - Treat the docstring as the contract: inputs, return shape, and edge case.
+    - Solve the smallest visible behavior before thinking about later modules.
+    - If an example is present, make that example work first, then generalize.
 """
 
 

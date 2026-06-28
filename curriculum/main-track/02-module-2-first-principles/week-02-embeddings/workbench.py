@@ -39,42 +39,49 @@ class TinyVectorIndex:
 def normalize_terms(text: str) -> list[str]:
     """Lowercase text and return simple alphanumeric terms."""
     # TODO: Return lowercase terms such as "AAPL revenue!" -> ["aapl", "revenue"].
+    # Hint: decide what counts as a term before counting or scoring anything.
     return []
 
 
 def build_vocabulary(texts: list[str]) -> list[str]:
     """Build a sorted vocabulary from all texts."""
     # TODO: Collect unique normalized terms and return them in sorted order.
+    # Hint: use uniqueness for the set of dimensions, then sort for determinism.
     return []
 
 
 def vectorize(text: str, vocabulary: list[str]) -> list[float]:
     """Convert text into a term-frequency vector using the given vocabulary."""
     # TODO: Count each vocabulary term in the normalized text.
+    # Hint: the output length should always match len(vocabulary).
     return []
 
 
 def dot_product(left: list[float], right: list[float]) -> float:
     """Return the dot product of two equal-length vectors."""
     # TODO: Multiply matching positions and sum the products.
+    # Hint: matching positions represent the same vocabulary term.
     return 0.0
 
 
 def magnitude(vector: list[float]) -> float:
     """Return the Euclidean length of a vector."""
     # TODO: Return sqrt(sum(value squared)).
+    # Hint: this is the vector length used to normalize similarity.
     return 0.0
 
 
 def cosine_similarity(left: list[float], right: list[float]) -> float:
     """Return cosine similarity, or 0.0 when either vector is empty/zero."""
     # TODO: Use dot product divided by both vector magnitudes.
+    # Hint: avoid division when either vector has no length.
     return 0.0
 
 
 def build_index(notes: list[MarketNote]) -> TinyVectorIndex:
     """Build a tiny vector index from market notes."""
     # TODO: Build vocabulary from note text and vectorize each note.
+    # Hint: index.vectors should line up with index.notes by position.
     return TinyVectorIndex(vocabulary=[], notes=notes, vectors=[])
 
 
@@ -82,12 +89,14 @@ def search(query: str, index: TinyVectorIndex, top_k: int = 3) -> list[SearchRes
     """Return the top matching notes for a query."""
     # TODO: Vectorize query, score every indexed note, sort by score descending,
     # preserve original note order for ties, and return top_k positive results.
+    # Hint: keep enough pairing information during sorting to recover the note.
     return []
 
 
 def build_grounded_context(results: list[SearchResult]) -> str:
     """Format retrieval results as source-grounded context."""
     # TODO: Return one line per result with note ID, ticker, score, and text.
+    # Hint: this output is for humans and prompts, so include citation-like IDs.
     return ""
 
 

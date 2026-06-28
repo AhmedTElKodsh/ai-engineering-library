@@ -1,5 +1,9 @@
 # Week 2 Rubric
 
+## How To Use This File
+
+Use this before starting to understand what good work looks like, then use it after verification to check whether you have evidence, not just passing tests. The rubric is a review checklist, not extra scope.
+
 | Area | Strong | Developing | Needs Work |
 | --- | --- | --- | --- |
 | Demo | Reviewer can rerun the demo and inspect cited, abstaining, and refusal behavior | Demo works but skips evidence review | Demo depends on vague manual steps |

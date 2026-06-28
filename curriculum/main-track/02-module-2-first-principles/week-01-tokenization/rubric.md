@@ -1,5 +1,9 @@
 # Rubric: Market Text Tokenization Lab
 
+## How To Use This File
+
+Use this before starting to understand what good work looks like, then use it after verification to check whether you have evidence, not just passing tests. The rubric is a review checklist, not extra scope.
+
 ## Correctness
 
 - Converts text to UTF-8 byte values and back without losing content.

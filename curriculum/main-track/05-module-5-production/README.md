@@ -1,5 +1,9 @@
 # Module 5: Production AI Engineering
 
+## How To Use This File
+
+Read this file first. It defines the lesson objective, the minimum path, the expected evidence, and the verification command. Treat the local tests as the exact contract when implementation details feel unclear.
+
 ## Verification, Operations, and Model Decisions
 
 **Duration:** 5 required weeks plus 2 extended production-depth labs  

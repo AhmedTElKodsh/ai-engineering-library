@@ -1,5 +1,9 @@
 # Rubric
 
+## How To Use This File
+
+Use this before starting to understand what good work looks like, then use it after verification to check whether you have evidence, not just passing tests. The rubric is a review checklist, not extra scope.
+
 | Category | Excellent | Passing | Needs Work |
 | --- | --- | --- | --- |
 | Integration | Composes validation, fixtures, retrieval, safety, brief, and trace into one deterministic workflow | Connects the main workflow stages | Leaves disconnected helper functions |

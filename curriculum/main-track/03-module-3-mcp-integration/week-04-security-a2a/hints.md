@@ -1,5 +1,9 @@
 # Hints: Secure MCP And Agent Handoff Lab
 
+## How To Use This File
+
+Open this only after you have read the failing test or the unclear TODO. Move through the layers in order: identify the failing contract first, then take the smallest hint that lets you continue.
+
 Use these only after you have read the failing test and identified the security boundary it targets.
 
 The hints are layered. Start with Layer 1. Move to Layer 2 only when you are stuck. Use Layer 3 when the handoff looks plausible but a safety assertion still fails.

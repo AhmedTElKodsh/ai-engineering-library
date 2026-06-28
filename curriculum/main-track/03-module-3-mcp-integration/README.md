@@ -1,5 +1,9 @@
 # Module 3: LLM APIs, PromptOps, Tools, and MCP Boundaries
 
+## How To Use This File
+
+Read this file first. It defines the lesson objective, the minimum path, the expected evidence, and the verification command. Treat the local tests as the exact contract when implementation details feel unclear.
+
 ## Reliable Model, Prompt, Tool, And MCP Boundaries
 
 **Duration:** 4 weeks  

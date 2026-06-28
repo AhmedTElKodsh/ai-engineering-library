@@ -1,5 +1,9 @@
 # Week 00 Hints
 
+## How To Use This File
+
+Open this only after you have read the failing test or the unclear TODO. Move through the layers in order: identify the failing contract first, then take the smallest hint that lets you continue.
+
 Use these only after you have run the setup check and the diagnostic at least once.
 
 The diagnostic is a placement tool. Do not try to force every test green before you understand what the failures are telling you.

@@ -1,5 +1,9 @@
 # Rubric: FinAgent Risk Signal Extension
 
+## How To Use This File
+
+Use this before starting to understand what good work looks like, then use it after verification to check whether you have evidence, not just passing tests. The rubric is a review checklist, not extra scope.
+
 | Criterion | Strong | Developing | Needs Work |
 | --- | --- | --- | --- |
 | Correctness | Risk thresholds and formatting match tests | Most behavior works with one boundary issue | Core behavior missing or hardcoded |

@@ -1,5 +1,9 @@
 # Rubric: Market Context Attention Lab
 
+## How To Use This File
+
+Use this before starting to understand what good work looks like, then use it after verification to check whether you have evidence, not just passing tests. The rubric is a review checklist, not extra scope.
+
 ## Correctness
 
 - Computes dot products for equal-length vectors.

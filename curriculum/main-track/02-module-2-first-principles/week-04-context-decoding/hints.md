@@ -1,5 +1,9 @@
 # Phase 4 Hints
 
+## How To Use This File
+
+Open this only after you have read the failing test or the unclear TODO. Move through the layers in order: identify the failing contract first, then take the smallest hint that lets you continue.
+
 ## Layer 1
 
 Start with `estimate_tokens`. The budget tests are easier when token counting is predictable.

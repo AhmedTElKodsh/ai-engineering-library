@@ -1,5 +1,9 @@
 # Main Track: 30-Day Core
 
+## How To Use This File
+
+Read this file first. It defines the lesson objective, the minimum path, the expected evidence, and the verification command. Treat the local tests as the exact contract when implementation details feel unclear.
+
 This is the active 30-day core path for Course 1: Junior AI Engineering With
 Python. It replaces the archived 30-day overlay as the learner-facing route and
 uses the archived plan only as pacing history. Use `30-day-map.md` for the

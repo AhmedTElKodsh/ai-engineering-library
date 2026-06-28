@@ -1,5 +1,9 @@
 # Module 2: First-Principles AI Mechanisms
 
+## How To Use This File
+
+Read this file first. It defines the lesson objective, the minimum path, the expected evidence, and the verification command. Treat the local tests as the exact contract when implementation details feel unclear.
+
 ## Understand, Test, And Improve Model Behavior
 
 **Duration:** 4 required phases plus 2 extended model-internals labs  

@@ -52,18 +52,21 @@ class FinAgentBrief:
 def load_market_snapshot(path: Path) -> MarketSnapshot:
     """Load deterministic market snapshot data from a local JSON fixture."""
     # TODO: Read UTF-8 JSON and return a MarketSnapshot.
+    # Hint: this boundary turns fixture JSON into typed data the workflow can trust.
     return MarketSnapshot("", "", 0.0, 0.0, "", "")
 
 
 def load_evidence_chunks(path: Path) -> list[EvidenceChunk]:
     """Load deterministic citation chunks from a local JSON fixture."""
     # TODO: Read UTF-8 JSON and return EvidenceChunk objects.
+    # Hint: preserve citation and collected_at fields; they support the final answer.
     return []
 
 
 def validate_request(request: FinAgentRequest) -> dict[str, object]:
     """Validate ticker shape and finance-safety boundaries."""
     # TODO: Return accepted/refused status, reason, and normalized ticker.
+    # Hint: validation should explain refusal without needing to run retrieval.
     return {}
 
 
@@ -74,6 +77,7 @@ def retrieve_evidence(
 ) -> list[EvidenceChunk]:
     """Retrieve fixture evidence for the request without live services."""
     # TODO: Select matching ticker chunks and rank simple keyword overlap.
+    # Hint: filter by ticker first, then use the question terms to rank matches.
     return []
 
 
@@ -84,6 +88,7 @@ def compose_finagent_brief(
 ) -> FinAgentBrief:
     """Compose an educational, cited FinAgent brief from deterministic inputs."""
     # TODO: Include movement, citations, uncertainty, and non-advice safety note.
+    # Hint: this function writes the brief; it should not reload files or redo validation.
     return FinAgentBrief(request.ticker, "", [], "", "")
 
 
@@ -95,4 +100,5 @@ def run_finagent_workflow(
     """Run the local FinAgent integration workflow and return a traced result."""
     # TODO: Validate, load fixtures, retrieve evidence, refuse unsafe requests,
     # compose a cited brief, and attach a reviewable workflow trace.
+    # Hint: trace the major steps so failures are visible without a debugger.
     return FinAgentBrief(request.ticker, "", [], "", "")

@@ -40,18 +40,22 @@ class ToolSpec:
 def list_tools() -> list[ToolSpec]:
     """Return the narrow set of tools exposed through this boundary."""
     # TODO: Expose only quote_lookup and moving_average.
+    # Hint: the tool list is an allowlist, not a dump of every Python function.
     return []
 
 
 def quote_lookup(arguments: dict[str, object]) -> dict[str, object]:
     """Return a deterministic fake quote for a ticker."""
     # TODO: Require a non-empty ticker string and return ticker, price, currency.
+    # Hint: validate the argument shape before normalizing ticker for the response.
     return {}
 
 
 def moving_average(arguments: dict[str, object]) -> dict[str, object]:
     """Compute a simple moving average from recent prices."""
     # TODO: Require prices as numbers and window as a positive integer.
+    # Hint: reject malformed inputs before calculating any average.
+    # The window controls how many recent prices contribute to the result.
     return {}
 
 
@@ -59,4 +63,6 @@ def dispatch_tool(request: ToolRequest) -> ToolResponse:
     """Validate and dispatch one tool request."""
     # TODO: Refuse unknown tools, missing arguments, and malformed arguments.
     # Return ToolResponse with ok/data/error plus trace fields.
+    # Hint: this function owns routing; individual tools own their own argument checks.
+    # The trace should make success and refusal paths inspectable.
     return ToolResponse(ok=False, data={}, error=None, trace={})

@@ -1,5 +1,9 @@
 # Extension: AI Client Simulator
 
+## How To Use This File
+
+Read this file first. It defines the lesson objective, the minimum path, the expected evidence, and the verification command. Treat the local tests as the exact contract when implementation details feel unclear.
+
 This optional project prepares you for later LLM API modules after you complete Module 1 and the Week 03 stock pipeline bridge.
 
 It practices:

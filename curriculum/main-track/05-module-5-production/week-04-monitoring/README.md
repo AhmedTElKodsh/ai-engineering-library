@@ -1,5 +1,9 @@
 # Week 4: Monitoring And Review Loop
 
+## How To Use This File
+
+Read this file first. It defines the lesson objective, the minimum path, the expected evidence, and the verification command. Treat the local tests as the exact contract when implementation details feel unclear.
+
 Expected time to finish: 4-6 hours
 
 ## Learning Logic

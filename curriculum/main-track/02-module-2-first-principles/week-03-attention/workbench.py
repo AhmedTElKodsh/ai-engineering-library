@@ -35,24 +35,28 @@ class AttentionResult:
 def dot_product(left: Vector, right: Vector) -> float:
     """Return the dot product of two equal-length vectors."""
     # TODO: Validate matching lengths, multiply matching positions, and sum.
+    # Hint: a shape mismatch is a data bug; fail before doing partial math.
     return 0.0
 
 
 def scale_scores(scores: list[float], dimension: int) -> list[float]:
     """Scale scores by sqrt(dimension)."""
     # TODO: Divide each score by sqrt(dimension). Reject non-positive dimensions.
+    # Hint: the same scale factor applies to every score for this query.
     return []
 
 
 def softmax(scores: list[float]) -> list[float]:
     """Convert scores into positive weights that sum to 1."""
     # TODO: Implement stable softmax by subtracting the max score first.
+    # Hint: subtracting the max changes numerical stability, not the ranking.
     return []
 
 
 def weighted_sum(weights: list[float], values: Matrix) -> Vector:
     """Blend value vectors using attention weights."""
     # TODO: Return the weighted sum across all value vectors.
+    # Hint: each output dimension is built from that same dimension in every value.
     return []
 
 
@@ -65,18 +69,22 @@ def attention(
     """Run scaled dot-product attention for one query over many sources."""
     # TODO: Validate aligned inputs, score query against keys, scale, softmax,
     # blend values, and return AttentionResult.
+    # Hint: keys, values, and sources are parallel lists; their lengths must agree.
+    # Build the result in the same order: score -> scale -> weights -> output.
     return AttentionResult(output=[], weights=[], sources=sources)
 
 
 def most_attended_source(result: AttentionResult) -> AttentionSource | None:
     """Return the source with the highest attention weight."""
     # TODO: Return None when there are no weights or sources.
+    # Hint: the winning weight's index points to the winning source.
     return None
 
 
 def explain_attention(result: AttentionResult) -> str:
     """Create a short debugging explanation for FinAgent."""
     # TODO: Include the top source ID, ticker, and weight rounded to two decimals.
+    # Hint: call the helper that finds the top source instead of duplicating it.
     return ""
 
 

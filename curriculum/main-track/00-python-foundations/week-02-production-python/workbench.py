@@ -10,6 +10,11 @@ Sections:
     5. Comprehensions     - list/dict/set with filtering
     6. Generators         - yield, lazy pipelines, streaming
     7. Pythonic Patterns  - **, zip, enumerate, EAFP
+
+How to read each function:
+    - Find the boundary first: what should raise, suppress, or pass through?
+    - Preserve the object/protocol shape the docstring names.
+    - Prefer one clear Python feature over extra helper functions.
 """
 
 

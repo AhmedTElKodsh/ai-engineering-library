@@ -31,24 +31,28 @@ class StructuredAnswer:
 def sanitize_text(text: str) -> str:
     """Remove unsafe instruction-like fragments from context text."""
     # TODO: Remove common prompt-injection phrases while keeping market content.
+    # Hint: remove the dangerous instruction phrase, not the whole useful record.
     return text
 
 
 def validate_context_items(items: list[ContextItem]) -> list[ContextItem]:
     """Validate context shape before rendering a prompt."""
     # TODO: Require source_id, text, and metadata["ticker"] for every item.
+    # Hint: context with no source or ticker cannot be audited later.
     return []
 
 
 def prepare_model_context(items: list[ContextItem]) -> str:
     """Render validated, sanitized context lines for a model prompt."""
     # TODO: Return one line per source: [source_id] ticker: sanitized text.
+    # Hint: validate first, sanitize second, format last.
     return ""
 
 
 def validate_structured_answer(payload: dict[str, object]) -> StructuredAnswer:
     """Validate an assistant JSON-style output before trusting it."""
     # TODO: Require answer string, citations list[str], and confidence low/medium/high.
+    # Hint: model output is untrusted input, even if it looks like JSON.
     return StructuredAnswer(answer="", citations=[], confidence="")
 
 
@@ -60,4 +64,5 @@ def build_trace_record(
     """Build debug metadata without leaking full prompt text."""
     # TODO: Include request ID, source IDs, citation count, confidence,
     # and whether every citation appears in the available context.
+    # Hint: compare citation IDs against available source IDs; do not store full context text.
     return {}

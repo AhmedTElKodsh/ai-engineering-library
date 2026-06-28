@@ -1,4 +1,8 @@
-﻿# Hints: Critique And Review Loop
+# Hints: Critique And Review Loop
+
+## How To Use This File
+
+Open this only after you have read the failing test or the unclear TODO. Move through the layers in order: identify the failing contract first, then take the smallest hint that lets you continue.
 
 Use these only after you have read the first failing test and named the behavior it is asking for.
 

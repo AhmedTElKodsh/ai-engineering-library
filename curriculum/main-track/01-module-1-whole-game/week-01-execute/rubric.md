@@ -1,5 +1,9 @@
 # Rubric: First FinAgent Stock Summary
 
+## How To Use This File
+
+Use this before starting to understand what good work looks like, then use it after verification to check whether you have evidence, not just passing tests. The rubric is a review checklist, not extra scope.
+
 | Category | Excellent | Passing | Needs Work |
 | --- | --- | --- | --- |
 | Correctness | All functions pass normal and edge-case tests | Core summary works | Core calculations are wrong |

@@ -1,4 +1,8 @@
-﻿# Phase 3: Market Context Attention Lab
+# Phase 3: Market Context Attention Lab
+
+## How To Use This File
+
+Read this file first. It defines the lesson objective, the minimum path, the expected evidence, and the verification command. Treat the local tests as the exact contract when implementation details feel unclear.
 
 ## Learning Logic
 

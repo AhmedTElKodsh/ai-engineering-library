@@ -22,22 +22,26 @@ class Critique:
 def critique_draft(draft: Draft) -> Critique:
     """Check a draft for citations, advice language, and risk."""
     # TODO: Fail missing citations, investment advice, and high-risk drafts needing review.
+    # Hint: collect all issues you can see so the revision step has a useful checklist.
     return Critique(False, [], False)
 
 
 def should_retry(critique: Critique, attempt: int, max_attempts: int = 2) -> bool:
     """Return whether the workflow should retry automatically."""
     # TODO: Retry failed drafts only while attempts remain and no human review is required.
+    # Hint: human-review cases should stop automatic retries even if attempts remain.
     return False
 
 
 def revise_draft(draft: Draft, critique: Critique) -> Draft:
     """Return a safer deterministic revision."""
     # TODO: Add limitation language and preserve citations.
+    # Hint: revision should reduce risk without erasing the evidence trail.
     return draft
 
 
 def run_review_loop(draft: Draft, max_attempts: int = 2) -> dict[str, object]:
     """Run critique and bounded retry loop."""
     # TODO: Critique, revise while allowed, and return final draft plus trace.
+    # Hint: trace each attempt so a reviewer can see why the loop stopped.
     return {}

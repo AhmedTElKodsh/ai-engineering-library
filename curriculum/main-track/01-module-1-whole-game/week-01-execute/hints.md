@@ -1,5 +1,9 @@
 # Hints: First FinAgent Stock Summary
 
+## How To Use This File
+
+Open this only after you have read the failing test or the unclear TODO. Move through the layers in order: identify the failing contract first, then take the smallest hint that lets you continue.
+
 Use these only after you have read the failing test and found the function it names.
 
 The hints are layered. Start with Layer 1. Move to Layer 2 only when you are stuck. Use Layer 3 when the behavior is clear but the final summary still fails.

@@ -48,40 +48,47 @@ class WorkflowTrace:
 def load_workflow_cases(path: Path) -> list[WorkflowCase]:
     """Load deterministic workflow cases from a JSON fixture."""
     # TODO: Read UTF-8 JSON and return WorkflowCase objects.
+    # Hint: fixture loading turns untyped JSON into typed cases the workflow can trust.
     return []
 
 
 def classify_request(case: WorkflowCase) -> str:
     """Route a request to answer, retrieve_then_answer, or refuse."""
     # TODO: Use risk level and available evidence to choose a simple route.
+    # Hint: high risk and missing evidence should change the route before any tool runs.
     return ""
 
 
 def build_prompt_chain_plan(case: WorkflowCase, route: str) -> list[WorkflowStep]:
     """Create explicit workflow steps before any tool call runs."""
     # TODO: Build inspectable steps for the selected route.
+    # Hint: a plan names what should happen; it should not perform the work itself.
     return []
 
 
 def run_evidence_tool(case: WorkflowCase, query: str) -> ToolResult:
     """Run a deterministic evidence lookup over available fixture evidence."""
     # TODO: Return ok=True when evidence exists; otherwise return a failed tool result.
+    # Hint: tool failure is still useful trace data for the gate.
     return ToolResult("evidence_lookup", False, "", [])
 
 
 def evaluate_gate(route: str, tool_results: list[ToolResult]) -> str:
     """Decide whether the workflow may answer, must retrieve more, or must stop."""
     # TODO: Gate answers on evidence. Refusal routes should stop without tool success.
+    # Hint: the gate is where safety and evidence decide whether response generation is allowed.
     return ""
 
 
 def run_explicit_workflow(case: WorkflowCase) -> WorkflowTrace:
     """Run the full explicit workflow without autonomous agent decisions."""
     # TODO: Classify, plan, call deterministic tools when needed, gate, and respond.
+    # Hint: keep the sequence readable in the trace: route, steps, tools, gate, response.
     return WorkflowTrace(case.case_id, "", [], [], "", "")
 
 
 def build_trace_summary(trace: WorkflowTrace) -> dict[str, object]:
     """Build a compact trace for debugging workflow behavior."""
     # TODO: Return case_id, route, step_ids, tool_names, gate_decision, and final_response.
+    # Hint: summarize identifiers and decisions; avoid hiding the final outcome.
     return {}

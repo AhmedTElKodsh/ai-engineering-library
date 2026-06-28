@@ -1,5 +1,9 @@
 # Module 1: FinAgent Whole-Game Slice
 
+## How To Use This File
+
+Read this file first. It defines the lesson objective, the minimum path, the expected evidence, and the verification command. Treat the local tests as the exact contract when implementation details feel unclear.
+
 ## Top-Down: Run, Trace, Modify, Package
 
 **Duration:** 3 weeks  
