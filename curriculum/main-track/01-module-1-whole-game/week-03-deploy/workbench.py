@@ -69,7 +69,7 @@ def analyze_move(request: DeploymentRequest) -> dict:
     # TODO: calculate percentage change from the validated prices.
     # Hint: compare current_price against previous_close as the baseline.
     # Keep the sign so the next label can tell up from down.
-    percent = (DeploymentRequest['current_price'] - DeploymentRequest['previous_close'])/
+    # Start by naming the derived percent value here.
 
     # TODO: classify movement as up, down, or flat using the lesson thresholds.
     # Hint: this label cares about direction, so use the signed percent.
