@@ -32,7 +32,7 @@ Expected initial state: collection succeeds and assertions fail because `workben
 
 - Minimum required path: load deterministic eval output, load version notes, calculate pass rate, fail unsafe or incomplete gates, and emit a command checklist.
 - Optional enrichment only after the minimum path works: add one extra gate reason for latency, cost, or missing citation evidence.
-- Advanced doorway, named briefly but not required: hosted CI, deployment automation, A/B traffic splitting, model registry workflows, and enterprise LLMOps belong to Course 3.
+- Advanced doorway, named briefly but not required: hosted CI, deployment automation, A/B traffic splitting, model registry workflows, and enterprise LLMOps belong to Milestone 3.
 
 ## Evidence Portfolio Enhancement
 

@@ -29,6 +29,7 @@ def classify_type(value: object) -> str:
 
     AI use: type routing in Pydantic validators.
     """
+    # Hint reference: hints.md#classify_type
     pass  # YOUR CODE HERE
 
 
@@ -37,6 +38,7 @@ def safe_convert_to_int(value: str) -> int | None:
 
     AI use: parsing LLM JSON responses that may contain non-numeric strings.
     """
+    # Hint reference: hints.md#safe_convert_to_int
     pass  # YOUR CODE HERE
 
 
@@ -45,6 +47,7 @@ def build_profile(name: str, age: int, score: float) -> dict:
 
     AI use: building document metadata dicts like {"source": ..., "page": ..., "score": ...}.
     """
+    # Hint reference: hints.md#build_profile
     pass  # YOUR CODE HERE
 
 
@@ -53,6 +56,7 @@ def calculate_stats(numbers: list[int | float]) -> dict:
 
     AI use: evaluation metric aggregation in later assessment work.
     """
+    # Hint reference: hints.md#calculate_stats
     pass  # YOUR CODE HERE
 
 
@@ -66,6 +70,7 @@ def format_greeting(name: str, age: int, city: str) -> str:
 
     AI use: simplest form of prompt templating.
     """
+    # Hint reference: hints.md#format_greeting
     pass  # YOUR CODE HERE
 
 
@@ -81,6 +86,7 @@ def build_prompt(context: str, question: str, system: str = "You are a helpful a
         >>> build_prompt("Paris is in France.", "Where is Paris?")
         "System: You are a helpful assistant.\\n\\nContext:\\nParis is in France.\\n\\nQuestion: Where is Paris?"
     """
+    # Hint reference: hints.md#build_prompt
     pass  # YOUR CODE HERE
 
 
@@ -93,6 +99,7 @@ def truncate(text: str, max_chars: int, suffix: str = "...") -> str:
         >>> truncate("Hello world", 7)
         "Hell..."
     """
+    # Hint reference: hints.md#truncate
     pass  # YOUR CODE HERE
 
 
@@ -132,6 +139,7 @@ def chunk_list(items: list, size: int) -> list[list]:
     
     Tip: Python slicing is forgiving - items[4:6] on a 5-item list just returns [items[4]]
     """
+    # Hint reference: hints.md#chunk_list
     pass  # YOUR CODE HERE
 
 
@@ -144,6 +152,7 @@ def merge_configs(base: dict, overrides: dict) -> dict:
         >>> merge_configs({"model": "gpt-4", "temp": 0.7}, {"temp": 0.0})
         {"model": "gpt-4", "temp": 0.0}
     """
+    # Hint reference: hints.md#merge_configs
     pass  # YOUR CODE HERE
 
 
@@ -186,6 +195,7 @@ def group_by_key(records: list[dict], key: str) -> dict[str, list]:
     
     Tip: Use result.setdefault(bucket, []) or check with `if bucket not in result`
     """
+    # Hint reference: hints.md#group_by_key
     pass  # YOUR CODE HERE
 
 
@@ -208,6 +218,7 @@ def unique_sources(records: list[dict], key: str = "source") -> list[str]:
     
     Remember: Sets lose order, so track with set but build with list.
     """
+    # Hint reference: hints.md#unique_sources
     pass  # YOUR CODE HERE
 
 
@@ -221,6 +232,7 @@ def fizzbuzz(n: int) -> list[str]:
 
     Divisible by 3 AND 5 -> "FizzBuzz", by 3 -> "Fizz", by 5 -> "Buzz", else str(n).
     """
+    # Hint reference: hints.md#fizzbuzz
     pass  # YOUR CODE HERE
 
 
@@ -237,6 +249,7 @@ def route_request(provider: str, model: str) -> str:
 
     AI use: multi-provider LLM routing in the provider-boundary module.
     """
+    # Hint reference: hints.md#route_request
     pass  # YOUR CODE HERE
 
 
@@ -245,6 +258,7 @@ def is_valid_temperature(value: float) -> bool:
 
     AI use: validating LLM config parameters.
     """
+    # Hint reference: hints.md#is_valid_temperature
     pass  # YOUR CODE HERE
 
 
@@ -258,6 +272,7 @@ def apply_discount(price: float, discount: float = 0.1) -> float:
 
     AI use: default-argument pattern used in every LLM config constructor.
     """
+    # Hint reference: hints.md#apply_discount
     pass  # YOUR CODE HERE
 
 
@@ -312,6 +327,7 @@ def memoize(func):
     
     Key insight: args must be tuple (hashable) to use as dict key
     """
+    # Hint reference: hints.md#memoize
     pass  # YOUR CODE HERE
 
 
@@ -351,6 +367,7 @@ def retry(max_attempts: int = 3):
     
     Retry logic: try → fail? → try again → fail? → ... → max attempts reached? → raise
     """
+    # Hint reference: hints.md#retry
     pass  # YOUR CODE HERE
 
 
@@ -397,4 +414,5 @@ def make_counter(start: int = 0) -> dict:
     - Define three inner functions that modify/read count
     - Return dict with those three functions
     """
+    # Hint reference: hints.md#make_counter
     pass  # YOUR CODE HERE

@@ -50,7 +50,7 @@ Expected initial state: collection succeeds and assertions fail because
   error category or blocked status.
 - Advanced doorway, named briefly but not required: durable queues, cron jobs,
   distributed orchestrators, background workers, persisted event stores, and
-  production incident automation belong to Course 3.
+  production incident automation belong to Milestone 3.
 
 ## Source Evidence Enhancement
 

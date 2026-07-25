@@ -1,43 +1,63 @@
-# Main Track Scope Guards
+# Milestone 1 Scope Guards
 
-Use this file whenever the main track starts expanding. The core question is:
-does this help the learner complete the 30-day transformation, or should it
-move to `../extended-concepts/`?
+Use this file whenever the 30-45 hour route starts expanding. Existing lesson
+material does not become Milestone 1 core merely because it already lives under
+`main-track`.
 
-## Required Core Test
+## Scope Classes
 
-A main-track item must pass all five gates:
-
-| Gate | Keep in main-track only if... |
+| Class | Meaning |
 | --- | --- |
-| 30-day necessity | the learner cannot reasonably complete the core outcome without it |
-| Daily time box | it can produce observable evidence inside a bounded daily slice |
-| Milestone integrity | it strengthens Day 7, 14, 21, 28, or 30 instead of replacing the gate |
-| Evidence portfolio | it creates code, tests, evals, traces, notes, demo proof, or explanation |
-| Scope guard | it has a clear "not today" boundary |
+| Core | required to build and defend the cumulative Milestone 1 application |
+| Optional verification | useful after core evidence exists, such as an opt-in live-provider run |
+| Remediation | prerequisite repair triggered by the diagnostic; outside the timed core |
+| Later milestone | production depth, scale, or specialization work |
+
+## Required-Core Test
+
+A topic belongs in Milestone 1 only if all five answers are yes:
+
+| Gate | Question |
+| --- | --- |
+| Capability necessity | Does the cumulative application need this to work, be evaluated, be safely bounded, or be defended? |
+| Forty-hour budget | Can the normal learner complete its required evidence inside the 40 planned hours? |
+| Same product | Does it improve the existing cumulative application rather than start another project? |
+| Assessable evidence | Does it leave code, tests, evals, traces, or a defensible engineering decision? |
+| Explicit ceiling | Does the lesson state what is deliberately postponed? |
+
+If any answer is no, defer the topic.
 
 ## Default Deferrals
 
-Move or delay these unless a specific main-track day cannot work without them:
-
-- transformer internals beyond API/RAG decision intuition
-- training math and fine-tuning implementation
-- advanced RAG variants before simple cited retrieval works
-- framework state machines before plain Python workflow state works
-- multi-agent collaboration before a single bounded workflow passes
-- long-term memory architectures before traceable state exists
-- production-scale eval platforms before local golden evals exist
-- hosted CI/CD before a local quality gate works
-- enterprise observability stacks before structured local traces exist
-- full frontend/backend platforms before one runnable service boundary works
-- custom model serving, distributed systems depth, and enterprise governance
+- Python review not triggered by the diagnostic
+- BPE, attention, or transformer implementation
+- training math, fine-tuning, and LoRA implementation
+- required live scraping or broad web-acquisition work
+- vector database operations, reranking, hybrid search, and GraphRAG
+- MCP transports, remote authorization, and large tool catalogs
+- framework-managed workflows before plain Python state is understood
+- multi-agent collaboration and long-term memory
+- hosted CI/CD, cloud deployment, and enterprise observability stacks
+- custom model serving, distributed systems, and governance platforms
+- separate portfolio projects that discard the cumulative spine
 
 ## Learner Permission Statements
 
 - Do not optimize prompts before you can reproduce failures.
-- Do not add agents before the tool contract is clear.
-- Do not deploy before you have an evaluation note.
-- Do not chase multi-agent systems inside the core unless the single-workflow baseline works.
-- Do not keep adding features to avoid writing the limitation note.
-- Do not treat extended concepts as missing work; treat them as the next learning shelf.
+- Do not add retrieval before source records preserve provenance.
+- Do not add tools before their authority and failure contracts are explicit.
+- Do not add agents before one bounded workflow passes its evals.
+- Do not deploy before the local service and evaluation gates pass.
+- Do not add a feature to avoid writing a limitation note.
+- Do not treat later-milestone material as unfinished Milestone 1 work.
 
+## Change-Control Rule
+
+Any proposal that adds a Milestone 1 topic must name:
+
+1. the existing topic or activity it replaces
+2. the hours removed and added
+3. the cumulative artifact it changes
+4. the gate that proves the change was worth the time
+
+No replacement and no evidence means no addition.

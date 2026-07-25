@@ -18,10 +18,10 @@ Use the course map in `curriculum/LEARNER_JOURNEY_MAP.md` and the local module R
 
 ## Minimum Path, Enrichment, And Doorway
 
-- **Minimum path:** read the scenario, run the setup and diagnostic tests, inspect the first 1-3 failures, map them to `../concept-review-map.md`, and write the reflection/evidence note.
+- **Minimum path:** run the setup tests and five-test placement sample, inspect the first 1-3 failures, map them to `../concept-review-map.md`, and write the reflection/evidence note.
 - **Optional calibration:** complete TODOs in `diagnostic_workbench.py` only when fixing them helps you confirm a readiness pattern.
 - **Optional enrichment:** add one edge case, comparison, or small test after the required diagnostic behavior is clear.
-- **Advanced doorway:** notice the later advanced topic this prepares for, then return to the bounded Course 1 task.
+- **Advanced doorway:** notice the later advanced topic this prepares for, then return to the bounded Milestone 1 task.
 
 **Stop rule:** stop after you can name your weak areas and choose a path. You do not need a perfect score in Week 00.
 
@@ -61,23 +61,33 @@ python -m pytest week-00-diagnostic/test_setup.py -v
 
 Both tests should pass. If not, install Python 3.10+ and run `pip install pytest`.
 
-## Step 2: Take the Inventory
+## Step 2: Run The Placement Sample
 
 ```powershell
-python -m pytest week-00-diagnostic/test_assessment.py -v
+python -m pytest week-00-diagnostic/test_assessment.py -k "swap_without_temp or flatten_list or make_multiplier or counter_initial_count or safe_divide_zero_division" -v
 ```
 
-The tests import `diagnostic_workbench.py`, the learner-facing file for this inventory. Your results show strengths and gaps across six areas. Do not worry about failures. The failures are the starting point.
+The sample checks a calibration function, collections, functions/closures,
+object initialization, and exceptions. In the untouched starter, two
+calibration tests pass and three TODO samples fail. The failures are placement
+signals, not work you must finish before starting the course.
 
 Some early diagnostic functions are intentionally prefilled calibration examples. Treat them as a warm-up: they show what a clean assertion looks like before the inventory reaches TODO areas you may need to repair.
 
 Your job is not to prove you already know every item. Your job is to notice what the assessment reveals.
 
+Run the full inventory only when the five-test signal is unclear:
+
+```powershell
+python -m pytest week-00-diagnostic/test_assessment.py -v
+```
+
 ## Expected First Test Run
 
-On the first run, `test_setup.py` should pass. `test_assessment.py` may show a mix of passing calibration tests and failing TODO tests. That is the intended diagnostic state: passing tests show current fluency, and failing tests identify the next concept to review.
-
-A result like `6 passed / 20 failed` is useful signal, not a bad outcome. The exact count may differ after you implement some diagnostic tasks, but the expected shape is still setup green and assessment mixed.
+On the first run, `test_setup.py` should pass. The placement sample should show
+a small mix of passing calibration tests and failing TODO tests. That is the
+intended diagnostic state: passing tests demonstrate the environment and test
+flow, while failing samples identify the next concept to review.
 
 ## Step 3: Read The First Failure
 

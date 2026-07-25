@@ -1,87 +1,92 @@
-# Learner Journey Map
+# AI Engineering Learner Journey
 
-This course is not an encyclopedia of AI Engineering or Generative AI. It is the
-foundation path for a learner who wants enough practical judgment to build,
-test, evaluate, and explain small AI systems before deep-diving later.
+This is a roadmap toward mastery, not a claim that mastery can be completed by
+finishing a fixed list of lessons.
 
-## Course Promise
+## Roadmap Shape
 
-By the end of Course 1, the learner can design, build, test, evaluate, and
-explain a small production-shaped AI assistant using Python, LLM APIs,
-structured prompts, tools, retrieval, bounded workflows, safety boundaries, and
-reliability practices.
+The milestones are sequential capability gates. Inside each milestone, the
+learner builds vertical slices across software, models, data, evaluation,
+security, and operations. The same layers deepen instead of waiting in separate
+queues.
 
-The goal is solid ground, not total coverage.
-
-## Capability Ladder
-
-| Stage | Learner Can Now | Main Failure Practiced | Evidence |
+| Engineering layer | Milestone 1: Implementer | Milestone 2: Production Engineer | Milestone 3: Advanced Systems Engineer |
 | --- | --- | --- | --- |
-| Module 0 | Use Python, pytest, config, and small data pipelines | unclear traceback, invalid input, weak function boundary | diagnostic result, passing workbench tests, edge-case note |
-| Module 1 | Run, trace, modify, and package a deterministic FinAgent slice | unsafe summary, bad ticker, weak boundary | trace note, PR-style summary, request/response note |
-| Module 2 | Explain tokens, embeddings, attention, context, and training vs inference at toy scale | overtrusting model internals or magic terms | mechanism trace, model-boundary decision note |
-| Module 3 | Wrap model, prompt, tool, and MCP-style boundaries behind testable contracts | malformed prompt/output/tool input, secret or permission leak | prompt tests, typed tool schema, trace metadata |
-| Web Data Bridge | Acquire and package small web/API datasets responsibly | broken selector, missing provenance, stale data, unsafe collection | source checklist, fixture tests, quality report, RAG-ready chunks |
-| Module 4 | Build AI-ready data, cited RAG, and bounded workflow/agent patterns | unsupported answer, missing citation, runaway loop | retrieval log, abstention case, workflow trace |
-| Module 5 | Add evals, CI-style gates, service boundaries, logs, cost, latency, and model-choice discipline | flaky output, regression, unobservable failure, premature fine-tune | golden eval, release gate, logs, model-selection note |
-| Module 6 | Assemble and defend a portfolio-ready FinAgent capstone | overclaiming, unsupported advice, unreviewable system | capstone demo, eval harness, limitations note, interview defense |
+| Software | functions, schemas, tests, explicit workflow | async, architecture, packaging, independent second build | scale, maintainability, team and platform decisions |
+| Models | one provider boundary, structured output | routing, fallbacks, streaming, model selection | inference strategy and model adaptation decisions |
+| Data and retrieval | controlled sources, provenance, basic RAG | persistent lifecycle, advanced retrieval and evaluation | large-scale search and knowledge architecture |
+| Evaluation | small task-specific dataset introduced early | automated regression and human calibration | evaluation governance and judge calibration |
+| Security | validation, least privilege, refusal, human gate | auth, privacy, secrets, threat modelling | isolation, compliance, adversarial resilience |
+| Operations | local service, trace, version and cost evidence | deployment, monitoring, caching, CI/CD | SLOs, incidents, recovery, capacity and economics |
+| Agency | one explicit bounded workflow | evaluated agent or MCP integration when justified | complex autonomy only where evidence supports it |
 
-## Repeated Lesson Logic
+## Milestone 1: AI Application Implementer
 
-Every lesson should make these five questions visible:
+**Planning range:** 30-45 focused hours.
 
-1. What can I do now?
-2. What new capability am I adding?
-3. What failure does this help me catch?
-4. How does this improve FinAgent or a practical AI system?
-5. What should I be able to explain afterward?
+The learner builds, tests, evaluates, exposes, and defends one bounded,
+source-grounded application.
 
-## Exit Rubric
+Minimum evidence:
 
-Course 1 is successful when the learner can show evidence for each capability:
+- deterministic baseline with validated inputs
+- fixture-backed provider and structured output
+- task-specific evaluation cases
+- retrieval with citations and abstention
+- one least-privilege tool
+- one visible workflow with bounded retry and human escalation
+- one tested local HTTP boundary
+- trace, version, cost/latency, limitation, and transfer evidence
 
-| Capability | Minimum Evidence |
-| --- | --- |
-| Design a small AI assistant boundary | architecture or boundary note |
-| Implement structured LLM or prompt behavior | tested prompt, schema, or provider artifact |
-| Use tools safely | typed tool contract with malformed-input test |
-| Retrieve grounded context | citation and abstention behavior |
-| Test deterministic and AI behavior | unit tests plus eval or golden examples |
-| Evaluate answer quality | scored run, failure categories, or review note |
-| Operate locally and explain failures | logs, release command, limitation note |
-| Defend tradeoffs | model/system decision note and interview-style explanation |
+Exit level: guided junior implementer. This is not production readiness or
+mastery.
 
-## Minimum Path
+## Milestone 2: Production AI Engineer
 
-The minimum path is the required path to the Course 1 exit standard:
+**Planning range:** 80-120 additional focused hours, with evidence-gated
+completion.
 
-- complete the diagnostic-driven Python foundation
-- build the deterministic FinAgent whole-game slice
-- complete the first-principles mechanism labs
-- complete LLM/prompt/tool/MCP-style boundary labs
-- complete the required web-data bridge
-- complete AI-ready data, RAG, and bounded workflow labs
-- complete production reliability and model-decision labs
-- complete the FinAgent capstone build and polish evidence
+The learner independently builds and operates a second application with reduced
+scaffolding. Depth includes provider failure handling, persistent data
+lifecycle, advanced retrieval and evaluation, authentication and privacy,
+deployment, tracing, monitoring, cost controls, CI/CD, reproducible packaging,
+and one real MCP client/server integration.
 
-## Optional Enrichment
+Exit level: credible junior production practitioner.
 
-Optional enrichment may include deeper scraping, framework variants, additional
-edge cases, alternate capstones, and advanced previews. It should never become a
-hidden prerequisite for Course 1 completion.
+## Milestone 3: Advanced AI Systems Engineer
 
-## Advanced Doorways
+There is no honest fixed-hour mastery promise.
 
-Course 1 prepares learners for later deep dives without teaching them fully:
+Common evidence includes architecture reviews, multi-provider strategy,
+evaluation governance, reliability and incident analysis, authorization and
+isolation, performance and inference economics, and decisions under ambiguous
+constraints.
 
-| Doorway | Course 1 Treatment | Later Depth |
-| --- | --- | --- |
-| ML and neural network foundations | intuition, toy mechanisms, train vs inference decisions | Course 2 |
-| Fine-tuning | decision framework and optional adaptation lab | Course 3 or specialization |
-| GraphRAG and advanced retrieval | cited RAG, abstention, metadata discipline | Course 3 |
-| Multimodal systems | recognition and requirements awareness | Course 3 or specialization |
-| Advanced agents | bounded workflows and small multi-role patterns | Course 3 |
-| Full LLMOps and governance | evals, logs, release gates, safety basics | Course 3 |
+The learner then chooses one or two specializations:
 
-Use this map to keep scope honest: advanced topics are named as doorways, not
-turned into surprise requirements.
+- agentic systems
+- RAG, search, and knowledge systems
+- LLMOps and platform engineering
+- model adaptation
+- multimodal systems
+- AI safety and security
+
+Completion requires operated-project evidence and defensible judgment, not
+exposure to every specialization.
+
+## Learning Loop
+
+Across all milestones:
+
+1. inspect
+2. predict
+3. run
+4. implement
+5. verify
+6. explain
+7. transfer
+
+Scaffolding fades over time: Milestone 1 exposes contracts and progressive
+hints, Milestone 2 provides thinner behavioral requirements, and Milestone 3
+uses ambiguous constraints, architecture review, and operational failures.

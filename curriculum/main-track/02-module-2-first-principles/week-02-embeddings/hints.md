@@ -69,3 +69,43 @@ After the smallest behavior works, leave four notes:
 - failure evidence: what broken case is now handled or intentionally refused
 - explanation evidence: why the fix works in 2-4 sentences
 - transfer evidence: how this pattern strengthens FinAgent or a later AI system
+
+## Function Hint Index
+
+Use these anchors from `workbench.py` when a TODO points here. They are stable targets, so learners can jump from a function to its matching hint section without relying on brittle line numbers.
+
+### normalize_terms
+
+Use this hint entry for `normalize_terms`. First read the function docstring and the nearest TODO, then compare the expected input and output shape in the tests.
+
+### build_vocabulary
+
+Use this hint entry for `build_vocabulary`. First read the function docstring and the nearest TODO, then compare the expected input and output shape in the tests.
+
+### vectorize
+
+Use this hint entry for `vectorize`. First read the function docstring and the nearest TODO, then compare the expected input and output shape in the tests.
+
+### dot_product
+
+Use this hint entry for `dot_product`. First read the function docstring and the nearest TODO, then compare the expected input and output shape in the tests.
+
+### magnitude
+
+Use this hint entry for `magnitude`. First read the function docstring and the nearest TODO, then compare the expected input and output shape in the tests.
+
+### cosine_similarity
+
+Use this hint entry for `cosine_similarity`. First read the function docstring and the nearest TODO, then compare the expected input and output shape in the tests.
+
+### build_index
+
+Use this hint entry for `build_index`. First read the function docstring and the nearest TODO, then compare the expected input and output shape in the tests.
+
+### search
+
+Use this hint entry for `search`. First read the function docstring and the nearest TODO, then compare the expected input and output shape in the tests.
+
+### build_grounded_context
+
+Use this hint entry for `build_grounded_context`. First read the function docstring and the nearest TODO, then compare the expected input and output shape in the tests.

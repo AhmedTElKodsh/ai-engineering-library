@@ -1,6 +1,6 @@
 # Course Visual Map
 
-Use these Mermaid diagrams as the standard visual language for Course 1. Copy a
+Use these Mermaid diagrams as the standard visual language for Milestone 1. Copy a
 diagram into a module README only when it clarifies the lesson.
 
 ## Module 0: Python Skill To AI Engineering Use

@@ -32,6 +32,7 @@ def risk_label(change_percent: float) -> str:
     - absolute move from 1.0% up to but not including 5.0% -> "watchlist"
     - absolute move 5.0% or greater -> "high volatility"
     """
+    # Hint reference: hints.md#risk_label
     movement = abs(change_percent)
     if movement < 1.0:
         return "low"
@@ -49,6 +50,7 @@ def format_percent(value: float) -> str:
     - Should this return a number for math, or a string for display?
     - Which formatting rule keeps every summary visually consistent?
     """
+    # Hint reference: hints.md#format_percent
     return f"{value:.2f}%"
 
 
@@ -61,6 +63,7 @@ def movement_label(change_percent: float) -> str:
     - Should this use the signed value or the absolute value?
     - Which labels describe direction, not risk?
     """
+    # Hint reference: hints.md#movement_label
     if change_percent >= 1.0:
         return "up"
     if change_percent <= -1.0:
@@ -78,6 +81,7 @@ def build_risk_aware_summary(move: StockMove) -> str:
     - Which values should be calculated before the final sentence is assembled?
     - Which facts would a reader need to audit where the summary came from?
     """
+    # Hint reference: hints.md#build_risk_aware_summary
     # TODO: use the helper functions instead of recalculating labels inline.
     # TODO: include ticker, formatted percent, movement, risk label, source,
     # and a not-financial-advice disclaimer in one readable summary.

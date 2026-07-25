@@ -33,7 +33,7 @@ Each week needs:
 
 - Do not require NumPy, PyTorch, transformer libraries, paid APIs, or GPUs for the first-success path.
 - Do not pull the extended tiny-transformer lab back into the required path unless the learner is explicitly taking the extension.
-- Do not let from-scratch GPT training enter Layer 1.
+- Do not let from-scratch GPT training enter Milestone 1.
 - Treat numerical tests carefully and keep tolerances explicit.
 
 ## Pedagogy Enforcement

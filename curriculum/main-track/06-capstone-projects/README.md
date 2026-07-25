@@ -6,8 +6,8 @@ Read this file first. It defines the lesson objective, the minimum path, the exp
 
 ## Portfolio-Ready AI Engineering Synthesis
 
-**Duration:** 3 learner-ready scaffold weeks  
-**Expected time to finish:** 12-18 hours total, about 4-6 hours per scaffold week  
+**Full capstone library:** 12-18 hours across 3 scaffold phases
+**Milestone 1 allocation:** 4-5 hours for integration, transfer, and defense because the cumulative product starts at the beginning of the route
 **Prerequisites:** Module 5 or equivalent ability to build, test, evaluate, and explain an AI workflow  
 **Pedagogy:** build, evaluate, harden, explain
 
@@ -30,7 +30,7 @@ Use `PORTFOLIO_README_TEMPLATE.md` when packaging the final learner-facing
 capstone README. Use `FINAL_ASSESSMENT_CHECKLIST.md` for the reviewer or
 self-assessment gate before presenting the capstone.
 
-This capstone is a strong Layer 1 portfolio project because it naturally integrates:
+This capstone is a strong Milestone 1 portfolio project because it naturally integrates:
 
 - structured data loading and validation
 - AI-ready data boundaries: raw, clean, curated, and failed records
@@ -54,16 +54,17 @@ advanced extensions.
 
 The advanced doorway is specialization. A learner may later deepen the same
 system with richer finance data, GraphRAG, fine-tuning, multimodal inputs, or
-advanced agent workflows, but none of those are required to prove Course 1
-mastery.
+advanced agent workflows, but none of those are required to prove Milestone 1
+completion.
 
 ## Recommended Project Architecture
 
-Layer 1 should not depend on one enormous project from day one. The curriculum uses a spine-and-ribs model:
+Milestone 1 uses one small cumulative spine:
 
-- **Spine:** FinAgent appears in small slices across the modules.
-- **Ribs:** smaller layer-proof projects show transfer in RAG, tools, workflows, and production.
-- **Final:** FinAgent capstone synthesizes the layers into one portfolio artifact.
+- **Spine:** FinAgent appears in small slices across the route.
+- **Practice branches:** RAG, tool, workflow, and production assets deepen the
+  same application instead of becoming separate required projects.
+- **Final:** the integration and defense phase verifies the accumulated work.
 
 Optional alternate capstones can reuse the same gates:
 
@@ -72,15 +73,16 @@ Optional alternate capstones can reuse the same gates:
 
 These are variants, not replacements for the canonical FinAgent path.
 
-## Minimum Job-Ready Portfolio Path
+## Minimum Implementer Portfolio Path
 
-The all-phases synthesis proposes many possible projects. For Layer 1, the minimum coherent portfolio should be smaller and stronger:
+The full library proposes many possible projects. Milestone 1 keeps one
+portfolio artifact and reuses earlier evidence:
 
-1. FinAgent whole-game slice from Module 1.
-2. LLM API Playground or Prompt Engineering Test Suite from Module 3.
-3. AI-Ready Data Pipeline plus RAG Support Desk from Module 4.
-4. Production Hardening Sprint from Module 5.
-5. FinAgent capstone with evals, traces, and failure analysis.
+1. FinAgent deterministic baseline.
+2. The same FinAgent with model, evaluation, and grounded retrieval boundaries.
+3. The same FinAgent with one tool, bounded workflow, service boundary, and
+   operational evidence.
+4. Final transfer task, eval run, failure analysis, limitations, and defense.
 
 This shows APIs, prompting, data pipelines, RAG, tools/workflows, evaluation, deployment discipline, and production thinking without forcing a 17-project portfolio.
 
@@ -117,8 +119,10 @@ This shows APIs, prompting, data pipelines, RAG, tools/workflows, evaluation, de
 
 ## Timeline
 
-Folder names preserve earlier scaffold history. The recommended learner order is
-kickoff, deterministic integration, then polish.
+Folder names preserve earlier scaffold history. For Milestone 1,
+`week-03-integration-build` is opened during Block 1 and updated throughout the
+route. The timeline below describes the capstone library in isolation; it does
+not add three more required weeks to the 30-45-hour route.
 
 ### Week 1: Scope, Evaluate, And Plan The Build
 
@@ -146,18 +150,15 @@ kickoff, deterministic integration, then polish.
 
 ## Learner-Ready Scaffolds
 
-The folder names are legacy labels. Follow the `Order` column for the learner
-sequence: kickoff, integration, then polish.
-
-| Order | Legacy folder | Learner deliverable | Verification |
+| Milestone 1 role | Legacy folder | Learner deliverable | Verification |
 | --- | --- | --- | --- |
-| 1 | `week-01-build` | FinAgent capstone scope, deterministic eval cases, and portfolio evidence ledger | `python -m pytest curriculum/main-track/06-capstone-projects/week-01-build/tests -v` |
-| 2 | `week-03-integration-build` | Runnable FinAgent workflow composed from prior slices, with fixture data, citation boundary, eval command, and safety tests | `python -m pytest curriculum/main-track/06-capstone-projects/week-03-integration-build/tests -v` |
-| 3 | `week-02-polish` | Demo, limitation note, release evidence, and interview defense | `python -m pytest curriculum/main-track/06-capstone-projects/week-02-polish/tests -v` |
+| Required working spine from Block 1 | `week-03-integration-build` | One cumulative FinAgent application with focused checkpoint tests for model, eval, retrieval, tool/workflow, HTTP, operations, and defense | Use the checkpoint command in the local README |
+| Optional planning aid | `week-01-build` | Additional scope and portfolio-planning practice when the learner needs it | `python -m pytest curriculum/main-track/06-capstone-projects/week-01-build/tests -v` |
+| Selected final evidence | `week-02-polish` | Demo, limitation note, and interview defense; reuse Block 8 release evidence | `python -m pytest curriculum/main-track/06-capstone-projects/week-02-polish/tests -k "demo_script or limitation_note or interview_defense" -v` |
 
-Expected first run: all capstone weeks should collect tests cleanly and fail on
-TODO behavior. The failures are portfolio prompts: they name scope, integration,
-evidence, release, and explanation work that the learner must make concrete.
+The cumulative spine should collect cleanly and fail only on visible TODO
+contracts. Learners run one checkpoint filter at a time; the complete suite is
+the Block 9 regression gate.
 
 ## Assessment Split
 
@@ -186,4 +187,4 @@ The capstone is complete when a reviewer can:
 - no investment recommendations
 - no unsupported price predictions
 - no hidden full-solution AI code filling
-- no full fintech SaaS requirement for Layer 1
+- no full fintech SaaS requirement for Milestone 1

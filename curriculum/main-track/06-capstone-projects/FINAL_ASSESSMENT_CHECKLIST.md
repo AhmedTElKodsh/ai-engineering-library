@@ -1,8 +1,8 @@
 # Final Capstone Assessment Checklist
 
-Use this checklist after Week 2 polish and the integration build. It is for a
-reviewer, mentor, or learner doing a final self-check before presenting the
-Course 1 capstone.
+Use this checklist after the Block 9 regression, transfer task, and selected
+polish slice. It is for a reviewer, mentor, or learner doing a final self-check
+before presenting the Milestone 1 capstone.
 
 ## Review Gate
 
@@ -21,7 +21,7 @@ Course 1 capstone.
 
 ## Minimum Passing Standard
 
-The capstone is Course 1 ready when all of these are true:
+The capstone is Milestone 1 ready when all of these are true:
 
 - A reviewer can run at least one verification command without guessing paths.
 - The project demonstrates one safe success path and one safe refusal or

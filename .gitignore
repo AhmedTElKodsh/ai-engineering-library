@@ -112,6 +112,8 @@ books/
 _bmad-output/
 _bmad/
 _bmad_legacy/
+_legacy/
+skills-lock.json
 infrastructure/
 .kiro/skills/
 .kiro/specs/curriculum-planning/source-material/

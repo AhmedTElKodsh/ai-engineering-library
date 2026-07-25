@@ -36,6 +36,7 @@ class FakeProvider:
     calls: list[list[Message]] = field(default_factory=list)
 
     def complete(self, messages: list[Message]) -> str:
+        # Hint reference: hints.md#complete
         self.calls.append(messages)
         return self.response_text
 
@@ -43,6 +44,7 @@ class FakeProvider:
 class Provider(Protocol):
     def complete(self, messages: list[Message]) -> str:
         """Return model text for a validated message list."""
+        # Hint reference: hints.md#complete
 
 
 @dataclass(frozen=True)
@@ -55,6 +57,7 @@ class ProviderResponse:
 
 def validate_messages(messages: list[Message]) -> list[Message]:
     """Validate chat messages before any provider call."""
+    # Hint reference: hints.md#validate_messages
     # TODO: Require at least one message with role in system/user/assistant
     # and non-empty string content.
     # Hint: this is the trust boundary; reject bad shape before the provider sees it.
@@ -64,6 +67,7 @@ def validate_messages(messages: list[Message]) -> list[Message]:
 
 def estimate_tokens(text: str) -> int:
     """Return a simple deterministic token estimate."""
+    # Hint reference: hints.md#estimate_tokens
     # TODO: Count whitespace-separated terms, returning 0 for blank text.
     # Hint: this estimate is intentionally boring; no tokenizer dependency needed.
     return 0
@@ -71,6 +75,7 @@ def estimate_tokens(text: str) -> int:
 
 def estimate_cost(tokens: int, price_per_1k_tokens: float) -> float:
     """Estimate cost for a token count."""
+    # Hint reference: hints.md#estimate_cost
     # TODO: Use tokens / 1000 * price and round to six decimal places.
     # Hint: keep this numeric; formatting as currency belongs in presentation code.
     return 0.0
@@ -78,6 +83,7 @@ def estimate_cost(tokens: int, price_per_1k_tokens: float) -> float:
 
 def render_prompt(template: PromptTemplate, variables: dict[str, str]) -> Message:
     """Render a versioned prompt template as a user message."""
+    # Hint reference: hints.md#render_prompt
     # TODO: Replace {variable} placeholders and include template metadata.
     # Hint: the body is the prompt content; name/version make the prompt traceable.
     return Message(role="user", content="")
@@ -91,6 +97,7 @@ def call_provider(
     price_per_1k_tokens: float = 0.0,
 ) -> ProviderResponse:
     """Validate messages, call a provider, and return trace metadata."""
+    # Hint reference: hints.md#call_provider
     # TODO: Validate first, call the provider second, then include model,
     # input token estimate, output token estimate, and cost estimate.
     # Hint: trace should describe the call without hiding whether validation happened.

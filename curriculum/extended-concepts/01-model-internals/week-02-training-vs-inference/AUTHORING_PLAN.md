@@ -6,7 +6,7 @@ Create a training-versus-inference lab after context and decoding.
 
 This phase teaches learners to inspect loss, gradients, parameter updates,
 inference traces, and adaptation decisions with a tiny linear model. It must not
-turn Course 1 into a real LLM training, fine-tuning, PyTorch, Hugging Face, GPU,
+turn Milestone 1 into a real LLM training, fine-tuning, PyTorch, Hugging Face, GPU,
 or LoRA lab.
 
 ## Acceptance Checks
@@ -56,7 +56,7 @@ Expected initial state: collection succeeds and assertions fail because
 - Advanced doorway, named briefly but not required: full pretraining,
   supervised fine-tuning, LoRA/QLoRA, optimizer variants, backprop through
   transformers, GPU training, distillation, quantization, pruning, and ONNX
-  belong to Course 2/3 or a future adaptation specialization.
+  belong to Milestone 2/3 or a future adaptation specialization.
 
 ## Evidence Portfolio Enhancement
 
@@ -76,14 +76,14 @@ Use `../../05-module-5-production/EVAL_OBSERVABILITY_EVIDENCE_CHECKLIST.md` if
 future edits connect this lesson to production adaptation decisions.
 
 - B13 `Build a Large Language Model (From Scratch)` indexed baseline for
-  from-scratch model internals as useful later-course depth, not Course 1 scope.
+  from-scratch model internals as useful later-course depth, not Milestone 1 scope.
 - Local PDF `Natural Language Processing with Transformers`, p.99-100 and p.122
   for model body/head and task-framing concepts that support adaptation
   decisions.
 - Local PDF `Natural Language Processing with Transformers`, p.233-234 and
   p.254-255 for production efficiency and optimization as advanced doorway
   topics.
-- Ledger decision: Course 1 keeps full fine-tuning and LoRA implementation
+- Ledger decision: Milestone 1 keeps full fine-tuning and LoRA implementation
   deferred; the required outcome is mechanism intuition and adaptation judgment.
 - Assessment conversion rule: each source insight must become a loss assertion,
   parameter-update check, inference immutability check, adaptation rule,

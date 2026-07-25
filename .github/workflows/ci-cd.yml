@@ -2,9 +2,9 @@ name: Curriculum Validation
 
 on:
   push:
-    branches: [main, develop]
+    branches: [master, main, develop]
   pull_request:
-    branches: [main, develop]
+    branches: [master, main, develop]
 
 jobs:
   curriculum:
@@ -28,14 +28,14 @@ jobs:
       - name: Collect learner curriculum tests
         run: python -m pytest --collect-only curriculum -q
 
-      - name: Validate reviewer reference notes
-        run: python scripts/validate_curriculum_references.py --strict
+      - name: Validate reviewer notes and executable reference
+        run: python scripts/validate_curriculum_references.py --strict --executable
 
       - name: Validate curriculum quality contract
         run: python scripts/validate_curriculum_quality.py --strict
 
       - name: Compile Python sources
-        run: python -m compileall -q curriculum scripts tests
+        run: python -m compileall -q curriculum reference scripts
 
       - name: Lint Python sources
-        run: python -m ruff check curriculum scripts tests
+        run: python -m ruff check curriculum reference scripts

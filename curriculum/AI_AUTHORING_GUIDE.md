@@ -22,7 +22,7 @@ The source of truth is still `.kiro/specs/curriculum-planning/ROADMAP.md` for se
 - AI provides hints, explanations, review, debugging help, and reference-after-effort support.
 - Do not put full solutions in learner-facing folders.
 - Do not require paid APIs for the first successful learner path.
-- Do not add hosted platform infrastructure to Layer 1 unless the lesson directly teaches that production concept.
+- Do not add hosted platform infrastructure to Milestone 1 unless the lesson directly teaches that production concept.
 - Do not turn FinAgent into investment advice, trading automation, or a full fintech SaaS.
 
 ## Lesson Shape

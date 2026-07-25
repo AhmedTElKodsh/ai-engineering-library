@@ -1,4 +1,4 @@
-﻿# Core Lab 1: HTTP And Page Inspection
+# Core Lab 1: HTTP And Page Inspection
 
 ## Learning Logic
 
@@ -16,7 +16,7 @@ Use the course map in `curriculum/LEARNER_JOURNEY_MAP.md` and the local module R
 
 - **Minimum path:** read the scenario, inspect the tests or fixtures, complete the TODOs in `workbench.py`, run the verification command, and write the reflection/evidence note.
 - **Optional enrichment:** add one edge case, comparison, or small test after the required behavior works.
-- **Advanced doorway:** notice the later advanced topic this prepares for, then return to the bounded Course 1 task.
+- **Advanced doorway:** notice the later advanced topic this prepares for, then return to the bounded Milestone 1 task.
 
 ## Evidence Portfolio
 

@@ -63,3 +63,35 @@ After the smallest behavior works, leave four notes:
 - failure evidence: what broken case is now handled or intentionally refused
 - explanation evidence: why the fix works in 2-4 sentences
 - transfer evidence: how this pattern strengthens FinAgent or a later AI system
+
+## Function Hint Index
+
+Use these anchors from `workbench.py` when a TODO points here. They are stable targets, so learners can jump from a function to its matching hint section without relying on brittle line numbers.
+
+### load_fixture_records
+
+Use this hint entry for `load_fixture_records`. First read the function docstring and the nearest TODO, then compare the expected input and output shape in the tests.
+
+### normalize_text
+
+Use this hint entry for `normalize_text`. First read the function docstring and the nearest TODO, then compare the expected input and output shape in the tests.
+
+### normalize_metadata
+
+Use this hint entry for `normalize_metadata`. First read the function docstring and the nearest TODO, then compare the expected input and output shape in the tests.
+
+### prepare_records
+
+Use this hint entry for `prepare_records`. First read the function docstring and the nearest TODO, then compare the expected input and output shape in the tests.
+
+### chunk_records
+
+Use this hint entry for `chunk_records`. First read the function docstring and the nearest TODO, then compare the expected input and output shape in the tests.
+
+### build_pipeline_report
+
+Use this hint entry for `build_pipeline_report`. First read the function docstring and the nearest TODO, then compare the expected input and output shape in the tests.
+
+### run_pipeline
+
+Use this hint entry for `run_pipeline`. First read the function docstring and the nearest TODO, then compare the expected input and output shape in the tests.

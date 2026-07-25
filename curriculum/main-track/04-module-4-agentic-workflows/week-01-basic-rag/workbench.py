@@ -66,6 +66,7 @@ class PipelineOutput:
 
 def load_fixture_records() -> list[RawRecord]:
     """Return a small deterministic source set for the lab."""
+    # Hint reference: hints.md#load_fixture_records
     # TODO: Return three useful market-context records and one bad record
     # that is missing retrievable body text.
     # Hint: the bad record is intentional evidence for validation, not a mistake to hide.
@@ -74,6 +75,7 @@ def load_fixture_records() -> list[RawRecord]:
 
 def normalize_text(text: str) -> str:
     """Trim text and collapse repeated whitespace without changing meaning."""
+    # Hint reference: hints.md#normalize_text
     # TODO: Collapse newlines, tabs, and repeated spaces into single spaces.
     # Hint: normalize spacing only; do not rewrite the source meaning.
     return ""
@@ -81,6 +83,7 @@ def normalize_text(text: str) -> str:
 
 def normalize_metadata(metadata: dict[str, str]) -> dict[str, str]:
     """Normalize metadata keys and values while preserving provenance."""
+    # Hint reference: hints.md#normalize_metadata
     # TODO: Trim keys and values, lowercase keys, and skip blank keys.
     # Hint: metadata keys should become predictable; values should keep their evidence.
     return {}
@@ -88,6 +91,7 @@ def normalize_metadata(metadata: dict[str, str]) -> dict[str, str]:
 
 def prepare_records(records: list[RawRecord]) -> tuple[list[CleanRecord], list[FailedRecord]]:
     """Validate and clean raw records, keeping failed-record evidence."""
+    # Hint reference: hints.md#prepare_records
     # TODO: Validate record_id, source_id, title, body, and collected_at.
     # Clean valid records; report invalid records with a useful reason.
     # Hint: successful records and failed records are both useful outputs.
@@ -97,6 +101,7 @@ def prepare_records(records: list[RawRecord]) -> tuple[list[CleanRecord], list[F
 
 def chunk_records(records: list[CleanRecord], max_words: int = 40) -> list[Chunk]:
     """Split clean records into simple word chunks with citation metadata."""
+    # Hint reference: hints.md#chunk_records
     # TODO: Split each clean record into max_words chunks. Each chunk should
     # include record_id, source_id, collected_at, title, and record metadata.
     # Hint: chunks are smaller text units, but they must still point back to the source.
@@ -110,6 +115,7 @@ def build_pipeline_report(
     chunks: list[Chunk],
 ) -> dict[str, object]:
     """Build a compact report that makes the run inspectable."""
+    # Hint reference: hints.md#build_pipeline_report
     # TODO: Return counts, failed reasons, source IDs, and chunk IDs.
     # Hint: the report should let you audit the run without re-reading every chunk.
     return {}
@@ -117,6 +123,7 @@ def build_pipeline_report(
 
 def run_pipeline(records: list[RawRecord], *, max_words: int = 40) -> PipelineOutput:
     """Run the full fixture-first ingestion pipeline."""
+    # Hint reference: hints.md#run_pipeline
     # TODO: Prepare records, chunk clean records, and build the report.
     # Hint: this orchestration function should call helpers instead of duplicating them.
     return PipelineOutput(clean_records=[], failed_records=[], chunks=[], report={})

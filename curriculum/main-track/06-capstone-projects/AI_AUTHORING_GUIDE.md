@@ -12,7 +12,7 @@ Module 6 synthesizes the curriculum into a portfolio-ready FinAgent capstone. Th
 2. Require tests, evals, fixtures, traces, and failure analysis.
 3. Make model-selection reasoning visible.
 4. Preserve source freshness, uncertainty, and limitations.
-5. Prepare portfolio artifacts without turning Layer 1 into a full SaaS build.
+5. Prepare portfolio artifacts without turning Milestone 1 into a full SaaS build.
 
 ## Lesson Requirements
 

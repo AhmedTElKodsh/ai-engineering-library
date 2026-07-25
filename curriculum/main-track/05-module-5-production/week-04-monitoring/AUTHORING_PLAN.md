@@ -34,7 +34,7 @@ Expected initial state: collection succeeds and assertions fail because `workben
 
 - Minimum required path: build safe log events, categorize citation and safety failures, summarize category counts, and map categories to review actions.
 - Optional enrichment only after the minimum path works: add one extra category for latency, malformed output, permission denial, or unknown failure.
-- Advanced doorway, named briefly but not required: hosted tracing, service-level alerts, drift dashboards, automated incident workflows, and enterprise governance programs belong to Course 3.
+- Advanced doorway, named briefly but not required: hosted tracing, service-level alerts, drift dashboards, automated incident workflows, and enterprise governance programs belong to Milestone 3.
 
 ## Evidence Portfolio Enhancement
 

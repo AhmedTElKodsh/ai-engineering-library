@@ -2,7 +2,7 @@
 
 ## Scope
 
-Create the Course 1 ingestion and chunking foundation for RAG before retrieval,
+Create the Milestone 1 ingestion and chunking foundation for RAG before retrieval,
 answer generation, workflow routing, or agent autonomy.
 
 This phase teaches learners that RAG quality starts with source records,
@@ -55,7 +55,7 @@ Expected initial state: collection succeeds and assertions fail because
   failure or report change.
 - Advanced doorway, named briefly but not required: embeddings, vector stores,
   hybrid retrieval, reranking, GraphRAG, permission filtering, and production RAG
-  monitoring belong to later phases or Course 3 depth unless a bounded lesson
+  monitoring belong to later phases or Milestone 3 depth unless a bounded lesson
   explicitly introduces them.
 
 ## Evidence Portfolio Enhancement
@@ -88,7 +88,7 @@ Use `../RAG_CITATION_ABSTENTION_CHECKLIST.md` before changing this lesson.
 - Local PDF `Hands-On RAG for Production`, p.8-15 for separating ingest,
   retrieval, generation, and post-generation guardrails.
 - Local PDF `Hands-On RAG for Production`, p.20 and p.41-43 for missing data,
-  weak retrieval, and hallucination risks that the Course 1 pipeline should make
+  weak retrieval, and hallucination risks that the Milestone 1 pipeline should make
   visible before answer generation.
 - Assessment conversion rule: each source insight must become a required field,
   validation rule, failed-record reason, chunk metadata assertion, run-report

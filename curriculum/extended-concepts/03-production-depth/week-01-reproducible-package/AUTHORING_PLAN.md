@@ -55,7 +55,7 @@ Expected initial state: collection succeeds and assertions fail because
   release.
 - Advanced doorway, named briefly but not required: real Dockerfiles, image
   builds, registries, secrets managers, cloud deployment, health probes, and
-  infrastructure-as-code belong to Course 3 or later production depth.
+  infrastructure-as-code belong to Milestone 3 or later production depth.
 
 ## Evidence Portfolio Enhancement
 
@@ -76,7 +76,7 @@ Use `../EVAL_OBSERVABILITY_EVIDENCE_CHECKLIST.md` before changing this lesson.
   documented goals, KPIs, model/config rationale, risk notes, and review
   expectations.
 - Local PDF `LLMOps`, p.211, p.218, p.224, p.229, and p.251-253 for scoped
-  governance, audit artifacts, and restore planning as lightweight Course 1
+  governance, audit artifacts, and restore planning as lightweight Milestone 1
   notes rather than infrastructure depth.
 - B03 `Introducing MLOps`, Chapter 8, p.137, `B03_B03_P0137_C001` for governance
   artifacts that are trackable and connected to the work they approve.

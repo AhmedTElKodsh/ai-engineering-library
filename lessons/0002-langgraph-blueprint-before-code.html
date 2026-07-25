@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lesson 0002: LangGraph Blueprint Before Code</title>
+  <link rel="stylesheet" href="../assets/lesson.css">
+</head>
+<body>
+  <main>
+    <header>
+      <h1>Lesson 0002: LangGraph Blueprint Before Code</h1>
+      <p>Design the smallest useful graph for a FinAgent research brief. No model call and no framework installation yet.</p>
+    </header>
+
+    <section>
+      <h2>Your Win</h2>
+      <p>By the end, you will be able to look at a product process and identify its state, nodes, edges, branches, and stop conditions. That is the skill LangGraph syntax expresses.</p>
+      <p>This serves your job-ready mission: you should be able to defend why a graph exists before showing that you can import one.</p>
+    </section>
+
+    <section>
+      <h2>Read Only This</h2>
+      <p>Read the <a href="https://docs.langchain.com/oss/python/langgraph/overview">official overview</a> through “Core benefits,” then stop. Keep <a href="../reference/langgraph-core-and-project-map.html">LangGraph Core And Project Map</a> open beside this lesson.</p>
+      <p>The official docs describe LangGraph as low-level orchestration for long-running, stateful workflows. It does not choose your prompts or architecture. That control is useful only when your process needs it.</p>
+    </section>
+
+    <section>
+      <h2>Project Brief</h2>
+      <p>Build a workflow that accepts a finance-related request and produces an educational, cited research brief. It must refuse direct investment advice, abstain when evidence is missing, and require review before publication.</p>
+      <table>
+        <thead><tr><th>Request</th><th>Expected route</th><th>Why</th></tr></thead>
+        <tbody>
+          <tr><td>“Summarize the risks in ACME's latest filing.”</td><td>Research</td><td>Bounded evidence-gathering task.</td></tr>
+          <tr><td>“Tell me which stock to buy today.”</td><td>Refuse</td><td>Direct financial advice is outside the product boundary.</td></tr>
+          <tr><td>“Explain ACME.”</td><td>Clarify</td><td>The desired question and evidence target are missing.</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>The Three Parts</h2>
+      <p><strong>State</strong> is the raw information that later steps need. <strong>Nodes</strong> do one unit of work. <strong>Edges</strong> decide what runs next. LangGraph's Graph API is intentionally close to ordinary Python: nodes and routing rules are functions.</p>
+      <p class="note">Do not put a formatted prompt in state. Store the request, evidence, decisions, and outputs; format a prompt inside the node that uses it.</p>
+    </section>
+
+    <section class="practice">
+      <h2>Interactive Checkpoint A: State</h2>
+      <p>Without looking at the reference, choose the smallest state schema from this list. Write your choice and one-sentence reason before opening the answer.</p>
+      <ol>
+        <li><code>request, route, evidence, draft, review_status</code></li>
+        <li><code>request, every_prompt, model_name, temperature, route, evidence, draft, review_status</code></li>
+        <li><code>request, final_answer</code></li>
+      </ol>
+      <details>
+        <summary>Reveal after committing to an answer</summary>
+        <p>Choice 1. Those are the raw facts shared by multiple steps. Prompts are derived inside nodes; choice 3 loses the intermediate evidence needed for routing, review, and debugging.</p>
+      </details>
+    </section>
+
+    <section class="practice">
+      <h2>Interactive Checkpoint B: Nodes And Edges</h2>
+      <p>On paper or in your notes, draw the route for these nodes:</p>
+      <pre><code>classify_request
+clarify_request
+refuse_request
+retrieve_evidence
+draft_brief
+review_brief
+revise_brief
+publish_brief</code></pre>
+      <p>Your drawing must show:</p>
+      <ul>
+        <li>where execution starts;</li>
+        <li>the three routes after classification;</li>
+        <li>the revision loop;</li>
+        <li>every place execution can stop.</li>
+      </ul>
+      <details>
+        <summary>Reveal one structural hint</summary>
+        <p>The review step has three possible outcomes: publish, revise, or abstain. If your drawing cannot stop on missing evidence, it is unsafe.</p>
+      </details>
+    </section>
+
+    <section>
+      <h2>Retrieval Check</h2>
+      <p>Close the reference and answer in your own words:</p>
+      <ol>
+        <li>Why is the request part of state rather than an edge?</li>
+        <li>Why is <code>retrieve_evidence</code> a node rather than state?</li>
+        <li>What makes the revision path a loop?</li>
+        <li>Which requirement actually justifies LangGraph over one Python function?</li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>Evidence To Send Me</h2>
+      <p>Reply with:</p>
+      <pre><code>A. My five state fields:
+B. My route as arrows:
+C. The LangGraph feature this project truly needs:
+D. One thing I am unsure about:</code></pre>
+      <p>I will review the reasoning, record what you have demonstrated, and unlock Lesson 0003: your first deterministic <code>StateGraph</code> with two assertions and no API key.</p>
+    </section>
+
+    <section>
+      <h2>Ask Me While You Work</h2>
+      <p>Ask about any term or route that is unclear. I will explain the contract or question your design without completing the exercise for you.</p>
+    </section>
+  </main>
+</body>
+</html>

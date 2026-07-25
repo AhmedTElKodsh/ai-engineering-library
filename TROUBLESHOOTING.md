@@ -27,7 +27,7 @@ before importing `workbench.py`.
 
 ## API Keys
 
-Most Course 1 lessons do not need real provider keys. Use fake providers and
+Most Milestone 1 lessons do not need real provider keys. Use fake providers and
 fixtures unless a lesson explicitly asks for a real API boundary.
 
 ## Windows Paths

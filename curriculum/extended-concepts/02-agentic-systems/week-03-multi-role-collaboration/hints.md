@@ -1,4 +1,4 @@
-﻿# Hints: Multi-Role Review Workflow
+# Hints: Multi-Role Review Workflow
 
 Use these only after you have read the first failing test and named the behavior it is asking for.
 

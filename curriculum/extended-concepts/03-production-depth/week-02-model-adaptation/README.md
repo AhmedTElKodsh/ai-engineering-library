@@ -1,4 +1,4 @@
-﻿# Week 7: Model Selection And Adaptation
+# Week 7: Model Selection And Adaptation
 
 Expected time to finish: 4-6 hours
 
@@ -24,7 +24,7 @@ Read `tests/test_model_adaptation.py` before editing:
 score_option -> rank_options -> choose_adaptation -> build_decision_note
 ```
 
-This is a decision framework. It does not require hands-on fine-tuning in Course 1.
+This is a decision framework. It does not require hands-on fine-tuning in Milestone 1.
 
 ## Micro-Checkpoints
 

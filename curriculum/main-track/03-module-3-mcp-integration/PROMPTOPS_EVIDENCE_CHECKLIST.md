@@ -67,4 +67,4 @@ Keep Module 3 focused on prompt contracts and local testability.
 - Do not add an enterprise prompt-management platform.
 - Do not introduce autonomous agents to compensate for weak prompts.
 - Do not teach a framework helper before the learner can explain the prompt contract it wraps.
-- Defer large prompt catalogs, A/B testing platforms, and production prompt governance to Module 5 or Course 3.
+- Defer large prompt catalogs, A/B testing platforms, and production prompt governance to Module 5 or Milestone 3.

@@ -37,6 +37,7 @@ class DefenseAnswer:
 
 def build_demo_script() -> list[DemoStep]:
     """Create a short reviewer-run demo path for the capstone."""
+    # Hint reference: hints.md#build_demo_script
     # TODO: Include setup, safe cited-answer, abstention/refusal, and evidence review steps.
     # Hint: demo steps should be runnable by someone who did not build the project.
     return []
@@ -44,6 +45,7 @@ def build_demo_script() -> list[DemoStep]:
 
 def summarize_release_evidence(checks: list[ReleaseCheck]) -> dict[str, object]:
     """Summarize whether the capstone is ready to present."""
+    # Hint reference: hints.md#summarize_release_evidence
     # TODO: Count checks, list blockers, and mark ready only when every check passes.
     # Hint: a single blocker should keep ready=false even if most checks passed.
     return {}
@@ -51,6 +53,7 @@ def summarize_release_evidence(checks: list[ReleaseCheck]) -> dict[str, object]:
 
 def write_limitation_note() -> LimitationNote:
     """Document the capstone's safety and evidence limits."""
+    # Hint reference: hints.md#write_limitation_note
     # TODO: Name source freshness limits, unsupported claims, non-advice boundary, and follow-up work.
     # Hint: limitations are not apologies; they tell reviewers where the system is honest.
     return LimitationNote("", [], "", [])
@@ -58,6 +61,7 @@ def write_limitation_note() -> LimitationNote:
 
 def build_interview_defense() -> list[DefenseAnswer]:
     """Prepare concise answers for portfolio review questions."""
+    # Hint reference: hints.md#build_interview_defense
     # TODO: Cover architecture, evals, source grounding, safety, and next improvements.
     # Hint: answer points should connect design choices to evidence, not slogans.
     return []

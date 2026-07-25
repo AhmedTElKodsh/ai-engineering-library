@@ -85,3 +85,79 @@ After the smallest behavior works, leave four notes:
 - failure evidence: what broken case is now handled or intentionally refused
 - explanation evidence: why the fix works in 2-4 sentences
 - transfer evidence: how this pattern strengthens FinAgent or a later AI system
+
+## Function Hint Index
+
+Use these anchors from `workbench.py` when a TODO points here. They are stable targets, so learners can jump from a function to its matching hint section without relying on brittle line numbers.
+
+### classify_type
+
+Use this hint entry for `classify_type`. First read the function docstring and the nearest TODO, then compare the expected input and output shape in the tests.
+
+### safe_convert_to_int
+
+Use this hint entry for `safe_convert_to_int`. First read the function docstring and the nearest TODO, then compare the expected input and output shape in the tests.
+
+### build_profile
+
+Use this hint entry for `build_profile`. First read the function docstring and the nearest TODO, then compare the expected input and output shape in the tests.
+
+### calculate_stats
+
+Use this hint entry for `calculate_stats`. First read the function docstring and the nearest TODO, then compare the expected input and output shape in the tests.
+
+### format_greeting
+
+Use this hint entry for `format_greeting`. First read the function docstring and the nearest TODO, then compare the expected input and output shape in the tests.
+
+### build_prompt
+
+Use this hint entry for `build_prompt`. First read the function docstring and the nearest TODO, then compare the expected input and output shape in the tests.
+
+### truncate
+
+Use this hint entry for `truncate`. First read the function docstring and the nearest TODO, then compare the expected input and output shape in the tests.
+
+### chunk_list
+
+Use this hint entry for `chunk_list`. First read the function docstring and the nearest TODO, then compare the expected input and output shape in the tests.
+
+### merge_configs
+
+Use this hint entry for `merge_configs`. First read the function docstring and the nearest TODO, then compare the expected input and output shape in the tests.
+
+### group_by_key
+
+Use this hint entry for `group_by_key`. First read the function docstring and the nearest TODO, then compare the expected input and output shape in the tests.
+
+### unique_sources
+
+Use this hint entry for `unique_sources`. First read the function docstring and the nearest TODO, then compare the expected input and output shape in the tests.
+
+### fizzbuzz
+
+Use this hint entry for `fizzbuzz`. First read the function docstring and the nearest TODO, then compare the expected input and output shape in the tests.
+
+### route_request
+
+Use this hint entry for `route_request`. First read the function docstring and the nearest TODO, then compare the expected input and output shape in the tests.
+
+### is_valid_temperature
+
+Use this hint entry for `is_valid_temperature`. First read the function docstring and the nearest TODO, then compare the expected input and output shape in the tests.
+
+### apply_discount
+
+Use this hint entry for `apply_discount`. First read the function docstring and the nearest TODO, then compare the expected input and output shape in the tests.
+
+### memoize
+
+Use this hint entry for `memoize`. First read the function docstring and the nearest TODO, then compare the expected input and output shape in the tests.
+
+### retry
+
+Use this hint entry for `retry`. First read the function docstring and the nearest TODO, then compare the expected input and output shape in the tests.
+
+### make_counter
+
+Use this hint entry for `make_counter`. First read the function docstring and the nearest TODO, then compare the expected input and output shape in the tests.

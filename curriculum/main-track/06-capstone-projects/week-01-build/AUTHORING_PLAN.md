@@ -85,7 +85,7 @@ Reference validation path: `.kiro/specs/curriculum-planning/implementation-notes
 
 - Minimum required path: define capstone scope, kickoff eval cases, refusal/non-advice behavior, and portfolio evidence ledger entries.
 - Optional enrichment only after the minimum path works: add one extra artifact row for an architecture diagram, trace sample, or release note.
-- Advanced doorway, named briefly but not required: public website, hosted deployment, richer finance integrations, GraphRAG, fine-tuning, and autonomous trading agents are outside Course 1.
+- Advanced doorway, named briefly but not required: public website, hosted deployment, richer finance integrations, GraphRAG, fine-tuning, and autonomous trading agents are outside Milestone 1.
 
 ## Evidence Portfolio Enhancement
 

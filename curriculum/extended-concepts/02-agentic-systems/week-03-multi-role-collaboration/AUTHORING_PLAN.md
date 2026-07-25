@@ -50,7 +50,7 @@ Expected initial state: collection succeeds and assertions fail because
   rule and explain why it is needed.
 - Advanced doorway, named briefly but not required: autonomous multi-agent
   debate, dynamic planner/evaluator teams, real-time collaboration systems, and
-  distributed agent memory belong to Course 3.
+  distributed agent memory belong to Milestone 3.
 
 ## Source Evidence Enhancement
 

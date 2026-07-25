@@ -85,7 +85,7 @@ Reference validation path: `.kiro/specs/curriculum-planning/implementation-notes
 
 - Minimum required path: deterministic keyword retrieval, citation-bearing answer objects, abstention on unsupported questions, and a debuggable retrieval trace.
 - Optional enrichment only after the minimum path works: compare one tiny vector or hybrid retrieval case against the keyword baseline.
-- Advanced doorway, named briefly but not required: reranking, GraphRAG, adaptive RAG, large retrieval benchmarks, and production monitoring dashboards belong to Course 3 or specializations.
+- Advanced doorway, named briefly but not required: reranking, GraphRAG, adaptive RAG, large retrieval benchmarks, and production monitoring dashboards belong to Milestone 3 or specializations.
 
 ## Evidence Portfolio Enhancement
 

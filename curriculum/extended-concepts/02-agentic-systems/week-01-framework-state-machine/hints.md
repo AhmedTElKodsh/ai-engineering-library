@@ -1,4 +1,4 @@
-﻿# Hints: Framework State Machine
+# Hints: Framework State Machine
 
 Use these only after you have read the first failing test and named the behavior it is asking for.
 

@@ -7,7 +7,7 @@ optimization.
 
 This week teaches learners to compare deterministic code, prompt-only design,
 structured outputs, RAG, tools, agents, and fine-tuning from task evidence.
-Fine-tuning stays a decision option in Course 1, not a required PyTorch,
+Fine-tuning stays a decision option in Milestone 1, not a required PyTorch,
 Hugging Face, LoRA, or GPU implementation lab.
 
 ## Acceptance Checks
@@ -56,7 +56,7 @@ Expected initial state: collection succeeds and assertions fail because
   the ranking.
 - Advanced doorway, named briefly but not required: supervised fine-tuning,
   LoRA/QLoRA, data curation for training, GPU workflows, distillation,
-  quantization, and model serving belong to Course 3 or a future adaptation
+  quantization, and model serving belong to Milestone 3 or a future adaptation
   specialization.
 
 ## Evidence Portfolio Enhancement
@@ -83,9 +83,9 @@ when connecting adaptation choices to model-task intuition.
   layers.
 - Local PDF `Natural Language Processing with Transformers`, p.233-234 and
   p.254-255 for production transformer efficiency as a tradeoff space rather
-  than a Course 1 implementation requirement.
+  than a Milestone 1 implementation requirement.
 - Ledger decision: full fine-tuning and LoRA implementation are deferred for
-  Course 1; the required learner outcome is a decision framework and comparison
+  Milestone 1; the required learner outcome is a decision framework and comparison
   with deterministic code, prompts, structured outputs, RAG, tools, and agents.
 - Assessment conversion rule: each source insight must become an option score,
   ranking rule, simpler-alternative check, fine-tuning boundary note, risk note,

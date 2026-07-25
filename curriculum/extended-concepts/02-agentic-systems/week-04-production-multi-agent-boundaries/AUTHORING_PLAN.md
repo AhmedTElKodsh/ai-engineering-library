@@ -52,7 +52,7 @@ Expected initial state: collection succeeds and assertions fail because
   role, or stop reason.
 - Advanced doorway, named briefly but not required: real multi-agent execution,
   distributed tools, remote MCP ecosystems, enterprise authorization, hosted
-  monitoring, and governance platforms belong to Course 3.
+  monitoring, and governance platforms belong to Milestone 3.
 
 ## Source Evidence Enhancement
 

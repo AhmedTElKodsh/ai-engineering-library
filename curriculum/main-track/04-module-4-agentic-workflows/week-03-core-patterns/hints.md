@@ -63,3 +63,35 @@ After the smallest behavior works, leave four notes:
 - failure evidence: what broken case is now handled or intentionally refused
 - explanation evidence: why the fix works in 2-4 sentences
 - transfer evidence: how this pattern strengthens FinAgent or a later AI system
+
+## Function Hint Index
+
+Use these anchors from `workbench.py` when a TODO points here. They are stable targets, so learners can jump from a function to its matching hint section without relying on brittle line numbers.
+
+### load_workflow_cases
+
+Use this hint entry for `load_workflow_cases`. First read the function docstring and the nearest TODO, then compare the expected input and output shape in the tests.
+
+### classify_request
+
+Use this hint entry for `classify_request`. First read the function docstring and the nearest TODO, then compare the expected input and output shape in the tests.
+
+### build_prompt_chain_plan
+
+Use this hint entry for `build_prompt_chain_plan`. First read the function docstring and the nearest TODO, then compare the expected input and output shape in the tests.
+
+### run_evidence_tool
+
+Use this hint entry for `run_evidence_tool`. First read the function docstring and the nearest TODO, then compare the expected input and output shape in the tests.
+
+### evaluate_gate
+
+Use this hint entry for `evaluate_gate`. First read the function docstring and the nearest TODO, then compare the expected input and output shape in the tests.
+
+### run_explicit_workflow
+
+Use this hint entry for `run_explicit_workflow`. First read the function docstring and the nearest TODO, then compare the expected input and output shape in the tests.
+
+### build_trace_summary
+
+Use this hint entry for `build_trace_summary`. First read the function docstring and the nearest TODO, then compare the expected input and output shape in the tests.

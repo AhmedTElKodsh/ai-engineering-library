@@ -1,86 +1,119 @@
-# Week 3: Runnable FinAgent Integration Build
+# Milestone 1 Cumulative FinAgent Application
 
-## How To Use This File
+The folder name `week-03-integration-build` is a legacy location. This scaffold
+is the single learner-owned application used throughout Milestone 1; it is not
+an extra project added at the end.
 
-Read this file first. It defines the lesson objective, the minimum path, the expected evidence, and the verification command. Treat the local tests as the exact contract when implementation details feel unclear.
+## Working Agreement
 
-## Learning Logic
+For each checkpoint:
 
-This milestone turns the capstone from scope and presentation artifacts into a
-small local workflow a reviewer can run. It stays deterministic so failures are
-easy to inspect before live LLMs, tools, or services enter the system.
+1. **Inspect** the named function and focused test.
+2. **Predict** the first result and write down why.
+3. **Run** only the focused command.
+4. **Implement** the smallest coherent behavior.
+5. **Verify** the normal and failure paths.
+6. **Reflect** using `../../../templates/evidence-portfolio-template.md`.
 
-| Question | Learner-facing answer |
-| --- | --- |
-| What can I do now? | Define FinAgent scope, eval cases, release evidence, and limitations. |
-| What new capability am I adding? | Compose fixture market data, cited evidence, safety gates, and a workflow trace into one runnable educational brief. |
-| What failure does this help me catch? | Malformed tickers, unsupported advice requests, missing citations, stale evidence, and untraceable decisions. |
-| How does this improve FinAgent or a practical AI system? | It proves the capstone has an executable backbone before model calls or hosted services are added. |
-| What should I be able to explain afterward? | Why the workflow is deterministic, where evidence enters, when it refuses, and what would change for a live implementation. |
+Do not open the completed instructor reference before making a serious attempt.
+Follow `../../../../REFERENCE_AFTER_EFFORT.md`.
 
-## Learning Goal
+## Time Accounting
 
-Build the smallest runnable FinAgent workflow: validate request, load fixture
-market data, retrieve cited context, apply safety gates, compose an educational
-brief, and return a trace.
+The work below is distributed across the canonical 30-40 instructional hours
+in `../../milestone-1-45-hour-map.md`. It does not add another 6-8 hours.
+Block 0 happens before the clock; Block 9 reserves four fast-path or five
+full-path hours for final integration, transfer, and defense.
 
-**Expected time to finish:** 6-8 hours
+## Cumulative Checkpoints
 
-## Real-World Context
+Run commands from the repository root.
 
-Portfolio reviewers trust a small workflow they can run more than a large
-architecture promise. This milestone connects the course spine into one local
-capstone path while preserving the finance safety boundary.
+| Route block | Change to this application | Focused command |
+| ---: | --- | --- |
+| 0 | Complete the environment check and five-test placement sample before editing this scaffold. | Follow the two commands in `../../00-python-foundations/week-00-diagnostic/README.md` |
+| 1 | Load typed fixtures, validate requests, compute movement, and produce one deterministic non-advice summary. | `python -m pytest curriculum/main-track/06-capstone-projects/week-03-integration-build/tests/test_integration_build.py -k "load_market_snapshot or validate_request or deterministic_summary" -v` |
+| 2 | Put fixture model behavior behind a validated structured-output boundary with a two-attempt retry ceiling. | `python -m pytest curriculum/main-track/06-capstone-projects/week-03-integration-build/tests/test_milestone_checkpoints.py -k checkpoint_2 -v` |
+| 3 | Load the ten-case evaluation seed as soon as the model boundary exists. | `python -m pytest curriculum/main-track/06-capstone-projects/week-03-integration-build/tests/test_milestone_checkpoints.py -k checkpoint_3 -v` |
+| 4 | Reject evidence without provenance, rank approved chunks before applying the explicit budget, and explain why keyword overlap is only a local stand-in for semantic similarity. | `python -m pytest curriculum/main-track/06-capstone-projects/week-03-integration-build/tests/test_integration_build.py -k "load_evidence_chunks or retrieve_evidence" -v` |
+| 5 | Preserve provenance, cite supported answers, abstain without evidence, and compose the full deterministic workflow. | `python -m pytest curriculum/main-track/06-capstone-projects/week-03-integration-build/tests/test_integration_build.py -k "compose_finagent_brief or run_finagent_workflow" -v` |
+| 6 | Add one allowlisted read-only tool, approval/denial paths, and a bounded observable workflow. | `python -m pytest curriculum/main-track/06-capstone-projects/week-03-integration-build/tests/test_milestone_checkpoints.py -k checkpoint_6 -v` |
+| 7 | Serialize the same application behind `GET /health` and `POST /brief`, then prove it over real loopback HTTP. | `python -m pytest curriculum/main-track/06-capstone-projects/week-03-integration-build/tests/test_milestone_checkpoints.py -k checkpoint_7 -v` |
+| 8 | Label fixture/live evidence separately and record measured latency, estimated tokens/live cost, actual fixture cost, and the local version/config gate. | `python -m pytest curriculum/main-track/06-capstone-projects/week-03-integration-build/tests/test_milestone_checkpoints.py -k checkpoint_8 -v` |
+| 9 | Prove the eval reports both passes and diagnostic failures, run the full regression, complete one unfamiliar change, and defend limitations. | `python -m pytest curriculum/main-track/06-capstone-projects/week-03-integration-build/tests -v` |
 
-## Visual Map
+The first run is expected to fail on TODO behavior. Collection errors, broken
+imports, missing fixtures, and server hangs are curriculum defects rather than
+learner exercises.
 
-```mermaid
-flowchart LR
-    A["User request"] --> B["Validation and safety gate"]
-    B --> C["Market fixture"]
-    B --> D["Evidence chunks"]
-    D --> E["Cited retrieval"]
-    C --> F["Educational brief"]
-    E --> F
-    F --> G["Workflow trace"]
-    B --> H["Refusal when unsafe"]
-```
+The Block 9 command proves regression and evaluation behavior only. It does not
+certify the learner-authored transfer change, evidence entries, or defense.
 
-## Evidence First
+## Supporting Labs, Not Additional Projects
 
-Run:
+Start with the cumulative checkpoint and its hints. Open a supporting lab only
+when you cannot explain or implement that checkpoint. Run only the selector
+below, stop at the return condition, and come back here. Full supporting labs
+are post-Milestone 1 depth.
 
-```powershell
-python -m pytest curriculum/main-track/06-capstone-projects/week-03-integration-build/tests -v
-```
+| Block | Maximum slice time | Exact supporting slice from the repository root | Return here when... |
+| ---: | ---: | --- | --- |
+| 1 | 45m | `python -m pytest curriculum/main-track/01-module-1-whole-game/week-01-execute/tests -k "percentage_change or validate_ticker" -v` | you can explain validation before transformation and the zero-denominator failure |
+| 2 | 60m | `python -m pytest curriculum/main-track/03-module-3-mcp-integration/week-01-fundamentals/tests -k call_provider -v`<br>`python -m pytest curriculum/main-track/03-module-3-mcp-integration/week-03-context-engineering/tests -k validate_structured_answer -v` | you can reject invalid input/output at the provider boundary and label its trace |
+| 3 | 45m | `python -m pytest curriculum/main-track/05-module-5-production/week-01-golden-datasets/tests -k "load_golden_examples or summarize_eval" -v` | you can name representative cases and diagnostic failure categories |
+| 4 | 60m | `python -m pytest curriculum/main-track/02-module-2-first-principles/week-02-embeddings/tests -k cosine_similarity -v`<br>`python -m pytest curriculum/main-track/02-module-2-first-principles/week-04-context-decoding/tests -k "estimate_tokens or select_context" -v` | you can explain similarity, a zero-vector edge, and one context-budget decision |
+| 5 | 60m | `python -m pytest curriculum/main-track/04-module-4-agentic-workflows/week-01-basic-rag/tests -k "prepare_records or chunk_records" -v`<br>`python -m pytest curriculum/main-track/04-module-4-agentic-workflows/week-02-advanced-rag/tests -k answer_with_citations -v` | a supported question cites preserved provenance and an unsupported question abstains |
+| 6 | 60m | `python -m pytest curriculum/main-track/03-module-3-mcp-integration/week-02-server-building/tests -k "quote_lookup or dispatch_tool_refuses" -v`<br>`python -m pytest curriculum/main-track/04-module-4-agentic-workflows/week-03-core-patterns/tests -k "classify_request or evaluate_gate" -v` | an allowed tool succeeds, denied calls expose no data, and an unsupported answer is blocked |
+| 7 | 30m | `python -m pytest curriculum/main-track/05-module-5-production/week-03-fastapi/tests -k "health or error" -v` | you can explain stable health metadata and a machine-readable error boundary |
+| 8 | 60m | `python -m pytest curriculum/main-track/05-module-5-production/week-02-cicd/tests -k "load_version_note or build_ci_command_checklist" -v`<br>`python -m pytest curriculum/main-track/05-module-5-production/week-04-monitoring/tests -k "log_event or categorize" -v`<br>`python -m pytest curriculum/main-track/05-module-5-production/week-05-optimization/tests -k cost -v` | you can record versions, a rerunnable local gate, one structured failure event, and measured-versus-estimated cost evidence |
+| 9 | 90m | `python -m pytest curriculum/main-track/06-capstone-projects/week-02-polish/tests -k "demo_script or limitation_note or interview_defense" -v` | a reviewer can rerun the demo, see honest limitations, and challenge your trade-offs |
 
-The starting failures are expected TODO failures in `workbench.py`.
+If every slice is needed, the caps total 7h 30m inside the existing block
+budgets. Exceeding a cap uses the explicit recovery allowance; it does not
+silently extend the core route.
 
-## Learner Outputs
+## Required Evidence
 
-| Artifact | Purpose |
-| --- | --- |
-| Request validator | Accept supported educational questions and reject malformed or advice-seeking requests. |
-| Fixture loaders | Keep market data and evidence deterministic for tests. |
-| Retrieval function | Select cited evidence chunks without a vector database. |
-| Brief composer | Produce an educational summary with movement, citations, uncertainty, and non-advice language. |
-| Workflow runner | Return a runnable result and trace each gate a reviewer should inspect. |
-| Integration note | Explain what is deterministic now and what could become live later. |
+Keep one evidence entry per checkpoint using the shared template. Each entry
+must name:
 
-## Minimum Scope
+- the focused command and result
+- one failure, refusal, abstention, denial, or retry
+- what the evidence proves and does not prove
+- whether the result is deterministic, fixture-backed, live, or merely planned
+- one limitation or deferred improvement
 
-Use local fixtures only. The workflow may discuss public market context for
-education, but it must not recommend trades, predict returns as advice, or
-pretend fixture data is live.
+Never paste secrets. Fixture-provider evidence is not live-provider evidence.
+Loopback HTTP is not hosted deployment.
 
-## Reflect
+For Block 8, record the exact local gate command, Python and dependency/config
+versions, fixture names, and which metrics are measured versus estimated. For
+Block 9, record the learner-written failing test, the unfamiliar change, the
+before/after eval result, and written or oral answers to the exit defense.
 
-- Which earlier module skill became most important during integration?
-- Which refusal path protects the capstone from overclaiming?
-- Where would a live LLM or tool call fit later, and what test would need to stay deterministic?
-- What trace step would you show first in an interview?
+## Transfer Task
 
-## Cafe Visual Break
+After all required tests pass, choose one unfamiliar change:
 
-- Reference: [OpenAI evaluation best practices](https://platform.openai.com/docs/guides/evaluation-best-practices) - use it to connect deterministic capstone cases to later production evals.
-- Reference: [OpenAI agent evals guide](https://platform.openai.com/docs/guides/agent-evals) - use it as optional context for how workflow traces can become eval evidence later.
+- refuse evidence older than a configurable freshness threshold
+- add a second approved ticker with its own snapshot and citations
+- add a new read-only tool argument while preserving approval and denial tests
+
+Write the new failing test first, implement the smallest change, rerun the ten
+eval cases, and record which trade-off changed. Do not copy the instructor
+reference for this task.
+
+## Exit Defense
+
+A reviewer should be able to ask:
+
+- Where does untrusted input become typed application data?
+- Which behavior is deterministic and which simulates a model?
+- How are invented citations rejected?
+- Why can the tool not read arbitrary files or environment values?
+- Where do retries stop and human approval begin?
+- What does the real HTTP test prove?
+- Which claims remain unverified without a live provider or hosted deployment?
+
+Milestone 1 is complete only when the learner can answer with their own code,
+test output, eval report, trace, and transfer evidence.

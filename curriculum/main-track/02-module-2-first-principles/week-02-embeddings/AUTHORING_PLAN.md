@@ -52,14 +52,14 @@ Expected initial state: collection succeeds and assertions fail because
   tie-break, or misleading-match edge case.
 - Advanced doorway, named briefly but not required: learned embeddings,
   embedding APIs, vector databases, ANN indexes, hybrid retrieval, and reranking
-  belong to Module 4/5 or Course 3.
+  belong to Module 4/5 or Milestone 3.
 
 ## Source Evidence Enhancement
 
 Use `../MODEL_MECHANISM_EVIDENCE_CHECKLIST.md` before changing this lesson.
 
 - B09 `Hands-On Large Language Models` indexed baseline for embeddings and RAG
-  intuition in Course 1 mental models.
+  intuition in Milestone 1 mental models.
 - Local PDF `Natural Language Processing with Transformers`, p.81 and p.84-86
   for embeddings becoming contextual representations in later transformer
   layers.

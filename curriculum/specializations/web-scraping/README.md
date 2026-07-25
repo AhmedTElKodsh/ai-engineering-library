@@ -13,7 +13,7 @@ Build ethical, testable web-data pipelines that can support AI engineering workf
 
 The six core labs and portfolio mini-project are required before learners use
 web-collected data for RAG, tools, agents, or FinAgent capstone evidence. Deeper
-projects remain optional extension work because Course 1 should teach
+projects remain optional extension work because Milestone 1 should teach
 responsible acquisition without turning into a full production scraping engineer
 track.
 
@@ -28,7 +28,7 @@ data package.
 The advanced doorway is production web data engineering: browser automation,
 large crawling, scheduled refresh, monitoring, and legal review workflows. The
 required bridge stays small so learners can responsibly feed AI systems without
-turning Course 1 into a scraping specialization.
+turning Milestone 1 into a scraping specialization.
 
 ## Teaching Contract
 

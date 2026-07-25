@@ -85,7 +85,7 @@ Reference validation path: `.kiro/specs/curriculum-planning/implementation-notes
 
 - Minimum required path: deterministic golden examples, category-based evaluator behavior, summary report, and release recommendation.
 - Optional enrichment only after the minimum path works: add one extra ambiguous or high-risk case and explain whether it should fail, pass, or need review.
-- Advanced doorway, named briefly but not required: model-judge evals, production monitoring dashboards, drift/retraining systems, and enterprise LLMOps belong to Course 3.
+- Advanced doorway, named briefly but not required: model-judge evals, production monitoring dashboards, drift/retraining systems, and enterprise LLMOps belong to Milestone 3.
 
 ## Evidence Portfolio Enhancement
 

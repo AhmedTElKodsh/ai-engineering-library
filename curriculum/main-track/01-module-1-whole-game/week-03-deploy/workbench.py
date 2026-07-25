@@ -31,7 +31,10 @@ def validate_request(payload: dict) -> DeploymentRequest:
     - Which payload keys must exist before any indexing like payload["ticker"]?
     - Which returned dataclass fields should contain the validated values?
     """
+    # Hint reference: hints.md#validate_request
     # TODO: check that all required fields are present before reading values.
+    # Example shape: {"ticker": " msft ", "previous_close": "100",
+    # "current_price": "102.5", "source": "lesson fixture"} -> DeploymentRequest.
     required_keys = {"ticker", "previous_close", "current_price", "source"}
     if not required_keys.issubset(payload.keys()):
         raise ValueError("Missing one or more required fields.")
@@ -44,7 +47,7 @@ def validate_request(payload: dict) -> DeploymentRequest:
     try:
         current_price = float(payload['current_price'])
         previous_close = float(payload['previous_close'])
-    except:
+    except (TypeError, ValueError):
         raise ValueError("Prices must be valid numerical values")
     if current_price <= 0 or previous_close <= 0:
         raise ValueError("Prices must be positive values")
@@ -66,20 +69,32 @@ def analyze_move(request: DeploymentRequest) -> dict:
     - Movement uses signed percent; risk uses movement size.
     - Return data, not prose: build_response owns the human-readable wording.
     """
+    # Hint reference: hints.md#analyze_move
     # TODO: calculate percentage change from the validated prices.
     # Hint: compare current_price against previous_close as the baseline.
     # Keep the sign so the next label can tell up from down.
     # Start by naming the derived percent value here.
+    # Example shape: previous=100.0 and current=106.0 -> change_percent 6.0.
+    percent = (request.current_price - request.previous_close) / request.previous_close
 
     # TODO: classify movement as up, down, or flat using the lesson thresholds.
     # Hint: this label cares about direction, so use the signed percent.
-
-
+    if percent > 0:
+        movement = "UP"
+    elif percent < 0:
+        movement = "DOWN"
+    else:
+        movement = "FLAT"
     # TODO: classify risk by movement size, not by whether the move is up or down.
     # Hint: this label cares about magnitude, so compare the absolute percent.
+    if abs(percent) >  0.05:
+        risk = "High"
+    elif abs(percent) < 0.05:
+        risk = "LOW"
+    else:
+        risk = "medium"
 
-
-    return {}
+    return {"movement": movement, "risk": risk}
 
 
 
@@ -89,15 +104,29 @@ def build_response(request: DeploymentRequest, analysis: dict) -> dict:
     Required fields: ticker, analysis, summary, trace, disclaimer.
     Trace should include operation, source, and status.
 
+    Take the clean request plus the calculated analysis and package them into
+    the shape a future caller would expect.
+
+    This is not cloud deployment. It prepares the output so later deployment
+    is easy: a CLI, API, or MCP tool can read stable fields instead of parsing
+    a human sentence.
+
     Think first:
-    - Which fields are machine-readable, and which are human-readable?
-    - How can the trace explain where the answer came from?
-    - What safety text should always travel with the response?
-    - Which fields should tests and future wrappers inspect without parsing text?
-    - Which trace values explain operation, evidence source, and success status?
+    - summary is for humans.
+    - analysis is for code.
+    - trace is for debugging.
+    - disclaimer is for safety.
     """
+    # Hint reference: hints.md#build_response
     # TODO: include the required top-level fields so tests and callers can inspect them.
+    # Hint: keep analysis as a nested dictionary instead of spreading its keys.
+    # Hint: summary is for people; ticker, analysis, and trace are for code.
     # TODO: include the non-advice safety phrase in the disclaimer.
+    # Hint: trace should describe the operation, evidence source, and ok status.
+    # Example shape: DeploymentRequest("MSFT", ..., "lesson fixture") plus
+    # {"change_percent": 2.5, ...} -> response["ticker"] == "MSFT" and
+    # response["trace"]["source"] == "lesson fixture".
+
     return {}
 
 
@@ -111,5 +140,7 @@ def handle_request(payload: dict) -> dict:
     - Each helper should receive the output of the previous helper.
     - This function should be glue, not a second copy of validation or analysis.
     """
+    # Hint reference: hints.md#handle_request
     # TODO: compose the three helper functions in the same order as the docstring.
+    # Example shape: raw payload -> validate_request -> analyze_move -> build_response.
     return {}

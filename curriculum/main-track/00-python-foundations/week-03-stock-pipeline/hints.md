@@ -88,3 +88,47 @@ After the smallest behavior works, leave four notes:
 - failure evidence: what broken case is now handled or intentionally refused
 - explanation evidence: why the fix works in 2-4 sentences
 - transfer evidence: how this pattern strengthens FinAgent or a later AI system
+
+## Function Hint Index
+
+Use these anchors from `workbench.py` when a TODO points here. They are stable targets, so learners can jump from a function to its matching hint section without relying on brittle line numbers.
+
+### from_row
+
+Use this hint entry for `from_row`. First read the function docstring and the nearest TODO, then compare the expected input and output shape in the tests.
+
+### ticker_count
+
+Use this hint entry for `ticker_count`. First read the function docstring and the nearest TODO, then compare the expected input and output shape in the tests.
+
+### load_price_rows
+
+Use this hint entry for `load_price_rows`. First read the function docstring and the nearest TODO, then compare the expected input and output shape in the tests.
+
+### group_by_ticker
+
+Use this hint entry for `group_by_ticker`. First read the function docstring and the nearest TODO, then compare the expected input and output shape in the tests.
+
+### percentage_change
+
+Use this hint entry for `percentage_change`. First read the function docstring and the nearest TODO, then compare the expected input and output shape in the tests.
+
+### moving_average
+
+Use this hint entry for `moving_average`. First read the function docstring and the nearest TODO, then compare the expected input and output shape in the tests.
+
+### calculate_metrics
+
+Use this hint entry for `calculate_metrics`. First read the function docstring and the nearest TODO, then compare the expected input and output shape in the tests.
+
+### stream_summary_lines
+
+Use this hint entry for `stream_summary_lines`. First read the function docstring and the nearest TODO, then compare the expected input and output shape in the tests.
+
+### build_report
+
+Use this hint entry for `build_report`. First read the function docstring and the nearest TODO, then compare the expected input and output shape in the tests.
+
+### render_report
+
+Use this hint entry for `render_report`. First read the function docstring and the nearest TODO, then compare the expected input and output shape in the tests.

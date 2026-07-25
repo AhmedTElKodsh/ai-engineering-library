@@ -2,7 +2,7 @@
 
 Use this checklist before creating or revising a Module 4 lesson that retrieves context, generates cited answers, evaluates retrieval quality, or teaches abstention when evidence is weak.
 
-This file is an authoring aid. It keeps Course 1 RAG work focused on source grounding, inspectable retrieval, and refusal of unsupported claims before advanced GraphRAG or production-scale retrieval.
+This file is an authoring aid. It keeps Milestone 1 RAG work focused on source grounding, inspectable retrieval, and refusal of unsupported claims before advanced GraphRAG or production-scale retrieval.
 
 ## Source Evidence Baseline
 
@@ -12,7 +12,7 @@ This file is an authoring aid. It keeps Course 1 RAG work focused on source grou
 | B05 `Building LLM Agents with RAG, Knowledge Graphs, and Reflection` | p.108-109, `B05_B05_P0108_C001`, `B05_B05_P0109_C001` | RAG reduces hallucination risk by grounding answers in retrieved evidence, but fabricated citations remain a failure mode. | Require unsupported-claim and invented-citation negative cases. |
 | B05 `Building LLM Agents with RAG, Knowledge Graphs, and Reflection` | p.147, `B05_B05_P0147_C001` | Critical systems benefit from tracing generated statements back to supporting context. | Require retrieval traces that expose selected chunks and citation coverage. |
 | B05 `Building LLM Agents with RAG, Knowledge Graphs, and Reflection` | p.149, `B05_B05_P0149_C001` | Retrieval quality and generation quality should be debugged separately. | Require authors to test retrieval first, then answer generation. |
-| B10 `LLM Engineer's Handbook` | Chapter 7, p.300-303, `B10_B10_P0300_C001`, `B10_B10_P0302_C001`, `B10_B10_P0303_C001` | RAG evaluation should use test datasets and monitor retrieval/generation quality over time; model-judge outputs need caution. | Keep Course 1 evals small and deterministic before optional judge-based evaluation. |
+| B10 `LLM Engineer's Handbook` | Chapter 7, p.300-303, `B10_B10_P0300_C001`, `B10_B10_P0302_C001`, `B10_B10_P0303_C001` | RAG evaluation should use test datasets and monitor retrieval/generation quality over time; model-judge outputs need caution. | Keep Milestone 1 evals small and deterministic before optional judge-based evaluation. |
 | B19 `Essential GraphRAG` | Chapter 8, p.142, `B19_B19_P0142_C001` | Answer correctness can be checked by testing whether answer statements are attributable to the provided context. | Require sentence/claim support checks in rubrics or tests when answers make factual claims. |
 | B01 `Generative AI in Action` | Chapter 7, p.209 and p.238, `B01_B01_P0209_C001`, `B01_B01_P0238_C001` | RAG connects LLM behavior to external retrieved knowledge and depends on retriever quality. | Require source records and retrieval quality to be visible before answer text. |
 | Local PDF `Principles of Building AI Agents` | p.88 and p.92-93 | RAG pipelines require chunking, embeddings, vector storage, metadata upsert, indexing, querying, and optional reranking decisions. | Require chunks and metadata to be inspectable before answer generation. |
@@ -69,10 +69,10 @@ Add these rubric checks when a lesson touches RAG answers:
 
 ## Scope Boundaries
 
-Keep Course 1 RAG practical and inspectable.
+Keep Milestone 1 RAG practical and inspectable.
 
 - Do not introduce GraphRAG implementation depth in the required path.
 - Do not require hosted vector databases for the first green path.
 - Do not use judge-based evaluation as the only correctness signal.
 - Do not let answer fluency override citation support.
-- Defer reranking, large retrieval benchmarks, adaptive RAG, production monitoring dashboards, and knowledge graph construction to Course 3 or specializations.
+- Defer reranking, large retrieval benchmarks, adaptive RAG, production monitoring dashboards, and knowledge graph construction to Milestone 3 or specializations.

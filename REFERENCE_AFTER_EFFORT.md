@@ -42,3 +42,21 @@ hyphens. This is the convention enforced by
 The reference note should explain intended behavior, hidden edge cases, and how
 the visible tests map to the lesson goal. It should not be linked from the local
 learner README before the learner has completed the exercise.
+
+## Cumulative Executable Reference
+
+After a learner has attempted the full Milestone 1 integration and recorded
+their evidence, the instructor/reviewer implementation is under:
+
+```text
+reference/milestone-1-finagent/
+```
+
+Its focused verification command is:
+
+```powershell
+python scripts/validate_curriculum_references.py --strict --executable
+```
+
+This is fixture-backed executable evidence. It does not verify a live provider
+or replace the learner's transfer task.

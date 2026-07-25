@@ -2,7 +2,7 @@
 
 Use this decision tree before creating or revising a Module 4 lesson that adds routing, tool use, critique, state machines, orchestration, collaboration, or multi-agent behavior.
 
-The Course 1 default is the simplest inspectable system that can satisfy the user need. Agents are useful only when the task genuinely needs dynamic action selection, tool composition, or adaptive control that a simpler path cannot handle safely.
+The Milestone 1 default is the simplest inspectable system that can satisfy the user need. Agents are useful only when the task genuinely needs dynamic action selection, tool composition, or adaptive control that a simpler path cannot handle safely.
 
 ## Source Evidence Baseline
 
@@ -73,10 +73,10 @@ Add these rubric checks when a lesson touches workflows or agents:
 
 ## Scope Boundaries
 
-Keep Course 1 focused on controlled workflows.
+Keep Milestone 1 focused on controlled workflows.
 
 - Do not introduce autonomous agents before prompt, tool, RAG, and workflow contracts are testable.
 - Do not use a framework to hide route, state, or stop-condition reasoning.
-- Do not require multi-agent collaboration for the required Course 1 path.
+- Do not require multi-agent collaboration for the required Milestone 1 path.
 - Do not let agentic behavior produce financial advice or unsupported predictions.
-- Defer distributed multi-agent systems, advanced planner/executor/evaluator teams, and long-running orchestration platforms to Course 3 or a specialization.
+- Defer distributed multi-agent systems, advanced planner/executor/evaluator teams, and long-running orchestration platforms to Milestone 3 or a specialization.

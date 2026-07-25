@@ -1,7 +1,7 @@
 # FinAgent Portfolio README Template
 
-Use this template for the final capstone README after Week 2 polish. Keep it
-short, evidence-backed, and honest about limitations.
+Use this template after the Block 9 regression, transfer task, and selected
+polish slice. Keep it short, evidence-backed, and honest about limitations.
 
 ## Project
 
@@ -40,7 +40,7 @@ Replace this text block with a small diagram if your capstone includes one.
 
 ```powershell
 python -m pytest curriculum/main-track/06-capstone-projects/week-03-integration-build/tests -v
-python -m pytest curriculum/main-track/06-capstone-projects/week-02-polish/tests -v
+python -m pytest curriculum/main-track/06-capstone-projects/week-02-polish/tests -k "demo_script or limitation_note or interview_defense" -v
 ```
 
 Add any local run command your capstone supports.

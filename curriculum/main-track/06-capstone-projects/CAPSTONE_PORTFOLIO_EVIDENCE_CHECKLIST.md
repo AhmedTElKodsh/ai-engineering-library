@@ -49,7 +49,7 @@ Every capstone-polish exercise should include at least six of these checks.
 
 ## Scope Boundaries
 
-- Do not require a public portfolio website for Course 1.
+- Do not require a public portfolio website for Milestone 1.
 - Do not require social posting, networking, income planning, or career coaching deliverables.
 - Do not let polish hide missing evals, citations, refusals, or limitations.
 - Do not turn interview defense into generic resume advice.

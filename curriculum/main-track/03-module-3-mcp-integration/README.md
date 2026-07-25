@@ -6,8 +6,8 @@ Read this file first. It defines the lesson objective, the minimum path, the exp
 
 ## Reliable Model, Prompt, Tool, And MCP Boundaries
 
-**Duration:** 4 weeks  
-**Expected time to finish:** 16-24 hours total, about 4-6 hours per phase  
+**Full module library:** 16-24 hours across 4 phases
+**Milestone 1 use:** selected provider, structured-output, tool, trace, and permission contracts from `../milestone-1-45-hour-map.md`
 **Prerequisites:** Module 2 or equivalent comfort with Python, tests, structured data, and basic LLM concepts  
 **Pedagogy:** tool contracts first, frameworks second, security always
 
@@ -35,17 +35,20 @@ For authors extending tool-related lessons, use
 schemas, malformed-input tests, permission refusals, missing-output behavior,
 trace metadata, and rubric hooks.
 
-MCP appears here as a practical interface pattern for exposing tools, resources, and prompts to AI applications. The learner does not need to become an enterprise integration architect in Layer 1. They need to understand the shape of the contract, how to test it, and where permissions and secrets can fail.
+MCP appears here as an interface pattern for exposing tools, resources, and
+prompts. Milestone 1 requires the underlying bounded tool contract, not a claim
+of real MCP transport or authorization integration.
 
 ## Minimum Path And Advanced Doorway
 
-Use `../../LEARNER_JOURNEY_MAP.md` as the course-level map. Module 3's minimum
-path is provider boundaries, prompt contracts, structured output validation,
-typed local tools, trace metadata, permissions, and secret-safe configuration.
+Use `../../LEARNER_JOURNEY_MAP.md` as the course-level map. Milestone 1 selects
+provider boundaries, structured output validation, one typed local tool, trace
+metadata, permissions, and secret-safe configuration.
 
 The advanced doorway is full integration architecture: MCP ecosystems,
 multi-provider routing, enterprise prompt management, and large tool catalogs.
-Layer 1 keeps the work small so learners understand contracts before scale.
+The first milestone keeps the work small so learners understand contracts
+before scale.
 
 ## Layer-Proof Project
 

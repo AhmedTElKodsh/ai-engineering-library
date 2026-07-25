@@ -52,7 +52,7 @@ Expected initial state: collection succeeds and assertions fail because
   out-of-range, or permission/refusal case.
 - Advanced doorway, named briefly but not required: remote MCP servers,
   provider-specific tool schemas, large tool catalogs, arbitrary agent tool
-  choice, and distributed tools belong to later modules or Course 3.
+  choice, and distributed tools belong to later modules or Milestone 3.
 
 ## Evidence Portfolio Enhancement
 

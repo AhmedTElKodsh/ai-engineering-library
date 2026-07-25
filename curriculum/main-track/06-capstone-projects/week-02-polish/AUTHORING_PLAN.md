@@ -85,7 +85,7 @@ Reference validation path: `.kiro/specs/curriculum-planning/implementation-notes
 
 - Minimum required path: demo sequence, release evidence summary, limitation note, portfolio README package, final assessment checklist, and interview-defense answers for architecture, evals, safety, and tradeoffs.
 - Optional enrichment only after the minimum path works: add one extra reviewer artifact such as a diagram, trace excerpt, release checklist, or small STAR story.
-- Advanced doorway, named briefly but not required: portfolio website, hosted demo, live finance feeds, public launch materials, and advanced agent specialization belong after Course 1.
+- Advanced doorway, named briefly but not required: portfolio website, hosted demo, live finance feeds, public launch materials, and advanced agent specialization belong after Milestone 1.
 
 ## Evidence Portfolio Enhancement
 

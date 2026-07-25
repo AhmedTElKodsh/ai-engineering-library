@@ -32,6 +32,42 @@ Return a dictionary because this boundary is preparing learners for JSON respons
 
 Trace metadata can be simple. It should answer what operation ran, what source was used, and whether the result succeeded.
 
+Read `build_response` as packaging, not analysis. The request already carries the trusted ticker and source; the analysis dictionary already carries movement data. This function should assemble those pieces into:
+
+- machine-readable fields callers can inspect directly
+- one human-readable summary
+- one trace dictionary for debugging
+- one disclaimer that always travels with the answer
+
+If you feel tempted to parse the summary later, that is a sign the field belongs in `analysis` or `trace` instead.
+
+### Example Contract
+
+Input objects:
+
+```python
+request = DeploymentRequest("MSFT", 100.0, 102.5, "lesson fixture")
+analysis = {"change_percent": 2.5, "movement": "up", "risk": "watchlist"}
+```
+
+Expected response shape:
+
+```python
+{
+    "ticker": "MSFT",
+    "analysis": analysis,
+    "summary": "human-readable sentence that includes MSFT and 2.50%",
+    "trace": {
+        "operation": "finagent.local_analysis",
+        "source": "lesson fixture",
+        "status": "ok",
+    },
+    "disclaimer": "text that includes not financial advice",
+}
+```
+
+The exact summary wording is less important than the stable fields. Future CLI, API, or MCP callers should read `ticker`, `analysis`, and `trace` directly instead of scraping values out of the sentence.
+
 ## Layer 3
 
 ### Reading The Tests
@@ -57,3 +93,23 @@ After the smallest behavior works, leave four notes:
 - failure evidence: what broken case is now handled or intentionally refused
 - explanation evidence: why the fix works in 2-4 sentences
 - transfer evidence: how this pattern strengthens FinAgent or a later AI system
+
+## Function Hint Index
+
+Use these anchors from `workbench.py` when a TODO points here. They are stable targets, so learners can jump from a function to its matching hint section without relying on brittle line numbers.
+
+### validate_request
+
+Use this hint entry for `validate_request`. First read the function docstring and the nearest TODO, then compare the expected input and output shape in the tests.
+
+### analyze_move
+
+Use this hint entry for `analyze_move`. First read the function docstring and the nearest TODO, then compare the expected input and output shape in the tests.
+
+### build_response
+
+Use this hint entry for `build_response`. First read the function docstring and the nearest TODO, then compare the expected input and output shape in the tests.
+
+### handle_request
+
+Use this hint entry for `handle_request`. First read the function docstring and the nearest TODO, then compare the expected input and output shape in the tests.

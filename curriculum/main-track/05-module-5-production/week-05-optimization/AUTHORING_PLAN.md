@@ -53,7 +53,7 @@ Expected initial state: collection succeeds and assertions fail because
   failure, cache-risk note, or budget threshold.
 - Advanced doorway, named briefly but not required: live pricing APIs, distributed
   queues, semantic caches, load testing, autoscaling, and production tail-latency
-  dashboards belong to Course 3 or later production depth.
+  dashboards belong to Milestone 3 or later production depth.
 
 ## Evidence Portfolio Enhancement
 

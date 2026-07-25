@@ -40,6 +40,7 @@ class Handoff:
 
 def is_tool_allowed(call: ToolCall, policies: list[PermissionPolicy]) -> bool:
     """Return whether the role may call the requested tool."""
+    # Hint reference: hints.md#is_tool_allowed
     # TODO: Match the role policy and check the tool is explicitly allowed.
     # Hint: no matching role policy should mean no permission.
     return False
@@ -47,6 +48,7 @@ def is_tool_allowed(call: ToolCall, policies: list[PermissionPolicy]) -> bool:
 
 def detect_prompt_injection(text: str) -> bool:
     """Detect obvious instruction-smuggling attempts in untrusted text."""
+    # Hint reference: hints.md#detect_prompt_injection
     # TODO: Detect phrases such as ignore previous instructions, reveal secrets,
     # system prompt, or exfiltrate.
     # Hint: normalize case before checking phrases so casing cannot bypass the guard.
@@ -55,6 +57,7 @@ def detect_prompt_injection(text: str) -> bool:
 
 def redact_secret_values(config: dict[str, str]) -> dict[str, str]:
     """Return config names without leaking secret values."""
+    # Hint reference: hints.md#redact_secret_values
     # TODO: Replace values for keys containing key, token, secret, or password.
     # Hint: inspect key names, preserve non-secret values, and never mutate by surprise.
     return config
@@ -68,6 +71,7 @@ def build_handoff(
     allowed_tools: tuple[str, ...],
 ) -> Handoff:
     """Create a safe role-to-role handoff object."""
+    # Hint reference: hints.md#build_handoff
     # TODO: Reject empty fields and injection in task or context summary.
     # Hint: handoff text crosses a role boundary, so validate it like user input.
     return Handoff(from_role, to_role, task, context_summary, allowed_tools)
@@ -75,6 +79,7 @@ def build_handoff(
 
 def authorize_handoff_tool_call(handoff: Handoff, call: ToolCall) -> bool:
     """Check that a receiving role stays inside the handoff boundary."""
+    # Hint reference: hints.md#authorize_handoff_tool_call
     # TODO: Allow only calls by handoff.to_role using handoff.allowed_tools.
     # Hint: check both the acting role and the specific tool name.
     return False

@@ -32,7 +32,7 @@ Expected initial state: collection succeeds and assertions fail because `workben
 
 - Minimum required path: load workflow cases, classify the request, build an explicit step plan, run the deterministic evidence tool, evaluate the gate, return a traceable response, and summarize the trace.
 - Optional enrichment only after the minimum path works: add one extra route or negative case for missing evidence, unsafe advice, unauthorized data, or malformed input.
-- Advanced doorway, named briefly but not required: framework-managed state, dynamic tool selection, planner/executor/evaluator teams, multi-agent collaboration, and long-running orchestration belong to later Course 3 depth unless a bounded Course 1 lab explicitly justifies them.
+- Advanced doorway, named briefly but not required: framework-managed state, dynamic tool selection, planner/executor/evaluator teams, multi-agent collaboration, and long-running orchestration belong to later Milestone 3 depth unless a bounded Milestone 1 lab explicitly justifies them.
 
 ## Evidence Portfolio Enhancement
 

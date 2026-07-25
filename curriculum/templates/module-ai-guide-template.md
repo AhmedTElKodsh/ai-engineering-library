@@ -4,7 +4,7 @@ Copy this file to `curriculum/<module>/AI_AUTHORING_GUIDE.md` and customize it b
 
 ## Module Role
 
-Explain what this module contributes to the Layer 1 learner journey.
+Explain what this module contributes to the Milestone 1 learner journey.
 
 ## AI Authoring Priorities
 

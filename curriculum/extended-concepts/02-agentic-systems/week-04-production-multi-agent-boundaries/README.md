@@ -24,7 +24,9 @@ Read the tests as a production boundary:
 authorize_action -> append_action -> should_stop -> build_agent_run_report
 ```
 
-This is optional advanced doorway practice. The Course 1 core is explicit workflow reliability; this lab shows what extra controls become necessary when multiple agents and tools enter the picture.
+This is optional advanced doorway practice. Milestone 1 stops at explicit
+workflow reliability; this lab shows what extra controls become necessary when
+multiple agents and tools enter the picture.
 
 ## Micro-Checkpoints
 

@@ -57,8 +57,8 @@ Expected initial state: collection succeeds and assertions fail because
   comparison.
 - Advanced doorway, named briefly but not required: planner/evaluator agents,
   dynamic critique prompts, model-judge evaluation, long-running task queues,
-  and multi-agent review systems belong to later Course 3 depth unless a bounded
-  Course 1 lab explicitly introduces them.
+  and multi-agent review systems belong to later Milestone 3 depth unless a bounded
+  Milestone 1 lab explicitly introduces them.
 
 ## Evidence Portfolio Enhancement
 

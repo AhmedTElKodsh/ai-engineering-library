@@ -63,3 +63,43 @@ After the smallest behavior works, leave four notes:
 - failure evidence: what broken case is now handled or intentionally refused
 - explanation evidence: why the fix works in 2-4 sentences
 - transfer evidence: how this pattern strengthens FinAgent or a later AI system
+
+## Function Hint Index
+
+Use these anchors from `workbench.py` when a TODO points here. They are stable targets, so learners can jump from a function to its matching hint section without relying on brittle line numbers.
+
+### load_bridge_chunks
+
+Use this hint entry for `load_bridge_chunks`. First read the function docstring and the nearest TODO, then compare the expected input and output shape in the tests.
+
+### normalize_terms
+
+Use this hint entry for `normalize_terms`. First read the function docstring and the nearest TODO, then compare the expected input and output shape in the tests.
+
+### retrieve
+
+Use this hint entry for `retrieve`. First read the function docstring and the nearest TODO, then compare the expected input and output shape in the tests.
+
+### build_tiny_vocabulary
+
+Use this hint entry for `build_tiny_vocabulary`. First read the function docstring and the nearest TODO, then compare the expected input and output shape in the tests.
+
+### vectorize_terms
+
+Use this hint entry for `vectorize_terms`. First read the function docstring and the nearest TODO, then compare the expected input and output shape in the tests.
+
+### cosine_similarity
+
+Use this hint entry for `cosine_similarity`. First read the function docstring and the nearest TODO, then compare the expected input and output shape in the tests.
+
+### retrieve_hybrid
+
+Use this hint entry for `retrieve_hybrid`. First read the function docstring and the nearest TODO, then compare the expected input and output shape in the tests.
+
+### answer_with_citations
+
+Use this hint entry for `answer_with_citations`. First read the function docstring and the nearest TODO, then compare the expected input and output shape in the tests.
+
+### build_retrieval_trace
+
+Use this hint entry for `build_retrieval_trace`. First read the function docstring and the nearest TODO, then compare the expected input and output shape in the tests.

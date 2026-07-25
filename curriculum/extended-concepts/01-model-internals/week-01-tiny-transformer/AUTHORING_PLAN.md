@@ -128,7 +128,7 @@ Follow-up files to update:
 
 - Minimum required path: implement plain-Python vector addition, normalization, embedding lookup, projection, self-attention, residual output, feed-forward output, and trace metadata.
 - Optional enrichment only after the minimum path works: add one focused edge case for empty input, unknown token IDs, or mismatched projection dimensions.
-- Advanced doorway, named briefly but not required: Hugging Face/PyTorch implementation, encoder-decoder depth, decoder masking, fine-tuning, distillation, quantization, pruning, and ONNX optimization belong to Course 2/3.
+- Advanced doorway, named briefly but not required: Hugging Face/PyTorch implementation, encoder-decoder depth, decoder masking, fine-tuning, distillation, quantization, pruning, and ONNX optimization belong to Milestone 2/3.
 
 ## Evidence Portfolio Enhancement
 
@@ -144,6 +144,6 @@ Use `../MODEL_MECHANISM_EVIDENCE_CHECKLIST.md` before changing this lesson.
 - Local PDF `Natural Language Processing with Transformers`, p.81 and p.84-86 for transformer encoders updating token embeddings with self-attention, feed-forward layers, skip connections, and normalization.
 - Local PDF `Natural Language Processing with Transformers`, p.99-100 and p.122 for the body/head split, task-specific heads, and decoder masking as model-task distinctions.
 - Local PDF `Natural Language Processing with Transformers`, p.233-234 and p.254-255 for production efficiency tradeoffs that should remain an advanced doorway.
-- B09 `Hands-On Large Language Models` and B13 `Build a Large Language Model (From Scratch)` for indexed support of visual intuition and Course 2 from-scratch depth.
+- B09 `Hands-On Large Language Models` and B13 `Build a Large Language Model (From Scratch)` for indexed support of visual intuition and Milestone 2 from-scratch depth.
 - Assessment conversion rule: each source insight must become a trace field, shape check, edge-case test, toy limitation note, model-task distinction, or advanced-doorway boundary.
 

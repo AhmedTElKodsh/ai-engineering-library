@@ -1,0 +1,34 @@
+{
+  "evidence": [
+    {
+      "chunk_id": "nvda-data-center",
+      "ticker": "NVDA",
+      "text": "NVIDIA reported strong data center demand while noting supply constraints for advanced accelerators.",
+      "citation": "Data Center Demand Note | https://example.com/research/nvda-data-center"
+    },
+    {
+      "chunk_id": "nvda-cloud-capacity",
+      "ticker": "NVDA",
+      "text": "Cloud providers continue to discuss GPU capacity planning and cost controls in infrastructure spending.",
+      "citation": "Cloud GPU Capacity Note | https://example.com/research/cloud-gpu-capacity"
+    },
+    {
+      "chunk_id": "msft-enterprise-ai",
+      "ticker": "MSFT",
+      "text": "Microsoft cloud growth remains tied to enterprise AI demand and infrastructure investment.",
+      "citation": "Enterprise AI Cloud Note | https://example.com/research/msft-cloud-ai"
+    }
+  ],
+  "quotes": {
+    "MSFT": {
+      "price": 452.31,
+      "currency": "USD",
+      "as_of": "2026-05-25T16:00:00Z"
+    },
+    "NVDA": {
+      "price": 125.5,
+      "currency": "USD",
+      "as_of": "2026-05-25T16:00:00Z"
+    }
+  }
+}

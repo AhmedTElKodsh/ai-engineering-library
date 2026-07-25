@@ -42,3 +42,23 @@ After the smallest behavior works, leave four notes:
 - failure evidence: what broken case is now handled or intentionally refused
 - explanation evidence: why the fix works in 2-4 sentences
 - transfer evidence: FinAgent can expose an API-style contract without adding hosted infrastructure
+
+## Function Hint Index
+
+Use these anchors from `workbench.py` when a TODO points here. They are stable targets, so learners can jump from a function to its matching hint section without relying on brittle line numbers.
+
+### health_check
+
+Use this hint entry for `health_check`. First read the function docstring and the nearest TODO, then compare the expected input and output shape in the tests.
+
+### validate_service_request
+
+Use this hint entry for `validate_service_request`. First read the function docstring and the nearest TODO, then compare the expected input and output shape in the tests.
+
+### handle_service_request
+
+Use this hint entry for `handle_service_request`. First read the function docstring and the nearest TODO, then compare the expected input and output shape in the tests.
+
+### build_error_response
+
+Use this hint entry for `build_error_response`. First read the function docstring and the nearest TODO, then compare the expected input and output shape in the tests.

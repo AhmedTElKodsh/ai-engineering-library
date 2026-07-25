@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>LangGraph Core And Project Map</title>
+  <link rel="stylesheet" href="../assets/lesson.css">
+</head>
+<body>
+  <main>
+    <header>
+      <h1>LangGraph Core And Project Map</h1>
+      <p>A compact reference for the FinAgent Research Brief Workflow project.</p>
+    </header>
+
+    <section>
+      <h2>The Small Mental Model</h2>
+      <table>
+        <thead><tr><th>Term</th><th>Meaning</th><th>Project example</th></tr></thead>
+        <tbody>
+          <tr><td>State</td><td>The current raw facts shared across steps.</td><td>Request, route, evidence, draft, approval status.</td></tr>
+          <tr><td>Node</td><td>A Python function that reads state and returns updates.</td><td>Classify request, retrieve evidence, draft brief.</td></tr>
+          <tr><td>Edge</td><td>The rule selecting which node runs next.</td><td>Research requests retrieve; advice requests refuse.</td></tr>
+          <tr><td>Reducer</td><td>The rule for combining an update with existing state.</td><td>Append trace events instead of overwriting them.</td></tr>
+          <tr><td>Graph</td><td>The compiled state, nodes, and routing rules.</td><td>The runnable research-brief workflow.</td></tr>
+          <tr><td>Checkpoint</td><td>A saved state snapshot at a step boundary.</td><td>Resume a draft after review or failure.</td></tr>
+          <tr><td>Thread</td><td>The identifier tying checkpoints to one run history.</td><td>One research request and its revisions.</td></tr>
+          <tr><td>Interrupt</td><td>A deliberate pause awaiting external input.</td><td>Human approval before publishing the brief.</td></tr>
+        </tbody>
+      </table>
+      <p class="note">State stores raw facts. Prompt strings and display formatting are derived inside nodes when needed.</p>
+    </section>
+
+    <section>
+      <h2>Project Route</h2>
+      <pre><code>START
+  -> classify_request
+       -> refuse_request -> END
+       -> retrieve_evidence -> draft_brief -> review_brief
+            -> revise_brief -> review_brief
+            -> publish_brief -> END</code></pre>
+      <p>The first version is deterministic and local. Model calls, tools, persistence, and human review arrive only when the underlying contract is visible and tested.</p>
+    </section>
+
+    <section>
+      <h2>Eight Increments</h2>
+      <table>
+        <thead><tr><th>Increment</th><th>Tangible win</th><th>Evidence</th></tr></thead>
+        <tbody>
+          <tr><td>1. Blueprint</td><td>Map state, nodes, edges, and stop paths.</td><td>Defensible graph sketch.</td></tr>
+          <tr><td>2. First graph</td><td>Run deterministic research/refusal routes.</td><td>Two passing assertions.</td></tr>
+          <tr><td>3. State updates</td><td>Add trace history with a reducer.</td><td>No overwritten events.</td></tr>
+          <tr><td>4. Model boundary</td><td>Replace classification with structured model output.</td><td>Stubbed unit test plus one live trace.</td></tr>
+          <tr><td>5. Tool boundary</td><td>Retrieve citation-ready evidence.</td><td>Tool failure and abstention tests.</td></tr>
+          <tr><td>6. Persistence</td><td>Resume the same run from a checkpoint.</td><td>Stable thread ID and state readback.</td></tr>
+          <tr><td>7. Human review</td><td>Pause, edit, approve, and resume safely.</td><td>Interrupt/resume demonstration.</td></tr>
+          <tr><td>8. Production proof</td><td>Stream, test, and explain failure boundaries.</td><td>Portfolio-ready trace and short architecture defense.</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>Framework Decision Rule</h2>
+      <p>Use plain Python when a short function or fixed sequence is enough. Reach for LangGraph when the workflow genuinely needs inspectable state transitions, branching or loops, durable resume, streaming progress, or human intervention.</p>
+      <p>Primary sources: <a href="https://docs.langchain.com/oss/python/langgraph/overview">overview</a>, <a href="https://docs.langchain.com/oss/python/langgraph/thinking-in-langgraph">design walkthrough</a>, and <a href="https://docs.langchain.com/oss/python/langgraph/graph-api">Graph API</a>.</p>
+    </section>
+  </main>
+</body>
+</html>

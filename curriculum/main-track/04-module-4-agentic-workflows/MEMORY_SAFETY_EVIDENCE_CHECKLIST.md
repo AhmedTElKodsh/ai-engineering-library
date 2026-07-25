@@ -2,7 +2,7 @@
 
 Use this checklist before creating or revising a Module 4 lesson that stores conversation history, summarizes prior turns, carries workflow state, recalls previous evidence, or introduces agent memory.
 
-This file is an authoring aid. It keeps Course 1 memory work bounded: learners should understand what state is carried, what is forgotten, what is summarized, what must never be stored, and how a developer can inspect the result.
+This file is an authoring aid. It keeps Milestone 1 memory work bounded: learners should understand what state is carried, what is forgotten, what is summarized, what must never be stored, and how a developer can inspect the result.
 
 ## Source Evidence Baseline
 
@@ -37,7 +37,7 @@ A Module 4 memory or state lesson is ready to implement only when its `AUTHORING
 
 ## Minimum Test Set
 
-Every memory-facing exercise should include at least four of these tests. Choose the smallest set that proves memory behavior without turning Course 1 into an advanced memory architecture course.
+Every memory-facing exercise should include at least four of these tests. Choose the smallest set that proves memory behavior without turning Milestone 1 into an advanced memory architecture course.
 
 | Test type | Required learner evidence |
 |---|---|
@@ -65,8 +65,8 @@ Add these rubric checks when a lesson touches memory or workflow state:
 
 Keep Module 4 memory work practical and bounded.
 
-- Do not require long-term personal memory for Course 1.
+- Do not require long-term personal memory for Milestone 1.
 - Do not add vector-memory infrastructure unless the lesson first proves retrieval and citation behavior.
 - Do not let memory replace source grounding; recalled facts still need evidence when used in answers.
 - Do not introduce advanced cognitive architectures as required implementation work.
-- Defer long-running memory systems, memory processors, cross-session profiles, and enterprise retention policies to Course 3 or a specialization.
+- Defer long-running memory systems, memory processors, cross-session profiles, and enterprise retention policies to Milestone 3 or a specialization.

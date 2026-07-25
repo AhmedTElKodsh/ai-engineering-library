@@ -52,7 +52,7 @@ Expected initial state: collection succeeds and assertions fail because
   state-summary field.
 - Advanced doorway, named briefly but not required: LangGraph dependency,
   persisted state stores, streaming graph execution, interrupts, and human-in-
-  the-loop platform features belong to later Course 3 depth.
+  the-loop platform features belong to later Milestone 3 depth.
 
 ## Source Evidence Enhancement
 

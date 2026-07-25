@@ -6,8 +6,8 @@ Read this file first. It defines the lesson objective, the minimum path, the exp
 
 ## Understand, Test, And Improve Model Behavior
 
-**Duration:** 4 required phases plus 2 extended model-internals labs  
-**Expected time to finish:** 16-24 hours for the required path, plus 8-12 optional hours for extended internals  
+**Full module library:** 16-24 hours across 4 phases, plus 8-12 optional hours for extended internals
+**Milestone 1 allocation:** 4 hours for embeddings, similarity, and the selected context-budget trace in `../milestone-1-45-hour-map.md`
 **Prerequisites:** Module 1 or equivalent Python and AI engineering fluency  
 **Pedagogy:** first-principles implementation, worked traces, tests-first practice, tiny visual mechanisms, and model-decision reflection
 
@@ -37,20 +37,21 @@ early AI engineering decisions:
 3. attention
 4. context-window and decoding decisions
 
-Tiny transformer assembly and training-versus-inference math are available as
-extended concepts after the learner can already explain the required path.
+Tokenization, attention implementation, tiny transformer assembly, and
+training-versus-inference math are later depth after the learner can explain
+the Milestone 1 retrieval decisions.
 
 The goal is not to recreate a production framework. The goal is mechanical understanding. Learners should finish this module able to explain what happens between a stock-market sentence and a model output.
 
-The book synthesis includes deeper from-scratch LLM training. Layer 1 only takes the parts that are runnable now and help a junior AI engineer make better system decisions: tokens, vectors, attention traces, context budgets, decoding choices, and why a bigger model is not automatically the right fix.
+The book synthesis includes deeper from-scratch LLM training. Milestone 1 only takes the parts that are runnable now and help a junior AI engineer make better system decisions: tokens, vectors, attention traces, context budgets, decoding choices, and why a bigger model is not automatically the right fix.
 
 ## Minimum Path And Advanced Doorway
 
-Use `../../LEARNER_JOURNEY_MAP.md` as the course-level map. Module 2's minimum
-path is mechanical intuition: tokenization, embeddings, attention, context
-windows, decoding, and model-choice decisions at toy scale.
+Use `../../LEARNER_JOURNEY_MAP.md` as the course-level map. Milestone 1 selects
+embeddings, similarity, and context-budget intuition. The remaining phases are
+useful module depth, not hidden requirements of the 30-45-hour route.
 
-The advanced doorway is Course 2 depth: tensors, losses, optimization,
+The advanced doorway is Milestone 2 depth: tensors, losses, optimization,
 transformer blocks, backpropagation, and neural-network training. Module 2 keeps
 those ideas available without making them a required timeline cost.
 
@@ -93,22 +94,24 @@ The folder names stay stable for tests and links. The learner-facing titles belo
 | Phase 3 | `week-03-attention` | Market Context Attention Lab | Implement scaled dot-product attention | `python -m pytest curriculum/main-track/02-module-2-first-principles/week-03-attention/tests -v` |
 | Phase 4 | `week-04-context-decoding` | Context Window And Decoding Lab | Explore context windows, decoding, and model selection through inspectable functions | `python -m pytest curriculum/main-track/02-module-2-first-principles/week-04-context-decoding/tests -v` |
 
-The required phases are learner-ready now. Tests are expected to fail before
-learners complete the TODOs in each `workbench.py`.
+All phases have learner scaffolds. Only the slices named by the canonical route
+are Milestone 1 core. Tests are expected to fail before learners complete the
+TODOs in each selected `workbench.py`.
 
 ## Extended Concepts
 
-Move to these only after the required Phase 4 artifact and model-decision note:
+Move to these only after the Milestone 1 retrieval and model-decision evidence:
 
 | Extended order | Folder | When to use it |
 | ---: | --- | --- |
 | 1 | `../../extended-concepts/01-model-internals/week-01-tiny-transformer` | When the learner wants to inspect transformer block assembly after attention and context windows. |
-| 2 | `../../extended-concepts/01-model-internals/week-02-training-vs-inference` | When the learner needs deeper loss/training intuition before Course 2 or model-adaptation work. |
+| 2 | `../../extended-concepts/01-model-internals/week-02-training-vs-inference` | When the learner needs deeper loss/training intuition before Milestone 2 or model-adaptation work. |
 
 ## Learner Readiness Boundary
 
-Assign phases in order. Each phase has a README, learner-editable
-`workbench.py`, tests that collect cleanly, hints, and a rubric.
+When using the full module as later depth, assign phases in order. Each phase
+has a README, learner-editable `workbench.py`, tests that collect cleanly,
+hints, and a rubric.
 
 ## Teaching Contract
 

@@ -1,149 +1,107 @@
 # AI Engineering Library
 
-Text-first, test-guided curriculum for junior AI engineers with intermediate Python experience.
+A text-first, test-guided curriculum for learners who have working Python
+fundamentals and want to build reliable AI applications.
 
-The active course is **Course 1: Junior AI Engineering With Python**. It teaches learners to build, test, evaluate, and explain practical LLM, RAG, tool, agent, and production workflows through small projects and a final educational FinAgent capstone.
+The active route is **Milestone 1: AI Application Implementer**. It offers a
+30-hour fast path or 40-hour full path, plus at most five recovery hours. A
+Python-ready learner builds, tests, evaluates, exposes, modifies, and defends
+one bounded, source-grounded application. This is the first of three capability
+milestones, not a mastery or production readiness claim.
 
-## Start Here
+## Start
 
-- `START_HERE.md` is the learner front door.
-- `START_HERE_2_HOURS_PER_DAY.md` is the busy-learner route.
-- `LEARNER_READY_MATRIX.md` is the source of truth for assignable lessons.
-- `TROUBLESHOOTING.md` covers common local setup and pytest issues.
-- `HOW_TO_USE_AI_ASSISTANTS.md` explains acceptable AI help.
-- `FINANCE_SAFETY.md` defines the FinAgent educational boundary.
-- `curriculum/resources/diagrams/course-visual-map.md` provides standard module diagrams.
+One-time PowerShell setup:
 
-## Active Structure
+```powershell
+python -m venv .venv
+.\.venv\Scripts\python.exe -m pip install -r requirements.txt
+```
+
+1. Open `START_HERE.md`.
+2. Run the placement sample before starting the clock.
+3. Follow `curriculum/main-track/milestone-1-45-hour-map.md`.
+4. Keep the cumulative implementation in
+   `curriculum/main-track/06-capstone-projects/week-03-integration-build/`.
+
+Use `START_HERE_2_HOURS_PER_DAY.md` for the same route in short sessions.
+
+## Sources Of Truth
+
+| Question | File |
+| --- | --- |
+| What should the learner do next? | `START_HERE.md` |
+| What fits inside 30-45 hours? | `curriculum/main-track/milestone-1-45-hour-map.md` |
+| What proves each capability? | `curriculum/main-track/milestones.md` |
+| What is deferred? | `curriculum/main-track/scope-guards.md` |
+| What comes after Milestone 1? | `curriculum/LEARNER_JOURNEY_MAP.md` |
+| What does the repository currently prove? | `LEARNER_READY_MATRIX.md` |
+| What governs curriculum changes? | `.kiro/specs/curriculum-planning/` |
+
+Supporting learner policies:
+
+- `HOW_TO_USE_AI_ASSISTANTS.md`
+- `REFERENCE_AFTER_EFFORT.md`
+- `FINANCE_SAFETY.md`
+- `TROUBLESHOOTING.md`
+
+## Repository Shape
 
 ```text
 .
-|-- .kiro/specs/
-|   |-- README.md
-|   `-- curriculum-planning/
+|-- .kiro/specs/curriculum-planning/   # planning and reviewer evidence
 |-- curriculum/
-|   |-- main-track/
-|   |   |-- 00-python-foundations/
-|   |   |-- 01-module-1-whole-game/
-|   |   |-- 02-module-2-first-principles/
-|   |   |-- 03-module-3-mcp-integration/
-|   |   |-- 04-module-4-agentic-workflows/
-|   |   |-- 05-module-5-production/
-|   |   `-- 06-capstone-projects/
-|   |-- extended-concepts/
-|   |   |-- 01-model-internals/
-|   |   |-- 02-agentic-systems/
-|   |   `-- 03-production-depth/
-|   |-- specializations/web-scraping/
+|   |-- main-track/                    # Milestone 1 lesson library and route
+|   |-- extended-concepts/             # later-milestone depth
+|   |-- specializations/               # optional post-core branches
 |   |-- resources/
-|   |-- templates/
-|   |-- AI_AUTHORING_GUIDE.md
-|   |-- LEARNER_JOURNEY_MAP.md
-|   |-- ROADMAP.md
-|   `-- SPEC.md
-|-- conftest.py
-|-- CONTRIBUTING.md
-|-- FINANCE_SAFETY.md
-|-- HOW_TO_USE_AI_ASSISTANTS.md
-|-- LEARNER_READY_MATRIX.md
-|-- LICENSE
-|-- requirements.txt
+|   `-- templates/
+|-- assets/                             # shared lesson presentation
+|-- lessons/                            # guided companion lessons
+|-- learning-records/                   # learner contract and evidence notes
+|-- reference/                         # gated reference material
+|-- scripts/                           # curriculum validators
 |-- START_HERE.md
 |-- START_HERE_2_HOURS_PER_DAY.md
-|-- TROUBLESHOOTING.md
-`-- README.md
+`-- LEARNER_READY_MATRIX.md
 ```
 
-## Canonical Planning
-
-The maintained planning home is:
-
-- `.kiro/specs/curriculum-planning/README.md`
-- `.kiro/specs/curriculum-planning/ROADMAP.md`
-- `.kiro/specs/curriculum-planning/SPEC.md`
-- `.kiro/specs/curriculum-planning/CURRICULUM_REVIEW.md`
-- `curriculum/LEARNER_JOURNEY_MAP.md`
-
-Large source inputs, generated research dumps, local books, and agent scratch folders stay out of the committed project surface. Do not recreate competing root-level spec folders.
+Local books, research corpora, agent workspaces, generated output, caches, and
+historical archives are not part of the committed curriculum surface.
 
 ## Curriculum Contract
 
-The learner-facing course is:
+- Build one cumulative product; do not substitute disconnected mini-projects.
+- Use the loop: inspect, predict, run, implement, verify, explain, transfer.
+- Learners write the implementation. AI supplies bounded hints and review.
+- Introduce evaluation with the first probabilistic boundary.
+- Preserve provenance before retrieval; prove citations and abstention before
+  adding tool authority.
+- Prove one explicit bounded workflow before agent autonomy.
+- Label fixture, live-provider, local integration, hosted, and production
+  evidence separately.
+- Add no Milestone 1 topic without removing equal scope and naming the gate it
+  improves.
 
-- text-first and project-based
-- learner-written, not solution-dump driven
-- test-guided, with expected TODO failures in learner workbenches
-- built around stable module folder paths
-- centered on FinAgent as the recurring product spine and final capstone
-
-The main track is the enhanced 30-day core curriculum surface. It keeps the
-archived 30-day route's useful pacing discipline while making
-`curriculum/main-track/` the only active learner route. Extended concepts are
-advanced deepening labs used after the related main-track capability already
-works; they do not replace or precede the main-track order.
-
-Every module and week should make the learner logic visible:
-
-1. what the learner can already do
-2. what new capability is being added
-3. what failure this catches
-4. how it improves FinAgent or a practical AI system
-5. what the learner should be able to explain afterward
-
-Advanced topics are treated as doorways, not hidden requirements. Course 1
-builds the minimum reliable foundation for later deep dives into ML/DL,
-fine-tuning, GraphRAG, multimodal systems, advanced agents, and full LLMOps.
-
-Use `workbench.py` for learner-editable files. Keep reviewer-only reference behavior under `.kiro/specs/curriculum-planning/implementation-notes/`.
-
-## Learner-Ready Status
-
-Use `LEARNER_READY_MATRIX.md` as the single source of truth. The current
-assignable Course 1 surface includes Module 0, Module 1, Module 2, Module 3,
-the web-data bridge plus portfolio mini-project, Module 4, Module 5, and the
-Module 6 FinAgent capstone scaffolds through the runnable local integration
-milestone.
-
-Reviewer-only reference validation is tracked separately from learner scaffold
-readiness. Use the strict gate for PRs and CI:
-
-```powershell
-python scripts/validate_curriculum_references.py --strict
-python scripts/validate_curriculum_quality.py --strict
-```
-
-Large cleanup work should follow `MIGRATION_COMMIT_PLAN.md` so archive
-de-indexing, planning convention changes, CI gates, and learner-facing pedagogy
-updates remain separately reviewable.
+`workbench.py` is learner-editable. Instructor reference behavior belongs under
+`.kiro/specs/curriculum-planning/implementation-notes/` and is opened only
+after a serious learner attempt.
 
 ## Verification
 
-For learner curriculum files, clean collection/import health is the first regression gate. Many behavior tests are expected to fail until learners complete TODOs.
-
-Useful commands:
+Run from the repository root:
 
 ```powershell
-python -m pytest --collect-only curriculum/main-track curriculum/extended-concepts curriculum/specializations -q
-python scripts/validate_curriculum_references.py --strict
-python scripts/validate_curriculum_quality.py --strict
+.\.venv\Scripts\python.exe -m pytest --collect-only curriculum/main-track curriculum/extended-concepts curriculum/specializations -q
+.\.venv\Scripts\python.exe scripts/validate_curriculum_references.py --strict --executable
+.\.venv\Scripts\python.exe scripts/validate_curriculum_quality.py --strict
+.\.venv\Scripts\python.exe -m compileall -q curriculum reference scripts
+.\.venv\Scripts\python.exe -m ruff check curriculum reference scripts
 ```
 
-Use this when plugin noise makes pytest collection noisy:
+Expected TODO behavior failures are part of learner scaffolds. Import errors,
+missing fixtures, broken paths, or unexplained collection failures are defects.
 
-```powershell
-$env:PYTEST_DISABLE_PLUGIN_AUTOLOAD='1'
-```
-
-This repo intentionally has no active root JavaScript platform tooling. If a
-future lesson needs frontend, backend, search, or deployment infrastructure, it
-should introduce that tooling inside the bounded lesson path.
-
-Legacy root tests for the old `teaching_methodology_evaluator` prototype are
-skipped unless that package is restored as an active project. The active test
-surface is `curriculum/`.
-
-## Non-Goals
-
-This repo no longer treats the hosted learning platform as the active MVP. React apps, backend microservices, Kubernetes, object storage, search clusters, dashboards, and hosted code playgrounds are parked planning ideas unless a future lesson explicitly teaches them.
-
-Private books, generated corpora, local exports, and tool scratch folders should stay out of the committed project surface.
+The reference gate proves one fixture-backed cumulative implementation,
+including a loopback HTTP test. It does not prove live-provider behavior,
+learner independence, hosted deployment, or production operation.

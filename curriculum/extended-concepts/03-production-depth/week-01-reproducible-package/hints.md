@@ -1,4 +1,4 @@
-﻿# Hints: Reproducible Package Boundary
+# Hints: Reproducible Package Boundary
 
 Use these only after you have read the first failing test and named the behavior it is asking for.
 

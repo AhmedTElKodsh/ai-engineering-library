@@ -25,6 +25,7 @@ class ObservedAnswer:
 
 def load_golden_examples() -> list[GoldenExample]:
     """Return a deterministic golden set for cited FinAgent behavior."""
+    # Hint reference: hints.md#load_golden_examples
     # TODO: Include supported, abstention, and investment-advice refusal cases.
     # Hint: a useful golden set covers happy path, "I don't know", and safety refusal.
     return []
@@ -32,6 +33,7 @@ def load_golden_examples() -> list[GoldenExample]:
 
 def evaluate_answer(example: GoldenExample, observed: ObservedAnswer) -> dict[str, object]:
     """Evaluate one observed answer against one golden example."""
+    # Hint reference: hints.md#evaluate_answer
     # TODO: Check abstention, citation requirement, and safety category.
     # Hint: compare behavior fields, not whether the prose sounds nice.
     # Return enough detail to explain a failure category later.
@@ -40,6 +42,7 @@ def evaluate_answer(example: GoldenExample, observed: ObservedAnswer) -> dict[st
 
 def summarize_eval(results: list[dict[str, object]]) -> dict[str, object]:
     """Summarize eval rows into release-gate evidence."""
+    # Hint reference: hints.md#summarize_eval
     # TODO: Return total, passed, failed, and failure_categories counts.
     # Hint: the summary should be computable from result rows without re-running evals.
     return {}

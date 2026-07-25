@@ -56,7 +56,7 @@ Expected initial state: collection succeeds and assertions fail because
   fields.
 - Advanced doorway, named briefly but not required: real FastAPI routes, auth,
   rate limiting, streaming, hosted deployment, OpenAPI schemas, and distributed
-  tracing belong to later production depth unless a bounded Course 1 lab adds
+  tracing belong to later production depth unless a bounded Milestone 1 lab adds
   them explicitly.
 
 ## Evidence Portfolio Enhancement

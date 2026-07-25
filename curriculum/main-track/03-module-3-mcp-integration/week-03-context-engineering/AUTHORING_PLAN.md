@@ -53,7 +53,7 @@ Expected initial state: collection succeeds and assertions fail because
   citation, missing metadata, or unsafe retrieved-text case.
 - Advanced doorway, named briefly but not required: full prompt-injection
   classifiers, privacy review platforms, model-judge citation checks, and
-  enterprise prompt governance belong to Module 5 or Course 3.
+  enterprise prompt governance belong to Module 5 or Milestone 3.
 
 ## Evidence Portfolio Enhancement
 

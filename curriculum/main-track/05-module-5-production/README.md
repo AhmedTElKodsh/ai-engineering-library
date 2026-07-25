@@ -6,8 +6,8 @@ Read this file first. It defines the lesson objective, the minimum path, the exp
 
 ## Verification, Operations, and Model Decisions
 
-**Duration:** 5 required weeks plus 2 extended production-depth labs  
-**Expected time to finish:** 20-30 hours for the required path, plus 8-12 optional hours for extended production depth  
+**Full module library:** 20-30 hours across 5 phases, plus 8-12 optional hours for extended production depth
+**Milestone 1 use:** evaluation begins earlier; selected service, trace, version, cost/latency, and local-gate evidence is budgeted in `../milestone-1-45-hour-map.md`
 **Prerequisites:** Module 4 or equivalent comfort with RAG, tools, workflows, and pytest  
 **Pedagogy:** eval-driven development, operational evidence, and small release gates
 
@@ -27,13 +27,13 @@ files.
 
 ## Minimum Path And Advanced Doorway
 
-Use `../../LEARNER_JOURNEY_MAP.md` as the course-level map. Module 5's minimum
-path is evidence: golden evals, CI-style gates, local service boundaries, logs,
-monitoring review, cost/latency tradeoffs, and release evidence.
+Use `../../LEARNER_JOURNEY_MAP.md` as the course-level map. Milestone 1 selects
+one small evaluation set, service boundary, trace, version note, cost/latency
+decision, and repeatable local release command.
 
 The advanced doorway is full LLMOps, production ML platforms, governance, and
 hands-on fine-tuning. Reproducible packaging depth and model-adaptation depth
-now live in `../../extended-concepts/03-production-depth/` so Layer 1 can teach
+now live in `../../extended-concepts/03-production-depth/` so Milestone 1 can teach
 enough production discipline without turning into platform work.
 
 ## Layer-Proof Project
@@ -85,9 +85,9 @@ Move to these only after the service boundary and release/eval gates are clear:
 
 ## Learner Readiness Boundary
 
-Assign Weeks 1-5 in order. Each week has a README, learner-editable
-`workbench.py`, tests that collect cleanly, hints, and a rubric. Tests are
-expected to fail before learners complete TODO behavior.
+Use the canonical Milestone 1 sequence, which introduces Week 1 evaluation
+immediately after the model boundary and selects later production evidence.
+Use all five phases in order only for later production-depth practice.
 
 ## Teaching Contract
 

@@ -1,4 +1,4 @@
-﻿# Hints: Model Adaptation Decision
+# Hints: Model Adaptation Decision
 
 Use these only after you have read the first failing test and named the behavior it is asking for.
 

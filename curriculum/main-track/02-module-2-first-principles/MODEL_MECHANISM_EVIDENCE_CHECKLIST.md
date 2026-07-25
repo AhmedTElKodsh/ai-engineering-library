@@ -2,19 +2,19 @@
 
 Use this checklist before revising Module 2 lessons that teach tokenization, embeddings, attention, transformer flow, decoding, or training-versus-inference decisions.
 
-This file is an authoring aid. It keeps Module 2 first-principles work small, inspectable, and connected to later engineering decisions without turning Course 1 into a framework or model-training course.
+This file is an authoring aid. It keeps Module 2 first-principles work small, inspectable, and connected to later engineering decisions without turning Milestone 1 into a framework or model-training course.
 
 ## Source Evidence Baseline
 
 | Source | Evidence locator | Planning takeaway | Use in Module 2 |
 |---|---|---|---|
-| B09 `Hands-On Large Language Models` | Indexed source metadata and corpus retrieval available | Visual LLM intuition, embeddings, and RAG concepts support Course 1 mental models. | Keep explanations concrete and diagrammable before using production libraries. |
-| B13 `Build a Large Language Model (From Scratch)` | Indexed source metadata and corpus retrieval available | From-scratch LLM internals are useful as Course 2 depth, but Course 1 should keep toy mechanisms bounded. | Use only the smallest runnable primitives in Course 1; defer full pretraining depth. |
+| B09 `Hands-On Large Language Models` | Indexed source metadata and corpus retrieval available | Visual LLM intuition, embeddings, and RAG concepts support Milestone 1 mental models. | Keep explanations concrete and diagrammable before using production libraries. |
+| B13 `Build a Large Language Model (From Scratch)` | Indexed source metadata and corpus retrieval available | From-scratch LLM internals are useful as Milestone 2 depth, but Milestone 1 should keep toy mechanisms bounded. | Use only the smallest runnable primitives in Milestone 1; defer full pretraining depth. |
 | Local PDF `Natural Language Processing with Transformers` | p.41 and p.53-57 | Transformer systems require tokenization before numerical model input; character, word, and subword tokenization have different tradeoffs. | Require tokenization lessons to show token IDs, vocabulary behavior, and what gets lost or preserved. |
 | Local PDF `Natural Language Processing with Transformers` | p.81 and p.84-86 | Transformer encoders update token embeddings into contextual representations with self-attention, feed-forward layers, skip connections, and normalization. | Require transformer lessons to expose shapes, attention weights, residuals, normalized vectors, and final outputs. |
 | Local PDF `Natural Language Processing with Transformers` | p.99-100 and p.122 | Transformer models separate a task-independent body from task-specific heads; decoder masking changes generation behavior. | Require model-decision notes to distinguish representation learning, classification, question answering, and generation. |
 | Local PDF `Natural Language Processing with Transformers` | p.151 | Decoding turns logits into token choices through approximate search methods. | Keep decoding lessons toy-scale and inspectable, with no live model dependency. |
-| Local PDF `Natural Language Processing with Transformers` | p.233-234 and p.254-255 | Production transformer efficiency involves latency, memory, distillation, quantization, pruning, and graph optimization tradeoffs. | Name these as advanced doorway topics; do not make them required Course 1 implementation. |
+| Local PDF `Natural Language Processing with Transformers` | p.233-234 and p.254-255 | Production transformer efficiency involves latency, memory, distillation, quantization, pruning, and graph optimization tradeoffs. | Name these as advanced doorway topics; do not make them required Milestone 1 implementation. |
 
 Do not copy book text into learner-facing files. Use these locators to justify small mechanisms, trace fields, and scope boundaries.
 
@@ -29,7 +29,7 @@ A Module 2 lesson is ready to revise only when its `AUTHORING_PLAN.md` answers a
 | What does the toy prove? | Name the concrete behavior the toy implementation demonstrates. |
 | What does the toy not prove? | Name the production behavior handled by real frameworks, larger data, optimization, or training systems. |
 | What decision does this prepare? | Connect the mechanism to provider choice, prompt design, retrieval, context limits, model adaptation, or production tradeoffs. |
-| What stays advanced? | Label full model training, Hugging Face implementation, GPU workflows, distillation, quantization, pruning, and ONNX as Course 2/3 depth. |
+| What stays advanced? | Label full model training, Hugging Face implementation, GPU workflows, distillation, quantization, pruning, and ONNX as Milestone 2/3 depth. |
 
 ## Minimum Evidence Set
 
@@ -49,6 +49,6 @@ Every mechanism lesson should include at least five of these checks.
 ## Scope Boundaries
 
 - Do not require Hugging Face, PyTorch, TensorFlow, GPU access, or live model downloads in Module 2 learner labs.
-- Do not add full transformer training, pretraining, fine-tuning, distillation, quantization, pruning, or ONNX implementation to Course 1.
+- Do not add full transformer training, pretraining, fine-tuning, distillation, quantization, pruning, or ONNX implementation to Milestone 1.
 - Do not teach model internals as a replacement for provider boundaries, evals, RAG, or safety checks.
 - Keep toy mechanisms connected to FinAgent decisions: token counts, retrieval similarity, attention/context, decoding, and when not to train a model.

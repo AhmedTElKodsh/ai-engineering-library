@@ -1,64 +1,80 @@
-# Main Track Milestones
+# AI Engineering Capability Milestones
 
-Use these gates on Days 7, 14, 21, 28, and 30. If a milestone does not pass in
-the review window, cut stretch scope before expanding the 30-day core.
+The roadmap uses three sequential capability milestones. Each milestone
+delivers a complete system and deepens the same engineering layers: software,
+models, data, evaluation, security, and operations.
 
-## Shared Review Rule
+| Milestone | Planning range | Exit question |
+| --- | ---: | --- |
+| 1. AI Application Implementer | 30-45 hours | Can the learner build, evaluate, expose, and defend one bounded AI application? |
+| 2. Production AI Engineer | 80-120 additional focused hours; evidence-gated | Can the learner independently rebuild and operate a second system under realistic constraints? |
+| 3. Advanced AI Systems Engineer | no honest fixed mastery clock | Can the learner make and defend architecture decisions under scale, reliability, security, and organizational constraints? |
 
-Every milestone must show:
+## Milestone 1 Gates
 
-- runnable technical evidence
-- at least one failure, limit, refusal, or rejected input
-- a short explanation of the tradeoff
-- a transfer note for FinAgent or another practical AI system
+Every gate must show a runnable artifact, focused verification, at least one
+failure or refusal, and a short explanation.
 
-## Day 7: Deterministic Assistant
+### Gate 0: Readiness
 
-Ready to continue when:
+- the environment command runs
+- the learner can read a focused pytest failure
+- Python gaps are named and routed to repair outside the timed core
 
-- local input is validated before processing
-- one deterministic workflow runs from a documented command
-- tests cover normal and bad-input behavior
-- logs, README, or notes state known limits
-- no LLM behavior is required for the baseline to be useful
+### Gate A: Deterministic Baseline
 
-## Day 14: Cited Q&A System
+- inputs are validated before processing
+- one useful deterministic workflow runs
+- normal and rejected-input behavior are tested
+- limitations are documented
 
-Ready to continue when:
+### Gate B: Model Boundary and Evaluation
 
-- provider behavior is isolated behind a mockable boundary
-- prompts and outputs have schemas or regression checks
-- retrieval can rank a small corpus reproducibly
-- answers cite retrieved evidence or abstain
-- eval output distinguishes retrieval, citation, refusal, and formatting issues
+- model behavior is isolated behind a fixture-backed boundary
+- output is validated before application use
+- the first task-specific evaluation set exists
+- fixture and live-provider evidence are labelled separately
 
-## Day 21: Bounded AI Workflow
+### Gate C: Grounded Retrieval
 
-Ready to continue when:
+- source records preserve provenance
+- retrieval behavior is inspectable
+- supported answers carry citations
+- unsupported questions abstain
+- eval evidence distinguishes retrieval and generation failures
 
-- tools have typed input and output contracts
-- tool routing uses explicit allowlists and failure handling
-- workflow state is visible in a trace or log
-- verifier and retry behavior have stop conditions
-- safety/refusal behavior is documented with examples
+### Gate D: Bounded Action
 
-## Day 28: Production-Shaped Local App
+- one tool has typed input/output and least-privilege authority
+- denied and malformed calls are tested
+- workflow state and termination are visible
+- retries are bounded and human escalation is explicit
 
-Ready to continue when:
+### Gate E: Implementer Defense
 
-- the project has one documented runnable boundary
-- versioning and cache assumptions are written down
-- logs or traces expose request, retrieval, tool, model, verification, and final status where relevant
-- one local quality gate gives a clear pass/fail signal
-- demo and failure analysis cover happy path, edge case, and refusal or abstention
+- one documented service boundary is tested over real HTTP
+- logs or traces expose relevant request, retrieval, tool, model, and final status
+- a local quality command is repeatable
+- the learner completes one unfamiliar change
+- the demo includes a normal case, edge case, and refusal or abstention
+- claims distinguish local, fixture, live, and production evidence
 
-## Day 30: Portfolio Defense
+## Milestone 2 Gate
 
-Complete when:
+Milestone 2 is complete only after the learner independently builds a second
+system with reduced scaffolding and demonstrates production depth such as
+async/provider failure handling, persistent data lifecycle, authentication,
+automated regression evaluation, deployment, tracing, monitoring, cost control,
+and one real MCP client/server integration.
 
-- setup and demo commands work as written
-- the portfolio explains problem, architecture, evidence, limits, and next steps
-- the learner can defend what is deterministic, what is model-dependent, and what is still mock-only
-- the next backlog separates follow-up fixes from extended concepts
-- the project claims local educational readiness, not unsupported production readiness
+The 80-120 hour range is a planning estimate, not an automatic pass.
 
+## Milestone 3 Gate
+
+Milestone 3 requires operated-project evidence: architecture reviews,
+performance and reliability trade-offs, authorization/isolation decisions,
+incident or rollback analysis, and evaluation governance. The learner then
+develops one or two specializations rather than superficially completing all
+advanced topics.
+
+Completion hours alone never prove mastery.

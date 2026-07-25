@@ -1,57 +1,76 @@
 # Learner-Ready Matrix
 
-This file is the source of truth for what a learner can be assigned now. Module
-READMEs may summarize it, but status changes should be made here first.
+This file reports what the repository currently proves. It does not turn file
+presence into executable or learner-completion evidence.
 
-Status meanings:
+## Evidence States
 
-- `assignable`: learner-facing README, workbench, tests, hints, and rubric exist.
-- `scaffolded`: learner files exist, but the slice is optional, advanced, or not part of the required core path.
-- `planned`: not part of the current assignable path.
-- `instructor-only`: planning, source material, or reviewer material.
+| Evidence state | Proves | Does not prove |
+| --- | --- | --- |
+| Documentation truth | the intended route and capability are stated consistently | code execution |
+| Structural health | files import, fixtures parse, and tests collect | completed behavior |
+| Expected starter state | the incomplete scaffold is usable as a focused exercise | a solved lesson |
+| Reviewer notes present | intended behavior and reviewer checks are documented | an executable reference solution |
+| Executable reference proof | a completed implementation passes the required contracts | learner understanding |
+| Learner completion | the learner passes contracts and an unfamiliar transfer task | production mastery |
 
-Reference validation meanings:
+## Status Meanings
 
-- `pending`: reviewer-only intended behavior is not yet documented for every scaffold.
-- `protocol`: the validation script can inventory the expected reference files.
-- `done`: reviewer-only reference behavior exists and has been checked.
+- `assignable`: learner README, scaffold, tests, hints, and rubric exist.
+- `scaffolded`: files exist but the slice is optional or outside Milestone 1.
+- `planned`: the required implementation surface does not yet exist.
+- `reference-only`: completed instructor evidence, not a solved learner scaffold.
+- `instructor-only`: planning or reviewer material.
 
-| Module | Week/Lab | Status | Has README | Has workbench | Has tests | Has hints | Has rubric | Reference validation | Assignable now? |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| Module 0 | Week 0 diagnostic | assignable | yes | diagnostic workbench | yes | yes | yes | done | yes |
-| Module 0 | Weeks 1-3 Python foundations | assignable | yes | yes | yes | yes | yes | done | yes |
-| Module 1 | Weeks 1-3 whole-game FinAgent | assignable | yes | yes | yes | yes | yes | done | yes |
-| Module 2 | Required phases: tokenization, embeddings, attention, context/decoding | assignable | yes | yes | yes | yes | yes | done | yes |
-| Module 3 | Phases 1-4 LLM APIs, PromptOps, tools, and MCP boundaries | assignable | yes | yes | yes | yes | yes | done | yes |
-| Web data bridge | Core Labs 1-6 | assignable | yes | yes | yes | yes | yes | done | yes |
-| Web data bridge | Portfolio mini-project | assignable | yes | yes | yes | yes | yes | done | yes |
-| Module 4 | Required bridge plus Phases 1-4 AI-ready data, RAG, and explicit workflows | assignable | yes | yes | yes | yes | yes | done | yes |
-| Module 5 | Required weeks: evals, CI gate, service boundary, monitoring, optimization | assignable | yes | yes | yes | yes | yes | done | yes |
-| Module 6 | Capstone order: kickoff, integration build, then polish evidence; folder names are legacy labels | assignable | yes | yes | yes | yes | yes | done | yes |
-| Extended concepts | Model internals, advanced agentic systems, reproducible packaging, model adaptation | scaffolded | yes | yes | yes | yes | yes | done | optional |
-| Planning | `.kiro/specs/curriculum-planning/` | instructor-only | yes | no | no | no | no | protocol | no |
+## Current Route Evidence
+
+| Area | Milestone 1 role | Status | Structural surface | Reviewer notes | Executable reference |
+| --- | --- | --- | --- | --- | --- |
+| Module 0 diagnostic | readiness gate outside clock | assignable | setup check plus five-test placement sample; full inventory optional | present | not applicable |
+| Module 0 Python repair | remediation outside clock | assignable | present | present | not available |
+| Module 1 deterministic whole game | core | assignable | present | present | not available |
+| Module 2 embeddings and context-budget trace | core slice | assignable | present | present | not available |
+| Module 2 BPE and attention implementation | later milestone | scaffolded | present | present | not available |
+| Module 3 provider and structured-output boundary | core slice | assignable | present | present | not available |
+| Module 3 local tool contract | core slice | assignable | present | present | not available |
+| Full MCP transport/auth integration | later milestone | scaffolded | partial | present where scaffolded | not available |
+| Web-scraping specialization | later milestone | scaffolded | present | present | not available |
+| Module 4 ingestion, cited RAG, and explicit workflow | core slice | assignable | present | present | not available |
+| Module 4 advanced critique/agent patterns | later milestone | scaffolded | present | present | not available |
+| Module 5 eval, service, trace, version, and cost/latency evidence | core slice | assignable | present | present | not available |
+| Cumulative Milestone 1 reference | instructor proof | reference-only | present | not applicable | fixture-backed executable pass |
+| Real HTTP adapter and integration test | required reference proof | reference-only | present | not applicable | loopback HTTP pass |
+| Module 5 caching, batching, and optimization depth | later milestone | scaffolded | present | present | not available |
+| Module 6 cumulative integration and defense | learner spine for Blocks 1-9 | assignable | checkpoint scaffold and tests present | present | separate fixture-backed reference pass |
+| Extended concepts | Milestone 2/3 or specialization | scaffolded | present | present | not available |
+| Planning material | instructor-only | instructor-only | documentation only | not applicable | not applicable |
+
+## Current Readiness Verdict
+
+- Milestone 1 route contract: documented.
+- Structural health: must be rechecked on each change.
+- Expected starter integrity: lesson-scoped; the full suite is intentionally
+  incomplete.
+- Executable Milestone 1 reference: **fixture-backed proof available**.
+- Real HTTP proof required by the exit gate: **loopback integration passed**.
+- Human cohort timing proof: **not checked**; 30-45 hours remains a design
+  budget.
+- Live-provider proof: **not checked**.
+- Learner completion: evaluated per learner, never inferred from repository
+  structure.
+
+Therefore, the cumulative reference can be described as executable-reference
+verified in fixture mode. The route must not be described as live-provider,
+learner-completion, production-readiness, or mastery verified.
 
 ## Validation Commands
 
-Collection/import health:
-
 ```powershell
 python -m pytest --collect-only curriculum -q
-```
-
-Strict reference gate:
-
-```powershell
-python scripts/validate_curriculum_references.py --strict
+python scripts/validate_curriculum_references.py --strict --executable
 python scripts/validate_curriculum_quality.py --strict
 ```
 
-Current validation state:
-
-```text
-Scaffolds found: 42
-Reference-complete: 42
-Reference-pending: 0
-```
-
-The strict gate is now the reviewer reference command for PRs and CI.
+Expected documentary output uses `Reviewer-notes-present`, not
+`Reference-complete`. Only the explicit `--executable` gate runs the cumulative
+reference; it labels fixture and live-provider evidence separately.

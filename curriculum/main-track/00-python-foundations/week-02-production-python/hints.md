@@ -135,3 +135,199 @@ After the smallest behavior works, leave four notes:
 - failure evidence: what broken case is now handled or intentionally refused
 - explanation evidence: why the fix works in 2-4 sentences
 - transfer evidence: how this pattern strengthens FinAgent or a later AI system
+
+## Function Hint Index
+
+Use these anchors from `workbench.py` when a TODO points here. They are stable targets, so learners can jump from a function to its matching hint section without relying on brittle line numbers.
+
+### __init__
+
+Use this hint entry for `__init__`. First read the function docstring and the nearest TODO, then compare the expected input and output shape in the tests.
+
+### __init__
+
+Use this hint entry for `__init__`. First read the function docstring and the nearest TODO, then compare the expected input and output shape in the tests.
+
+### safe_divide
+
+Use this hint entry for `safe_divide`. First read the function docstring and the nearest TODO, then compare the expected input and output shape in the tests.
+
+### validate_llm_config
+
+Use this hint entry for `validate_llm_config`. First read the function docstring and the nearest TODO, then compare the expected input and output shape in the tests.
+
+### process_api_responses
+
+Use this hint entry for `process_api_responses`. First read the function docstring and the nearest TODO, then compare the expected input and output shape in the tests.
+
+### __enter__
+
+Use this hint entry for `__enter__`. First read the function docstring and the nearest TODO, then compare the expected input and output shape in the tests.
+
+### __exit__
+
+Use this hint entry for `__exit__`. First read the function docstring and the nearest TODO, then compare the expected input and output shape in the tests.
+
+### __init__
+
+Use this hint entry for `__init__`. First read the function docstring and the nearest TODO, then compare the expected input and output shape in the tests.
+
+### __enter__
+
+Use this hint entry for `__enter__`. First read the function docstring and the nearest TODO, then compare the expected input and output shape in the tests.
+
+### __exit__
+
+Use this hint entry for `__exit__`. First read the function docstring and the nearest TODO, then compare the expected input and output shape in the tests.
+
+### __init__
+
+Use this hint entry for `__init__`. First read the function docstring and the nearest TODO, then compare the expected input and output shape in the tests.
+
+### __enter__
+
+Use this hint entry for `__enter__`. First read the function docstring and the nearest TODO, then compare the expected input and output shape in the tests.
+
+### __exit__
+
+Use this hint entry for `__exit__`. First read the function docstring and the nearest TODO, then compare the expected input and output shape in the tests.
+
+### __init__
+
+Use this hint entry for `__init__`. First read the function docstring and the nearest TODO, then compare the expected input and output shape in the tests.
+
+### model_dump
+
+Use this hint entry for `model_dump`. First read the function docstring and the nearest TODO, then compare the expected input and output shape in the tests.
+
+### __repr__
+
+Use this hint entry for `__repr__`. First read the function docstring and the nearest TODO, then compare the expected input and output shape in the tests.
+
+### __init__
+
+Use this hint entry for `__init__`. First read the function docstring and the nearest TODO, then compare the expected input and output shape in the tests.
+
+### __init__
+
+Use this hint entry for `__init__`. First read the function docstring and the nearest TODO, then compare the expected input and output shape in the tests.
+
+### run
+
+Use this hint entry for `run`. First read the function docstring and the nearest TODO, then compare the expected input and output shape in the tests.
+
+### get_stats
+
+Use this hint entry for `get_stats`. First read the function docstring and the nearest TODO, then compare the expected input and output shape in the tests.
+
+### __init__
+
+Use this hint entry for `__init__`. First read the function docstring and the nearest TODO, then compare the expected input and output shape in the tests.
+
+### run
+
+Use this hint entry for `run`. First read the function docstring and the nearest TODO, then compare the expected input and output shape in the tests.
+
+### __init__
+
+Use this hint entry for `__init__`. First read the function docstring and the nearest TODO, then compare the expected input and output shape in the tests.
+
+### __call__
+
+Use this hint entry for `__call__`. First read the function docstring and the nearest TODO, then compare the expected input and output shape in the tests.
+
+### __or__
+
+Use this hint entry for `__or__`. First read the function docstring and the nearest TODO, then compare the expected input and output shape in the tests.
+
+### __repr__
+
+Use this hint entry for `__repr__`. First read the function docstring and the nearest TODO, then compare the expected input and output shape in the tests.
+
+### __init__
+
+Use this hint entry for `__init__`. First read the function docstring and the nearest TODO, then compare the expected input and output shape in the tests.
+
+### __call__
+
+Use this hint entry for `__call__`. First read the function docstring and the nearest TODO, then compare the expected input and output shape in the tests.
+
+### __or__
+
+Use this hint entry for `__or__`. First read the function docstring and the nearest TODO, then compare the expected input and output shape in the tests.
+
+### __len__
+
+Use this hint entry for `__len__`. First read the function docstring and the nearest TODO, then compare the expected input and output shape in the tests.
+
+### __repr__
+
+Use this hint entry for `__repr__`. First read the function docstring and the nearest TODO, then compare the expected input and output shape in the tests.
+
+### __init__
+
+Use this hint entry for `__init__`. First read the function docstring and the nearest TODO, then compare the expected input and output shape in the tests.
+
+### __len__
+
+Use this hint entry for `__len__`. First read the function docstring and the nearest TODO, then compare the expected input and output shape in the tests.
+
+### __eq__
+
+Use this hint entry for `__eq__`. First read the function docstring and the nearest TODO, then compare the expected input and output shape in the tests.
+
+### __repr__
+
+Use this hint entry for `__repr__`. First read the function docstring and the nearest TODO, then compare the expected input and output shape in the tests.
+
+### __getitem__
+
+Use this hint entry for `__getitem__`. First read the function docstring and the nearest TODO, then compare the expected input and output shape in the tests.
+
+### batch_embed
+
+Use this hint entry for `batch_embed`. First read the function docstring and the nearest TODO, then compare the expected input and output shape in the tests.
+
+### filter_by_score
+
+Use this hint entry for `filter_by_score`. First read the function docstring and the nearest TODO, then compare the expected input and output shape in the tests.
+
+### build_metadata_index
+
+Use this hint entry for `build_metadata_index`. First read the function docstring and the nearest TODO, then compare the expected input and output shape in the tests.
+
+### count_by_category
+
+Use this hint entry for `count_by_category`. First read the function docstring and the nearest TODO, then compare the expected input and output shape in the tests.
+
+### stream_tokens
+
+Use this hint entry for `stream_tokens`. First read the function docstring and the nearest TODO, then compare the expected input and output shape in the tests.
+
+### batch_generator
+
+Use this hint entry for `batch_generator`. First read the function docstring and the nearest TODO, then compare the expected input and output shape in the tests.
+
+### document_pipeline
+
+Use this hint entry for `document_pipeline`. First read the function docstring and the nearest TODO, then compare the expected input and output shape in the tests.
+
+### fibonacci
+
+Use this hint entry for `fibonacci`. First read the function docstring and the nearest TODO, then compare the expected input and output shape in the tests.
+
+### update_state
+
+Use this hint entry for `update_state`. First read the function docstring and the nearest TODO, then compare the expected input and output shape in the tests.
+
+### zip_to_records
+
+Use this hint entry for `zip_to_records`. First read the function docstring and the nearest TODO, then compare the expected input and output shape in the tests.
+
+### indexed_chunks
+
+Use this hint entry for `indexed_chunks`. First read the function docstring and the nearest TODO, then compare the expected input and output shape in the tests.
+
+### deep_get
+
+Use this hint entry for `deep_get`. First read the function docstring and the nearest TODO, then compare the expected input and output shape in the tests.

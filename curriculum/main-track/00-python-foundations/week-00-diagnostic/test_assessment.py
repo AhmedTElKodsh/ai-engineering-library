@@ -1,9 +1,10 @@
 """
 Python Confidence Inventory - Week 00 Assessment
 
-This diagnostic covers six skill areas. Do not worry about failing tests;
-that is expected until learner TODOs are complete. Your results show where to
-focus during the refresher path.
+This diagnostic covers six skill areas. Start with the five-test placement
+sample from the README; use this full file only when that signal is unclear.
+Do not worry about failing tests; that is expected until learner TODOs are
+complete. Your results show where to focus during the refresher path.
 
 Run this now, then again after the refresher path to measure your growth.
 """

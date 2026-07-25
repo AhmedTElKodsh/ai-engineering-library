@@ -54,7 +54,7 @@ Expected initial state: collection succeeds and assertions fail because
   unsupported decoding mode, or larger-context edge case.
 - Advanced doorway, named briefly but not required: beam search, sampling
   strategies beyond the toy, KV caches, long-context architectures, production
-  tokenizer quirks, and live model evaluation belong to Course 2/3 depth.
+  tokenizer quirks, and live model evaluation belong to Milestone 2/3 depth.
 
 ## Evidence Portfolio Enhancement
 

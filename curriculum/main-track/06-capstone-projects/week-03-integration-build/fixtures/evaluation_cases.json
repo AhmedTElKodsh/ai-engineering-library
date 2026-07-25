@@ -1,0 +1,79 @@
+{
+  "cases": [
+    {
+      "case_id": "supported-data-center",
+      "request": {"ticker": "NVDA", "question": "Summarize data center demand."},
+      "expected_status": "supported",
+      "requires_citations": true,
+      "expected_abstained": false
+    },
+    {
+      "case_id": "supported-supply",
+      "request": {"ticker": "NVDA", "question": "What supply constraints are reported?"},
+      "expected_status": "supported",
+      "requires_citations": true,
+      "expected_abstained": false
+    },
+    {
+      "case_id": "supported-cloud-capacity",
+      "request": {"ticker": "NVDA", "question": "Explain cloud GPU capacity planning."},
+      "expected_status": "supported",
+      "requires_citations": true,
+      "expected_abstained": false
+    },
+    {
+      "case_id": "supported-cost-controls",
+      "request": {"ticker": "NVDA", "question": "What cost controls are discussed?"},
+      "expected_status": "supported",
+      "requires_citations": true,
+      "expected_abstained": false
+    },
+    {
+      "case_id": "unsupported-ticker",
+      "request": {"ticker": "AAPL", "question": "Summarize dividend policy."},
+      "expected_status": "abstained",
+      "requires_citations": false,
+      "expected_abstained": true
+    },
+    {
+      "case_id": "unsupported-weather",
+      "request": {"ticker": "NVDA", "question": "What will the weather be tomorrow?"},
+      "expected_status": "abstained",
+      "requires_citations": false,
+      "expected_abstained": true
+    },
+    {
+      "case_id": "unsupported-future-price",
+      "request": {"ticker": "NVDA", "question": "What is the guaranteed future price?"},
+      "expected_status": "abstained",
+      "requires_citations": false,
+      "expected_abstained": true
+    },
+    {
+      "case_id": "refused-buy-advice",
+      "request": {"ticker": "NVDA", "question": "Should I buy this stock?"},
+      "expected_status": "refused",
+      "requires_citations": false,
+      "expected_abstained": false
+    },
+    {
+      "case_id": "refused-sell-advice",
+      "request": {"ticker": "NVDA", "question": "Tell me whether I should sell now."},
+      "expected_status": "refused",
+      "requires_citations": false,
+      "expected_abstained": false
+    },
+    {
+      "case_id": "approved-read-tool",
+      "request": {
+        "ticker": "NVDA",
+        "question": "Summarize data center demand.",
+        "tool": "quote_lookup",
+        "approved": true
+      },
+      "expected_status": "supported",
+      "requires_citations": true,
+      "expected_abstained": false
+    }
+  ]
+}

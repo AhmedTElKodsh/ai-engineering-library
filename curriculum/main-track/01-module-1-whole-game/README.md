@@ -6,8 +6,8 @@ Read this file first. It defines the lesson objective, the minimum path, the exp
 
 ## Top-Down: Run, Trace, Modify, Package
 
-**Duration:** 3 weeks  
-**Expected time to finish:** 9-15 hours total, about 3-5 hours per phase  
+**Full module library:** 9-15 hours across 3 phases
+**Milestone 1 allocation:** 4 hours for the deterministic baseline slice selected in `../milestone-1-45-hour-map.md`
 **Prerequisites:** `../00-python-foundations/week-00-diagnostic`; complete `../00-python-foundations/week-01-python-essentials` first if the diagnostic exposes Python gaps  
 **Pedagogy:** whole-part-whole learning, test-driven modification, product trace review, and PR-style explanation
 
@@ -73,8 +73,9 @@ The intended entry path is:
 
 1. Run `../00-python-foundations/week-00-diagnostic`.
 2. If needed, complete `../00-python-foundations/week-01-python-essentials`.
-3. Complete this whole-game module.
-4. Return to `../00-python-foundations/week-03-stock-pipeline` as the post-Module-1 integration bridge.
+3. Complete the Milestone 1 deterministic baseline slice.
+4. Use the remaining Module 1 phases later when the canonical route calls for
+   boundary practice or extra repetition.
 
 Module 1 reuses the skills from Python foundations:
 
@@ -118,7 +119,9 @@ You are building the first reliable slice of FinAgent, an educational stock-mark
 - no external market API dependency
 - no investment advice
 
-Later modules will add model calls, retrieval, web data, MCP tools, agent workflows, observability, and production gates around this same spine.
+Later route blocks add model calls, retrieval, bounded tools and workflows,
+observability, and production evidence around this same spine. Web acquisition,
+full MCP, and autonomous-agent depth are later-milestone options.
 
 ## Phase Breakdown
 

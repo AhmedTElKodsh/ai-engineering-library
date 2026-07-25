@@ -72,4 +72,4 @@ Keep Module 3 focused on small, inspectable contracts.
 - Do not introduce a large tool catalog.
 - Do not let an agent choose arbitrary tools before each tool has standalone tests.
 - Do not hide validation inside framework helpers without making the schema and failure behavior visible.
-- Defer enterprise MCP ecosystems, provider-specific tool routing, distributed tools, and long-running orchestration to later modules or Course 3.
+- Defer enterprise MCP ecosystems, provider-specific tool routing, distributed tools, and long-running orchestration to later modules or Milestone 3.

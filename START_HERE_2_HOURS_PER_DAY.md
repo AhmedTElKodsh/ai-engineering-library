@@ -1,49 +1,58 @@
-# Start Here: 2 Hours Per Day
+# Start Here: Two Hours Per Day
 
-This route is for busy learners. It keeps the course moving without trying to
-finish every optional extension.
+This schedule spreads Milestone 1 across **20 planned sessions plus up to three
+shorter recovery sessions totaling no more than five hours**. Keep the same
+cumulative project and capability order from
+`curriculum/main-track/milestone-1-45-hour-map.md`.
+
+Use `curriculum/main-track/06-capstone-projects/week-03-integration-build` as
+the working application in every implementation session.
 
 ## Rules
 
-- Do not open advanced folders yet.
-- Do not try to finish every optional extension.
-- Do not watch external videos before running tests.
-- Do not ask an AI assistant for the final answer before making a real attempt.
-- Stop each session by writing what passed, what failed, and what you learned.
+- Run the diagnostic before starting the clock.
+- Remediate only the Python gaps the diagnostic exposes.
+- Use the smallest focused test command.
+- Stop every session with evidence and a next action.
+- Do not open later-milestone material to avoid a current failure.
 
-## Suggested Core Route
+## Planned Sessions
 
-| Days | Focus | Target |
-| --- | --- | --- |
-| Day 1 | Setup and diagnostic | Run Module 0 diagnostic tests and note gaps. |
-| Days 2-4 | Module 0 remediation | Practice only the Python gaps the diagnostic exposed. |
-| Days 5-8 | Module 1 Week 1 | Execute the first FinAgent slice and explain the data flow. |
-| Days 9-12 | Module 1 Week 2 | Modify FinAgent behavior through tests. |
-| Days 13-16 | Module 1 Week 3 | Add the local deployment boundary. |
-| Days 17-22 | Module 0 stock pipeline bridge | Strengthen deterministic parsing and pipeline habits. |
-| Days 23-34 | Module 2 Phases 1-3 | Tokenization, embeddings, and attention primitives. |
-| Days 35-46 | Module 2 Phases 4-6 | Tiny transformer flow, context windows, and training versus inference. |
-| Days 47-54 | Module 3 | Provider, prompt, tool, trace, and security boundaries. |
-| Days 55-63 | Web data bridge and portfolio | Complete Core Labs 1-6, preserve provenance, and package the portfolio mini-project. |
-| Days 64-75 | Module 4 core | AI-ready records, cited RAG, critique/review, and explicit workflow gates through Phase 4. |
-| Days 76-94 | Module 5 | Golden evals, CI gates, service boundaries, packaging, logs, optimization, and model-choice tradeoffs. |
-| Days 95-105 | Module 6 kickoff, integration, and polish | FinAgent scope, deterministic integration workflow, eval evidence, demo evidence, limitations, and interview defense. |
+| Sessions | Focus | End evidence |
+| ---: | --- | --- |
+| 1-2 | deterministic whole game | validated baseline and tests |
+| 3-5 | model boundary and structured output | fixture provider, validated output, trace |
+| 6 | evaluation seed | representative cases and failure taxonomy |
+| 7-8 | model and retrieval essentials | context-budget and ranking evidence |
+| 9-11 | grounded RAG | provenance, citations, abstention, eval evidence |
+| 12-14 | one tool and bounded workflow | denied action, visible state, stop condition |
+| 15-16 | service boundary | request/response proof and HTTP integration test |
+| 17-18 | production evidence | repeatable local gate, trace, versions, cost/latency note |
+| 19-20 | integration, transfer, and defense | full eval, unfamiliar change, demo, limitations |
 
-## Optional After The Core
+## Recovery Sessions
 
-| Optional slice | Use it when... | Boundary |
-| --- | --- | --- |
-| Module 4 Phases 5-8 | you want state-machine, resumable orchestration, collaboration, and production multi-agent practice | advanced doorway, not required Course 1 core |
-| Web data live-source extension | an instructor approves a live target and terms review | optional after the fixture-first portfolio package |
-| FinAgent live-provider integration | the deterministic Week 3 workflow passes and an instructor approves a model/tool provider | optional after the local integration milestone |
+Use Sessions 21-23 for no more than five total hours and only for:
 
-## Daily Session Template
+- environment or dependency repair
+- a concept the learner could not yet explain
+- debugging required Milestone 1 behavior
+- the unfamiliar transfer modification
+- final evidence and defense refinement
+
+If recovery is not needed, use at most one optional branch after all gates pass.
+
+## Session Close
 
 ```text
-Today I worked on:
-Smallest test I ran:
-What failed:
-What I changed:
-What I can explain now:
-Next session:
+Capability changed:
+Smallest command I ran:
+What passed:
+What failed and its category:
+Decision or limitation:
+Smallest next action:
+AI assistance used:
 ```
+
+Completing 23 calendar sessions is not the goal. Passing the Milestone 1
+capability gates is.

@@ -42,3 +42,27 @@ After the smallest behavior works, leave four notes:
 - failure evidence: what broken case is now handled or intentionally refused
 - explanation evidence: why the fix works in 2-4 sentences
 - transfer evidence: FinAgent optimizations stay tied to measured reliability, cost, and latency
+
+## Function Hint Index
+
+Use these anchors from `workbench.py` when a TODO points here. They are stable targets, so learners can jump from a function to its matching hint section without relying on brittle line numbers.
+
+### estimate_call_cost
+
+Use this hint entry for `estimate_call_cost`. First read the function docstring and the nearest TODO, then compare the expected input and output shape in the tests.
+
+### estimate_batch_latency
+
+Use this hint entry for `estimate_batch_latency`. First read the function docstring and the nearest TODO, then compare the expected input and output shape in the tests.
+
+### should_cache
+
+Use this hint entry for `should_cache`. First read the function docstring and the nearest TODO, then compare the expected input and output shape in the tests.
+
+### choose_retry_policy
+
+Use this hint entry for `choose_retry_policy`. First read the function docstring and the nearest TODO, then compare the expected input and output shape in the tests.
+
+### build_optimization_report
+
+Use this hint entry for `build_optimization_report`. First read the function docstring and the nearest TODO, then compare the expected input and output shape in the tests.

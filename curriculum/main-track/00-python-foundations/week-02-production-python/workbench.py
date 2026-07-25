@@ -32,6 +32,7 @@ class ValidationError(Exception):
         message (str): human-readable description
     """
     def __init__(self, field: str, message: str):
+        # Hint reference: hints.md#__init__
         self.field = field
         self.message = message
         super().__init__(f"{field}: {message}")
@@ -45,6 +46,7 @@ class APIError(Exception):
         message (str): error description
     """
     def __init__(self, status_code: int, message: str):
+        # Hint reference: hints.md#__init__
         self.status_code = status_code
         self.message = message
         super().__init__(f"HTTP {status_code}: {message}")
@@ -57,6 +59,7 @@ def safe_divide(a, b) -> float:
         TypeError: if a or b is not int or float
         ZeroDivisionError: if b == 0
     """
+    # Hint reference: hints.md#safe_divide
     pass  # YOUR CODE HERE
 
 
@@ -77,6 +80,7 @@ def validate_llm_config(config: dict) -> dict:
     AI use: Pydantic does this automatically in Week 1, but understanding
             the manual version makes you a better schema designer.
     """
+    # Hint reference: hints.md#validate_llm_config
     if not isinstance(config, dict):
         raise ValidationError("config", "must be a dictionary")
     pass  # YOUR CODE HERE
@@ -93,6 +97,7 @@ def process_api_responses(responses: list[dict]) -> dict:
 
     AI use: batch LLM processing - some calls succeed and some fail.
     """
+    # Hint reference: hints.md#process_api_responses
     pass  # YOUR CODE HERE
 
 
@@ -128,9 +133,11 @@ class Timer:
     Tip: Use time.time() to get current timestamp in seconds
     """
     def __enter__(self):
+        # Hint reference: hints.md#__enter__
         pass  # YOUR CODE HERE
 
     def __exit__(self, exc_type, exc_val, exc_tb):
+        # Hint reference: hints.md#__exit__
         pass  # YOUR CODE HERE
 
 
@@ -164,12 +171,15 @@ class Suppress:
     - If no match: return False (let it raise)
     """
     def __init__(self, *exception_types):
+        # Hint reference: hints.md#__init__
         pass  # YOUR CODE HERE
 
     def __enter__(self):
+        # Hint reference: hints.md#__enter__
         pass  # YOUR CODE HERE
 
     def __exit__(self, exc_type, exc_val, exc_tb):
+        # Hint reference: hints.md#__exit__
         pass  # YOUR CODE HERE
 
 
@@ -184,14 +194,17 @@ class ManagedResource:
     AI use: mirrors SQLAlchemy `with Session() as session:` (Week 1).
     """
     def __init__(self, name: str):
+        # Hint reference: hints.md#__init__
         self.name = name
         self.open = False
         self.log: list[str] = []
 
     def __enter__(self):
+        # Hint reference: hints.md#__enter__
         pass  # YOUR CODE HERE
 
     def __exit__(self, exc_type, exc_val, exc_tb):
+        # Hint reference: hints.md#__exit__
         pass  # YOUR CODE HERE
 
 
@@ -232,12 +245,15 @@ class BaseModel:
     - Format as "ClassName(key=value, key=value)"
     """
     def __init__(self, **fields):
+        # Hint reference: hints.md#__init__
         pass  # YOUR CODE HERE
 
     def model_dump(self) -> dict:
+        # Hint reference: hints.md#model_dump
         pass  # YOUR CODE HERE
 
     def __repr__(self) -> str:
+        # Hint reference: hints.md#__repr__
         pass  # YOUR CODE HERE
 
 
@@ -253,6 +269,7 @@ class DocumentSchema(BaseModel):
         doc.model_dump()  # {"title": "AI Paper", ...}
     """
     def __init__(self, title: str, content: str, source: str, chunk_index: int):
+        # Hint reference: hints.md#__init__
         pass  # YOUR CODE HERE
 
 
@@ -269,12 +286,15 @@ class BaseAgent:
         get_stats() -> dict: return {"name", "model", "calls"}
     """
     def __init__(self, name: str, model: str):
+        # Hint reference: hints.md#__init__
         pass  # YOUR CODE HERE
 
     def run(self, input_text: str) -> str:
+        # Hint reference: hints.md#run
         raise NotImplementedError("Subclasses must implement run()")
 
     def get_stats(self) -> dict:
+        # Hint reference: hints.md#get_stats
         pass  # YOUR CODE HERE
 
 
@@ -294,9 +314,11 @@ class RAGAgent(BaseAgent):
     AI use: this is the RAGAgent pattern learners revisit in the agent module.
     """
     def __init__(self, name: str, model: str, retriever, prompt_template: str):
+        # Hint reference: hints.md#__init__
         pass  # YOUR CODE HERE
 
     def run(self, question: str) -> str:
+        # Hint reference: hints.md#run
         pass  # YOUR CODE HERE
 
 
@@ -336,16 +358,20 @@ class Step:
     Your __call__ should: return self.transform(data)
     """
     def __init__(self, name: str, transform):
+        # Hint reference: hints.md#__init__
         self.name = name
         self.transform = transform
 
     def __call__(self, data):
+        # Hint reference: hints.md#__call__
         pass  # YOUR CODE HERE
 
     def __or__(self, other):
+        # Hint reference: hints.md#__or__
         pass  # YOUR CODE HERE
 
     def __repr__(self):
+        # Hint reference: hints.md#__repr__
         pass  # YOUR CODE HERE
 
 
@@ -361,18 +387,23 @@ class Pipeline:
     __repr__: "Pipeline([Step('a'), Step('b')])"
     """
     def __init__(self, steps: list):
+        # Hint reference: hints.md#__init__
         self.steps = steps
 
     def __call__(self, data):
+        # Hint reference: hints.md#__call__
         pass  # YOUR CODE HERE
 
     def __or__(self, other):
+        # Hint reference: hints.md#__or__
         pass  # YOUR CODE HERE
 
     def __len__(self):
+        # Hint reference: hints.md#__len__
         pass  # YOUR CODE HERE
 
     def __repr__(self):
+        # Hint reference: hints.md#__repr__
         pass  # YOUR CODE HERE
 
 
@@ -392,19 +423,24 @@ class EmbeddingVector:
     AI use: custom embedding types in the retrieval module.
     """
     def __init__(self, values: list[float], model: str = "text-embedding-3-small"):
+        # Hint reference: hints.md#__init__
         self.values = values
         self.model = model
 
     def __len__(self):
+        # Hint reference: hints.md#__len__
         pass  # YOUR CODE HERE
 
     def __eq__(self, other):
+        # Hint reference: hints.md#__eq__
         pass  # YOUR CODE HERE
 
     def __repr__(self):
+        # Hint reference: hints.md#__repr__
         pass  # YOUR CODE HERE
 
     def __getitem__(self, index):
+        # Hint reference: hints.md#__getitem__
         pass  # YOUR CODE HERE
 
 
@@ -418,6 +454,7 @@ def batch_embed(chunks: list[str], embed_fn) -> list:
 
     AI use: [embed(c) for c in chunks] - the core of retrieval indexing.
     """
+    # Hint reference: hints.md#batch_embed
     pass  # YOUR CODE HERE
 
 
@@ -426,6 +463,7 @@ def filter_by_score(records: list[dict], min_score: float, score_key: str = "sco
 
     AI use: filtering retrieved chunks by relevance score.
     """
+    # Hint reference: hints.md#filter_by_score
     pass  # YOUR CODE HERE
 
 
@@ -436,6 +474,7 @@ def build_metadata_index(docs: list[dict]) -> dict[str, dict]:
 
     AI use: building document metadata lookup tables.
     """
+    # Hint reference: hints.md#build_metadata_index
     pass  # YOUR CODE HERE
 
 
@@ -444,6 +483,7 @@ def count_by_category(items: list[dict], category_key: str) -> dict[str, int]:
 
     AI use: analytics on retrieved document categories in evaluation work.
     """
+    # Hint reference: hints.md#count_by_category
     pass  # YOUR CODE HERE
 
 
@@ -460,6 +500,7 @@ def stream_tokens(text: str, chunk_size: int = 1):
     AI use: every streaming LLM response uses this pattern:
         for chunk in stream_tokens(response): print(chunk, end="", flush=True)
     """
+    # Hint reference: hints.md#stream_tokens
     pass  # YOUR CODE HERE
 
 
@@ -509,6 +550,7 @@ def batch_generator(items: list, batch_size: int):
     
     Usage: for batch in batch_generator([1,2,3,4,5], 2): print(batch)
     """
+    # Hint reference: hints.md#batch_generator
     pass  # YOUR CODE HERE
 
 
@@ -520,6 +562,7 @@ def document_pipeline(raw_docs: list[str], chunk_size: int = 100):
 
     AI use: the document ingestion pipeline used in RAG indexing.
     """
+    # Hint reference: hints.md#document_pipeline
     pass  # YOUR CODE HERE
 
 
@@ -528,6 +571,7 @@ def fibonacci(n: int):
 
     AI use: generator pattern - same mechanism as streaming LLM responses.
     """
+    # Hint reference: hints.md#fibonacci
     pass  # YOUR CODE HERE
 
 
@@ -542,6 +586,7 @@ def update_state(state: dict, **updates) -> dict:
     AI use: LangGraph state updates use exactly this pattern:
         return {**state, "messages": state["messages"] + [new_msg]}
     """
+    # Hint reference: hints.md#update_state
     pass  # YOUR CODE HERE
 
 
@@ -554,6 +599,7 @@ def zip_to_records(headers: list[str], *rows) -> list[dict]:
         zip_to_records(["name", "score"], ["Alice", 95], ["Bob", 87])
         -> [{"name": "Alice", "score": 95}, {"name": "Bob", "score": 87}]
     """
+    # Hint reference: hints.md#zip_to_records
     pass  # YOUR CODE HERE
 
 
@@ -562,6 +608,7 @@ def indexed_chunks(chunks: list[str], start: int = 0) -> list[dict]:
 
     AI use: chunk_index tracking for vector store insertion.
     """
+    # Hint reference: hints.md#indexed_chunks
     pass  # YOUR CODE HERE
 
 
@@ -624,4 +671,5 @@ def deep_get(data: dict, path: str, default=None):
     - Try: loop through keys, go deeper each time
     - Except KeyError: return default
     """
+    # Hint reference: hints.md#deep_get
     pass  # YOUR CODE HERE

@@ -55,7 +55,7 @@ Expected initial state: collection succeeds and assertions fail because
   capability, role mismatch, or secret-like key pattern.
 - Advanced doorway, named briefly but not required: remote MCP servers,
   enterprise authorization systems, long-running multi-agent handoffs, and
-  distributed audit trails belong to Course 3 or specializations.
+  distributed audit trails belong to Milestone 3 or specializations.
 
 ## Evidence Portfolio Enhancement
 

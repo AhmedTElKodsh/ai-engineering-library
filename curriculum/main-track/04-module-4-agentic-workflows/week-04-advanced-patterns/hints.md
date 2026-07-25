@@ -42,3 +42,23 @@ After the smallest behavior works, leave four notes:
 - failure evidence: what broken case is now handled or intentionally refused
 - explanation evidence: why the fix works in 2-4 sentences
 - transfer evidence: FinAgent can improve drafts without hiding repeated failures or bypassing human review
+
+## Function Hint Index
+
+Use these anchors from `workbench.py` when a TODO points here. They are stable targets, so learners can jump from a function to its matching hint section without relying on brittle line numbers.
+
+### critique_draft
+
+Use this hint entry for `critique_draft`. First read the function docstring and the nearest TODO, then compare the expected input and output shape in the tests.
+
+### should_retry
+
+Use this hint entry for `should_retry`. First read the function docstring and the nearest TODO, then compare the expected input and output shape in the tests.
+
+### revise_draft
+
+Use this hint entry for `revise_draft`. First read the function docstring and the nearest TODO, then compare the expected input and output shape in the tests.
+
+### run_review_loop
+
+Use this hint entry for `run_review_loop`. First read the function docstring and the nearest TODO, then compare the expected input and output shape in the tests.

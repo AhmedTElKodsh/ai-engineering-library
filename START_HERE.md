@@ -1,77 +1,111 @@
 # Start Here
 
-Welcome to the AI Engineering Library. This repo is a text-first, test-guided
-curriculum for junior AI engineers with intermediate Python experience.
+Welcome to the AI Engineering Library. This is a text-first, test-guided
+curriculum for learners with working Python fundamentals; the placement sample
+decides whether targeted remediation is needed.
+
+## The Roadmap
+
+The curriculum grows through three sequential capability milestones:
+
+1. **AI Application Implementer** — build and defend one bounded application in
+   30-45 focused hours.
+2. **Production AI Engineer** — independently rebuild and operate a second
+   system with production depth.
+3. **Advanced AI Systems Engineer** — make architecture decisions under scale,
+   reliability, security, and organizational constraints, then specialize.
+
+Milestone 1 is the active learner route. It is a launchpad, not a mastery
+claim.
 
 ## First 15 Minutes
 
-1. Read this file.
-2. Open `README.md` for the course contract.
-3. Open `LEARNER_READY_MATRIX.md` to see what is assignable, optional, or planned.
-4. Run the Module 0 diagnostic:
+1. Prove the environment:
 
-```powershell
-python -m pytest curriculum/main-track/00-python-foundations/week-00-diagnostic -q
-```
+   ```powershell
+   python -m pytest curriculum/main-track/00-python-foundations/week-00-diagnostic/test_setup.py -q
+   ```
 
-If pytest plugin noise gets in the way, run:
+2. Run the five-test placement sample:
+
+   ```powershell
+   python -m pytest curriculum/main-track/00-python-foundations/week-00-diagnostic/test_assessment.py -k "swap_without_temp or flatten_list or make_multiplier or counter_initial_count or safe_divide_zero_division" -v
+   ```
+
+3. Record the first failure you understand and any Python gap it exposes. Do
+   not complete the full 24-test inventory unless the sample is inconclusive.
+4. Open `curriculum/main-track/milestone-1-45-hour-map.md`.
+5. Start the deterministic baseline only after you know whether remediation is
+   required.
+
+If pytest plugin noise gets in the way:
 
 ```powershell
 $env:PYTEST_DISABLE_PLUGIN_AUTOLOAD='1'
 ```
 
-## What To Open First
+## Time Boundary
 
-Start here:
+| Path | Budget | Boundary |
+| --- | ---: | --- |
+| Guided fast path | 30 hours | clean diagnostic, fixture-first execution, narrowest required evidence |
+| Full path | 40 hours | normal implementation, debugging, evaluation, and explanation |
+| Recovery allowance | 5 hours | remediation, environment repair, repetition, or transfer work |
+
+Python remediation happens before the timed route. Do not hide a broad Python
+course inside the 30-45-hour promise.
+
+## What You Build
+
+Use one cumulative FinAgent application or an approved source-grounded
+alternative. It grows through:
 
 ```text
-curriculum/main-track/00-python-foundations/week-00-diagnostic/
+deterministic baseline
+  -> model boundary + first evals
+  -> grounded retrieval
+  -> bounded tool and workflow
+  -> tested service + operational evidence
+  -> transfer task + engineering defense
 ```
 
-Then move through the Course 1 core path below. Use `LEARNER_READY_MATRIX.md`
-when you need the detailed readiness status. The main track is the active core
-curriculum; extended concepts are optional advanced labs after the matching
-main-track capability works.
+Keep the learner implementation in
+`curriculum/main-track/06-capstone-projects/week-03-integration-build` from the
+first deterministic checkpoint onward. Its legacy folder name does not mean
+you wait until the end to open it.
 
-For the full-time 30-day route, open
-`curriculum/main-track/30-day-map.md`. For checkpoint gates, open
-`curriculum/main-track/milestones.md`. For deferrals, open
-`curriculum/main-track/scope-guards.md`.
+After placement, open only:
 
-## Canonical Learner Route
+1. `curriculum/main-track/milestone-1-45-hour-map.md` for order and time.
+2. `curriculum/main-track/06-capstone-projects/week-03-integration-build/README.md`
+   for checkpoint and support commands.
 
-| Step | Open | Go next when... | Remediate or skip |
-| --- | --- | --- | --- |
-| 1 | Module 0 diagnostic | you can read the first failure and name the Python gap | remediate only the gaps the diagnostic exposes |
-| 2 | Module 1 Weeks 1-3 | you can run, modify, and locally package the deterministic FinAgent slice | do not add LLMs yet |
-| 3 | Module 0 stock pipeline bridge | you can validate CSV rows, metrics, and source-aware summaries | skip broad Python review you already passed |
-| 4 | Module 2 core weeks 1-4 | you can explain tokens, vectors, attention, context, and decoding | keep transformer internals and training math in `curriculum/extended-concepts/` |
-| 5 | Module 3 Phases 1-4 | you can test provider, prompt, tool, trace, and security boundaries | keep live API work optional unless instructed |
-| 6 | Web data Core Labs 1-6 plus portfolio mini-project | you can package provenance-preserving records for RAG and explain source-quality limits | keep live scraping optional unless instructed |
-| 7 | Module 4 Phases 1-4 | you can build AI-ready records, cited RAG, and explicit workflow gates | advanced agentic-system labs live in `curriculum/extended-concepts/` |
-| 8 | Module 5 Weeks 1-5 | you can show evals, CI-style gates, service boundaries, logs, and tradeoff notes | avoid hosted platform scope |
-| 9 | Module 6 in capstone order: Week 1 build, Week 3 integration, then Week 2 polish | you can prepare capstone scope, run a deterministic FinAgent integration workflow, and present demo/limitation evidence | keep live providers and hosted deployment optional |
+Use `curriculum/main-track/README.md` as the index. Consult
+`curriculum/main-track/milestones.md`, `curriculum/main-track/scope-guards.md`,
+and `LEARNER_READY_MATRIX.md` at review points rather than reading them as
+prerequisite lessons.
 
-## What To Ignore For Now
-
-- optional extensions
-- advanced doorway notes
-- archived route material under `_legacy/`
-- parked planning material
-- external videos or articles before you run the local tests
-- any folder not listed as assignable in `LEARNER_READY_MATRIX.md`
+Use `START_HERE_2_HOURS_PER_DAY.md` when you want the same path spread across
+short daily sessions.
 
 ## How Lessons Work
 
-Each lesson is built around the same loop:
+Inspect, predict, run the smallest relevant test, implement one coherent
+behavior, verify, and reflect. Use progressive hints only after naming the
+stuck point.
 
-1. Read the local `README.md`.
-2. Inspect the tests before editing.
-3. Complete TODO behavior in `workbench.py` or the named learner file.
-4. Run the smallest relevant pytest command.
-5. Write a short explanation of what changed and what still fails.
-6. Use `hints.md` only after you can name the failing test or failure category.
-7. Check `rubric.md` before you call the lesson done.
+Starter behavior tests are expected to fail until TODOs are implemented.
+Import errors, missing fixtures, broken paths, or undocumented setup are
+curriculum defects.
 
-Starter tests are expected to fail until the learner completes TODOs. Import
-errors, missing fixtures, or unclear instructions are curriculum defects.
+## Ignore for Milestone 1
+
+- broad Python review not triggered by the diagnostic
+- BPE and attention implementation
+- required live scraping
+- advanced MCP, RAG, agent, memory, or framework work
+- fine-tuning and model training
+- hosted deployment and platform engineering
+- separate projects that replace the cumulative application
+
+These are later-milestone material, not missing Milestone 1 work.

@@ -54,6 +54,7 @@ class StockPrice:
 
         Tip: Use try/except for float conversion to catch ValueError
         """
+        # Hint reference: hints.md#from_row
 
         return cls(ticker="", date="", close=0.0, source="")
 
@@ -69,6 +70,7 @@ class PipelineReport:
     @property
     def ticker_count(self) -> int:
         """Return the number of tickers represented in the report."""
+        # Hint reference: hints.md#ticker_count
         # TODO: count tickers from self.metrics.
         # Hint: metrics is already keyed by ticker, so do not recount raw rows.
         return 0
@@ -76,6 +78,7 @@ class PipelineReport:
 
 def load_price_rows(csv_path: str | Path) -> list[StockPrice]:
     """Load and validate rows from a CSV file."""
+    # Hint reference: hints.md#load_price_rows
     # TODO: open the CSV with a context manager.
     # TODO: use csv.DictReader.
     # TODO: convert each row with StockPrice.from_row.
@@ -85,6 +88,7 @@ def load_price_rows(csv_path: str | Path) -> list[StockPrice]:
 
 def group_by_ticker(prices: list[StockPrice]) -> dict[str, list[StockPrice]]:
     """Group validated prices by ticker."""
+    # Hint reference: hints.md#group_by_ticker
     # TODO: return {"AAPL": [StockPrice, ...], ...}.
     # TODO: preserve the original row order within each ticker.
     # Hint: append each price to its ticker bucket as you encounter it.
@@ -93,6 +97,7 @@ def group_by_ticker(prices: list[StockPrice]) -> dict[str, list[StockPrice]]:
 
 def percentage_change(first: float, last: float) -> float:
     """Return percentage change from first to last, rounded to two decimals."""
+    # Hint reference: hints.md#percentage_change
     # TODO: reject first <= 0.
     # TODO: calculate ((last - first) / first) * 100.
     # Hint: first is the baseline; last is the later observation.
@@ -101,6 +106,7 @@ def percentage_change(first: float, last: float) -> float:
 
 def moving_average(values: list[float], window: int) -> list[float]:
     """Return rolling averages rounded to two decimals."""
+    # Hint reference: hints.md#moving_average
     # TODO: reject window <= 0.
     # TODO: return [] when there are not enough values.
     # TODO: calculate each rolling average.
@@ -144,6 +150,7 @@ def moving_average(values: list[float], window: int) -> list[float]:
 
 def calculate_metrics(grouped: dict[str, list[StockPrice]]) -> dict[str, dict[str, float]]:
     """Calculate metrics for each ticker."""
+    # Hint reference: hints.md#calculate_metrics
     # TODO: for each ticker, calculate:
     # - first_close
     # - last_close
@@ -180,6 +187,7 @@ def calculate_metrics(grouped: dict[str, list[StockPrice]]) -> dict[str, dict[st
 
 def stream_summary_lines(metrics: dict[str, dict[str, float]]):
     """Yield one human-readable summary line per ticker."""
+    # Hint reference: hints.md#stream_summary_lines
     # TODO: yield one line per ticker with:
     # ticker, last close to 2 decimals, change percent to 2 decimals,
     # and latest 2-day average to 2 decimals.
@@ -208,6 +216,7 @@ def stream_summary_lines(metrics: dict[str, dict[str, float]]):
 
 def build_report(csv_path: str | Path) -> PipelineReport:
     """Run the full local stock pipeline."""
+    # Hint reference: hints.md#build_report
     # TODO: load rows, group by ticker, calculate metrics, stream summary lines.
     # Hint: compose the helpers in data-flow order and store each intermediate result.
     return PipelineReport(prices=[], metrics={}, summary_lines=[])
@@ -215,6 +224,7 @@ def build_report(csv_path: str | Path) -> PipelineReport:
 
 def render_report(report: PipelineReport) -> str:
     """Render the final educational report."""
+    # Hint reference: hints.md#render_report
     # TODO: include a title, all summary lines, ticker count, and disclaimer.
     # The disclaimer must include the phrase "not financial advice".
     # Hint: this function formats an existing report; it should not recalculate metrics.

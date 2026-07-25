@@ -1,4 +1,4 @@
-﻿# Hints: Production Multi-Agent Boundaries
+# Hints: Production Multi-Agent Boundaries
 
 Use these only after you have read the first failing test and named the behavior it is asking for.
 

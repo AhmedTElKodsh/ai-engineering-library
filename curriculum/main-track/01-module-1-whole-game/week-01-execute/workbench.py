@@ -5,7 +5,6 @@ Expected time to finish: 3-4 hours.
 Complete the TODOs to build a deterministic stock summary. Keep the code
 simple: this lesson is about making the system testable before adding LLMs.
 """
-import typing_extensions
 import re
 from dataclasses import dataclass
 
@@ -32,6 +31,7 @@ def parse_price(raw_value: str) -> float:
     - Which input examples in the tests are valid prices, and which are traps?
     - Should cleanup change the number itself, or only remove display characters?
     """
+    # Hint reference: hints.md#parse_price
     # TODO: strip whitespace and a leading dollar sign.
     if isinstance(raw_value, float):
         raise ValueError("The input must be a string")
@@ -59,6 +59,7 @@ def percentage_change(previous_close: float, current_price: float) -> float:
     - Which value is the baseline and which value is the new observation?
     - Does the sign of the result need to survive for later movement labeling?
     """
+    # Hint reference: hints.md#percentage_change
     # TODO: reject previous_close <= 0 because division would be invalid.
     if previous_close <= 0:
         raise ValueError("The dominantor must be positive")
@@ -77,6 +78,7 @@ def classify_movement(change_percent: float) -> str:
     - Are 1.0 and -1.0 inside the movement buckets or still flat?
     - Does this function care about dollars, or only an already-computed percent?
     """
+    # Hint reference: hints.md#classify_movement
     # TODO: return "up" for >= 1.0, "down" for <= -1.0, otherwise "flat".
     if change_percent >= 1.0:
         return "up"
@@ -94,6 +96,7 @@ def validate_ticker(ticker: str) -> str:
     - Which operation normalizes learner-friendly input before the shape check?
     - Which characters would make downstream summaries look less trustworthy?
     """
+    # Hint reference: hints.md#validate_ticker
     # TODO: strip whitespace and uppercase the ticker.
     # TODO: require 1-5 alphabetic characters.
     ticker = ticker.strip().upper()
@@ -114,6 +117,7 @@ def build_stock_summary(snapshot: StockSnapshot) -> str:
     - Which fields come from the snapshot, and which values are derived?
     - Which phrase protects the summary from sounding like trading advice?
     """
+    # Hint reference: hints.md#build_stock_summary
     # TODO: validate the ticker.
     # TODO: compute percentage change and movement label.
     # TODO: reject a missing or blank source before building the summary.

@@ -65,3 +65,35 @@ After the smallest behavior works, leave four notes:
 - failure evidence: what broken case is now handled or intentionally refused
 - explanation evidence: why the fix works in 2-4 sentences
 - transfer evidence: how this pattern strengthens FinAgent or a later AI system
+
+## Function Hint Index
+
+Use these anchors from `workbench.py` when a TODO points here. They are stable targets, so learners can jump from a function to its matching hint section without relying on brittle line numbers.
+
+### dot_product
+
+Use this hint entry for `dot_product`. First read the function docstring and the nearest TODO, then compare the expected input and output shape in the tests.
+
+### scale_scores
+
+Use this hint entry for `scale_scores`. First read the function docstring and the nearest TODO, then compare the expected input and output shape in the tests.
+
+### softmax
+
+Use this hint entry for `softmax`. First read the function docstring and the nearest TODO, then compare the expected input and output shape in the tests.
+
+### weighted_sum
+
+Use this hint entry for `weighted_sum`. First read the function docstring and the nearest TODO, then compare the expected input and output shape in the tests.
+
+### attention
+
+Use this hint entry for `attention`. First read the function docstring and the nearest TODO, then compare the expected input and output shape in the tests.
+
+### most_attended_source
+
+Use this hint entry for `most_attended_source`. First read the function docstring and the nearest TODO, then compare the expected input and output shape in the tests.
+
+### explain_attention
+
+Use this hint entry for `explain_attention`. First read the function docstring and the nearest TODO, then compare the expected input and output shape in the tests.

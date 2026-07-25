@@ -20,7 +20,7 @@ Use the course map in `curriculum/LEARNER_JOURNEY_MAP.md` and the local module R
 
 - **Minimum path:** read the scenario, inspect the tests or fixtures, complete the TODOs in `workbench.py`, run the verification command, and write the reflection/evidence note.
 - **Optional enrichment:** add one edge case, comparison, or small test after the required behavior works.
-- **Advanced doorway:** notice the later advanced topic this prepares for, then return to the bounded Course 1 task.
+- **Advanced doorway:** notice the later advanced topic this prepares for, then return to the bounded Milestone 1 task.
 
 ## Evidence Portfolio
 
@@ -30,7 +30,16 @@ Leave this lesson with technical evidence, failure evidence, explanation evidenc
 
 Turn the FinAgent capstone into a reviewer-ready portfolio artifact with a demo script, limitation note, release evidence, and interview defense.
 
-**Expected time to finish:** 6-8 hours
+**Full standalone lesson:** 6-8 hours
+
+**Milestone 1 selected slice:** 60-90 minutes. Run only:
+
+```powershell
+python -m pytest curriculum/main-track/06-capstone-projects/week-02-polish/tests -k "demo_script or limitation_note or interview_defense" -v
+```
+
+Reuse the release evidence already produced in Block 8. Complete the remaining
+polish TODOs only when you want post-milestone portfolio depth.
 
 ## Real-World Context
 
@@ -51,7 +60,7 @@ flowchart LR
 
 ## Evidence First
 
-Run:
+For the full standalone lesson, run:
 
 ```powershell
 python -m pytest curriculum/main-track/06-capstone-projects/week-02-polish/tests -v
@@ -68,7 +77,7 @@ The starting failures are expected TODO failures in `workbench.py`.
 | Limitation note | Names stale data, missing sources, non-advice boundaries, and remaining risks. |
 | Interview defense | Explains architecture, evals, safety, tradeoffs, and what you would improve next. |
 | Portfolio README | Packages the project claim, run commands, evidence table, limitations, tradeoffs, and STAR defense. |
-| Final assessment checklist | Confirms the capstone is ready before you present it as Course 1 portfolio evidence. |
+| Final assessment checklist | Confirms the capstone is ready before you present it as Milestone 1 portfolio evidence. |
 
 ## Portfolio Packaging Gate
 

@@ -16,7 +16,7 @@ does not already make the curriculum logic explicit.
 ## Minimum Path
 
 Complete the README trace, the TODOs in `workbench.py`, the relevant tests, and
-the reflection/evidence prompt. This is the required path for Course 1.
+the reflection/evidence prompt. This is the required path for Milestone 1.
 
 ## Optional Enrichment
 

@@ -2,9 +2,10 @@
 
 ## Scope
 
-Create a runnable, deterministic FinAgent integration milestone that composes
-prior course skills: input validation, fixture market data, cited evidence
-retrieval, safety gating, educational brief composition, and workflow trace.
+Use this existing scaffold as the cumulative Milestone 1 FinAgent application.
+It starts with deterministic validation and grounded retrieval, then adds the
+fixture-provider, evaluation, tool/workflow, real HTTP, operational evidence,
+and transfer contracts from the canonical route.
 
 ## Acceptance Checks
 
@@ -14,6 +15,18 @@ retrieval, safety gating, educational brief composition, and workflow trace.
 - [x] `hints.md` provides progressive help without giving full code.
 - [x] `rubric.md` evaluates integration, citations, safety, traceability, and explanation.
 - [x] Reviewer-only reference behavior lives outside the learner folder.
+- [x] Checkpoint tests map route blocks 1-9 to the same learner-owned application.
+- [x] Block 1 produces useful deterministic output without depending on later retrieval.
+- [x] Block 4 proves deterministic ranking and a bounded context slice before Block 5 composition.
+- [x] Block 5 proves unsupported-question abstention before tool authority is introduced.
+- [x] Block 6 proves missing approval stops before provider execution.
+- [x] Block 7 rejects malformed service payloads and separately proves real loopback HTTP.
+- [x] Block 8 distinguishes measured latency, estimated tokens/live cost, and zero fixture cost.
+- [x] Block 9 proves diagnostic failure categories and keeps transfer/defense as learner evidence.
+- [x] Supporting labs use exact time-capped selectors; full lab completion is post-milestone depth.
+- [x] The eval seed contains ten supported, abstained, refused, and tool cases.
+- [x] The HTTP checkpoint uses a real loopback request without adding a framework dependency.
+- [x] Fixture, live-provider, learner-completion, and production evidence stay distinct.
 
 ## Verification
 
@@ -22,7 +35,8 @@ python -m pytest curriculum/main-track/06-capstone-projects/week-03-integration-
 ```
 
 Expected initial state: collection succeeds and assertions fail because
-`workbench.py` contains learner TODOs.
+`workbench.py` contains learner TODOs. Learners run one checkpoint filter at a
+time rather than diagnosing the entire incomplete suite.
 
 ## Learner Logic Enhancement
 

@@ -6,8 +6,8 @@ Read this file first. It defines the lesson objective, the minimum path, the exp
 
 ## Controlled Workflows Before Autonomous Agents
 
-**Duration:** required web-data bridge plus 4 core phases  
-**Expected time to finish:** 20-30 hours for the required bridge plus Phases 1-4  
+**Full module library:** 20-30 hours across the web-data bridge and 4 phases
+**Milestone 1 use:** selected fixture-backed ingestion, cited RAG, and explicit-workflow slices from `../milestone-1-45-hour-map.md`
 **Prerequisites:** Module 3 or equivalent comfort with tool contracts and testable boundaries  
 **Pedagogy:** simple composable workflows first, agent autonomy only when justified
 
@@ -29,7 +29,9 @@ The goal is not to worship agent frameworks. The goal is to make the learner abl
 
 The book synthesis reinforces that many RAG failures happen before retrieval: bad loading, weak cleaning, missing metadata, arbitrary chunks, and no record of failed inputs. Module 4 therefore starts with AI-ready data pipelines before vector search or agent workflows.
 
-The required Web Data Acquisition bridge now feeds this module directly. Learners first inspect allowed sources and extract fixture-backed records with provenance, then Module 4 consumes those records as clean chunks for citation and abstention RAG.
+Milestone 1 uses fixture-backed records with provenance. The full Web Data
+Acquisition specialization is later depth and is not required by the
+30-45-hour route.
 
 For authors extending memory or state-related lessons, use
 `MEMORY_SAFETY_EVIDENCE_CHECKLIST.md` to connect source evidence to retention
@@ -46,10 +48,9 @@ before adding autonomy.
 
 ## Minimum Path And Advanced Doorway
 
-Use `../../LEARNER_JOURNEY_MAP.md` as the course-level map. Module 4's Course 1
-core path is AI-ready data, cited retrieval, abstention, explicit workflows,
-critique, retry, and human-review gates. The learner should prove that each
-answer or action is supported by evidence.
+Use `../../LEARNER_JOURNEY_MAP.md` as the course-level map. Milestone 1 selects
+AI-ready data, cited retrieval, abstention, one explicit workflow, bounded
+retry, and a human-review gate.
 
 The advanced doorway is GraphRAG, framework state machines, complex
 orchestration, autonomous agents, and multi-agent systems at scale. Those labs
@@ -92,16 +93,17 @@ The folder names stay stable for tests and links. The learner-facing titles belo
 
 | Phase | Folder | Learner-facing title | Learner deliverable | Verification from repo root |
 | --- | --- | --- | --- | --- |
-| Required bridge | `../../specializations/web-scraping/core-lab-01-http-inspection` | HTTP And Page Inspection Lab | Build an allowed-source checklist and extraction target table before collection | `python -m pytest curriculum/specializations/web-scraping/core-lab-01-http-inspection/tests -v` |
-| Required bridge | `../../specializations/web-scraping/core-lab-02-fixture-static-extraction` | Fixture-First Static Extraction Lab | Extract citation-ready records from local HTML fixtures with failed-row evidence | `python -m pytest curriculum/specializations/web-scraping/core-lab-02-fixture-static-extraction/tests -v` |
-| Required bridge | `../../specializations/web-scraping/core-lab-03-api-first-collection` | API-First Collection Lab | Prefer stable JSON payloads, validate records, and preserve raw/clean/failed layers | `python -m pytest curriculum/specializations/web-scraping/core-lab-03-api-first-collection/tests -v` |
+| Later bridge | `../../specializations/web-scraping/core-lab-01-http-inspection` | HTTP And Page Inspection Lab | Build an allowed-source checklist and extraction target table before collection | `python -m pytest curriculum/specializations/web-scraping/core-lab-01-http-inspection/tests -v` |
+| Optional fixture practice | `../../specializations/web-scraping/core-lab-02-fixture-static-extraction` | Fixture-First Static Extraction Lab | Extract citation-ready records from local HTML fixtures with failed-row evidence | `python -m pytest curriculum/specializations/web-scraping/core-lab-02-fixture-static-extraction/tests -v` |
+| Later bridge | `../../specializations/web-scraping/core-lab-03-api-first-collection` | API-First Collection Lab | Prefer stable JSON payloads, validate records, and preserve raw/clean/failed layers | `python -m pytest curriculum/specializations/web-scraping/core-lab-03-api-first-collection/tests -v` |
 | Phase 1 | `week-01-basic-rag` | AI-Ready Ingestion And Chunking Lab | Build raw, clean, failed, and chunked source layers with provenance metadata | `python -m pytest curriculum/main-track/04-module-4-agentic-workflows/week-01-basic-rag/tests -v` |
 | Phase 2 | `week-02-advanced-rag` | Citation And Abstention RAG Lab | Add retrieval, citation checks, and abstention behavior over bridge/Phase 1 chunks | `python -m pytest curriculum/main-track/04-module-4-agentic-workflows/week-02-advanced-rag/tests -v` |
 | Phase 3 | `week-03-core-patterns` | Explicit Workflow Pattern Lab | Build prompt chaining, routing, and tool-use workflows with gates | `python -m pytest curriculum/main-track/04-module-4-agentic-workflows/week-03-core-patterns/tests -v` |
 | Phase 4 | `week-04-advanced-patterns` | Critique And Review Loop Lab | Add reflection, critique, retry, and human-review checkpoints | `python -m pytest curriculum/main-track/04-module-4-agentic-workflows/week-04-advanced-patterns/tests -v` |
 
-Phases 1-4 and the required web-data bridge labs are the Course 1 core. Tests
-are expected to fail before learners complete the TODOs in `workbench.py`.
+The full module library is learner-scaffolded. Only the bounded ingestion, cited
+RAG, and explicit-workflow slices named in the canonical map are Milestone 1
+core. Tests are expected to fail before learners complete selected TODOs.
 
 ## Extended Concepts
 
@@ -116,10 +118,9 @@ Move to these only after Phase 4's explicit critique/retry loop works:
 
 ## Learner Readiness Boundary
 
-Assign the required web-data bridge plus Phases 1-4 in order. Offer the
-extended concepts only after the learner can already explain and test the
-explicit workflow path. Each listed folder has a README, learner-editable
-`workbench.py`, tests that collect cleanly, hints, and a rubric.
+Follow the selected route blocks for Milestone 1. Use the full bridge and
+remaining phases only as later depth after the learner can explain and test the
+explicit workflow path.
 
 ## Teaching Contract
 

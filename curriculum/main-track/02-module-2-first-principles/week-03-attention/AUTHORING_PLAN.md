@@ -54,7 +54,7 @@ Expected initial state: collection succeeds and assertions fail because
   alignment, or empty-result edge case.
 - Advanced doorway, named briefly but not required: multi-head attention,
   positional encodings, masking, residuals, layer normalization, and optimized
-  tensor implementations belong to later Module 2 slices or Course 2.
+  tensor implementations belong to later Module 2 slices or Milestone 2.
 
 ## Source Evidence Enhancement
 

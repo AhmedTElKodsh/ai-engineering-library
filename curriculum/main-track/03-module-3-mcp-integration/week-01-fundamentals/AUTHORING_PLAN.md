@@ -51,7 +51,7 @@ Expected initial state: collection succeeds and assertions fail because
   message, missing variable, or secret-safety negative case.
 - Advanced doorway, named briefly but not required: streaming, retries,
   rate-limits, provider failover, prompt-management platforms, and production
-  prompt governance belong to later Module 5 or Course 3 depth.
+  prompt governance belong to later Module 5 or Milestone 3 depth.
 
 ## Evidence Portfolio Enhancement
 

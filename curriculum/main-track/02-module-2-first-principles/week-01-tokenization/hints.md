@@ -69,3 +69,39 @@ After the smallest behavior works, leave four notes:
 - failure evidence: what broken case is now handled or intentionally refused
 - explanation evidence: why the fix works in 2-4 sentences
 - transfer evidence: how this pattern strengthens FinAgent or a later AI system
+
+## Function Hint Index
+
+Use these anchors from `workbench.py` when a TODO points here. They are stable targets, so learners can jump from a function to its matching hint section without relying on brittle line numbers.
+
+### text_to_bytes
+
+Use this hint entry for `text_to_bytes`. First read the function docstring and the nearest TODO, then compare the expected input and output shape in the tests.
+
+### bytes_to_text
+
+Use this hint entry for `bytes_to_text`. First read the function docstring and the nearest TODO, then compare the expected input and output shape in the tests.
+
+### count_adjacent_pairs
+
+Use this hint entry for `count_adjacent_pairs`. First read the function docstring and the nearest TODO, then compare the expected input and output shape in the tests.
+
+### merge_pair
+
+Use this hint entry for `merge_pair`. First read the function docstring and the nearest TODO, then compare the expected input and output shape in the tests.
+
+### train_bpe
+
+Use this hint entry for `train_bpe`. First read the function docstring and the nearest TODO, then compare the expected input and output shape in the tests.
+
+### encode
+
+Use this hint entry for `encode`. First read the function docstring and the nearest TODO, then compare the expected input and output shape in the tests.
+
+### decode
+
+Use this hint entry for `decode`. First read the function docstring and the nearest TODO, then compare the expected input and output shape in the tests.
+
+### estimate_token_budget
+
+Use this hint entry for `estimate_token_budget`. First read the function docstring and the nearest TODO, then compare the expected input and output shape in the tests.

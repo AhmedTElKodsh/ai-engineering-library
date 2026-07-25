@@ -5,8 +5,8 @@
 Read this file first. It defines the lesson objective, the minimum path, the expected evidence, and the verification command. Treat the local tests as the exact contract when implementation details feel unclear.
 ## Essential Python Fluency for AI Engineering
 
-**Duration:** diagnostic plus targeted remediation  
-**Expected time to finish:** 2-4 hours if the diagnostic passes cleanly; 8-20 hours if targeted remediation is needed  
+**Milestone 1 allocation:** up to 2 hours for diagnostic and environment proof
+**Remediation:** 8-20 hours when needed, outside the 30-45-hour Milestone 1 clock
 **Prerequisites:** basic Python exposure or willingness to learn from tests  
 **Outcome:** you can read, write, test, and debug the Python patterns used throughout the AI engineering curriculum.
 
@@ -19,10 +19,10 @@ The refresher path is shaped like a small engineering project, not a list of rig
 
 ## Minimum Path And Advanced Doorway
 
-Use `../../LEARNER_JOURNEY_MAP.md` as the course-level map. Module 0's minimum
-path is diagnostic first, targeted remediation only when needed, and a
-post-Module-1 stock pipeline bridge. Optional reinforcement is for repair, not
-for slowing every learner before Module 1.
+Use `../../LEARNER_JOURNEY_MAP.md` as the course-level map. Module 0's
+Milestone 1 role is diagnostic first and targeted remediation only when needed.
+The stock pipeline and production-Python phases are optional reinforcement, not
+hidden timed-core requirements.
 
 The advanced doorway is production Python for AI systems: configuration,
 testing, retries, resource cleanup, and data pipelines. This module does not
@@ -37,7 +37,8 @@ The student should not complete every folder here before starting Module 1. The 
 1. Try `week-00-diagnostic`.
 2. If the diagnostic exposes Python gaps, complete `week-01-python-essentials` as the FinAgent intake mini-project.
 3. Start and complete `../01-module-1-whole-game` in all cases.
-4. Return to `week-03-stock-pipeline` after Module 1 as the first larger Python integration project.
+4. Use `week-03-stock-pipeline` later only when pipeline practice is the
+   diagnosed need or an instructor-selected extension.
 
 `week-02-production-python` is optional reinforcement. Use it when the student struggles with errors, context managers, classes, generators, or state updates during Module 1 or the stock pipeline.
 
@@ -103,7 +104,13 @@ curriculum is broken.
 Required first:
 
 ```powershell
-python -m pytest week-00-diagnostic -v
+python -m pytest week-00-diagnostic/test_setup.py -v
+python -m pytest week-00-diagnostic/test_assessment.py -k "swap_without_temp or flatten_list or make_multiplier or counter_initial_count or safe_divide_zero_division" -v
+```
+
+Use Week 01 only when the placement sample exposes a real prerequisite gap:
+
+```powershell
 python -m pytest week-01-python-essentials -v
 ```
 
@@ -139,10 +146,12 @@ The workbench files are expected to fail at first because they contain TODOs. A 
 Run:
 
 ```powershell
-python -m pytest week-00-diagnostic -v
+python -m pytest week-00-diagnostic/test_setup.py -v
+python -m pytest week-00-diagnostic/test_assessment.py -k "swap_without_temp or flatten_list or make_multiplier or counter_initial_count or safe_divide_zero_division" -v
 ```
 
-If the diagnostic mostly passes and the failures are easy to explain, continue to Module 1.
+If the placement failures are easy to explain, continue to Module 1 without
+completing the full inventory.
 
 If the diagnostic exposes real gaps, complete Week 01 before Module 1.
 
